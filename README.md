@@ -2,12 +2,22 @@
 
 This GitHub repository provides GitHub Action workflows that (will) check draft specifications for conformance to OGC Naming Authority policies.
 
+The prototype workflows are at the **alpha** stage of development.
 
-### License
+## Draft Specifications Continuously Reviewed
+
+The following draft specifications are automatically compiled from asciidoc to HTML once a day. During the compilation a number of OGC-NA checks are made on the documents.
+
+* [OGC API - Environmental Data Retrieval, version 1.0.1](https://opengeospatial.github.io/ogcna-auto-review/19-086.html)
+
+* More to follow
+
+
+## License
 
 [Apache 2.0 License](LICENSE.txt)
 
-### How to contribute
+## How to contribute
 
 If you would like to get involved, you can:
 
@@ -17,6 +27,6 @@ If you would like to get involved, you can:
 * Add a new feature: Fork the repository, implement (and test) the feature on a new topic
 branch, and then create a pull request
 
-### Code of conduct
+## Code of conduct
 
 Contributors are expected to observe the project's [code of conduct](CODE_OF_CONDUCT.md).
