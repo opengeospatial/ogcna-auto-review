@@ -1,0 +1,30 @@
+name: generate_21-038
+on:
+  schedule:
+    - cron:  '1 15 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/mn:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/ogcapi-discrete-global-grid-systems
+          path: 21-038
+      - name: Generate document
+        run: |
+          cd 21-038/21_038_OGC_API_DGGS_Part_1
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc
+          cp document.html ../../main/21-038.html
+          cd ../../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 21-038.html
+          git commit -am "Automated generation of HTML documents"
+          git push
