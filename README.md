@@ -1,10 +1,10 @@
-# OGC Naming Authority - Continuous Review of Draft Specifications
+# OGC Naming Authority - Automated Continuous Review of Draft Specifications
 
 This GitHub repository provides GitHub Action workflows that (will) check draft specifications for conformance to OGC Naming Authority policies.
 
 The prototype workflows are at the **alpha** stage of development.
 
-## Draft Specifications Continuously Reviewed
+## Draft Specifications Reviewed
 
 The following draft specifications are automatically compiled from asciidoc to HTML once a day. During the compilation a number of OGC-NA checks are made on the documents.
 
