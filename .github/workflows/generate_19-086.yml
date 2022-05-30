@@ -1,7 +1,7 @@
 name: generate_19-086
 on:
-  issues:
-    types: opened
+  schedule:
+    - cron:  '1 14 * * *'
 
 jobs:
   build:
@@ -19,9 +19,8 @@ jobs:
           path: 19-086
       - name: Generate document
         run: |
-          cd 19-086
-          metanorma compile --agree-to-terms -t ogc -x xml,html,doc standard/document.adoc
-          cd standard
+          cd 19-086/standard
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc
           cp document.html ../../main/19-086.html
           cd ../../main
           git config --global user.name 'opengeospatial'
