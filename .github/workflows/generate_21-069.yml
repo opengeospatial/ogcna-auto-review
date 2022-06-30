@@ -19,7 +19,7 @@ jobs:
           path: 21-069
       - name: Generate document
         run: |
-          cd 21-069/standard_template/standard
+          cd 21-069/standard
           metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc
           cp document.html ../../../main/21-069.html
           cd ../../../main
