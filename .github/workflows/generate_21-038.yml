@@ -19,8 +19,8 @@ jobs:
           path: 21-038
       - name: Generate document
         run: |
-          cd 21-038/21_038_OGC_API_DGGS_Part_1
-          metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc
+          cd 21-038/core
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc 21-038.adoc
           cp document.html ../../main/21-038.html
           cd ../../main
           git config --global user.name 'opengeospatial'
