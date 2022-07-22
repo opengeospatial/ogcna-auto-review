@@ -1,7 +1,7 @@
 name: generate_22-029
 on:
-  schedule:
-    - cron:  '1 17 * * *'
+  issues:
+    types: opened
 
 jobs:
   build:
