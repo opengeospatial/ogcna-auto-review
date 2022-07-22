@@ -1,4 +1,4 @@
-name: generate_19-086
+name: generate_19-086r5
 on:
   schedule:
     - cron:  '1 14 * * *'
@@ -16,15 +16,16 @@ jobs:
         uses: actions/checkout@v3 # checkout the repository content to github runner
         with:
           repository: opengeospatial/ogcapi-environmental-data-retrieval
-          path: 19-086
+          ref: 1.0.1
+          path: 19-086r5
       - name: Generate document
         run: |
-          cd 19-086/standard
+          cd 19-086r5/standard
           metanorma compile --agree-to-terms -t ogc -x xml,html,doc document.adoc
-          cp document.html ../../main/19-086.html
+          cp document.html ../../main/19-086r5.html
           cd ../../main
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
-          git add 19-086.html
+          git add 19-086r5.html
           git commit -am "Automated generation of HTML documents"
           git push
