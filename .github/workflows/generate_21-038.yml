@@ -21,7 +21,7 @@ jobs:
         run: |
           cd 21-038/core
           metanorma compile --agree-to-terms -t ogc -x xml,html,doc 21-038.adoc
-          cp document.html ../../main/21-038.html
+          cp 21-038.html ../../main/21-038.html
           cd ../../main
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
