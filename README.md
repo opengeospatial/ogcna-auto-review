@@ -13,6 +13,7 @@ The following draft specifications are automatically compiled from asciidoc to H
 * [OGC API - Environmental Data Retrieval, version 1.0.1 draft](https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html)
 * [OGC API - Discrete Global Grid Systems - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-038.html)
 * [OGC CoverageJSON, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-069.html)
+* [OGC Two Dimensional Tile Matrix Set and Tile Set Metadata, version 2.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/17-083r4.html)
 * More to follow
 
 
