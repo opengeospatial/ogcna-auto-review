@@ -19,10 +19,10 @@ jobs:
           path: 17-083r4
       - name: Generate document
         run: |
-          cd 17-083r4/standard
-          metanorma compile --agree-to-terms -t ogc -x xml,html,doc 17-083r4.adoc
-          cp 17-083r4.html ../../main/17-083r4.html
-          cd ../../main
+          cd 17-083r4
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc ./standard/17-083r4.adoc
+          cp ./standard/17-083r4.html ../main/17-083r4.html
+          cd ../main
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
           git add 17-083r4.html
