@@ -1432,14 +1432,14 @@ span.hi {
       <div id="_abstract">
         <h1 class="AbstractTitle" id="toc0">I.&#xA0; Abstract</h1>
         <p id="_963908fe-8440-51ca-fbe9-3b0ad8a8c2bf">Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser.</p>
-        <p id="_b595e9f6-05c8-0f32-aa6c-a759ab5b78c0">Implementation experience has shown that CoverageJSON is an effective, efficient format, friendly to web and application developers, and therefore consistent with the current <a href="https://ogcapi.ogc.org/">OGC API developments</a>. CoverageJSON supports the efficient transfer, from big data stores, of useable quantities of data to lightweight clients, such as browsers and mobile applications. This enables straightfoward local manipulation of the data, for example, by science researchers. Web developers often use and are familiar with JSON formats.</p>
+        <p id="_d76b7b56-5418-958d-743f-b55c0c9ecaac">Implementation experience has shown that CoverageJSON is an effective, efficient format, friendly to web and application developers, and therefore consistent with the current <a href="https://ogcapi.ogc.org/">OGC API developments</a>. CoverageJSON supports the efficient transfer from big data stores of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables straightfoward local manipulation of the data, for example, by science researchers. Web developers often use and are familiar with JSON formats.</p>
         <p id="_e91decd7-0dc5-1409-6374-d2e814da43a3">CoverageJSON can be used to encode coverages and collections of coverages. Coverage data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications and to reduce the potential size of the payload.</p>
         <p id="_23e3b8a0-695b-4a69-736d-f3039e930130">Relatively large datasets can be handled efficiently in a &#x201C;web-friendly&#x201D; way by partitioning information among several CoverageJSON documents, including a tiling mechanism. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended primarily to store or transfer very large datasets in bulk.</p>
-        <p id="_5434b46d-f933-a142-b021-2f6c0d1d0fc2">The simplest and most common use case is to embed all the data values of all variables in a Coverage object within the CoverageJSON document, so that it is &#x201C;self-contained&#x201D;. A self-contained, standalone, document supports the use of very simple clients.</p>
-        <p id="_9de12c7f-0125-b95f-d50e-3991066607c5">The next-simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents which are linked from the Coverage object. This is useful for a multi-variable dataset, such as one with temperature, humidity, wind speed, etc., to be recorded in separate files. This allows the client to load only the variables of interest.</p>
-        <p id="_4b0bdcb4-0fa4-e741-d284-8cd74d14c0f4">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable&#x2019;s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially, like a tiled map server implementation.</p>
+        <p id="_38d25cc7-5cfd-8087-dba6-ca6eaf167c1e">The simplest and most common use case is to embed all the data values of all variables in a Coverage object within the CoverageJSON document, so that it is &#x201C;self-contained&#x201D;. Such a standalone document supports the use of very simple clients.</p>
+        <p id="_4ee78aba-5027-2e97-f61d-4ccfe1d0d06b">The next simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents which are linked from the Coverage object. This is useful for a multi-variable dataset, such as one with temperature, humidity, wind speed, etc., to be recorded in separate files. This allows the client to load only the variables of interest.</p>
+        <p id="_94fe8e33-9e6b-b7f0-50cd-1c14c357d4ba">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable&#x2019;s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially in a manner similar to a tiled map server.</p>
       </div>
-      <div class="Section3" id="_dc803397-1e2e-43be-81fb-9602ba5375cb">
+      <div class="Section3" id="_1716d864-818c-4def-a48e-0dfc6584f247">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1456,7 +1456,7 @@ span.hi {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security Considerations</h1>
         <p id="_46903dee-ef62-ae74-8c3a-aeae64b964c6">Given the intended use case of downloading data to a browser, there is no functionality within this specification to facilitate authenticity, integrity and confidentiality (e.g. signatures or encryption). This can be applied at the transport level using standards that apply there. Use cases involving authenticity, integrity and confidentiality outside of the transport context (e.g. offline devices) are not intended or supported.</p>
       </div>
-      <div class="Section3" id="_f6fba2e9-6668-49f2-b449-7620f6f017af">
+      <div class="Section3" id="_52ed6d1c-cdd5-4a1d-98de-19f3c58ae7af">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1493,10 +1493,10 @@ span.hi {
       <p class="zzSTDTitle1">OGC CoverageJSON Community Standard</p>
       <div id="_scope">
         <h1 id="toc7">1.&#xA0; Scope</h1>
-        <p id="_48db735e-37c6-f048-5180-17e43d14e9c0">This OGC Community Standard is a logical implementation of the long-established abstract conceptual standard ISO19123:2005 (also known as OGC Abstract Topic 6). The CoverageJSON specification has been stable for several years, with a wide-spread international community in the environmental sciences. The current version of the open specification, on the <a href="https://github.com/covjson/specification">original GitHub</a>, was labelled &#x2018;V0.2-draft&#x2019;. This document proposes that version, with only editorial changes for presentation, as an OGC Community Standard.</p>
+        <p id="_c896f554-668a-f0e5-0abd-f4f9b848d759">This OGC Community Standard is a logical implementation of the long-established abstract conceptual standard ISO19123:2005 (also known as OGC Abstract Topic 6). The original CoverageJSON specification has been stable for several years, with a wide-spread international implementation community in the environmental sciences. The current version of the open specification, available on <a href="https://github.com/covjson/specification">original GitHub</a>, is labelled &#x2018;V0.2-draft&#x2019;. That version is the basis of this Community Standard with only editorial changes for presentation.</p>
         <p id="_d6fc83d2-e056-55ed-e04e-b24ee7ea4a87">A formal JSON schema has been added for all the JSON objects identified, so that conformance to the OGC Community Standard can be checked.</p>
         <p id="_399b5ada-7986-d57b-58c3-286516e43d05">Unused or imprecisely specified components have been removed.</p>
-        <p id="_6ee8bad7-9efa-5603-dc80-3a21068e6783">Future improvements have been identified, such as the use of multiple time dimensions, or to use JSON-LD V1.1.</p>
+        <p id="_e92c13e2-b92b-1338-4a94-1ccd3c678e28">Future work has been identified, such as the use of multiple time dimensions, or to use JSON-LD V1.1.</p>
         <p id="_ba321b5e-1f34-9eec-6d09-d05cb9beb546">This specification does not specify encoding of information in any format other than JSON <a href="https://datatracker.ietf.org/doc/html/rfc7159">IETF RFC 7159</a>.</p>
       </div>
       <div id="_conformance">
@@ -1593,7 +1593,7 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
         <h1 id="toc17">10.&#xA0; CoverageJSON Encoding: Normative with Informative Examples</h1>
         <div id="_introduction"><h2 id="toc18">10.1.&#xA0; Introduction</h2>
 
-<p id="_53c09d53-a2c8-caf1-7815-ab92fbe9dd7d">CoverageJSON is a format for encoding coverage data like grids, time series, and vertical profiles, distinguished by the geometry of their spatiotemporal domain. A CoverageJSON object represents a domain, a range, a coverage, or a collection of coverages. A range in CoverageJSON  represents coverage values. A coverage in CoverageJSON is the combination of a domain, parameters, ranges, and additional metadata. A coverage collection represents a list of coverages.</p>
+<p id="_81157a56-73f2-4ad8-e962-6569d669df58">CoverageJSON is a format for encoding coverage data such as grids, time series, and vertical profiles, each distinguished by the geometry of their spatiotemporal domain. A CoverageJSON object represents a domain, a range, a coverage, or a collection of coverages. A range in CoverageJSON represents coverage values. A coverage in CoverageJSON is the combination of a domain, parameters, ranges, and additional metadata. A coverage collection represents a list of coverages.</p>
 
 <p id="_7884ebf2-1363-80f7-8bf5-2f5bab04ce2d">A complete CoverageJSON data structure is always an object (in JSON terms). In CoverageJSON, an object consists of a collection of name/value pairs&#x2009;&#x2014;&#x2009;also called members. For each member, the name is always a string. Member values are either a string, number, object, array or one of the literals: true, false, and null. An array consists of elements where each element is a value as described above.</p>
 
@@ -1712,15 +1712,15 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <p id="_3d986cf7-4ff8-2da1-3a9e-f82a2c30d6d0">Geographic CRSs anchor coordinate values to an ellipsoidal approximation of the Earth. They have coordinate axes of geodetic longitude and geodetic latitude, and perhaps height above the ellipsoid (i.e. they can be two- or three-dimensional). The origin of the CRS is on the surface of the ellipsoid.</p>
 
-<ul id="_074aa29d-36fe-328d-47e1-a3e63ef320e9"><li><p id="_3c5ea778-7f9e-cd3c-d45e-242042f595e0">The value of the <tt>"type"</tt> member MUST be &#x201C;GeographicCRS&#x201D;</p>
+<ul id="_0e247918-5eb7-cb78-c369-b670cd4c76d8"><li><p id="_3c5ea778-7f9e-cd3c-d45e-242042f595e0">The value of the <tt>"type"</tt> member MUST be &#x201C;GeographicCRS&#x201D;</p>
 </li>
 <li><p id="_4ef34d1e-5681-646e-105c-b88d3423e5af">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.</p>
 </li>
-<li><p id="_fc325ddf-3728-d22f-3912-21553ed4e587">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.</p>
+<li><p id="_c6c664fb-e238-acce-1f16-c331d9e0eeaa">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.</p>
 </li>
 </ul>
 
-<p id="_f5758fb8-0278-5f9b-3395-7bc47566d7dd">Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the <tt>"id"</tt> may be omitted, but the <tt>"type"</tt> still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they can&#x2019;t accurately georeference the information.</p>
+<p id="_b71618d8-603e-c1f8-ff88-f2528620544d">Note that sometimes (e.g. for numerical model data) the exact CRS may not be known or may be undefined. In this case the <tt>"id"</tt> may be omitted, but the <tt>"type"</tt> still indicates that this is a geographic CRS. Therefore clients can still use geodetic longitude, geodetic latitude (and maybe height) axes, even if they cannot accurately georeference the information.</p>
 
 <p id="_1489ff24-c9e0-e7f4-6734-2d8eb4dd8aa8">If a Coverage conforms to one of the defined [domain types][domain-types] then the coordinate identifier <tt>"x"</tt> is used to denote geodetic longitude, <tt>"y"</tt> is used for geodetic latitude and <tt>z</tt> for ellipsoidal height.</p>
 
@@ -1739,11 +1739,11 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <p id="_dad26729-b2f2-c826-3663-3f212841743c">Projected CRSs use two coordinates to denote positions on a Cartesian plane, which is derived from projecting the ellipsoid according to some defined transformation.</p>
 
-<ul id="_74b32ac0-c919-8ff3-8fdc-367ec735d6fc"><li><p id="_d02c9261-bd96-e00f-9329-5d84a3c186c2">The value of the <tt>"type"</tt> member MUST be &#x201C;ProjectedCRS&#x201D;</p>
+<ul id="_a550ca26-9c0f-8071-9510-6e777ca31d24"><li><p id="_d02c9261-bd96-e00f-9329-5d84a3c186c2">The value of the <tt>"type"</tt> member MUST be &#x201C;ProjectedCRS&#x201D;</p>
 </li>
 <li><p id="_378ae583-43fd-e22e-0b07-6b18e0bf16cf">The object MAY have an <tt>"id"</tt> member, whose value MUST be a string and SHOULD be a common identifier for the reference system.</p>
 </li>
-<li><p id="_726b3176-c162-6ea9-2617-15c959bdb51b">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardised content is interpreted from this description.</p>
+<li><p id="_26170277-2671-f1e4-3933-5481afc15bee">The object MAY have a <tt>"description"</tt> member, where the value MUST be an i18n object, but no standardized content is interpreted from this description.</p>
 </li>
 </ul>
 
@@ -1776,7 +1776,7 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <div id="_temporal_reference_systems"><h3>10.5.2.&#xA0; Temporal Reference Systems</h3>
 
-<p id="_2c1b52ad-d9c0-5b96-107c-798e7849789f">Time is referenced by a temporal reference system (temporal RS). In this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. &#x201C;days since 1970-01-01&#x201D;).</p>
+<p id="_42e8c78f-7e9d-2e20-fa8a-3b839f8913d7">Time is referenced by a temporal reference system (temporal RS). In the current version of this Community Standard, only a string-based notation for time values is defined. Future versions of this Community Standard may allow for alternative notations, such as recording time values as numeric offsets from a given temporal datum (e.g. &#x201C;days since 1970-01-01&#x201D;).</p>
 
 <ul id="_2c443065-66c6-2f72-4da9-4997031feea7"><li><p id="_54d7647a-2830-efad-ec38-d7a57f4d5e11">A temporal RS object MUST have a member <tt>"type"</tt>. The only currently defined value of it is <tt>"TemporalRS"</tt>.</p>
 </li>
@@ -1876,7 +1876,7 @@ Its general structure is:</p>
 
 <div id="_axis_objects"><h4>10.6.1.1.&#xA0; Axis Objects</h4>
 
-<ul id="_dbbdb232-9c17-71af-66b9-1bfd81ab9847"><li><p id="_9fd2c4e3-4c3f-830d-649e-3006b9748f09">An axis object MUST have either a <tt>"values"</tt> member or, as a compact notation for a regularly spaced numeric axis, all the members <tt>"start"</tt>, <tt>"stop"</tt>, and <tt>"num"</tt>.</p>
+<ul id="_3b0bd05c-f97a-de40-2097-b0c9de221469"><li><p id="_43e3c5de-77b8-d0bd-8ac3-414d6d1572b2">An axis object MUST have either a <tt>"values"</tt> member or, as a compact notation for a regularly spaced numeric axis, have all the members <tt>"start"</tt>, <tt>"stop"</tt>, and <tt>"num"</tt>.</p>
 </li>
 <li><p id="_8f8b9ee9-ad4d-7ca6-28f1-e1fb395ce28c">The value of <tt>"values"</tt> is a non-empty array of axis values.</p>
 </li>
