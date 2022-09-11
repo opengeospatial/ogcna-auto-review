@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: metanorma/mn:latest
+    container: metanorma/metanorma:latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
