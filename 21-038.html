@@ -851,7 +851,7 @@ table {
 .docstage-box table td {
   border: none; }
 
-table.recommendtest {
+table.modspec {
   width: 100%;
   font-weight: 300;
   margin: 1em 0 2em 0;
@@ -859,22 +859,22 @@ table.recommendtest {
   margin-right: auto;
   padding-right: 2em;
   color: #010d16; }
-  table.recommendtest, table.recommendtest th, table.recommendtest td {
+  table.modspec, table.modspec th, table.modspec td {
     border: none !important;
     font-size: 0.95em; }
-  table.recommendtest th, table.recommendtest td {
+  table.modspec th, table.modspec td {
     padding: 1em; }
-  table.recommendtest td.header {
+  table.modspec td.header {
     font-weigth: 400; }
-  table.recommendtest tr:nth-child(even) {
+  table.modspec tr:nth-child(even) {
     background: #ffffff; }
-  table.recommendtest tr:nth-child(odd) {
+  table.modspec tr:nth-child(odd) {
     background: #ffffff; }
-  table.recommendtest thead tr th {
+  table.modspec thead tr th {
     background-color: #5d99d6; }
-  table.recommendtest td, table.recommendtest th {
+  table.modspec td, table.modspec th {
     padding: 1em; }
-  table.recommendtest td.header {
+  table.modspec td.header {
     font-weight: 400; }
 
 td > p:first-child, th > p:first-child {
@@ -934,6 +934,12 @@ p.Biblio, p.NormRef {
   font-weight: 700;
   font-size: 1em;
   text-align: center; }
+
+.ListTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-align: left; }
 
 pre {
   font-family: "Space Mono",monospace;
@@ -1157,16 +1163,16 @@ span.hi {
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com" /> 
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet">
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 <style class="anchorjs"></style>
-</head>
+</link></link></link></link></link></head>
   <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
     <div class="title-section"><div class="document-stage-band" id="draft-band">
     <p class="document-stage">Draft</p>
@@ -1195,7 +1201,7 @@ span.hi {
   </div>
 
   <div class="coverpage-logo">
-    <span><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTUxMS42NSA1MDYuNzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO30uY2xzLTJ7Y2xpcC1wYXRoOnVybCgjY2xpcC1wYXRoKTt9LmNscy0ze2ZpbGw6IzAwYjFmZjt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5NzguMjUiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBpZD0iQmx1ZV9Ib3Jpem9udGFsX0xvY2t1cCIgZGF0YS1uYW1lPSJCbHVlIEhvcml6b250YWwgTG9ja3VwIj48ZyBjbGFzcz0iY2xzLTIiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIyMDQuMDcgMzY1LjI3IDIwNC4wNyA1MDYuNzMgMC4wMSAzODguOTEgMCAxNTMuMTUgMjA0LjA3IDI3MC45NyAyMDQuMDcgMzE4LjExIDE2My4zNCAyOTQuNjEgMTQyLjkzIDI4Mi44MiAxNDIuOTIgMjgyLjgyIDQwLjg0IDIyMy44OCA0MC44NCAzNjUuMzMgMTYzLjM0IDQzNi4wNiAxNjMuMzQgMzg4LjkxIDEwMi4wOSAzNTMuNTUgMTAyLjA5IDMyOS45NyAxMDIuMDkgMzA2LjQgMjA0LjA3IDM2NS4yNyIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTQyOC42OCwyMzUuNzYsMjI0LjUsMzUzLjY0LDQyOC42OCw0NzEuNTIsNjMyLjg1LDM1My42NFptMCwxODguNjFMMzA2LjE3LDM1My42NGwxMjIuNTItNzAuNzMsMTIyLjQ5LDcwLjczLTIwLjQxLDExLjc5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIzMjYuNzggMjcwLjQgMzY3LjYyIDI0Ni44MyA0MDguNDUgMjIzLjI1IDQwOC40NiAyNzAuNCA0NDkuMTggMjQ2Ljg5IDQ0OS4xOCAxNTMuMTIgMjQ1LjEyIDI3MC45NCAyNDUuMTIgMzE3LjU1IDI0NS4xMiAzMTcuNTUgMjQ1LjEyIDMzMS42MyAyNDUuMTIgNTA2LjE3IDI0NS4wMSA1MDYuMTEgMjQ1LjAxIDUwNi43NiA0NDkuMTggMzg4Ljg4IDQ0OS4xOCAyOTQuMDQgNDA4LjQ2IDMxNy41NiA0MDguNDYgMzY0LjcxIDI4NS45NSA0MzUuNDQgMjg1Ljk2IDI5My45OCAzMjYuNzggMjcwLjQiLz48ZyBjbGFzcz0iY2xzLTIiPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTg4MC41NywzOTguMTdjLTMyLjgxLDAtNTctMjQuMDYtNTctNTYuMDVzMjQuMi01Ni4wNSw1Ny01Ni4wNSw1Ni45MSwyNCw1Ni45MSw1Ni4wNS0yNC4xNSw1Ni4wNi01Ni45MSw1Ni4wNlptMzguODctNTYuMDVjMC0yMi4zLTE2LjU5LTM5LTM4Ljg3LTM5cy0zOSwxNi44NC0zOSwzOSwxNi42OSwzOSwzOSwzOSwzOC44Ny0xNi42OSwzOC44Ny0zOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEwMDAuNDgsMzEwLjc2YzI0Ljk0LDAsNDMuMTgsMTguNjIsNDMuMTgsNDMuNzFzLTE4LjI0LDQzLjc1LTQzLjE4LDQzLjc1YTQxLjY3LDQxLjY3LDAsMCwxLTI3LjY3LTEwLjA5VjQyNkg5NTUuNjdWMzEyLjhoMTEuNTVMOTcwLjQ0LDMyM2E0MS41LDQxLjUsMCwwLDEsMzAtMTIuMjZabTI1Ljg0LDQzLjcxYzAtMTUuNzEtMTEuNDctMjcuMzUtMjcuMTktMjcuMzVzLTI3LjMsMTEuNzUtMjcuMywyNy4zNSwxMS41OSwyNy4zNSwyNy4zLDI3LjM1LDI3LjE5LTExLjY0LDI3LjE5LTI3LjM1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTE0MS4xOSwzNTQuNjdhNTYuMTUsNTYuMTUsMCwwLDEtLjM1LDUuNjNoLTY3LjY1YzIuMTQsMTMuNSwxMS44NiwyMS44MSwyNS41MSwyMS44MSwxMCwwLDE4LTQuNjEsMjIuNDItMTIuMjFoMThjLTYuNjMsMTcuNi0yMS44NSwyOC4yOC00MC40NiwyOC4yOC0yNC4zNywwLTQyLjgzLTE4LjgxLTQyLjgzLTQzLjcxczE4LjQyLTQzLjcsNDIuODMtNDMuN2MyNS41MSwwLDQyLjQ5LDE5LjY0LDQyLjQ5LDQzLjlabS02Ny41OC04LjNIMTEyNGMtMy4wOC0xMi42Ni0xMi42Mi0yMC4xMy0yNS4zMS0yMC4xMy0xMi44OSwwLTIyLjI4LDcuNzctMjUuMDksMjAuMTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjAzLjUsMzEwLjljMTkuNDksMCwzMS42NiwxNC41MywzMS42NiwzNS4wNnY1MC4xOUgxMjE4VjM0OS40NGMwLTE1LjE0LTYuNTktMjMuMTgtMTkuMTItMjMuMTgtMTMuMSwwLTIyLjM5LDEwLjU0LTIyLjM5LDI1LjI2djQ0LjYzaC0xNy4xNFYzMTIuOGgxMS45NWwzLjMyLDExLjYzYzYuMzEtOC40MSwxNi42MS0xMy41MywyOC44NS0xMy41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik05MzMuNDUsNDkwLjJjLS40NCwzMy4xMi0yMi44LDU2Ljg5LTU0LjU0LDU2Ljg5cy01NS4zLTIzLjctNTUuMy01NiwyMy4yOS01Niw1NC45NS01NmMyNi4zNSwwLDQ4LjQsMTYuNTksNTMuMjgsNDAuMUg5MTMuNTZjLTQuNjMtMTMuODktMTguMzYtMjIuOTQtMzQuNjUtMjIuOTQtMjEuODQsMC0zNy4yNiwxNi0zNy4yNiwzOC44M3MxNSwzOC44NiwzNy4yNiwzOC44NmMxNy4yNSwwLDMxLjI3LTkuNzUsMzUuMzEtMjQuNDNIODc1LjdWNDkwLjE5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEwMzEuMzEsNTAzLjU4YTUzLjE5LDUzLjE5LDAsMCwxLS4zNiw1LjYzSDk2My4zYzIuMTQsMTMuNTEsMTEuODcsMjEuODEsMjUuNTEsMjEuODEsMTAsMCwxOC00LjYsMjIuNDMtMTIuMmgxOGMtNi42NCwxNy41OS0yMS44NSwyOC4yNy00MC40NiwyOC4yNy0yNC4zNywwLTQyLjgzLTE4LjgxLTQyLjgzLTQzLjdzMTguNDItNDMuNzEsNDIuODMtNDMuNzFjMjUuNSwwLDQyLjQ5LDE5LjY1LDQyLjQ5LDQzLjlabS02Ny41OC04LjI5aDUwLjRjLTMuMDgtMTIuNjYtMTIuNjItMjAuMTQtMjUuMzItMjAuMTQtMTIuODgsMC0yMi4yNyw3Ljc4LTI1LjA4LDIwLjE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTA4Ny45NCw1NDcuMDljLTI1LjQ5LDAtNDQuNTYtMTguNjUtNDQuNTYtNDMuNzFzMTkuMDctNDMuNyw0NC41Ni00My43LDQ0LjU2LDE4LjYxLDQ0LjU2LDQzLjcxUzExMTMuMzksNTQ3LjA5LDEwODcuOTQsNTQ3LjA5Wm0yNy4xMi00My43MWMwLTE1Ljk1LTExLjM0LTI3LjM0LTI3LjEyLTI3LjM0cy0yNy4xMiwxMS4zOS0yNy4xMiwyNy4zNCwxMS4zNCwyNy4zNSwyNy4xMiwyNy4zNSwyNy4xMi0xMS4zOSwyNy4xMi0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTExNDQuNDQsNTE4LjZoMTYuNzRjLjQ0LDguODEsNy44NCwxMy40MSwxNy44OCwxMy40MSw5LjIxLDAsMTYuMjgtMy44OSwxNi4yOC0xMC44NiwwLTcuOS04Ljk0LTkuNzEtMTkuMTUtMTEuNDMtMTMuODktMi4zOC0zMC4yNS01LjUzLTMwLjI1LTI0Ljg1LDAtMTQuOTUsMTIuOTItMjUuMTksMzIuMzEtMjUuMTlzMzEuOTMsMTAuNTQsMzIuMjYsMjYuNzFoLTE2LjIyYy0uMzMtNy45My02LjM3LTEyLjE5LTE2LjQ0LTEyLjE5LTkuNDcsMC0xNS4zMyw0LTE1LjMzLDEwLjEyLDAsNy4zNSw4LjUsOC44MSwxOC41NiwxMC40NiwxNC4wOCwyLjM2LDMxLjE5LDUuMDcsMzEuMTksMjUuNjIsMCwxNi4xOS0xMy40OSwyNi42OS0zMy44LDI2LjY5cy0zMy41OS0xMS4yLTM0LTI4LjQ5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTI3NS40OSw0NTkuNjhjMjQuOTQsMCw0My4xOCwxOC42MSw0My4xOCw0My43MXMtMTguMjQsNDMuNzUtNDMuMTgsNDMuNzVhNDEuNjUsNDEuNjUsMCwwLDEtMjcuNjctMTAuMXYzNy45aC0xNy4xNFY0NjEuNzFoMTEuNTVsMy4yMiwxMC4yNGE0MS40OCw0MS40OCwwLDAsMSwzMC0xMi4yN1ptMjUuODUsNDMuN2MwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zMSwxMS43NC0yNy4zMSwyNy4zNCwxMS41OSwyNy4zNSwyNy4zMSwyNy4zNSwyNy4xOS0xMS42MywyNy4xOS0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0MjAsNDYxLjY3VjU0NWgtMTMuODJsLTEuNjctMTAuMTRhNDEuODQsNDEuODQsMCwwLDEtMzAuMjIsMTIuMjFjLTI0Ljg0LDAtNDMuNC0xOC43Ni00My40LTQzLjc1czE4LjU2LTQzLjY2LDQzLjQtNDMuNjZjMTIuMjgsMCwyMi45MSw0LjY0LDMwLjQ4LDEyLjQxbDItMTAuNDJabS0xNy4xOCw0MS42N2MwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zLDExLjc0LTI3LjMsMjcuMzQsMTEuNTksMjcuMzUsMjcuMywyNy4zNSwyNy4xOS0xMS42NCwyNy4xOS0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0OTEuMDgsNTI5LjV2MTUuNTZoLTEyLjczYy0xOC4yNiwwLTI5LjUzLTExLjI2LTI5LjUzLTI5LjY4di0zOWgtMTQuOTF2LTMuMzJsMjktMzAuODJoMi45MXYxOS40NmgyNC44djE0LjY4SDE0NjZWNTE0YzAsOS45Myw1LjUzLDE1LjQ3LDE1LjYzLDE1LjQ3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE1MDcuNDIsNDMxLjEyaDE3Ljd2MTcuNjdoLTE3LjdabS4yOCwzMC41OWgxNy4xNHY4My4zNUgxNTA3LjdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTYzMi4yLDQ2MS42N1Y1NDVoLTEzLjgybC0xLjY3LTEwLjE0YTQxLjg0LDQxLjg0LDAsMCwxLTMwLjIyLDEyLjIxYy0yNC44MywwLTQzLjQtMTguNzYtNDMuNC00My43NXMxOC41Ny00My42Niw0My40LTQzLjY2YzEyLjI4LDAsMjIuOTEsNC42NCwzMC40OCwxMi40MWwyLTEwLjQyWk0xNjE1LDUwMy4zNGMwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zLDExLjc0LTI3LjMsMjcuMzQsMTEuNTksMjcuMzUsMjcuMywyNy4zNVMxNjE1LDUxOS4wNSwxNjE1LDUwMy4zNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMTQ1Mi40NSIgeT0iMTk2LjA4IiB3aWR0aD0iMTcuMTQiIGhlaWdodD0iMTEzLjIzIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNODIzLjYxLDY0MGMwLTMyLjMzLDIzLjU3LTU2LDU1LjU0LTU2LDI1LjU2LDAsNDYuMDUsMTUuOTMsNTEuNzIsNDAuMjVoLTE4Yy01LjE2LTE0LjM5LTE3Ljc3LTIzLjA5LTMzLjc3LTIzLjA5LTIxLjY0LDAtMzcuNSwxNi4yOC0zNy41LDM4LjgzczE1Ljg2LDM4Ljc0LDM3LjUsMzguNzRjMTYuNTEsMCwyOS4yNy05LjMyLDM0LjE0LTI0LjY0aDE4Yy01LjYxLDI1LjQxLTI2LjEsNDEuOC01Mi4xMyw0MS44LTMyLDAtNTUuNTQtMjMuNjYtNTUuNTQtNTUuOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTk4Ni44Niw2OTZjLTI1LjUsMC00NC41Ny0xOC42Ni00NC41Ny00My43MXMxOS4wNy00My43MSw0NC41Ny00My43MSw0NC41NiwxOC42Miw0NC41Niw0My43MVMxMDEyLjMsNjk2LDk4Ni44Niw2OTZaTTEwMTQsNjUyLjNjMC0xNS45NS0xMS4zNS0yNy4zNS0yNy4xMi0yNy4zNXMtMjcuMTMsMTEuNC0yNy4xMywyNy4zNSwxMS4zNSwyNy4zNSwyNy4xMywyNy4zNVMxMDE0LDY2OC4yNSwxMDE0LDY1Mi4zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTA5My43Nyw2MDguNzNjMTkuNDksMCwzMS42NiwxNC41MywzMS42NiwzNS4wNlY2OTRIMTEwOC4zVjY0Ny4yN2MwLTE1LjEzLTYuNTktMjMuMTgtMTkuMTItMjMuMTgtMTMuMSwwLTIyLjM5LDEwLjU0LTIyLjM5LDI1LjI2VjY5NGgtMTcuMTRWNjEwLjYzaDExLjk1bDMuMzMsMTEuNjNjNi4zLTguNDEsMTYuNi0xMy41MywyOC44NC0xMy41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMTQyLjQzLDY2Ny41MWgxNi43NGMuNDQsOC44Miw3Ljg0LDEzLjQyLDE3Ljg5LDEzLjQyLDkuMiwwLDE2LjI3LTMuOSwxNi4yNy0xMC44NiwwLTcuOTEtOC45NC05LjcyLTE5LjE1LTExLjQzLTEzLjg4LTIuMzgtMzAuMjUtNS41NC0zMC4yNS0yNC44NiwwLTE0Ljk1LDEyLjkzLTI1LjE4LDMyLjMxLTI1LjE4czMxLjk0LDEwLjU0LDMyLjI3LDI2LjdoLTE2LjIzYy0uMzMtNy45My02LjM3LTEyLjE4LTE2LjQ0LTEyLjE4LTkuNDcsMC0xNS4zMyw0LTE1LjMzLDEwLjExLDAsNy4zNiw4LjUxLDguODEsMTguNTYsMTAuNDcsMTQuMDksMi4zNSwzMS4yLDUuMDcsMzEuMiwyNS42MiwwLDE2LjE5LTEzLjUsMjYuNjktMzMuODEsMjYuNjlzLTMzLjU5LTExLjIxLTM0LTI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjY3LjEyLDY5NmMtMjUuNSwwLTQ0LjU3LTE4LjY2LTQ0LjU3LTQzLjcxczE5LjA3LTQzLjcxLDQ0LjU3LTQzLjcxLDQ0LjU2LDE4LjYyLDQ0LjU2LDQzLjcxUzEyOTIuNTYsNjk2LDEyNjcuMTIsNjk2Wm0yNy4xMi00My43MWMwLTE1Ljk1LTExLjM1LTI3LjM1LTI3LjEyLTI3LjM1UzEyNDAsNjM2LjM1LDEyNDAsNjUyLjNzMTEuMzUsMjcuMzUsMjcuMTMsMjcuMzUsMjcuMTItMTEuNCwyNy4xMi0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEzNzcuMzMsNjEwLjE2djE2LjE5aC05Yy0xNC4xNywwLTIxLjI0LDguMDgtMjEuMjQsMjMuMThWNjk0aC0xNy4xNFY2MTAuNjNoMTEuNTlsMi45LDExLjM3YzYtNy45LDE0LjE0LTExLjg0LDI1LjUyLTExLjg0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0MzcuNTMsNjc4LjQxVjY5NGgtMTIuNzRjLTE4LjI2LDAtMjkuNTItMTEuMjctMjkuNTItMjkuNjh2LTM5aC0xNC45MVY2MjJsMjktMzAuODJoMi45MnYxOS40NmgyNC44VjYyNS4zSDE0MTIuNHYzNy42NGMwLDkuOTQsNS41MywxNS40NywxNS42MiwxNS40N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xNDUzLjg2LDU4MGgxNy43MXYxNy42N2gtMTcuNzFabS4yOSwzMC41OWgxNy4xM1Y2OTRoLTE3LjEzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0OTQuMzYsNjU4Ljc4VjYxMC42M2gxNy4xNHY0NS43NWMwLDE0LjQ4LDcuOSwyMy4yNywyMC43NywyMy4yN1MxNTUzLDY3MC43LDE1NTMsNjU2LjM4VjYxMC42M2gxNy4xNHY0OC4xNWMwLDIyLjQzLTE0Ljg3LDM3LjIzLTM3Ljg3LDM3LjIzcy0zNy45MS0xNC44LTM3LjkxLTM3LjIzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTY4Ni4zOSw2MDguNzNjMTcuNTcsMCwyOS40MywxMy4zNywyOS40MywzMi4yNHY1M2gtMTcuMTN2LTQ4LjhjMC0xMy40Mi01LjgzLTIxLjA5LTE2LjIxLTIxLjA5LTExLDAtMTkuNTUsMTAuMTItMTkuNTUsMjQuMzFWNjk0SDE2NDYuMnYtNDguOGMwLTEzLjQyLTUuNzktMjEuMDktMTYuMjQtMjEuMDktMTEuMDgsMC0xOS42MywxMC4xMi0xOS42MywyNC4zMVY2OTRIMTU5My4yVjYxMC42M2gxMi4xNGwzLDEwLjc3YTMzLjM4LDMzLjM4LDAsMCwxLDI1Ljg5LTEyLjY3YzExLjMsMCwyMC4yNSw1LjU1LDI1LDE0LjU5YTMzLDMzLDAsMCwxLDI3LjItMTQuNTlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PC9nPjwvZz48L2c+PC9zdmc+" alt="Open Geospatial Consortium" width="" height="" /></span>
+    <span><img src="/usr/local/bundle/gems/metanorma-ogc-2.2.2.1/lib/isodoc/ogc/html/logo.2021.svg" alt="Open Geospatial Consortium" width="" height="" /></span>
   </div>
 
   <!--
@@ -1243,7 +1249,7 @@ span.hi {
       
       <span class="value"><a href="./document.doc"><i class="far fa-file-word"></i>DOC</a></span>
       
-      
+      </div>
     
     </div>
 
@@ -1278,6 +1284,8 @@ span.hi {
 
   </div>
  </div>
+         
+
 
 <div class="docstage-box">
   <table>
@@ -1311,10 +1319,7 @@ span.hi {
 
 <div class="rule"></div>
 </div>
-  </div>
-
-
-</header>
+  </header>
 
       
     </div>
@@ -1435,9 +1440,9 @@ span.hi {
       <br />
       <div id="_abstract">
         <h1 class="AbstractTitle" id="toc0">I.&#xA0; Abstract</h1>
-        <p id="_ea8b918b-259f-ad32-41cd-bf6720709423">&lt;Insert Abstract Text here&gt;</p>
+        <p id="_ea8b918b-259f-ad32-41cd-bf6720709423">&#x3c;Insert Abstract Text here&#x3e;</p>
       </div>
-      <div class="Section3" id="_071e6b7a-406f-4a97-84a8-ee1eccb6a48b">
+      <div class="Section3" id="_f03e6eeb-f73d-4e59-9df5-25c472bfaac0">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1456,7 +1461,7 @@ span.hi {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_0f459d35-2573-4e61-83c7-0865b388641b">
+      <div class="Section3" id="_d3547d6b-43b5-48b0-9b24-f64c97f34057">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1502,15 +1507,15 @@ span.hi {
 <p id="Czajkowski01" class="NormRef"><i>Grid Information Services for Distributed Resource Sharing.</i>Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C. In: 10th IEEE International Symposium on High Performance Distributed Computing, pp. 181&#x2013;184. IEEE Press, New York (2001)</p>
 <p id="Foster02" class="NormRef"><i>The Physiology of the Grid: an Open Grid Services Architecture for Distributed Systems Integration.</i>Foster, I., Kesselman, C., Nick, J., Tuecke, S. Technical report, Global Grid Forum (2002)</p>
 <p id="NCBI" class="NormRef"><i>National Center for Biotechnology Information</i>, <a href="http://www.ncbi.nlm.nih.gov">http://www.ncbi.nlm.nih.gov</a></p>
-<p id="ISO19101-1" class="NormRef">ISO: ISO 19101-1:2014, <i>Geographic information&#x2009;&#x2014;&#x2009;Reference model&#x2009;&#x2014;&#x2009;Part 1: Fundamentals</i>. <span>International Organization for Standardization</span>, Geneva (2014). <a href="https://www.iso.org/standard/59164.html">https://www.iso.org/standard/59164.html</a></p>
- <p id="ISO19115-1" class="NormRef">ISO: ISO 19115-1:2014, <i>Geographic information&#x2009;&#x2014;&#x2009;Metadata&#x2009;&#x2014;&#x2009;Part 1: Fundamentals</i>. <span>International Organization for Standardization</span>, Geneva (2014). <a href="https://www.iso.org/standard/53798.html">https://www.iso.org/standard/53798.html</a></p>
- <p id="ISO19157" class="NormRef">ISO: ISO 19157:2013, <i>Geographic information &#x2009;&#x2014;&#x2009;Data quality</i>. <span>International Organization for Standardization</span>, Geneva (2013). <a href="https://www.iso.org/standard/32575.html">https://www.iso.org/standard/32575.html</a></p>
-<p id="ISO19139" class="NormRef">ISO: ISO 19139:2007, <i>Geographic information&#x2009;&#x2014;&#x2009;Metadata&#x2009;&#x2014;&#x2009;XML schema implementation</i>. <span>ISO</span> (2007). </p>
-<p id="ISO19115-3" class="NormRef">ISO: ISO/DIS 19115-3, <i>Geographic information&#x2009;&#x2014;&#x2009;Metadata&#x2009;&#x2014;&#x2009;Part 3: XML schema implementation for fundamental concepts</i>. <span>International Organization for Standardization</span>, Geneva<a href="https://www.iso.org/standard/80874.html">https://www.iso.org/standard/80874.html</a></p>
+<p id="ISO19101-1" class="NormRef">ISO: ISO 19101-1:2014, <i>Geographic information&#x2009;&#x2014;&#x2009;Reference model&#x2009;&#x2014;&#x2009;Part 1: Fundamentals</i>. International Organization for Standardization, Geneva (2014). <a href="https://www.iso.org/standard/59164.html">https://www.iso.org/standard/59164.html</a>.</p>
+ <p id="ISO19115-1" class="NormRef">ISO: ISO 19115-1:2014, <i>Geographic information&#x2009;&#x2014;&#x2009;Metadata&#x2009;&#x2014;&#x2009;Part 1: Fundamentals</i>. International Organization for Standardization, Geneva (2014). <a href="https://www.iso.org/standard/53798.html">https://www.iso.org/standard/53798.html</a>.</p>
+ <p id="ISO19157" class="NormRef">ISO: ISO 19157:2013, <i>Geographic information &#x2009;&#x2014;&#x2009;Data quality</i>. International Organization for Standardization, Geneva (2013). <a href="https://www.iso.org/standard/32575.html">https://www.iso.org/standard/32575.html</a>.</p>
+ <p id="ISO19139" class="NormRef">ISO: ISO/TS 19139:2007, <i>Geographic information&#x2009;&#x2014;&#x2009;Metadata&#x2009;&#x2014;&#x2009;XML schema implementation</i>. International Organization for Standardization, Geneva (2007). <a href="https://www.iso.org/standard/32557.html">https://www.iso.org/standard/32557.html</a>.</p>
+ <p id="ISO19115-3" class="NormRef">ISO: ISO/TS 19115-3, <i>Geographic information&#x2009;&#x2014;&#x2009; Metadata&#x2009;&#x2014;&#x2009;Part 3: XML schema implementation for fundamental concepts</i>. International Organization for Standardization, Geneva <a href="https://www.iso.org/standard/32579.html">https://www.iso.org/standard/32579.html</a>.</p>
 <p id="OGC15-097" class="NormRef"><i>OGC Geospatial User Feedback Standard: Conceptual Model</i> (2016)</p>
-<p id="OGC12-019" class="NormRef">Gerhard Gr&#xF6;ger, Thomas H. Kolbe, Claus Nagel, Karl-Heinz H&#xE4;fele: OGC 12-019, <i>OGC City Geography Markup Language (CityGML) Encoding Standard</i>. <span>Open Geospatial Consortium</span> (2012). <a href="https://portal.ogc.org/files/?artifact_id=47842">https://portal.ogc.org/files/?artifact_id=47842</a></p>
- <p id="OGC14-005r3" class="NormRef">Jiyeong Lee, Ki-Joune Li, Sisi Zlatanova, Thomas H. Kolbe, Claus Nagel, Thomas Becker: OGC 14-005r3, <i>OGC&#xAE; IndoorGML</i>. <span>Open Geospatial Consortium</span> (2014). <a href="https://docs.ogc.org/is/14-005r3/14-005r3.html">https://docs.ogc.org/is/14-005r3/14-005r3.html</a></p>
- <p id="OGC06121r9" class="NormRef">Arliss Whiteside Jim Greenwood : OGC 06-121r9, <i>OGC Web Service Common Implementation Specification</i>. <span>Open Geospatial Consortium</span> (2010). <a href="https://portal.ogc.org/files/?artifact_id=38867">https://portal.ogc.org/files/?artifact_id=38867</a></p>
+<p id="OGC12-019" class="NormRef">Gerhard Gr&#xF6;ger, Thomas H. Kolbe, Claus Nagel, Karl-Heinz H&#xE4;fele: OGC 12-019, <i>OGC City Geography Markup Language (CityGML) Encoding Standard</i>. Open Geospatial Consortium (2012). <a href="https://portal.ogc.org/files/?artifact id=47842">https://portal.ogc.org/files/?artifact id=47842</a>.</p>
+ <p id="OGC14-005r3" class="NormRef">Jiyeong Lee, Ki-Joune Li, Sisi Zlatanova, Thomas H. Kolbe, Claus Nagel, Thomas Becker: OGC 14-005r3, <i>OGC&#xAE; IndoorGML</i>. Open Geospatial Consortium (2014). <a href="https://docs.ogc.org/is/14-005r3/14-005r3.html">https://docs.ogc.org/is/14-005r3/14-005r3.html</a>.</p>
+ <p id="OGC06121r9" class="NormRef">Arliss Whiteside Jim Greenwood: OGC 06-121r9, <i>OGC Web Service Common Implementation Specification</i>. Open Geospatial Consortium (2010). <a href="https://portal.ogc.org/files/?artifact id=38867">https://portal.ogc.org/files/?artifact id=38867</a>.</p>
 </div>
       <div id="_terms_and_definitions"><h1 id="toc8">4.&#xA0; Terms and definitions</h1><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word &#x201C;shall&#x201D; (not &#x201C;must&#x201D;) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p><p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the &#x2018;ModSpec&#x2019;. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p><p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p><p id="_a5c2011b-080b-de57-753c-94b804e5f324">This document uses the terms defined in Sub-clause 5.3 of <a href="#OGC06-121r9">[OGC06-121r9]</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word &#x201C;shall&#x201D; (not &#x201C;must&#x201D;) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.</p><p id="_ccf3e63b-6acc-0cd0-687c-fd7f951288d6">For the purposes of this document, the following additional terms and definitions apply.</p><h2 class="TermNum" style="text-align:left;" id="term-example-term">4.1.&#xA0;<b>example term</b></h2>
 <p id="_06db0da1-214c-7f57-bd34-fd4f77edb6ed">term used for exemplary purposes</p>
@@ -1520,7 +1525,7 @@ span.hi {
 
 
 
- <div id="_dba7a326-d460-4fd2-c200-c18e257c490b" class="Note"><p>Note 1 to entry: An example note.</p></div><p class="SourceTitle" style="text-align:center;">Example </p><div id="_6e5e388f-3384-3fe0-1387-5c648e5561e6" class="example"><p id="_2d45db5a-97c4-2358-7890-3aa696c4b809">Here&#x2019;s an example of an example term.</p>
+ <div id="_dba7a326-d460-4fd2-c200-c18e257c490b" class="Note"><p>Note 1 to entry: An example note.</p></div><p class="SourceTitle" style="text-align:center;">Example</p><div id="_6e5e388f-3384-3fe0-1387-5c648e5561e6" class="example"><p id="_2d45db5a-97c4-2358-7890-3aa696c4b809">Here&#x2019;s an example of an example term.</p>
 </div><p>[<b>SOURCE:</b> <a href="#ISO19101-1">ISO 19101-1:2014</a>]</p></div>
       <div id="_conventions">
         <h1 id="toc9">5.&#xA0; Conventions</h1>
@@ -1554,7 +1559,7 @@ span.hi {
 
 <p id="_1ad1f3a4-290a-4b26-7f68-a63544f01832">Use the following table for Requirements Classes.</p>
 
-<table id="rc_data-retrieval" class="recommendclass" style="border-collapse:collapse;border-spacing:0;"><thead><tr><th colspan="2" style="vertical-align:top;" scope="colgroup" class="recommend"><p class="RecommendationTitle">Requirements class 1</p></th></tr></thead><tbody><tr><td colspan="2" style="vertical-align:top;" class="recommend"><p><a href="http://www.opengis.net/spec/ABCD/m.n/req/data-retrieval">http://www.opengis.net/spec/ABCD/m.n/req/data-retrieval</a></p></td></tr><tr><td style="vertical-align:top;" class="recommend">Target type</td><td style="vertical-align:top;" class="recommend">Implementation Specification</td></tr><tr><td style="vertical-align:top;" class="recommend">Dependency</td><td style="vertical-align:top;" class="recommend"><a href="http://www.example.org/req/blah">http://www.example.org/req/blah</a></td></tr></tbody></table>
+<table id="rc_data-retrieval" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 1</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Target type</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Implementation Specification</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Dependency</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.example.org/req/blah</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">Label</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="http://www.opengis.net/spec/ABCD/m.n/req/data-retrieval">http://www.opengis.net/spec/ABCD/m.n/req/data-retrieval</a></td></tr></tbody></table>
 
 <div id="_requirement_1"><h3>7.1.1.&#xA0; Requirement 1</h3>
 
@@ -1562,10 +1567,10 @@ span.hi {
 
 <p id="_2c02de4d-abb2-5df7-0c61-0835e9a24783">Use the following table for Requirements, number sequentially.</p>
 
-<table id="_82f21723-1470-c1ef-9355-fa87cc89b83b" class="recommend" style="border-collapse:collapse;border-spacing:0;"><thead><tr><th colspan="2" style="vertical-align:top;" scope="colgroup" class="recommend"><p class="RecommendationTitle">Requirement 1</p></th></tr></thead><tbody><tr><td colspan="2" style="vertical-align:top;" class="recommend"><p>/req/data-retrieval/req-name-1</p></td></tr><tr><td colspan="2" style="vertical-align:top;" class="recommend"><p id="_00d6f999-5802-8ac5-6b06-f234836baf7c">For each UML class defined or referenced in the Relief Package:</p>
-</td></tr><tr><td style="vertical-align:top;" class="recommend">A</td><td style="vertical-align:top;" class="recommend"><p id="_d9c0a2d8-2142-d25d-a98d-5c08cf2e304d">The Implementation Specification SHALL contain an element which represents the
+<table id="_0f50e27a-5eaa-08f8-668f-1b051a476a09" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 1</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Label</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/req-name-1</td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_00d6f999-5802-8ac5-6b06-f234836baf7c">For each UML class defined or referenced in the Relief Package:</p>
+</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">A</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_d9c0a2d8-2142-d25d-a98d-5c08cf2e304d">The Implementation Specification SHALL contain an element which represents the
 same concept as that defined for the UML class.</p>
-</td></tr><tr><td style="vertical-align:top;" class="recommend">B</td><td style="vertical-align:top;" class="recommend"><p id="_9ffaf59d-2265-16c5-85d1-52b6b660c7b9">The Implementation Specification SHALL represent associations with the same
+</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">B</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_9ffaf59d-2265-16c5-85d1-52b6b660c7b9">The Implementation Specification SHALL represent associations with the same
 source, target, direction, roles, and multiplicities as those of the UML class.</p>
 </td></tr></tbody></table>
 
@@ -1584,7 +1589,7 @@ source, target, direction, roles, and multiplicities as those of the UML class.<
 
 <p id="_b11e2615-ef86-94de-8814-6150b81aac03">Use the following table for Requirements Classes.</p>
 
-<table id="rc_zone-query" class="recommendclass" style="border-collapse:collapse;border-spacing:0;"><thead><tr><th colspan="2" style="vertical-align:top;" scope="colgroup" class="recommend"><p class="RecommendationTitle">Requirements class 2</p></th></tr></thead><tbody><tr><td colspan="2" style="vertical-align:top;" class="recommend"><p><a href="http://www.opengis.net/spec/ABCD/m.n/req/zone-query">http://www.opengis.net/spec/ABCD/m.n/req/zone-query</a></p></td></tr><tr><td style="vertical-align:top;" class="recommend">Target type</td><td style="vertical-align:top;" class="recommend">Implementation Specification</td></tr><tr><td style="vertical-align:top;" class="recommend">Dependency</td><td style="vertical-align:top;" class="recommend"><a href="http://www.example.org/req/blah">http://www.example.org/req/blah</a></td></tr><tr><td style="vertical-align:top;" class="recommend">Dependency</td><td style="vertical-align:top;" class="recommend"><a href="#rc_data-retrieval">/req/data-retrieval</a></td></tr></tbody></table>
+<table id="rc_zone-query" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 2</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Target type</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Implementation Specification</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Dependency</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.example.org/req/blah</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Dependency</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="#rc_data-retrieval">/req/data-retrieval</a></td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">Label</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="http://www.opengis.net/spec/ABCD/m.n/req/zone-query">http://www.opengis.net/spec/ABCD/m.n/req/zone-query</a></td></tr></tbody></table>
 
 <div id="_requirement_1_2"><h3>8.1.1.&#xA0; Requirement 1</h3>
 
@@ -1592,10 +1597,10 @@ source, target, direction, roles, and multiplicities as those of the UML class.<
 
 <p id="_3827dffa-54a4-42a9-fff6-9a0dc87914c8">Use the following table for Requirements, number sequentially.</p>
 
-<table id="_fbadd203-e2c2-487b-be50-c0de79f7d559" class="recommend" style="border-collapse:collapse;border-spacing:0;"><thead><tr><th colspan="2" style="vertical-align:top;" scope="colgroup" class="recommend"><p class="RecommendationTitle">Requirement 2</p></th></tr></thead><tbody><tr><td colspan="2" style="vertical-align:top;" class="recommend"><p>/req/zone-query/req-name-1</p></td></tr><tr><td colspan="2" style="vertical-align:top;" class="recommend"><p id="_bf31b7bb-6ceb-cf23-5873-d115ef523b0e">For each UML class defined or referenced in the Relief Package:</p>
-</td></tr><tr><td style="vertical-align:top;" class="recommend">A</td><td style="vertical-align:top;" class="recommend"><p id="_e557633c-fdd3-cb21-1a9d-6e94f9487f50">The Implementation Specification SHALL contain an element which represents the
+<table id="_70e5d63d-2b1d-7906-8415-3e22048de621" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 2</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Label</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/zone-query/req-name-1</td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_bf31b7bb-6ceb-cf23-5873-d115ef523b0e">For each UML class defined or referenced in the Relief Package:</p>
+</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">A</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_e557633c-fdd3-cb21-1a9d-6e94f9487f50">The Implementation Specification SHALL contain an element which represents the
 same concept as that defined for the UML class.</p>
-</td></tr><tr><td style="vertical-align:top;" class="recommend">B</td><td style="vertical-align:top;" class="recommend"><p id="_9de0dfa4-93af-2182-0397-79e22082180e">The Implementation Specification SHALL represent associations with the same
+</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">B</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_9de0dfa4-93af-2182-0397-79e22082180e">The Implementation Specification SHALL represent associations with the same
 source, target, direction, roles, and multiplicities as those of the UML class.</p>
 </td></tr></tbody></table>
 
@@ -1619,8 +1624,8 @@ source, target, direction, roles, and multiplicities as those of the UML class.<
 
 <div id="_requirement_1_3"><h3>A.1.1.&#xA0; Requirement 1</h3>
 
-<table id="_5bbb472c-11f6-71bb-e0cb-984db40069de" class="recommend" style="border-collapse:collapse;border-spacing:0;"><thead><tr><th colspan="2" style="vertical-align:top;" scope="colgroup" class="recommend"><p class="RecommendationTitle">Requirement A.1</p></th></tr></thead><tbody><tr><td colspan="2" style="vertical-align:top;" class="recommend"><p>/req/req-class-a/req-name-1</p></td></tr><tr><td style="vertical-align:top;" class="recommend">Test purpose</td><td style="vertical-align:top;" class="recommend"><p id="_d47d8426-5d28-1c1c-2ac5-d2cb76633cdb">Verify that&#x2026;&#x200B;</p>
-</td></tr><tr><td style="vertical-align:top;" class="recommend">Test method</td><td style="vertical-align:top;" class="recommend"><p id="_82b50db0-7bcd-8066-e386-e61f2727f4c2">Inspect&#x2026;&#x200B;</p>
+<table id="_f47c02ed-6861-e4d1-ef07-329750ecf0f7" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.1</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Test purpose</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_d47d8426-5d28-1c1c-2ac5-d2cb76633cdb">Verify that&#x2026;&#x200B;</p>
+</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">Test method</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_82b50db0-7bcd-8066-e386-e61f2727f4c2">Inspect&#x2026;&#x200B;</p>
 </td></tr></tbody></table>
 </div>
 
