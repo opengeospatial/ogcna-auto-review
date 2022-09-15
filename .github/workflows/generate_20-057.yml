@@ -22,6 +22,7 @@ jobs:
           cd 20-057
           metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf ./core/standard/20-057.adoc
           cp ./core/standard/20-057.html ../main/20-057.html
+          cp ./core/standard/20-057.pdf ../main/20-057.pdf          
           cd ../main
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
