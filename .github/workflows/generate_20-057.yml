@@ -1,0 +1,30 @@
+name: generate_20-057
+on:
+  schedule:
+    - cron:  '1 19 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/ogcapi-tiles
+          path: 20-057
+      - name: Generate document
+        run: |
+          cd 20-057
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf ./core/standard/20-057.adoc
+          cp ./core/standard/20-057.html ../main/20-057.html
+          cd ../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 20-057.html 20-057.pdf
+          git commit -am "Automated generation of HTML documents"
+          git push
