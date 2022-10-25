@@ -653,7 +653,7 @@ dl {
     font-weight: 700;
     font-size: 1em;
     text-align: center; }
-  .figure > img {
+  .figure > img, .figure > svg {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -1442,7 +1442,7 @@ span.hi {
         <h1 class="AbstractTitle" id="toc0">I.&#xA0; Abstract</h1>
         <p id="_ea8b918b-259f-ad32-41cd-bf6720709423">&#x3c;Insert Abstract Text here&#x3e;</p>
       </div>
-      <div class="Section3" id="_29c14139-9e60-442d-b6dd-1043aec83bfc">
+      <div class="Section3" id="_51e77d88-fcc7-4fda-965f-a843e285688b">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1461,7 +1461,7 @@ span.hi {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_917eb660-e7df-4ecf-bd38-2ab4d165b733">
+      <div class="Section3" id="_932b610b-aca9-48b9-8129-ceea83021e0f">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1566,7 +1566,7 @@ for a particular collection of geospatial data, for a dataset as a whole, or
 in connection with <i>OGC API&#x2009;&#x2014;&#x2009;Processes&#x2009;&#x2014;&#x2009;Part 3: Workflows &#x26; Chaining</i>, the output of
 a processing workflow.</p>
 
-<table id="rc_data-retrieval" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 1</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Target type</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">DGGS Data Retrieval</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Dependency</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">Label</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="http://www.opengis.net/spec/ogcapi-dggs/0.0/req/data-retrieval">http://www.opengis.net/spec/ogcapi-dggs/0.0/req/data-retrieval</a></td></tr></tbody></table>
+<table id="rc_data-retrieval" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 1</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">DGGS Data Retrieval</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisite</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Label</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="http://www.opengis.net/spec/ogcapi-dggs/0.0/req/data-retrieval">http://www.opengis.net/spec/ogcapi-dggs/0.0/req/data-retrieval</a></td></tr></tbody></table>
 
 <div id="_retrieve_data_from_single_zone"><h3>7.1.1.&#xA0; Retrieve data from single zone</h3>
 
@@ -1575,21 +1575,21 @@ at the resource path <tt>&#x2026;&#x200B;/dggs/{dggsId}/zones/{zoneId}/data</tt>
 
 <div id="_operation"><h4>7.1.1.1.&#xA0; Operation</h4>
 
-<table id="_51446e71-f89a-ef8a-ecc8-23415875a3d8" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 1</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Label</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/single-zone-data-op</td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_d5884996-9844-ff59-2bbf-371a84fe8d9a">For retrieving data for a single DGGS zone:</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">A</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_6f7ffc90-b04e-bf06-88bc-ae6a6e7977c5">The Implementation SHALL support an HTTP GET operation at a resource path
+<table id="_51446e71-f89a-ef8a-ecc8-23415875a3d8" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 1</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Label</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/single-zone-data-op</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_d5884996-9844-ff59-2bbf-371a84fe8d9a">For retrieving data for a single DGGS zone:</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_6f7ffc90-b04e-bf06-88bc-ae6a6e7977c5">The Implementation SHALL support an HTTP GET operation at a resource path
 ending with <tt>&#x2026;&#x200B;/dggs/{dggsId}/zones/{zoneId}/data</tt>.</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">B</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_ef95212d-93d4-5eb8-8074-aca46a6affbc">The Implementation SHALL provide a templated  link to this resource path using
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_ef95212d-93d4-5eb8-8074-aca46a6affbc">The Implementation SHALL provide a templated  link to this resource path using
 the link relation type <a href="http://www.opengis.net/def/rel/ogc/1.0/dggs-zone-data">http://www.opengis.net/def/rel/ogc/1.0/dggs-zone-data</a>.</p>
 </td></tr></tbody></table>
 </div>
 
 <div id="_response"><h4>7.1.1.2.&#xA0; Response</h4>
 
-<table id="_fe545d9d-2cce-6bb5-6667-2e7a4da25eee" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 2</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Label</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/single-zone-data-response</td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_fc1858bb-306a-a599-6b58-6b5bc753963e">For the response to a query retrieving data for a single DGGS zone:</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">A</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_7f3afc52-7f0b-7d7c-3561-d3cb66ec11ba">The response of the HTTP GET operation SHALL have a status code of 200.</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">B</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_6c3b7edc-25ef-4c0b-82ff-682f377a8541">The content of the response SHALL be a data packet corresponding precisely to the area
+<table id="_fe545d9d-2cce-6bb5-6667-2e7a4da25eee" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 2</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Label</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/single-zone-data-response</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_fc1858bb-306a-a599-6b58-6b5bc753963e">For the response to a query retrieving data for a single DGGS zone:</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_7f3afc52-7f0b-7d7c-3561-d3cb66ec11ba">The response of the HTTP GET operation SHALL have a status code of 200.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_6c3b7edc-25ef-4c0b-82ff-682f377a8541">The content of the response SHALL be a data packet corresponding precisely to the area
 covered by the DGGS zone, at the resolution / scale corresponding to that zone.</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">C</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_c7db0cbd-df88-5922-8d6c-f6af426112fd">The selection of an encoding for the response SHALL be consistent with
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">C</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_c7db0cbd-df88-5922-8d6c-f6af426112fd">The selection of an encoding for the response SHALL be consistent with
 HTTP content negotiation.</p>
 </td></tr></tbody></table>
 </div>
@@ -1602,12 +1602,12 @@ at the resource path <tt>&#x2026;&#x200B;/dggs/{dggsId}/data?zones={zoneId},&#x2
 
 <div id="_operation_2"><h4>7.1.2.1.&#xA0; Operation</h4>
 
-<table id="_d435acbf-d58a-7375-7c9e-847828ea391b" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 3</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Label</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/multi-zone-data-op</td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_27ac32ab-9472-f551-daa9-bd7e52ec90cd">For retrieving data for multiple DGGS zones:</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">A</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_9c834eda-23e6-12f0-95d1-d14876095f28">The Implementation SHALL support an HTTP GET operation at a resource path
+<table id="_d435acbf-d58a-7375-7c9e-847828ea391b" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 3</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Label</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/multi-zone-data-op</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_27ac32ab-9472-f551-daa9-bd7e52ec90cd">For retrieving data for multiple DGGS zones:</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_9c834eda-23e6-12f0-95d1-d14876095f28">The Implementation SHALL support an HTTP GET operation at a resource path
 ending with <tt>&#x2026;&#x200B;/dggs/{dggsId}/zones/data</tt>.</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">B</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_c0272579-a86c-d982-676f-64b0f8d2d4cd">The Implementation SHALL support a <tt>zones</tt> query parameter, consisting of a list
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_c0272579-a86c-d982-676f-64b0f8d2d4cd">The Implementation SHALL support a <tt>zones</tt> query parameter, consisting of a list
 of zone IDs in a format consistent with the indexing scheme for the selected DGGS ID.</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">C</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_2dea94aa-2c94-6b85-8c0d-032bd4cebb70">The Implementation SHALL provide a link to this resource path using
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">C</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_2dea94aa-2c94-6b85-8c0d-032bd4cebb70">The Implementation SHALL provide a link to this resource path using
 the link relation type <a href="http://www.opengis.net/def/rel/ogc/1.0/dggs-zone-data">http://www.opengis.net/def/rel/ogc/1.0/dggs-zone-data</a>
 and the variable <tt>{zoneID}</tt> in the template URL.</p>
 </td></tr></tbody></table>
@@ -1615,12 +1615,12 @@ and the variable <tt>{zoneID}</tt> in the template URL.</p>
 
 <div id="_response_2"><h4>7.1.2.2.&#xA0; Response</h4>
 
-<table id="_668faa91-9a95-99f3-6400-ba05f904f379" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 4</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Label</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/multi-zone-data-response</td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_856c6365-6015-5f3c-4ac4-adf492e9521b">For the response to a query retrieving data for multiple DGGS zones:</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">A</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_c182566f-fdd2-1369-be6a-e902fb256a9e">The response of the HTTP GET operation SHALL have a status code of 200.</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">B</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_04280e12-150e-78bf-3488-d096b64b900e">The content of the response SHALL package data packets corresponding
+<table id="_668faa91-9a95-99f3-6400-ba05f904f379" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 4</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Label</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/data-retrieval/multi-zone-data-response</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_856c6365-6015-5f3c-4ac4-adf492e9521b">For the response to a query retrieving data for multiple DGGS zones:</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_c182566f-fdd2-1369-be6a-e902fb256a9e">The response of the HTTP GET operation SHALL have a status code of 200.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_04280e12-150e-78bf-3488-d096b64b900e">The content of the response SHALL package data packets corresponding
 precisely to the area covered by each of the DGGS zones being requested, at the
 resolution / scale corresponding to these zones.</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">C</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_ad3639de-7d17-416e-e5df-649f21e1c264">The selection of an encoding for the response SHALL be consistent with
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">C</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_ad3639de-7d17-416e-e5df-649f21e1c264">The selection of an encoding for the response SHALL be consistent with
 HTTP content negotiation.</p>
 </td></tr></tbody></table>
 </div>
@@ -1636,7 +1636,7 @@ HTTP content negotiation.</p>
 
 <p id="_b11e2615-ef86-94de-8814-6150b81aac03">Use the following table for Requirements Classes.</p>
 
-<table id="rc_zone-query" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 2</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Target type</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Implementation Specification</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Dependency</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.example.org/req/blah</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Dependency</td><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="#rc_data-retrieval">/req/data-retrieval</a></td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">Label</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="http://www.opengis.net/spec/ABCD/m.n/req/zone-query">http://www.opengis.net/spec/ABCD/m.n/req/zone-query</a></td></tr></tbody></table>
+<table id="rc_zone-query" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 2</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Implementation Specification</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.example.org/req/blah<br /><a href="#rc_data-retrieval">/req/data-retrieval</a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Label</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="http://www.opengis.net/spec/ABCD/m.n/req/zone-query">http://www.opengis.net/spec/ABCD/m.n/req/zone-query</a></td></tr></tbody></table>
 
 <div id="_requirement_1"><h3>8.1.1.&#xA0; Requirement 1</h3>
 
@@ -1666,8 +1666,8 @@ HTTP content negotiation.</p>
 
 <div id="_requirement_1_2"><h3>A.1.1.&#xA0; Requirement 1</h3>
 
-<table id="_f47c02ed-6861-e4d1-ef07-329750ecf0f7" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.1</p></th></tr></thead><tbody><tr><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Test purpose</td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_d47d8426-5d28-1c1c-2ac5-d2cb76633cdb">Verify that&#x2026;&#x200B;</p>
-</td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">Test method</td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_82b50db0-7bcd-8066-e386-e61f2727f4c2">Inspect&#x2026;&#x200B;</p>
+<table id="_f47c02ed-6861-e4d1-ef07-329750ecf0f7" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.1</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Test purpose</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_d47d8426-5d28-1c1c-2ac5-d2cb76633cdb">Verify that&#x2026;&#x200B;</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Test method</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_82b50db0-7bcd-8066-e386-e61f2727f4c2">Inspect&#x2026;&#x200B;</p>
 </td></tr></tbody></table>
 </div>
 
