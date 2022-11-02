@@ -17,6 +17,7 @@ The following draft specifications are automatically compiled from asciidoc to H
 * [OGC API - Tiles - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/20-057.html)
 * [2022 Joint OGC and ISO Code Sprint Summary Engineering Report draft](https://opengeospatial.github.io/ogcna-auto-review/22-043r1.html)
 * [OGC GeoPose, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-056r10.html)
+* [OGC API - Common - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/19-072.html)
 * More to follow
 
 
