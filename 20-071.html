@@ -1,0 +1,2145 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+  <!--
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline; }
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Overpass",sans-serif; }
+
+code, pre, tt, kbd, samp {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none; }
+
+code *, pre *, tt *, kbd *, samp * {
+  font-family: "Space Mono",monospace !important;
+  font-variant-ligatures: none; }
+
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: 0.8em; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass",sans-serif; }
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Overpass",sans-serif; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+.h2Annex {
+  font-family: "Overpass",sans-serif; }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto; }
+  dl dt p, dl dd p {
+    margin-top: 0; }
+  dl dt {
+    grid-column-start: 1; }
+  dl dd {
+    grid-column-start: 2; }
+
+b, strong {
+  font-weight: bold; }
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333; }
+
+a.FootnoteRef + a.FootnoteRef:before {
+  content: ", ";
+  vertical-align: super; }
+
+.addition {
+  color: blue; }
+
+.deletion {
+  color: red;
+  text-decoration: line-through; }
+
+#standard-band {
+  background-color: #3D9970; }
+
+#standard {
+  border-bottom: solid 3px #3D9970; }
+
+#abstract-specification-topic-band {
+  background-color: #3D9970; }
+
+#abstract-specification-topic {
+  border-bottom: solid 3px #3D9970; }
+
+#reference-model-band {
+  background-color: #3D9970; }
+
+#reference-model {
+  border-bottom: solid 3px #3D9970; }
+
+#best-practice-band {
+  background-color: #39CCCC; }
+
+#best-practice {
+  border-bottom: solid 3px #39CCCC; }
+
+#discussion-paper-band {
+  background-color: #39CCCC; }
+
+#discussion-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#white-paper-band {
+  background-color: #39CCCC; }
+
+#white-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#technical-paper-band {
+  background-color: #39CCCC; }
+
+#technical-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#engineering-report-band {
+  background-color: #39CCCC; }
+
+#engineering-report {
+  border-bottom: solid 3px #39CCCC; }
+
+#release-notes-band {
+  background-color: #FFDC00; }
+
+#release-notes {
+  border-bottom: solid 3px #FFDC00; }
+
+#user-guide-band {
+  background-color: #FFDC00; }
+
+#user-guide {
+  border-bottom: solid 3px #FFDC00; }
+
+#community-practice-band {
+  background-color: #FF851B; }
+
+#community-practice {
+  border-bottom: solid 3px #FF851B; }
+
+#community-standard-band {
+  background-color: #FF851B; }
+
+#community-standard {
+  border-bottom: solid 3px #FF851B; }
+
+#other-band {
+  background-color: #0074D9; }
+
+#other {
+  border-bottom: solid 3px #0074D9; }
+
+#policy-band {
+  background-color: #0074D9; }
+
+#policy {
+  border-bottom: solid 3px #0074D9; }
+
+#change-request-supporting-document-band {
+  background-color: #0074D9; }
+
+#change-request-supporting-document {
+  border-bottom: solid 3px #0074D9; }
+
+#test-suite-band {
+  background-color: #001F3F; }
+
+#test-suite {
+  border-bottom: solid 3px #001F3F; }
+
+#candidate-band {
+  background-color: #8B9EB7; }
+
+#candidate {
+  border-bottom: solid 3px #8B9EB7; }
+
+#working-draft-band {
+  background-color: #8B9EB7; }
+
+#working-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#proposal-band {
+  background-color: #8B9EB7; }
+
+#proposal {
+  border-bottom: solid 3px #8B9EB7; }
+
+#oab-review-band {
+  background-color: #8B9EB7; }
+
+#oab-review {
+  border-bottom: solid 3px #8B9EB7; }
+
+#committee-draft-band {
+  background-color: #8B9EB7; }
+
+#committee-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#swg-draft-band {
+  background-color: #8B9EB7; }
+
+#swg-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#public-rfc-band {
+  background-color: #48a0e7; }
+
+#public-rfc {
+  border-bottom: solid 3px #48a0e7; }
+
+#tc-vote-band {
+  background-color: #fd06fd; }
+
+#tc-vote {
+  border-bottom: solid 3px #fd06fd; }
+
+#published-band {
+  background-color: #9abd48; }
+
+#published {
+  border-bottom: solid 3px #9abd48; }
+
+#deprecated-band {
+  background-color: #7e0d13; }
+
+#deprecated {
+  border-bottom: solid 3px #7e0d13; }
+
+#retired-band {
+  background-color: #7e0d13; }
+
+#retired {
+  border-bottom: solid 3px #7e0d13; }
+
+.coverpage-maturity, .coverpage-stage {
+  font-family: "Overpass",sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
+
+.icon-svg {
+  width: 100%;
+  color: #5ecf86; }
+
+.wrapper-top {
+  background: #00335b;
+  background: linear-gradient(130deg, #00335b 45%, #f1f8ff 100%);
+  color: #ffffff;
+  padding: 5em 0;
+  width: 100%; }
+
+.wrapper-top-bottom {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #00335b;
+  border-right: 100px solid transparent;
+  position: absolute; }
+
+.document-type-band {
+  top: 260px; }
+
+.document-stage-band > :first-child {
+  height: 240px; }
+
+.coverpage-metadata {
+  margin-top: 35px;
+  padding-top: 15px;
+  margin-right: 25px;
+  border-top: solid 1px white; }
+
+.coverpage-metadata,
+.coverpage-alt-formats {
+  font-size: 12px;
+  font-family: "Overpass",sans-serif;
+  margin-left: 1em;
+  text-align: left; }
+  .coverpage-metadata span,
+  .coverpage-alt-formats span {
+    display: block;
+    text-align: left; }
+    .coverpage-metadata span a,
+    .coverpage-alt-formats span a {
+      color: white; }
+      .coverpage-metadata span a:hover,
+      .coverpage-alt-formats span a:hover {
+        text-decoration: underline;
+        background: none;
+        box-shadow: none !important;
+        font-weight: 400; }
+  .coverpage-metadata .value,
+  .coverpage-alt-formats .value {
+    font-size: 15px;
+    margin-bottom: 15px; }
+  .coverpage-metadata .label,
+  .coverpage-alt-formats .label {
+    font-size: 12px;
+    padding: 0; }
+
+.coverpage-alt-formats span {
+  display: inline;
+  text-align: left; }
+  .coverpage-alt-formats span a {
+    padding-right: 5px; }
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass",sans-serif;
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 1em; }
+  .coverpage-title span {
+    font-family: "Overpass",sans-serif;
+    font-size: 1.8em;
+    line-height: 1; }
+
+.docstage-box table {
+  width: auto; }
+
+.docstage-box th {
+  background-color: #93c0d6; }
+
+.docstage-box td {
+  vertical-align: top;
+  background-color: #daeef3;
+  padding: 0.5em;
+  border: 0; }
+
+.docstage-box th:first-child {
+  border-radius: 1em 0 0 0; }
+
+.docstage-box th:last-child {
+  border-radius: 0 1em 0 0; }
+
+.docstage-box tr:first-child {
+  border-radius: 0 0 0 1em; }
+
+.docstage-box tr:last-child {
+  border-radius: 0 1em 0 0; }
+
+.docstage-box tr:last-child > td:first-child {
+  border-radius: 0 0 0 1em; }
+
+.docstage-box tr:last-child > td:last-child {
+  border-radius: 0 0 1em 0; }
+
+.WordSection11 {
+  padding: 0 2em 0 3em; }
+
+.info-section {
+  padding: 0 2em 0 5em; }
+
+.prefatory-section {
+  padding: 0 3em 0 6em; }
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none; }
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em; }
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass",sans-serif;
+  text-transform: none;
+  font-weight: 300;
+  margin-left: 1em; }
+
+.coverpage-logo img {
+  width: 500px;
+  height: auto; }
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0; }
+
+.copyright {
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: left; }
+
+/* Document Identity */
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em; }
+
+.coverpage-title .title-second {
+  display: none; }
+
+.coverpage-stage-block {
+  font-family: "Overpass",sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase; }
+
+.authors {
+  margin-top: 2em; }
+  .authors span {
+    display: block;
+    line-height: 2; }
+  .authors span.roletag {
+    display: inline-block;
+    font-size: 12px;
+    color: #00335b;
+    background-color: white;
+    padding: 2px 5px;
+    margin-left: 7px;
+    border-radius: 5px; }
+
+/* Draft Warning */
+.coverpage-warning {
+  border: #f36f36 solid 2px;
+  color: #f36f36 !important;
+  margin: 1em 2em;
+  color: #2e81c2;
+  padding: 2em 1em 1em 1em;
+  border-radius: 25px; }
+  .coverpage-warning h1 {
+    font-family: "Overpass",sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2em; }
+
+@media print {
+  .document-info, .copyright {
+    page-break-before: always; }
+  .coverpage {
+    height: 23cm; }
+  .info-section {
+    display: none; }
+  .wrapper-top {
+    top: 0;
+    padding-top: 4cm;
+    padding-bottom: 4cm; }
+  .wrapper-top-bottom {
+    margin-top: -5px;
+    display: none; } }
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #00335b;
+  background-color: #f6f8fa; }
+  body main {
+    margin: 0 3em 0 6em; }
+  @media screen and (min-width: 768px) {
+    body {
+      padding-left: 360px; } }
+  @media print {
+    body {
+      padding-left: 0; } }
+dl {
+  grid-template-columns: minmax(0, 1fr) 93%; }
+  dl pre {
+    overflow-x: scroll; }
+
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+    padding: 5px 10px; }
+  #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+    color: #00335b;
+    text-decoration: none;
+    display: block; }
+    #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+      box-shadow: none;
+      color: white; }
+
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px; }
+
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px; }
+
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #00335b;
+  box-shadow: inset -5px 0px 10px -5px #00335b !important; }
+  #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: white; }
+
+@media print {
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: white;
+    box-shadow: none !important; }
+  #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+    color: #00335b; }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black; } }
+
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  font-size: 14px; }
+
+#toc li:before, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:before {
+  content: " ";
+  display: none; }
+
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  font-weight: 600; }
+
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  background: none;
+  box-shadow: none; }
+
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%; }
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    background-color: #f1f8ff; } }
+
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white; } }
+
+@media screen and (min-width: 768px) {
+  nav {
+    marign-right: 30px; } }
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #00335b;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+    #toggle span {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%); } }
+
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none; } }
+
+@media print {
+  #toggle {
+    display: none; } }
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #00335b;
+  margin: 2em 0; }
+  @media screen and (min-width: 768px) {
+    .rule.toc {
+      display: none; } }
+@media screen and (min-width: 768px) {
+  h1.toc-contents {
+    margin-top: 1em; }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0; } }
+
+#toc-list ul {
+  margin-bottom: 0.25em; }
+
+#toc-list li {
+  list-style-type: none; }
+
+.figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+  .figure .FigureTitle, .figure .figure-title {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  .figure > img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    height: auto; }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+  .document-stage-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 300;
+    height: 160px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-stage-band {
+      display: none; } }
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102; }
+  .document-type-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-type-band {
+      display: none; } }
+  .document-type-band .document-type {
+    top: 20px; }
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important; }
+
+#standard-band p {
+  height: 135px; }
+
+#proposal-band p {
+  height: 150px; }
+
+#standard-band,
+#published-band {
+  color: #7ba812; }
+
+#standard,
+#published {
+  color: #9ABD48; }
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #00335b;
+  font-weight: 400;
+  margin-top: 1.6em;
+  margin-bottom: 0.3em; }
+
+h1, .h1 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin-top: 2em; }
+  h1 #content, .h1 #content {
+    margin-top: 2em; }
+
+h2, .h2 {
+  margin-top: 1.3em;
+  font-size: 1.7em;
+  font-weight: 300; }
+  h2 p, .h2 p {
+    display: inline; }
+
+h3, .h3 {
+  margin-top: 1.3em;
+  font-size: 1.5em;
+  font-weight: 100; }
+
+h4, .h4 {
+  font-size: 1.4em; }
+
+.contact-info {
+  padding: 2em;
+  margin-top: 5em;
+  width: 280px;
+  text-align: left;
+  border: #00335b solid 2px;
+  color: #00335b !important;
+  border-radius: 25px; }
+  .contact-info a:hover {
+    text-decoration: underline;
+    background: none;
+    box-shadow: 0 0 0 0; }
+  .contact-info a, .contact-info a:hover {
+    color: #00335b; }
+  .contact-info p, .contact-info a {
+    font-family: "Space Mono",monospace;
+    font-variant-ligatures: none;
+    font-weight: 400; }
+  .contact-info #boilerplate-name {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 0; }
+  .contact-info #boilerplate-address {
+    font-size: 1em;
+    line-height: 1.3em;
+    margin-top: 0; }
+
+ul, ol {
+  margin-left: 1.2em; }
+
+ul > li {
+  list-style: none; }
+  ul > li:before {
+    content: "\2014";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; }
+  ul > li p:first-child {
+    display: inline; }
+  ul > li:first-child {
+    margin-top: 1em; }
+
+ul ul > li:first-child {
+  margin-top: 0; }
+
+ol ul > li:first-child {
+  margin-top: 0; }
+
+span.keyword {
+  font-weight: 600; }
+
+/* Tables */
+table {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+  /*color: #010d16;*/ }
+  table, table th, table td {
+    border: 1px solid black;
+    font-size: 0.95em; }
+  table th, table td {
+    padding: 1em; }
+  table td.header {
+    font-weigth: 400; }
+  table thead tr th {
+    background-color: #5d99d6; }
+  table td, table th {
+    padding: 1em; }
+  table td.header {
+    font-weight: 400; }
+
+.docstage-box table,
+.docstage-box table th,
+.docstage-box table td {
+  border: none; }
+
+table.modspec {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+  color: #010d16; }
+  table.modspec, table.modspec th, table.modspec td {
+    border: none !important;
+    font-size: 0.95em; }
+  table.modspec th, table.modspec td {
+    padding: 1em; }
+  table.modspec td.header {
+    font-weigth: 400; }
+  table.modspec tr:nth-child(even) {
+    background: #ffffff; }
+  table.modspec tr:nth-child(odd) {
+    background: #ffffff; }
+  table.modspec thead tr th {
+    background-color: #5d99d6; }
+  table.modspec td, table.modspec th {
+    padding: 1em; }
+  table.modspec td.header {
+    font-weight: 400; }
+
+td > p:first-child, th > p:first-child {
+  margin-top: 0em; }
+
+td > p:last-child, th > p:last-child {
+  margin-bottom: 0em; }
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400; }
+
+/* Terms */
+.TermNum {
+  font-weight: 300; }
+
+.TermNum, .Terms, .AltTerms {
+  color: #00335b;
+  font-family: "Overpass",sans-serif; }
+
+h2.TermNum {
+  margin-bottom: 0; }
+
+p.AltTerms {
+  font-size: 24px;
+  margin-top: 1em; }
+
+span.AdmittedLabel {
+  color: #00335b;
+  background-color: #CFE2F3;
+  font-size: 70%;
+  vertical-align: top; }
+
+/* Links, selection */
+a, a:visited {
+  text-decoration: none;
+  color: #2e81c2; }
+
+a:hover {
+  color: #00335b;
+  background: white;
+  box-shadow: 3px 0 0 white, -3px 0 0 white; }
+
+::selection,
+::-moz-selection {
+  background: white;
+  color: #00335b; }
+
+/* Bibliograhy */
+p.Biblio, p.NormRef {
+  margin-top: 1em;
+  margin-left: 2em; }
+
+/* Blocks */
+.SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.ListTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-align: left; }
+
+pre {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow-y: auto;
+  overflow-x: scroll;
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none; }
+
+.Admonition {
+  padding: 1em 1.2em 1.2em 1.2em;
+  margin: 1em 0 1em 0;
+  background-color: #fcad88;
+  border-top: 10px solid #eb5a06;
+  color: #290404; }
+  .Admonition .AdmonitionTitle {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  .Admonition.Important {
+    background-color: #f58cff;
+    color: #5d1364;
+    border-top: 10px solid #9503a8; }
+  .Admonition.Warning {
+    background-color: #ff989d;
+    color: #270204;
+    border-top: 10px solid #e4010c; }
+  .Admonition p, .Admonition.Important p, .Admonition.Warning p {
+    margin: 0; }
+
+.figure, pre, .pseudocode {
+  background-color: #e1eef1;
+  color: #424242;
+  font-size: 0.8em; }
+
+.Note {
+  background-color: #fff8bb;
+  color: #7d760b;
+  padding: 1.2em;
+  margin: 1em 0 1em 0; }
+  .Note p {
+    margin: 0; }
+
+.example {
+  background-color: #e1eef1;
+  color: #424242;
+  padding: 1.2em;
+  margin: 2em 0 1em 0;
+  padding-left: 2em; }
+  .example .example-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-left: -1.5em; }
+  .example pre, .example .pseudocode {
+    background: none; }
+
+.Quote {
+  background-color: #e1eef1;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.formula {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+.recommend .RecommendationTitle, .recommendtest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.require .RecommendationTitle, .requiretest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.permission .RecommendationTitle, .permissiontest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.RecommendationTestTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+/*
+.recommend {
+  &, .example_label {
+    background-color: #f8ffbd;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.permission {
+  &, .example_label {
+    background-color: #cdfdbe;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.require {
+  &, .example_label {
+    background-color: #d3e6ff;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+*/
+.recommend .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.require .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.permission .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle {
+  font-weight: normal;
+  text-align: left; }
+
+#myBtn {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #00335b;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px; }
+  #myBtn:hover {
+    opacity: 1; }
+  @media print {
+    #myBtn {
+      display: none; } }
+a.anchorjs-link:hover {
+  background: none;
+  color: #2e81c2;
+  box-shadow: none; }
+
+@page {
+  margin: 2cm 1cm; }
+
+@media print {
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+    page-break-after: avoid;
+    margin-top: 1.2em; }
+  h1, .h1 {
+    font-size: 1.5em;
+    line-height: 1.5; }
+    h1.content, .h1.content {
+      margin-top: 2em;
+      line-height: 2.5em; }
+  h2, .h2 {
+    font-size: 1.2em; }
+  h3, .h3 {
+    font-size: 1em; }
+  .prefatory-section {
+    page-break-before: always; }
+  .note, .pseudocode {
+    page-break-inside: avoid; }
+  .Note {
+    background-color: #fff495;
+    color: #47430c;
+    padding: 5px;
+    margin: 2em 0 1em 0; }
+    .Note p {
+      padding: 0 5px 0 5px; }
+  nav {
+    line-height: 1; } }
+
+/* Footnotes */
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em; }
+
+span.hi {
+  background-color: yellow; }
+
+-->
+</style><title>OGC API - Common - Users Guide</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet">
+
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<style class="anchorjs"></style>
+</link></link></link></link></link></head>
+  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
+    <div class="title-section"><div class="document-stage-band" id="draft-band">
+    <p class="document-stage">Draft</p>
+</div>
+
+<div class="document-type-band" id="user-guide-band">
+    <p class="document-type">OGC User Guide</p>
+</div>
+
+
+
+  <div id="toggle"> <span>&#x2022;</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+
+    <div class="coverpage-title">
+      <span class="title-first">OGC API - Common - Users Guide</span>
+      <!--<span class="title-second"></span>-->
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTUxMS42NSA1MDYuNzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO30uY2xzLTJ7Y2xpcC1wYXRoOnVybCgjY2xpcC1wYXRoKTt9LmNscy0ze2ZpbGw6IzAwYjFmZjt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5NzguMjUiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBpZD0iQmx1ZV9Ib3Jpem9udGFsX0xvY2t1cCIgZGF0YS1uYW1lPSJCbHVlIEhvcml6b250YWwgTG9ja3VwIj48ZyBjbGFzcz0iY2xzLTIiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIyMDQuMDcgMzY1LjI3IDIwNC4wNyA1MDYuNzMgMC4wMSAzODguOTEgMCAxNTMuMTUgMjA0LjA3IDI3MC45NyAyMDQuMDcgMzE4LjExIDE2My4zNCAyOTQuNjEgMTQyLjkzIDI4Mi44MiAxNDIuOTIgMjgyLjgyIDQwLjg0IDIyMy44OCA0MC44NCAzNjUuMzMgMTYzLjM0IDQzNi4wNiAxNjMuMzQgMzg4LjkxIDEwMi4wOSAzNTMuNTUgMTAyLjA5IDMyOS45NyAxMDIuMDkgMzA2LjQgMjA0LjA3IDM2NS4yNyIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTQyOC42OCwyMzUuNzYsMjI0LjUsMzUzLjY0LDQyOC42OCw0NzEuNTIsNjMyLjg1LDM1My42NFptMCwxODguNjFMMzA2LjE3LDM1My42NGwxMjIuNTItNzAuNzMsMTIyLjQ5LDcwLjczLTIwLjQxLDExLjc5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIzMjYuNzggMjcwLjQgMzY3LjYyIDI0Ni44MyA0MDguNDUgMjIzLjI1IDQwOC40NiAyNzAuNCA0NDkuMTggMjQ2Ljg5IDQ0OS4xOCAxNTMuMTIgMjQ1LjEyIDI3MC45NCAyNDUuMTIgMzE3LjU1IDI0NS4xMiAzMTcuNTUgMjQ1LjEyIDMzMS42MyAyNDUuMTIgNTA2LjE3IDI0NS4wMSA1MDYuMTEgMjQ1LjAxIDUwNi43NiA0NDkuMTggMzg4Ljg4IDQ0OS4xOCAyOTQuMDQgNDA4LjQ2IDMxNy41NiA0MDguNDYgMzY0LjcxIDI4NS45NSA0MzUuNDQgMjg1Ljk2IDI5My45OCAzMjYuNzggMjcwLjQiLz48ZyBjbGFzcz0iY2xzLTIiPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTg4MC41NywzOTguMTdjLTMyLjgxLDAtNTctMjQuMDYtNTctNTYuMDVzMjQuMi01Ni4wNSw1Ny01Ni4wNSw1Ni45MSwyNCw1Ni45MSw1Ni4wNS0yNC4xNSw1Ni4wNi01Ni45MSw1Ni4wNlptMzguODctNTYuMDVjMC0yMi4zLTE2LjU5LTM5LTM4Ljg3LTM5cy0zOSwxNi44NC0zOSwzOSwxNi42OSwzOSwzOSwzOSwzOC44Ny0xNi42OSwzOC44Ny0zOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEwMDAuNDgsMzEwLjc2YzI0Ljk0LDAsNDMuMTgsMTguNjIsNDMuMTgsNDMuNzFzLTE4LjI0LDQzLjc1LTQzLjE4LDQzLjc1YTQxLjY3LDQxLjY3LDAsMCwxLTI3LjY3LTEwLjA5VjQyNkg5NTUuNjdWMzEyLjhoMTEuNTVMOTcwLjQ0LDMyM2E0MS41LDQxLjUsMCwwLDEsMzAtMTIuMjZabTI1Ljg0LDQzLjcxYzAtMTUuNzEtMTEuNDctMjcuMzUtMjcuMTktMjcuMzVzLTI3LjMsMTEuNzUtMjcuMywyNy4zNSwxMS41OSwyNy4zNSwyNy4zLDI3LjM1LDI3LjE5LTExLjY0LDI3LjE5LTI3LjM1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTE0MS4xOSwzNTQuNjdhNTYuMTUsNTYuMTUsMCwwLDEtLjM1LDUuNjNoLTY3LjY1YzIuMTQsMTMuNSwxMS44NiwyMS44MSwyNS41MSwyMS44MSwxMCwwLDE4LTQuNjEsMjIuNDItMTIuMjFoMThjLTYuNjMsMTcuNi0yMS44NSwyOC4yOC00MC40NiwyOC4yOC0yNC4zNywwLTQyLjgzLTE4LjgxLTQyLjgzLTQzLjcxczE4LjQyLTQzLjcsNDIuODMtNDMuN2MyNS41MSwwLDQyLjQ5LDE5LjY0LDQyLjQ5LDQzLjlabS02Ny41OC04LjNIMTEyNGMtMy4wOC0xMi42Ni0xMi42Mi0yMC4xMy0yNS4zMS0yMC4xMy0xMi44OSwwLTIyLjI4LDcuNzctMjUuMDksMjAuMTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjAzLjUsMzEwLjljMTkuNDksMCwzMS42NiwxNC41MywzMS42NiwzNS4wNnY1MC4xOUgxMjE4VjM0OS40NGMwLTE1LjE0LTYuNTktMjMuMTgtMTkuMTItMjMuMTgtMTMuMSwwLTIyLjM5LDEwLjU0LTIyLjM5LDI1LjI2djQ0LjYzaC0xNy4xNFYzMTIuOGgxMS45NWwzLjMyLDExLjYzYzYuMzEtOC40MSwxNi42MS0xMy41MywyOC44NS0xMy41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik05MzMuNDUsNDkwLjJjLS40NCwzMy4xMi0yMi44LDU2Ljg5LTU0LjU0LDU2Ljg5cy01NS4zLTIzLjctNTUuMy01NiwyMy4yOS01Niw1NC45NS01NmMyNi4zNSwwLDQ4LjQsMTYuNTksNTMuMjgsNDAuMUg5MTMuNTZjLTQuNjMtMTMuODktMTguMzYtMjIuOTQtMzQuNjUtMjIuOTQtMjEuODQsMC0zNy4yNiwxNi0zNy4yNiwzOC44M3MxNSwzOC44NiwzNy4yNiwzOC44NmMxNy4yNSwwLDMxLjI3LTkuNzUsMzUuMzEtMjQuNDNIODc1LjdWNDkwLjE5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEwMzEuMzEsNTAzLjU4YTUzLjE5LDUzLjE5LDAsMCwxLS4zNiw1LjYzSDk2My4zYzIuMTQsMTMuNTEsMTEuODcsMjEuODEsMjUuNTEsMjEuODEsMTAsMCwxOC00LjYsMjIuNDMtMTIuMmgxOGMtNi42NCwxNy41OS0yMS44NSwyOC4yNy00MC40NiwyOC4yNy0yNC4zNywwLTQyLjgzLTE4LjgxLTQyLjgzLTQzLjdzMTguNDItNDMuNzEsNDIuODMtNDMuNzFjMjUuNSwwLDQyLjQ5LDE5LjY1LDQyLjQ5LDQzLjlabS02Ny41OC04LjI5aDUwLjRjLTMuMDgtMTIuNjYtMTIuNjItMjAuMTQtMjUuMzItMjAuMTQtMTIuODgsMC0yMi4yNyw3Ljc4LTI1LjA4LDIwLjE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTA4Ny45NCw1NDcuMDljLTI1LjQ5LDAtNDQuNTYtMTguNjUtNDQuNTYtNDMuNzFzMTkuMDctNDMuNyw0NC41Ni00My43LDQ0LjU2LDE4LjYxLDQ0LjU2LDQzLjcxUzExMTMuMzksNTQ3LjA5LDEwODcuOTQsNTQ3LjA5Wm0yNy4xMi00My43MWMwLTE1Ljk1LTExLjM0LTI3LjM0LTI3LjEyLTI3LjM0cy0yNy4xMiwxMS4zOS0yNy4xMiwyNy4zNCwxMS4zNCwyNy4zNSwyNy4xMiwyNy4zNSwyNy4xMi0xMS4zOSwyNy4xMi0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTExNDQuNDQsNTE4LjZoMTYuNzRjLjQ0LDguODEsNy44NCwxMy40MSwxNy44OCwxMy40MSw5LjIxLDAsMTYuMjgtMy44OSwxNi4yOC0xMC44NiwwLTcuOS04Ljk0LTkuNzEtMTkuMTUtMTEuNDMtMTMuODktMi4zOC0zMC4yNS01LjUzLTMwLjI1LTI0Ljg1LDAtMTQuOTUsMTIuOTItMjUuMTksMzIuMzEtMjUuMTlzMzEuOTMsMTAuNTQsMzIuMjYsMjYuNzFoLTE2LjIyYy0uMzMtNy45My02LjM3LTEyLjE5LTE2LjQ0LTEyLjE5LTkuNDcsMC0xNS4zMyw0LTE1LjMzLDEwLjEyLDAsNy4zNSw4LjUsOC44MSwxOC41NiwxMC40NiwxNC4wOCwyLjM2LDMxLjE5LDUuMDcsMzEuMTksMjUuNjIsMCwxNi4xOS0xMy40OSwyNi42OS0zMy44LDI2LjY5cy0zMy41OS0xMS4yLTM0LTI4LjQ5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTI3NS40OSw0NTkuNjhjMjQuOTQsMCw0My4xOCwxOC42MSw0My4xOCw0My43MXMtMTguMjQsNDMuNzUtNDMuMTgsNDMuNzVhNDEuNjUsNDEuNjUsMCwwLDEtMjcuNjctMTAuMXYzNy45aC0xNy4xNFY0NjEuNzFoMTEuNTVsMy4yMiwxMC4yNGE0MS40OCw0MS40OCwwLDAsMSwzMC0xMi4yN1ptMjUuODUsNDMuN2MwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zMSwxMS43NC0yNy4zMSwyNy4zNCwxMS41OSwyNy4zNSwyNy4zMSwyNy4zNSwyNy4xOS0xMS42MywyNy4xOS0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0MjAsNDYxLjY3VjU0NWgtMTMuODJsLTEuNjctMTAuMTRhNDEuODQsNDEuODQsMCwwLDEtMzAuMjIsMTIuMjFjLTI0Ljg0LDAtNDMuNC0xOC43Ni00My40LTQzLjc1czE4LjU2LTQzLjY2LDQzLjQtNDMuNjZjMTIuMjgsMCwyMi45MSw0LjY0LDMwLjQ4LDEyLjQxbDItMTAuNDJabS0xNy4xOCw0MS42N2MwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zLDExLjc0LTI3LjMsMjcuMzQsMTEuNTksMjcuMzUsMjcuMywyNy4zNSwyNy4xOS0xMS42NCwyNy4xOS0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0OTEuMDgsNTI5LjV2MTUuNTZoLTEyLjczYy0xOC4yNiwwLTI5LjUzLTExLjI2LTI5LjUzLTI5LjY4di0zOWgtMTQuOTF2LTMuMzJsMjktMzAuODJoMi45MXYxOS40NmgyNC44djE0LjY4SDE0NjZWNTE0YzAsOS45Myw1LjUzLDE1LjQ3LDE1LjYzLDE1LjQ3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE1MDcuNDIsNDMxLjEyaDE3Ljd2MTcuNjdoLTE3LjdabS4yOCwzMC41OWgxNy4xNHY4My4zNUgxNTA3LjdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTYzMi4yLDQ2MS42N1Y1NDVoLTEzLjgybC0xLjY3LTEwLjE0YTQxLjg0LDQxLjg0LDAsMCwxLTMwLjIyLDEyLjIxYy0yNC44MywwLTQzLjQtMTguNzYtNDMuNC00My43NXMxOC41Ny00My42Niw0My40LTQzLjY2YzEyLjI4LDAsMjIuOTEsNC42NCwzMC40OCwxMi40MWwyLTEwLjQyWk0xNjE1LDUwMy4zNGMwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zLDExLjc0LTI3LjMsMjcuMzQsMTEuNTksMjcuMzUsMjcuMywyNy4zNVMxNjE1LDUxOS4wNSwxNjE1LDUwMy4zNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMTQ1Mi40NSIgeT0iMTk2LjA4IiB3aWR0aD0iMTcuMTQiIGhlaWdodD0iMTEzLjIzIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNODIzLjYxLDY0MGMwLTMyLjMzLDIzLjU3LTU2LDU1LjU0LTU2LDI1LjU2LDAsNDYuMDUsMTUuOTMsNTEuNzIsNDAuMjVoLTE4Yy01LjE2LTE0LjM5LTE3Ljc3LTIzLjA5LTMzLjc3LTIzLjA5LTIxLjY0LDAtMzcuNSwxNi4yOC0zNy41LDM4LjgzczE1Ljg2LDM4Ljc0LDM3LjUsMzguNzRjMTYuNTEsMCwyOS4yNy05LjMyLDM0LjE0LTI0LjY0aDE4Yy01LjYxLDI1LjQxLTI2LjEsNDEuOC01Mi4xMyw0MS44LTMyLDAtNTUuNTQtMjMuNjYtNTUuNTQtNTUuOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTk4Ni44Niw2OTZjLTI1LjUsMC00NC41Ny0xOC42Ni00NC41Ny00My43MXMxOS4wNy00My43MSw0NC41Ny00My43MSw0NC41NiwxOC42Miw0NC41Niw0My43MVMxMDEyLjMsNjk2LDk4Ni44Niw2OTZaTTEwMTQsNjUyLjNjMC0xNS45NS0xMS4zNS0yNy4zNS0yNy4xMi0yNy4zNXMtMjcuMTMsMTEuNC0yNy4xMywyNy4zNSwxMS4zNSwyNy4zNSwyNy4xMywyNy4zNVMxMDE0LDY2OC4yNSwxMDE0LDY1Mi4zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTA5My43Nyw2MDguNzNjMTkuNDksMCwzMS42NiwxNC41MywzMS42NiwzNS4wNlY2OTRIMTEwOC4zVjY0Ny4yN2MwLTE1LjEzLTYuNTktMjMuMTgtMTkuMTItMjMuMTgtMTMuMSwwLTIyLjM5LDEwLjU0LTIyLjM5LDI1LjI2VjY5NGgtMTcuMTRWNjEwLjYzaDExLjk1bDMuMzMsMTEuNjNjNi4zLTguNDEsMTYuNi0xMy41MywyOC44NC0xMy41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMTQyLjQzLDY2Ny41MWgxNi43NGMuNDQsOC44Miw3Ljg0LDEzLjQyLDE3Ljg5LDEzLjQyLDkuMiwwLDE2LjI3LTMuOSwxNi4yNy0xMC44NiwwLTcuOTEtOC45NC05LjcyLTE5LjE1LTExLjQzLTEzLjg4LTIuMzgtMzAuMjUtNS41NC0zMC4yNS0yNC44NiwwLTE0Ljk1LDEyLjkzLTI1LjE4LDMyLjMxLTI1LjE4czMxLjk0LDEwLjU0LDMyLjI3LDI2LjdoLTE2LjIzYy0uMzMtNy45My02LjM3LTEyLjE4LTE2LjQ0LTEyLjE4LTkuNDcsMC0xNS4zMyw0LTE1LjMzLDEwLjExLDAsNy4zNiw4LjUxLDguODEsMTguNTYsMTAuNDcsMTQuMDksMi4zNSwzMS4yLDUuMDcsMzEuMiwyNS42MiwwLDE2LjE5LTEzLjUsMjYuNjktMzMuODEsMjYuNjlzLTMzLjU5LTExLjIxLTM0LTI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjY3LjEyLDY5NmMtMjUuNSwwLTQ0LjU3LTE4LjY2LTQ0LjU3LTQzLjcxczE5LjA3LTQzLjcxLDQ0LjU3LTQzLjcxLDQ0LjU2LDE4LjYyLDQ0LjU2LDQzLjcxUzEyOTIuNTYsNjk2LDEyNjcuMTIsNjk2Wm0yNy4xMi00My43MWMwLTE1Ljk1LTExLjM1LTI3LjM1LTI3LjEyLTI3LjM1UzEyNDAsNjM2LjM1LDEyNDAsNjUyLjNzMTEuMzUsMjcuMzUsMjcuMTMsMjcuMzUsMjcuMTItMTEuNCwyNy4xMi0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEzNzcuMzMsNjEwLjE2djE2LjE5aC05Yy0xNC4xNywwLTIxLjI0LDguMDgtMjEuMjQsMjMuMThWNjk0aC0xNy4xNFY2MTAuNjNoMTEuNTlsMi45LDExLjM3YzYtNy45LDE0LjE0LTExLjg0LDI1LjUyLTExLjg0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0MzcuNTMsNjc4LjQxVjY5NGgtMTIuNzRjLTE4LjI2LDAtMjkuNTItMTEuMjctMjkuNTItMjkuNjh2LTM5aC0xNC45MVY2MjJsMjktMzAuODJoMi45MnYxOS40NmgyNC44VjYyNS4zSDE0MTIuNHYzNy42NGMwLDkuOTQsNS41MywxNS40NywxNS42MiwxNS40N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xNDUzLjg2LDU4MGgxNy43MXYxNy42N2gtMTcuNzFabS4yOSwzMC41OWgxNy4xM1Y2OTRoLTE3LjEzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0OTQuMzYsNjU4Ljc4VjYxMC42M2gxNy4xNHY0NS43NWMwLDE0LjQ4LDcuOSwyMy4yNywyMC43NywyMy4yN1MxNTUzLDY3MC43LDE1NTMsNjU2LjM4VjYxMC42M2gxNy4xNHY0OC4xNWMwLDIyLjQzLTE0Ljg3LDM3LjIzLTM3Ljg3LDM3LjIzcy0zNy45MS0xNC44LTM3LjkxLTM3LjIzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTY4Ni4zOSw2MDguNzNjMTcuNTcsMCwyOS40MywxMy4zNywyOS40MywzMi4yNHY1M2gtMTcuMTN2LTQ4LjhjMC0xMy40Mi01LjgzLTIxLjA5LTE2LjIxLTIxLjA5LTExLDAtMTkuNTUsMTAuMTItMTkuNTUsMjQuMzFWNjk0SDE2NDYuMnYtNDguOGMwLTEzLjQyLTUuNzktMjEuMDktMTYuMjQtMjEuMDktMTEuMDgsMC0xOS42MywxMC4xMi0xOS42MywyNC4zMVY2OTRIMTU5My4yVjYxMC42M2gxMi4xNGwzLDEwLjc3YTMzLjM4LDMzLjM4LDAsMCwxLDI1Ljg5LTEyLjY3YzExLjMsMCwyMC4yNSw1LjU1LDI1LDE0LjU5YTMzLDMzLDAsMCwxLDI3LjItMTQuNTlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PC9nPjwvZz48L2c+PC9zdmc+" alt="Open Geospatial Consortium" width="" height="" /></span>
+  </div>
+
+  <!--
+  <div class="coverpage-tc-name">
+    <span>Technical</span>
+  </div>
+  -->
+
+  <div class="authors">
+    
+    
+    
+
+    
+    
+    <span>Charles Heazel <span class="roletag">Editor</span></span>
+    
+    
+  </div>
+
+    <div class="coverpage-metadata">
+      <span class="label">Submission Date: </span> <span class="value">2017-06-29</span>
+      <span class="label">Approval Date: </span> <span class="value">2027-06-29</span>
+      <span class="label">Publication Date: </span> <span class="value">2029-01-23</span>
+      <span class="label">External identifier of this OGC&#xAE; document: <span class="docnumber value">http://www.opengis.net/doc/UG/ogcapi-common/1.0</span></span>
+      <span class="label">Internal identifier of this OGC&#xAE; document: <span class="docnumber value">20-071</span></span>
+      
+      
+    </div>
+
+    <div class="coverpage-alt-formats">
+      
+    
+    </div>
+
+  </div>
+
+    <div class="wrapper-top-bottom"></div>
+
+  <div class="WordSection11">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="user-guide">OGC User Guide</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <p><span class="coverpage-maturity" id="draft">Draft</span></p>
+  </div>
+</div>
+
+  <div class="coverpage-warning">
+    <div class="boilerplate-legal">
+
+    <div><h1 class="IntroTitle">Notice</h1>
+
+      <p id="_64cd6a1e-b42a-1d67-a46a-682ea4ad73ae">This document is not an OGC Standard. This document is an OGC User Guide and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+      <p id="_4372936d-b228-917f-b16d-56d993e5f2dc">Further, an OGC User Guide should not be referenced as required or mandatory technology in procurements.</p>
+    </div>
+
+
+  </div>
+ </div>
+         
+
+
+<div class="docstage-box">
+  <table>
+    <tr><td>Document number:</td><td>20-071</td></tr>
+    <tr><td>Document type:</td><td>OGC User Guide</td></tr>
+    <tr><td align="right">Document subtype:</td><td align="right"></td></tr>
+    <tr><td align="right">Document stage:</td><td align="right">Draft</td></tr>
+    <tr><td align="right">Document language:</td><td align="right">English</td></tr>
+  </table>
+</div>
+
+<div class="info-section">
+<div class="copyright">
+  <div class="boilerplate-copyright">
+    <div><h1 class="IntroTitle">Copyright notice</h1>
+
+
+      <p id="_a607ce57-2573-47f1-412c-424ff0e684de" style="text-align:center;">Copyright
+        &#xA9; 2017 Open Geospatial Consortium<br />
+        To obtain additional rights of use, visit
+        <a href="http://www.ogc.org/legal/">http://www.ogc.org/legal/</a></p>
+    </div>
+    <div><h1 class="IntroTitle">Note</h1>
+
+      <p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+      <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+    </div>
+  </div>
+</div>
+
+<div class="rule"></div>
+</div>
+  </div>
+</header>
+      
+    </div>
+    <br />
+    <div class="prefatory-section"><div class="license">
+  <div class="boilerplate-license">
+    <div><h1 class="IntroTitle">License Agreement</h1>
+
+
+      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
+        Consortium, (&#x201C;Licensor&#x201D;), free of charge and subject to the terms set
+        forth below, to any person obtaining a copy of this Intellectual Property and
+        any associated documentation, to deal in the Intellectual Property without
+        restriction (except as set forth below), including without limitation the
+        rights to implement, use, copy, modify, merge, publish, distribute, and/or
+        sublicense copies of the Intellectual Property, and to permit persons to whom
+        the Intellectual Property is furnished to do so, provided that all copyright notices
+        on the intellectual property are retained intact and that each person to whom
+        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
+
+      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
+        the modified Intellectual Property must include, in addition to the above
+        copyright notice, a notice that the Intellectual Property includes
+        modifications that have not been approved or adopted by LICENSOR.</p>
+
+      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
+        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
+        THE INTELLECTUAL PROPERTY IS PROVIDED &#x201C;AS
+        IS&#x201D;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
+        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
+        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
+        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER&#x2019;S OWN RISK. IN NO
+        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
+        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
+        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
+        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
+
+      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
+        terminate it at any time by destroying the Intellectual Property together with
+        all copies in any form. The license will also terminate if you fail to comply
+        with any term or condition of this Agreement. Except as provided in the
+        following sentence, no such termination of this license shall require the
+        termination of any third party end-user sublicense to the Intellectual Property
+        which is in force as of the date of notice of such termination. In addition,
+        should the Intellectual Property, or the operation of the Intellectual
+        Property, infringe, or in LICENSOR&#x2019;s sole opinion be
+        likely to infringe, any patent, copyright, trademark or other right of a third
+        party, you agree that LICENSOR, in its sole discretion, may terminate this
+        license without any compensation or liability to you, your licensees or any
+        other party. You agree upon termination of any kind to destroy or cause to be
+        destroyed the Intellectual Property together with all copies in any form,
+        whether held by you or by any third party.</p>
+
+      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
+        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
+        Property shall not be used in advertising or otherwise to promote the sale, use
+        or other dealings in this Intellectual Property without prior written
+        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
+        all times be the sole entity that may authorize you or any third party to use
+        certification marks, trademarks or other special designations to indicate
+        compliance with any LICENSOR standards or specifications.
+        This Agreement is
+        governed by the laws of the Commonwealth of Massachusetts. The application to
+        this Agreement of the United Nations Convention on Contracts for the
+        International Sale of Goods is hereby expressly excluded. In the event any
+        provision of this Agreement shall be deemed unenforceable, void or invalid, such
+        provision shall be modified so as to make it valid and enforceable, and as so
+        modified the entire Agreement shall remain in full force and effect. No
+        decision, action or inaction by LICENSOR shall be construed to be a waiver of
+        any rights or remedies available to it.</p>
+
+      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    </div>
+  </div>
+
+
+
+</div>
+
+<nav>
+  <h1 id="content">Contents</h1>
+  <div id="toc"><ul><li class="h1"><a href="#toc0">      I.&#xA0; Abstract</a></li><li class="h1"><a href="#toc1">      II.&#xA0; Keywords</a></li><li class="h1"><a href="#toc2">      III.&#xA0; Preface</a></li><li class="h1"><a href="#toc3">      IV.&#xA0; Security considerations</a></li><li class="h1"><a href="#toc4">      V.&#xA0; Submitting Organizations</a></li><li class="h1"><a href="#toc5">      VI.&#xA0; Submitters</a></li><li class="h1"><a href="#toc6">      1.&#xA0; Scope</a></li><li class="h1"><a href="#toc7">      2.&#xA0; Terms and definitions</a></li><li class="h1"><a href="#toc8">      3.&#xA0; Abbreviated terms</a></li><li class="h1"><a href="#toc9">      4.&#xA0; Evolution from OGC Web Services</a></li><li class="h1"><a href="#toc10">      5.&#xA0; Architecture</a></li><li class="h2"><a href="#toc11">      5.1.&#xA0; Datasets</a></li><li class="h2"><a href="#toc12">      5.2.&#xA0; Processes</a></li><li class="h2"><a href="#toc13">      5.3.&#xA0; Resource Paths</a></li><li class="h1"><a href="#toc14">      6.&#xA0; Identifiers</a></li><li class="h1"><a href="#toc15">      7.&#xA0; Link Relations</a></li><li class="h2"><a href="#toc16">      7.1.&#xA0; Attributes of Link Relations</a></li><li class="h2"><a href="#toc17">      7.2.&#xA0; Relation Types</a></li><li class="h1"><a href="#toc18">      8.&#xA0; What is a Collection?</a></li><li class="h2"><a href="#toc19">      8.1.&#xA0; Definition</a></li><li class="h2"><a href="#toc20">      8.2.&#xA0; Rationale</a></li><li class="h2"><a href="#toc21">      8.3.&#xA0; Key Concepts</a></li><li class="h1"><a href="#toc22">      9.&#xA0; Using OpenAPI (Informative)</a></li><li class="h2"><a href="#toc23">      9.1.&#xA0; OpenAPI Document (root)</a></li><li class="h2"><a href="#toc24">      9.2.&#xA0; Paths</a></li><li class="h2"><a href="#toc25">      9.3.&#xA0; Operations</a></li><li class="h2"><a href="#toc26">      9.4.&#xA0; Parameters</a></li><li class="h2"><a href="#toc27">      9.5.&#xA0; Servers</a></li><li class="h1"><a href="#toc28">      Annex A (informative) Revision History</a></li><li class="h1"><a href="#toc29">      Bibliography</a></li></ul></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+
+      
+    </div>
+    <br />
+    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <div class="authority">
+  
+  
+
+  
+
+
+
+
+  <div class="boilerplate-feedback">
+
+  </div>
+</div>
+      <br />
+      <div id="_abstract">
+        <h1 class="AbstractTitle" id="toc0">I.&#xA0; Abstract</h1>
+        <p id="_0b9fb3f6-5e0f-4ef1-47f4-c4f66af502c2">The OGC API&#x2009;&#x2014;&#x2009;Common standard is a multi-part standard that specifies reusable building-blocks that can be used in the construction of OGC API Standards. The OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide presents information useful to developers or users of implementations of the OGC API&#x2009;&#x2014;&#x2009;Common standard. The information in the Users Guide is not normative. That is, it is not mandatory. However, it may prove essential to fully understand the normative text in the OGC API&#x2009;&#x2014;&#x2009;Common standard. The Users Guide is therefore intended to serve as an aid to developers and users.</p>
+      </div>
+      <div class="Section3" id="_8225c1a0-2829-4788-8ff4-581396035a8a">
+        <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
+        <p>The following are keywords to be used by search engines and
+    document catalogues.</p>
+        <p>OGC document, geographic information, spatial data, API, json, html, OpenAPI, REST, Common</p>
+      </div>
+      <br />
+      <div id="preface-section">
+        <h1 class="ForewordTitle" id="toc2">III.&#xA0; Preface</h1>
+        <p id="_8ba0feed-acfd-bc4f-1d13-2e75dab20f9a">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+        <p id="_25f6b7a1-8657-2655-9eff-47df179631e0">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+      </div>
+      <div class="Section3" id="_81b1ace7-21d3-2259-3346-8f24ee71ed45">
+        <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
+        <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
+      </div>
+      <div class="Section3" id="_5324693c-9add-4384-8f8f-a916a31a5cbd">
+        <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
+        <p>The following organizations submitted this Document to the
+   Open Geospatial Consortium (OGC):</p>
+        <ul><li>Ecere Corporation</li>
+<li>Heazeltech LLC</li>
+<li>Universitat Aut&#xF2;noma de Barcelona (CREAF)</li></ul>
+      </div>
+      <div class="Section3" id="submitters-section">
+        <h1 class="IntroTitle" id="toc5">VI.&#xA0; Submitters</h1>
+        <p id="_feaa5b51-ad60-39cf-a4bd-25c944916941">All questions regarding this submission should be directed to the editors or the submitters:</p>
+        <p class="TableTitle" style="text-align:center;">Table&#xA0;&#x2014; Submitters</p>
+        <table id="submitters-table" class="MsoISOTable" style="border-width:1px;border-spacing:0;width:90%;table-layout:fixed;">
+          <colgroup>
+            <col style="width: 40%;" />
+            <col style="width: 60%;" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">
+                <b>Name</b>
+              </th>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">
+                <b>Affiliation</b>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Charles Heazel <i>(editor)</i></td>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Heazeltech</td>
+            </tr>
+            <tr>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">J&#xE9;r&#xF4;me Jacovella-St-Louis</td>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Ecere Corporation</td>
+            </tr>
+            <tr>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Joan  Mas&#xF3;</td>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">UAB-CREAF</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="zzSTDTitle1">OGC API - Common - Users Guide</p>
+      <div id="_scope">
+        <h1 id="toc6">1.&#xA0; Scope</h1>
+        <p id="_2b3e58bf-ae48-e72c-77b4-e306b28f9fed">The OGC API&#x2009;&#x2014;&#x2009;Common standard is a multi-part standard that specifies reusable building-blocks that can be used in the construction of OGC API Standards. The purpose of the OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;standard is to define those fundamental building blocks and requirements which are applicable to all, if not most, OGC Web API standards.</p>
+        <p id="_f6ef644f-496d-2c3e-ddcb-a8f2e6398473">The <b>OGC API&#x2009;&#x2014;&#x2009;Common &#x2014; Users Guide</b> presents information useful to developers or users of implementations of OGC API&#x2009;&#x2014;&#x2009;Common. The Users Guide focuses on OGC API&#x2009;&#x2014;&#x2009;Common but is applicable to other OGC API Standards, specifically those OGC API Standards that implement requirements classes from OGC API&#x2009;&#x2014;&#x2009;Common. The Users Guide discusses the architecture adopted by OGC API&#x2009;&#x2014;&#x2009;Common, use of identifiers, link relations, OGC API Collections, and the OpenAPI specification.</p>
+      </div>
+      <div id="_terms_and_definitions"><h1 id="toc7">2.&#xA0; Terms and definitions</h1><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word &#x201C;shall&#x201D; (not &#x201C;must&#x201D;) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p><p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the &#x2018;ModSpec&#x2019;. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p><p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p><h2 class="TermNum" style="text-align:left;" id="uri-definition">2.1.&#xA0;<b>Uniform Resource Identifier (URI)</b></h2>
+<p id="_c1358301-84e7-c64c-1b40-63c77330d31c">an identifier consisting of a sequence of characters matching the syntax rule named &#x201C;&#x3c;URI&#x3e;&#x201D;. (<a href="#rfc3986">IETF RFC 3986</a>)</p>
+ <h2 class="TermNum" style="text-align:left;" id="url-definition">2.2.&#xA0;<b>Uniform Resource Locator (URL)</b></h2>
+<p id="_6d25d62e-cd00-f066-1858-38a5a18cae6d">the subset of <a href="#uri-definition">URIs</a> that, in addition to identifying a resource, provide a means of locating the resource by describing its primary access mechanism (e.g., its network &#x201C;location&#x201D;). (<a href="#rfc3986">IETF RFC 3986</a>)</p>
+ <h2 class="TermNum" style="text-align:left;" id="webapi-definition">2.3.&#xA0;<b>Web API</b></h2>
+<p id="_6efaba4b-0680-fc3c-581d-fec1e91b6008">API using an architectural style that is founded on the technologies of the Web. (<a href="#DWBP">W3C Data on the Web Best Practices</a>)</p>
+ <h2 class="TermNum" style="text-align:left;" id="web-resource-definition">2.4.&#xA0;<b>Web Resource</b></h2>
+<p id="_f4c396d3-c113-6ee7-3d1c-d3bca71e1400">a <a href="#resource-definition">resource</a> that is identified by a URI.</p>
+ </div>
+      <div id="_abbreviated_terms" class="Symbols">
+        <h1 id="toc8">3.&#xA0; Abbreviated terms</h1>
+        <dl id="_7a12c06c-e59d-c271-3258-c8b0259d6ec5">
+          <dt id="symbol-API">
+            <p>API</p>
+          </dt>
+          <dd><p id="_2f15c3f3-297b-787f-6b18-fcd4ed2616dd">Application Programming Interface</p>
+</dd>
+          <dt id="symbol-CORS">
+            <p>CORS</p>
+          </dt>
+          <dd><p id="_6fe9f3cc-2f4b-1e89-f489-0734f2d99843">Cross-Origin Resource Sharing</p>
+</dd>
+          <dt id="symbol-HTTP">
+            <p>HTTP</p>
+          </dt>
+          <dd><p id="_b3c9b82a-8b6c-dbff-0aaf-e968df85b993">Hypertext Transfer Protocol</p>
+</dd>
+          <dt id="symbol-HTTPS">
+            <p>HTTPS</p>
+          </dt>
+          <dd><p id="_2e14c31a-92b6-506d-9076-8094567a3556">Hypertext Transfer Protocol Secure</p>
+</dd>
+          <dt id="symbol-IANA">
+            <p>IANA</p>
+          </dt>
+          <dd><p id="_575df4f8-0d92-93cd-0b0b-4c91e779f9ec">Internet Assigned Numbers Authority</p>
+</dd>
+          <dt id="symbol-OGC">
+            <p>OGC</p>
+          </dt>
+          <dd><p id="_c62da6ff-88fb-a4db-c7d8-645a88ab5605">Open Geospatial Consortium</p>
+</dd>
+          <dt id="symbol-URI">
+            <p>URI</p>
+          </dt>
+          <dd><p id="_d632006f-49ff-2881-6ae7-a5cb628954d5">Uniform Resource Identifier</p>
+</dd>
+          <dt id="symbol-URL">
+            <p>URL</p>
+          </dt>
+          <dd><p id="_104bf288-5fe2-e326-e64c-971f1b023fca">Uniform Resource Locator</p>
+</dd>
+          <dt id="symbol-YAML">
+            <p>YAML</p>
+          </dt>
+          <dd><p id="_a5545da5-5e09-8345-8172-285fccd4998e">YAML Ain&#x2019;t Markup Language</p>
+</dd>
+        </dl>
+      </div>
+      <div id="ug-evolution-from-web-services">
+        <h1 id="toc9">4.&#xA0; Evolution from OGC Web Services</h1>
+        <p id="_aca07e34-f944-c373-98a3-d21b9fff6e8a">OGC Web Service (OWS) standards implement a Remote-Procedure-Call-over-HTTP architectural style using XML for payloads <a href="#ogc-06-121">[7]</a>. This was the state-of-the-art when OWS standards were originally designed in the late 1990s and early 2000s. However, technology has evolved. New Resource-Oriented APIs provide an alternative to the Service-Oriented Approach. New OGC Web API standards are under development to provide API alternatives to the OWS standards.</p>
+        <p id="_08fa747a-aa7c-c590-636c-98f60bc6950f">The OGC API&#x2009;&#x2014;&#x2009;Common Standard specifies common modules for defining OGC Web API standards that follow the current Web architecture. In particular, the recommendations as defined in the <a href="#SDWBP">W3C/OGC best practices for sharing Spatial Data on the Web</a> as well as the <a href="#DWBP">W3C best practices for sharing Data on the Web</a> <a href="#SDWBP">[11]</a> <a href="#DWBP">[10]</a>.</p>
+      </div>
+      <div id="architecture-section">
+        <h1 id="toc10">5.&#xA0; Architecture</h1>
+        <p id="_383ea839-5fd1-14f9-2628-fc2aaf03c2cc">The following &#x201C;architecture&#x201D; captures the core concepts which inform all OGC API Standards.</p>
+        <div id="_datasets"><h2 id="toc11">5.1.&#xA0; Datasets</h2>
+
+<p id="_46c69ea9-1109-9d91-333f-4e6c41f557af">Web APIs implement a Resource Oriented approach to Web-based distributed computing. A coherent set of APIs must be based on a common understanding of the resources to be shared. For OGC API Standards, those resources would be identified using an abstract concept of a geospatial dataset. Such a dataset would have the following characteristics:</p>
+
+<ul id="_6dd7d125-a124-12fe-d9a1-34f861a7cec2"><li><p id="_0a9c120a-1657-dfb5-99f6-3681714ac50b">A dataset can be a vector feature collection, a coverage/imagery, or a collection of datasets (therefore potentially a mix of any of these things)</p>
+</li>
+<li><p id="_98c570ea-0eb8-24b5-b5fd-b5531e9b23e4">A dataset has associated metadata, including some essential information:</p>
+<ul id="_91c8a850-ccf2-088c-6d2e-f892e1e11aa6"><li><p id="_c892ba06-fad6-a6c4-ec43-c3c3cd9d2e2a">Information about what type of dataset it is (vector features (and what type of vector features if limited to one type, e.g. polygons,lines, or points), coverages (values) / imagery (pixels), or sub-datasets&#x2014; more than one of those things)</p>
+</li>
+<li><p id="_d18dae2c-8355-4ae5-c5ef-a20b40ec579d">A textual identifier (e.g. which figures in the resource path)</p>
+</li>
+<li><p id="_34957c6d-6e48-69d7-a240-7a6dba52d45e">A title (short name / description)</p>
+</li>
+<li><p id="_de73b497-677e-e6f4-6284-b73f061bea1e">Access point for the dataset (could be hosted locally or remote)</p>
+</li>
+<li><p id="_c542c9b0-477a-ec09-9a4c-d9c0b454ed1e">Geospatial &#x26; temporal extent</p>
+</li>
+<li><p id="_458a1b89-3be4-348d-6277-45fecd4abe9a">Resolution/scale</p>
+</li>
+<li><p id="_7c0f986d-ae0c-8aa7-7ce7-5a49e60c3509">Units/Range/Bit-Depth/Channels/Dimensions etc. for imagery/coverages</p>
+</li>
+<li><p id="_4f8902e6-3fe6-c8ca-6c4e-678bf62cf9b5">A description of queryables, if applicable</p>
+</li>
+</ul>
+</li>
+<li><p id="_6f5bc601-95b7-cc70-6197-b33a5f01d19e">Keywords/Tags, and longer descriptions are also a commonly useful piece of metadata information</p>
+</li>
+<li><p id="_8550ce30-729e-165e-1f1d-49366caa14aa">Any other ISO 19115 metadata fields can also be associated with the dataset, but are nowhere near as essential to discovering and using geospatial data as those mentioned above. Metadata containing, at a minimum, those essential elements can always be retrieved in ISO 19115-based encodings and potentially other formats.</p>
+</li>
+</ul>
+</div>
+        <div id="_processes"><h2 id="toc12">5.2.&#xA0; Processes</h2>
+
+<p id="_6044ee4a-9ddb-7148-1dbb-e2ec1d2ce18a">Processes take one or more datasets as input, add parameters, and produce one or more datasets as output. The following are examples of types of processes that can all run on a server and be invoked by a remote client application:</p>
+
+<ol type="1" id="_10c8de40-beca-615c-7e53-2eb5a55f7df7"><li><p id="_6170dbe8-6711-2f05-44f8-c694937ce71d">A complex process built as a container or executable, as typical of implementations of the Web Processing Service (WPS) standard</p>
+</li>
+<li><p id="_bce7d789-a22b-6ec9-57fb-8862a4940f16">Process description languages such as the Web Coverage Processing Service (WCPS)</p>
+</li>
+<li><p id="_51f7b9f7-aef6-d52b-5091-9b99471ee8cf">Pre-defined named processes such as &#x2018;vectorization&#x2019;, &#x2018;buffering&#x2019;, &#x2018;rasterization&#x2019; or &#x2018;rendering of a styled map&#x2019;</p>
+</li>
+</ol>
+
+<p id="_2d8f95a7-fbbc-a3a6-9595-61a472f506ea">All of these kinds of processes could share aspects such as taking in an OGC API dataset as input and their output being usable as an OGC API dataset, for direct access and/or asynchronous delivery, and support multiple data partitioning/access mechanisms, estimates/billing elements, and so on.</p>
+</div>
+        <div id="_resource_paths"><h2 id="toc13">5.3.&#xA0; Resource Paths</h2>
+
+<p id="_193c1af3-94bc-3052-c575-674f1f1c3565">The resources exposed through implementations of OGC API Standards are accessed through standardized URL templates. These &#x201C;paths&#x201D; and their associated resources are described in <a href="#dataset-paths">Table 1</a>. This table documents a selection of the paths and resources as of December 2022. This information will be updated as these and other OGC API Standards mature.</p>
+
+<p class="TableTitle" style="text-align:center;">Table 1&#xA0;&#x2014; A selection of OGC Dataset Paths from OGC API Standards approved as of 2022-11-08</p><table id="dataset-paths" class="MsoISOTable" style="border-width:1px;border-spacing:0;width:90%;table-layout:fixed;"><colgroup><col style="width: 60%;" /><col style="width: 40%;" /></colgroup><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col"><b>Path Template</b></th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col"><b>Resource</b></th></tr></thead><tbody><tr><td colspan="2" style="text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><b>Common</b></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Metadata describing the spatial collections available from this API.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections/{collectionId}</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Metadata describing the collection which has the unique identifier <tt>{collectionId}</tt>.</td></tr><tr><td colspan="2" style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><b>Features</b></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections/{collectionId}</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">The Feature Collection resource identified by the <tt>{collectionId}</tt> parameter.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections/{collectionId}/items</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">The individual Features in a Feature Collection.</td></tr><tr><td colspan="2" style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><b>Spatio-temporal environmental data resources</b></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections/{collectionId}</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Identifies a collection of spatio-temporal data with the unique identifier {collectionId}.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections/{collectionId}/{queryType}</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Identifies an Information Resource of type {queryType} associated with the {collectionId} collection.</td></tr><tr><td colspan="2" style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><b>Tiles</b></td></tr><tr><td colspan="2" style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Note: A tile is associated with a resource. {resource} is a place holder for a path segment appropriate for a resource type.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections/{collectionId}/tiles/{tileMatrixSetId}/{tileMatrix}/{tileRow}/{tileCol}</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Feature tile representation of real-world elements at a given resolution restricted by the selected Tile Matrix Set.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections/{collectionId}/tiles/{tileMatrixSetId}</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">A description of the TileMatrixSet identified by the {tileMatrixSetId} identifier.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/collections/{collectionId}/tiles</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">An enumeration of the feature tileset list.</td></tr><tr><td colspan="2" style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><b>Processes</b></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/process</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Lists the processes this API offers.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/processes/{process-id}</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Returns a detailed description of a process.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/processes/{process-id}/jobs</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Returns the running and finished jobs for a process (GET), Executes a process, i.e. creates a new job. Inputs and outputs will have to be specified in a JSON document that needs to be send in the POST body. (POST)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">/processes/{process-id}/jobs/{job-id}</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Returns the status of a job of a process.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">/processes/{process-id}/jobs/{job-id}/results</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Returns the result of a job of a process.</td></tr></tbody></table>
+</div>
+      </div>
+      <div id="identifiers">
+        <h1 id="toc14">6.&#xA0; Identifiers</h1>
+        <p id="_81ac8923-bfeb-df4f-d9c2-38a6e18ddd58">The <a href="https://docs.ogc.org/is/19-072/19-072.html#WEBARCH">Architecture of the World Wide Web</a> establishes the URI as the single global identification system for the Web <a href="#WEBARCH">[8]</a>. Therefore, URIs or <a href="https://docs.ogc.org/is/19-072/19-072.html#rfc6570">URI Templates</a> are used in OGC Web API standards to identify key entities in those standards. In accordance with OGC policy, only the <a href="https://docs.ogc.org/is/19-072/19-072.html#url-definition">Uniform Resource Locator (URL)</a> form of URIs is used.</p>
+        <p id="_03c1a809-7bf1-58ed-4d13-05fbb18f3030">The normative provisions in the OGC API &#x2013; Common &#x2013; Part 1: Core standard are denoted by the URI <tt><a href="http://www.opengis.net/spec/ogcapi-common-1/1.0">http://www.opengis.net/spec/ogcapi-common-1/1.0</a></tt>. All <a href="https://docs.ogc.org/is/19-072/19-072.html#requirement-definition">Requirements</a>, <a href="https://docs.ogc.org/is/19-072/19-072.html#ctm-definition">Conformance Modules</a>, and <a href="https://docs.ogc.org/is/19-072/19-072.html#ctc-definition">Conformance Classes</a> that appear in the standard are denoted by partial URIs that are relative to this base.</p>
+        <p id="_c4c24587-bb48-45ee-a52a-81eccef773c3"><a href="https://docs.ogc.org/is/19-072/19-072.html#resource-definition">Resources</a> described in the standard are denoted by partial URIs that are relative to the <tt>root</tt>
+ node of the API. This node serves as the head of the resource tree
+exposed through an API. In OpenAPI, the root node is identified by the <tt>url</tt> field of the <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md#server-object">Server Object</a>. In the OGC API &#x2013; Common standard the tag <tt>{root}</tt> designates the root node of a URI.</p>
+        <p id="_f6b01566-cc4d-dbc0-4b6c-3c0987a805cc">The partial URIs used to identify <a href="https://docs.ogc.org/is/19-072/19-072.html#resource-definition">Resources</a> in the OGC API &#x2013; Common standard are referred to by the resource <tt>path</tt>. The purpose of a resource <tt>path</tt> is to identify the referenced resource within the context of the standard.
+ Implementors are encouraged to use these partial URIs in their
+implementations, thereby providing a common look and feel to implementations of OGC API Standards.</p>
+        <p id="_2f609103-90f9-8818-32ff-9407f69c74c1">This standard defines <a href="https://docs.ogc.org/is/19-072/19-072.html#resource-definition">Resources</a> which may appear in more than one place in the API. These <a href="https://docs.ogc.org/is/19-072/19-072.html#resource-type-definition">Resource Types</a> are identified by name rather than by URI.</p>
+        <p id="_5483b314-7bd5-8d98-c63b-f3a9a54b485e">
+          <b>Summary for Developers:</b>
+        </p>
+        <p id="_e1833c86-abc2-fbd6-f41a-aec1b2e5db08"><a href="https://docs.ogc.org/is/19-072/19-072.html#rfc3986">RFC 3986</a> defines a URI in Backus-Naur Form <a href="https://docs.ogc.org/is/19-072/19-072.html#bnf-citation">(BNF)</a> as follows:</p>
+        <pre id="_54d2df96-629d-77cd-65b0-b2e67aa920b2" class="prettyprint lang-java"><br /><br />&#xA0;&#xA0;&#xA0; URI = scheme &#x201D;:&#x201D; hier-part [ &#x201C;?&#x201D; query ] [ &#x201C;#&#x201D; fragment ]<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; hier-part&#xA0;&#xA0;&#xA0;&#xA0; = &#x201C;//&#x201D; authority path-abempty<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / path-absolute<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / path-rootless<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / path-empty<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; authority&#xA0;&#xA0;&#xA0;&#xA0; = [ userinfo &#x201C;@&#x201D; ] host [ &#x201D;:&#x201D; port ]<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path-abempty&#xA0; = *( &#x201C;/&#x201D; segment )<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path-absolute = &#x201C;/&#x201D; [ segment-nz *( &#x201C;/&#x201D; segment ) ]<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path-rootless = segment-nz *( &#x201C;/&#x201D; segment )<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path-empty&#xA0;&#xA0;&#xA0; = 0&#x3c;pchar&#x3e;</pre>
+        <p class="SourceTitle" style="text-align:center;">Figure 1&#xA0;&#x2014; Backus-Naur Definition of URI</p>
+        <p id="_3a06cfc3-11a2-85b6-3b2f-26f83c04f057">The following rules should be used when interpreting the BNF <a href="#bnf-citation">[6]</a> for use with this standard:</p>
+        <ul id="_94195ff3-d5aa-169e-6779-c18e77bb5ad5"><li><p id="_351145da-18eb-fa21-62b0-e553a92dc3bd"><tt>scheme</tt> is assumed to be <tt>HTTP</tt> or <tt>HTTPS</tt></p>
+</li>
+<li><p id="_3868b997-b2ce-3e2f-601a-e5a5b2394f31"><tt>authority</tt> is provided by the API developer</p>
+</li>
+<li><p id="_d35cc607-d1de-c449-bf9a-ea8b2937e1e0"><tt>{root}</tt> designates the <tt>scheme</tt>, <tt>authority</tt>, and <tt>path</tt> to the root node of the API implementation.</p>
+</li>
+<li><p id="_770ed99b-cebc-660f-740f-db1a696c92f3">only the <tt>path-absolute</tt> and <tt>path-rootless</tt> patterns are used</p>
+</li>
+<li><p id="_1523f4f6-9337-7a93-62d6-d37daaf13505">parameters passed as part of an operation are encoded in the <tt>query</tt>.</p>
+</li>
+<li><p id="_bc037392-bb37-70a6-7ad7-673c387d830e">parameters passed in HTTP headers or as cookies are out of scope for this Standard.</p>
+</li>
+</ul>
+        <p id="_b2b243e6-59ee-d0e6-c0e5-b357ca63f758">The following example shows a URI categorized according to <a href="#rfc3986">RFC 3986</a> and OGC Web API standards.</p>
+        <pre id="_db235a15-908d-6647-e0d6-a6e4eb112149" class="prettyprint lang-java"><br /><br />URI&#xA0;&#xA0;&#xA0;&#xA0; foo://example.com:8042/myapi/mydata/?name=roads#centerline<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; \__/ \______________/\____________/ \_________/ \________/<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |<br />3986&#xA0;&#xA0;&#xA0; scheme&#xA0;&#xA0;&#xA0;&#xA0; authority&#xA0;&#xA0;&#xA0;&#xA0; path&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; query&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; fragment<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; \__________________________/\_____/\__________/<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |<br />OGC&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; {root}&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path&#xA0;&#xA0; parameters</pre>
+        <p class="SourceTitle" style="text-align:center;">Figure 2&#xA0;&#x2014; Example URI and Components</p>
+        <p id="_7cd157aa-004a-d202-056d-3d83e40eb45a">The OGC API &#x2013; Common &#x2013; Part 1: Core standard does not restrict the lexical space of URIs used in the API beyond the requirements of the <a href="https://docs.ogc.org/is/19-072/19-072.html#rc2616">HTTP</a> and <a href="https://docs.ogc.org/is/19-072/19-072.html#rc3986">URI Syntax</a>
+ IETF RFCs. If URIs include reserved characters that are delimiters in
+the URI subcomponent, these have to be percent-encoded. See Clause 2 of <a href="https://docs.ogc.org/is/19-072/19-072.html#rfc3986">RFC 3986</a> for details.</p>
+        <div id="_f5659822-e369-934b-7800-a7827b9fd8c4" class="Note">
+          <p><span class="note_label">NOTE</span>&#xA0; OGC Web API standards may include a community-defined identifier as part  of a URI (ex. image id or feature id). Definition of the format of those identifiers is out of scope for these standards. Implementers should take care that these identifiers are properly encoded (see <a href="https://docs.ogc.org/is/19-072/19-072.html#rfc3986">RFC 3986</a>) in the URIs for all hosted resources.</p>
+        </div>
+      </div>
+      <div id="link-relations-section">
+        <h1 id="toc15">7.&#xA0; Link Relations</h1>
+        <p id="_9a567b09-7d0f-68ca-35a0-11ffbab5c369">This section provides a discussion of link relations, the governing policies and standards, as well as how they should be used.</p>
+        <p id="_a9d2a788-06a5-63b6-f66f-07c03b022668">Links between elements of an OGC API are encoded using the link relation schema provided in <a href="#link-schema">Figure 3</a>.</p>
+        <pre id="link-schema" class="prettyprint "><br /><br />type: object<br />required:<br />&#xA0; - href<br />&#xA0; - rel<br />properties:<br />&#xA0; href:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: Supplies the URI to a remote resource (or resource fragment).<br />&#xA0;&#xA0;&#xA0; example: http://data.example.com/buildings/123<br />&#xA0; rel:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: The type or semantics of the relation.<br />&#xA0;&#xA0;&#xA0; example: alternate<br />&#xA0; type:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: A hint indicating what the media type of the result of dereferencing the link should be.<br />&#xA0;&#xA0;&#xA0; example: application/geo+json<br />&#xA0; hreflang:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: A hint indicating what the language of the result of dereferencing the link should be.<br />&#xA0;&#xA0;&#xA0; example: en<br />&#xA0; title:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: Used to label the destination of a link such that it can be used as a human-readable identifier.<br />&#xA0;&#xA0;&#xA0; example: Trierer Strasse 70, 53115 Bonn<br />&#xA0; length:<br />&#xA0;&#xA0;&#xA0; type: integer</pre>
+        <p class="SourceTitle" style="text-align:center;">Figure 3&#xA0;&#x2014; Link Schema</p>
+        <div id="relation-attributes-section"><h2 id="toc16">7.1.&#xA0; Attributes of Link Relations</h2>
+
+<p id="_d1fca8ac-76eb-a024-17bd-3bb5633ca373">The attributes supported by link relations are presented in this subsection.</p>
+
+<div id="_href_attribute"><h3>7.1.1.&#xA0; Href Attribute</h3>
+
+<p id="_f94958fe-aacb-9cd1-add8-ca799de5229d">The <tt>href</tt> attribute is mandatory.</p>
+
+<p id="_eaa7c96b-aea6-e788-88f9-e891e732f8a0">&#x201C;The Locator Attribute (href) supplies the data that allows an application to find a remote resource or resource fragment. The value of this attribute is an Internationalized Resource Identifier (IRI) which serves as the Uniform Resource Identifier for the remote resource.&#x201D; (W3C XLink Version 1.1)</p>
+
+<div id="_5044f345-d6e2-8dcc-3d7d-2aacd27b04ea" class="Note"><p><span class="note_label">NOTE</span>&#xA0; An IRI is a sequence of characters from the Universal Character Set (Unicode/ISO 10646).  A mapping from IRIs to URIs is defined, which means that IRIs can be used instead of URIs, where appropriate, to identify resources. (<a href="#rfc3987">RFC 3987</a>)</p></div>
+</div>
+
+<div id="_rel_attribute"><h3>7.1.2.&#xA0; Rel Attribute</h3>
+
+<p id="_189a4bbf-1328-d397-72b6-f11d67462bec">The <tt>rel</tt> attribute is mandatory.</p>
+
+<p id="_e1980981-473a-48b9-86eb-1dae96b2f3ff">&#x201C;In the simplest case, a link relation type identifies the semantics of a link.  For example, a link with the relation type &#x201C;copyright&#x201D; indicates that the current link context has a copyright resource at the link target.</p>
+
+<p id="_0068539f-3c45-b096-df35-a069867850c9">Link relation types can also be used to indicate that the target resource has particular attributes, or exhibits particular behaviours; for example, a &#x201C;service&#x201D; link implies that the link target can be used as part of a defined protocol (in this case, a service description).</p>
+
+<p id="_20f705d9-0067-5e37-aa44-d025554e14c1">Relation types are not to be confused with media types [<a href="#rfc2046">RFC 2046</a>]; they do not identify the format of the representation that results when the link is dereferenced.  Rather, they only describe how the current context is related to another resource.</p>
+
+<p id="_b634eab0-6fda-f20c-28e2-5914bdc97ecc">Relation types SHOULD NOT infer any additional semantics based upon the presence or absence of another link relation type, or its own cardinality of occurrence.  An exception to this is the combination of the &#x201C;alternate&#x201D; and &#x201C;stylesheet&#x201D; registered relation types, which has special meaning in HTML for historical reasons.</p>
+
+<p id="_509a7975-42f4-f209-4845-8dfb586ff45e">There are two kinds of relation types: registered and extension.&#x201D; (<a href="#rfc8288">RFC 8288</a>)</p>
+</div>
+
+<div id="_type_attribute"><h3>7.1.3.&#xA0; Type Attribute</h3>
+
+<p id="_26eb141f-9df6-a353-c9f5-ddc87a60ff7b">The <tt>type</tt> attribute is optional.</p>
+
+<p id="_d63dc524-ae2d-ad86-0666-fa261ac08d64">&#x201C;The &#x201C;type&#x201D; attribute, when present, is a hint indicating what the media type of the result of dereferencing the link should be.  Note that this is only a hint; for example, it does not override the
+Content-Type header field of a HTTP response obtained by actually following the link.  The type attribute MUST NOT appear more than once in a given link-value; occurrences after the first MUST be ignored by parsers.&#x201D; (<a href="#rfc8288">RFC 8288</a>)</p>
+</div>
+
+<div id="_hreflang_attribute"><h3>7.1.4.&#xA0; Hreflang Attribute</h3>
+
+<p id="_51457cf7-1444-1a40-5af3-ecf1d70079a0">The <tt>hreflang</tt> attribute is optional.</p>
+
+<p id="_f876e7ac-03f5-7cba-5631-d41753f67129">&#x201C;The &#x201C;hreflang&#x201D; attribute, when present, is a hint indicating what the language of the result of dereferencing the link should be.  Note that this is only a hint; for example, it does not override the Content-Language header field of a HTTP response obtained by actually following the link.  Multiple hreflang attributes on a single link-value indicate that multiple languages are available from the indicated resource.&#x201D; (<a href="#rfc8288">RFC 8288</a>)</p>
+</div>
+
+<div id="_title_attribute"><h3>7.1.5.&#xA0; Title Attribute</h3>
+
+<p id="_ac847df2-20ee-fd5b-d9c8-a5f3603138fe">The <tt>title</tt> attribute is optional.</p>
+
+<p id="_133a6a55-3d20-0dab-15c9-8b14f2ebbf9b">&#x201C;The &#x201C;title&#x201D; attribute, when present, is used to label the destination of a link such that it can be used as a human-readable identifier (e.g., a menu entry) in the language indicated by the Content-Language header field (if present).  The title attribute MUST NOT appear more than once in a given link; occurrences after the first MUST be ignored by parsers.&#x201D; (<a href="#rfc8288">RFC 8288</a>)</p>
+</div>
+
+<div id="_length_attribute"><h3>7.1.6.&#xA0; Length Attribute</h3>
+
+<p id="_84db7303-3a17-3436-9d23-495614ceb532">The <tt>length</tt> attribute does not appear to be defined in the normative standards.</p>
+</div>
+</div>
+        <div id="relation-type-section"><h2 id="toc17">7.2.&#xA0; Relation Types</h2>
+
+<p id="_460a6aba-4ee0-7554-cc33-a5a693227898">There are two kinds of relation types; registered and extension.</p>
+
+<p id="_8eb057c0-ed31-381e-f0c9-b999e5db011b">Registered relation types are registered in the IANA register at <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a> <a href="#link-relations">[5]</a>. Registered relation types are used in OGC API standards whenever appropriate.</p>
+
+<p id="_0675ceca-d26f-f366-987d-4d6ed52c7c51">Extension relation types are those which are not registered with IANA. These extension types are in the form of &#x201C;&#x2014;- a URI [<a href="#rfc3986">RFC 3986</a>] that uniquely identifies the relation type.  Although the URI can point to a resource that contains a definition of the semantics of the relation type, clients SHOULD NOT automatically access that resource to avoid overburdening its server.</p>
+
+<p id="_8d96526d-71da-ee08-4852-3c47cc88143e">The URI used for an extension relation type SHOULD be under the control of the person or party defining it or be delegated to them.</p>
+
+<p id="_374b7d9b-2d83-2386-03ea-26eaf61aaeb1">When extension relation types are compared, they MUST be compared as strings (after converting to URIs if serialised in a different format) in a case-insensitive fashion, character by character. Because of this, all-lowercase URIs SHOULD be used for extension relations.</p>
+
+<p id="_babcea57-3049-85ab-1b32-742414e3920e">Note that while extension relation types are required to be URIs, a serialisation of links can specify that they are expressed in another form, as long as they can be converted to URIs.&#x201D; (<a href="#rfc8288">RFC 8288</a>)</p>
+
+<p id="_294279b2-8c25-374d-3f6c-e77b082a5aee">Extension relation types used in OGC API Standards are registered at <a href="http://www.opengis.net/def/rel">http://www.opengis.net/def/rel</a></p>
+</div>
+      </div>
+      <div id="_what_is_a_collection">
+        <h1 id="toc18">8.&#xA0; What is a Collection?</h1>
+        <p id="_b3168b54-ea4b-1ec3-0cc5-9c018d0bb82e">This section presents a definition for an OGC API Collection, as well as a rationale for such a collection.</p>
+        <div id="_definition"><h2 id="toc19">8.1.&#xA0; Definition</h2>
+
+<p id="_9fb936f6-e6d9-50d2-a32d-fc28c86ae66e"><b>&#x3c;OGC API&#x3e; Collection</b><br />
+A geospatial data resource that may be available as one or more sub-resource distributions that conform to one or more OGC API Standards.</p>
+
+<p id="_6692c0b7-6ef9-3979-39a7-5e01638d0b34">An OGC API Collection is a restriction on the general concept of a <a href="#collection-definition">collection</a>:</p>
+
+<ol type="1" id="_cdfef5f7-05df-175b-9121-82ca8add58a0"><li><p id="_29738011-89c6-2301-0bc7-a9809bac0802">An OGC API Collection may only contain data. It does not encompass non-data <a href="#definition-resource">resources</a> (but the Collection resource may still have related auxiliary resources, such as schemas, or processes, as sub-resources).</p>
+</li>
+<li><p id="_298e82a9-1035-c435-1b95-68607913efbe">Geospatial datasets include <a href="#spatial-thing-definition">Spatial Things</a> and/or <a href="#temporal-thing-definition">Temporal Things</a> as data items (but not all data items in the dataset have to have a spatial or temporal extent).</p>
+</li>
+<li><p id="_05a5f088-8077-5913-db07-925d02dff91f">An OGC API Collection has one or more <a href="#sub-resource-distribution-definition">sub-resource distributions</a>.</p>
+</li>
+<li><p id="_f0a6d667-0d2a-50a8-a6b0-977d60221c13">A <a href="#distribution-definition">distribution</a> provides access to a <a href="#representation-definition">representation</a> of a dataset.</p>
+</li>
+</ol>
+</div>
+        <div id="_rationale"><h2 id="toc20">8.2.&#xA0; Rationale</h2>
+
+<p id="dataset-definition"><b>Dataset</b><br />
+collection of data<div id="_78db7f97-cfe3-df75-fe12-69f8a3aa8b9c" class="Note"><p><span class="note_label">NOTE  1</span>&#xA0; Published or curated by a single agent, and available for access or download in one or more serializations or formats.</p></div><div id="_1dea5cc1-762e-fa9f-bf5d-e7b24f057b9b" class="Note"><p><span class="note_label">NOTE  2</span>&#xA0; This definition was adopted as the OGC definition of &#x201C;dataset&#x201D; by the OGC Architecture Board (OAB). See <a href="https://portal.ogc.org/?m=projects&#x26;a=view&#x26;project_id=228&#x26;tab=5&#x26;act=details&#x26;issue_id=1434">OAB issue 1434</a>.</p></div></p>
+
+
+
+
+
+<p id="_72453883-d664-7a19-04fb-59281c4b4f44">A dataset is a restriction on the general concept of a <a href="#collection-definition">collection</a></p>
+
+<ol type="1" id="_80d0f879-c88e-82cf-e47a-ad4ad27d7eb4"><li><p id="_4591f70b-5aeb-9d26-1d75-16177407f486">A dataset is a collection of data</p>
+</li>
+<li><p id="_ad0e5e93-d6a3-302c-39b2-17ede0e825bb">A dataset is published or curated by a single agent.</p>
+</li>
+<li><p id="_c43c3b8f-a045-7962-0733-a5560d2ad9c2">A dataset is available in one or more serializations or formats (<a href="#distribution-definition">distributions</a>).</p>
+</li>
+<li><p id="_63c7b0df-97b9-a4c8-abd4-349350e4a3be">A <a href="#distribution-definition">distribution</a> is synonymous to the REST concept of a <a href="#representation-definition">representation</a>.</p>
+</li>
+</ol>
+</div>
+        <div id="_key_concepts"><h2 id="toc21">8.3.&#xA0; Key Concepts</h2>
+
+<ul id="collection-definition"><li><p id="_ce8bac00-1f11-4618-a2e1-7419a81ba7df"><b>Collection</b><br />
+A body of resources that belong or are used together. An aggregate, set, or group of related resources. (Derived from <a href="https://www.merriam-webster.com/dictionary/collection">Webster&#x2019;s Dictionary</a>)</p>
+</li>
+</ul>
+
+<ul id="distribution-definition"><li><p id="_656b22f2-0865-7e1f-e9fd-a03722737e4e"><b>Distribution</b><br />
+specific representation of a <a href="#dataset-definition">dataset</a>. (<a href="#DCAT">DCAT</a>)<br />
+<br />
+EXAMPLE: a downloadable file, an RSS feed or an API.</p>
+</li>
+</ul>
+
+<ul id="sub-resource-distribution-definition"><li><p id="_1b4f816d-4b3a-90d3-8d79-b1adecd60f1d"><b>Sub-resource Distribution</b><br />
+a subset of the distribution of a dataset</p>
+</li>
+</ul>
+
+<ul id="feature-collection-definition"><li><p id="_7f2c3e61-03f8-c3de-42fc-cda8fda32b68"><b>Feature Collection</b><br />
+a set of <b>Features</b> from a <b>dataset</b></p>
+</li>
+</ul>
+
+<ul id="media-type-definition"><li><p id="_1c5c9f31-9298-1238-bbe5-7f4e5f5387b6"><b>Media Type</b><br />
+The data format of a <a href="#representation-definition">representation</a>. <a href="#fielding2000">[4]</a></p>
+</li>
+</ul>
+
+<ul id="resource-definition"><li><p id="_5d9fcebc-b01d-181f-a914-ddf4011f8480"><b>Resource</b><br /></p>
+<ol type="1" id="_488f55ef-cf4b-6ecc-c3df-2e2414fcbefd"><li><p id="_11f89731-4833-4ef8-4fbd-6487c3a13212">Any information that can be named. <a href="#fielding2000">[4]</a></p>
+</li>
+<li><p id="_da900bc0-34d2-4b95-00a3-18f9a535fde8">A conceptual mapping to a set of entities. <a href="#fielding2000">[4]</a></p>
+</li>
+<li><p id="_78d6bb08-5a05-a805-bc14-99ed54820f57">A resource R is a temporally varying membership function M<sub>R</sub>(t), which for time t maps to a set of entities, or values, which are equivalent. <a href="#fielding2000">[4]</a></p>
+</li>
+</ol>
+</li>
+</ul>
+
+<ul id="Representation-definition"><li><p id="_4487d561-c7cc-9cdd-88b7-533a7e94df7d"><b>Representation</b></p>
+<ol type="1" id="_051c0c02-47ef-1121-b4ac-4900f791e320"><li><p id="_3b7de020-b455-dd2c-afce-2a803184a84f">A format matching one of an evolving set of standard data types, selected dynamically based on the capabilities or desires of the recipient and the nature of the resource. <a href="#fielding2000">[4]</a></p>
+</li>
+<li><p id="_05b45e05-16ee-dd6a-ab59-644029e69855">The current or intended state of a resource. <a href="#fielding2000">[4]</a></p>
+</li>
+</ol>
+</li>
+</ul>
+
+<ul id="spatial-thing-definition"><li><p id="_77d2939e-9707-2c29-b8ed-e917da1b9b0c"><b>Spatial Thing</b><br />
+anything with spatial extent, (i.e. size, shape, or position) and is a combination of the real-world phenomenon and its abstraction. (<a href="#SDWBP">W3C/OGC Spatial Data on the Web Best Practice</a>)</p>
+</li>
+</ul>
+
+<ul id="temporal-thing-definition"><li><p id="_501e1cae-6711-44f8-1bf4-5f3d3b482b4e"><b>Temporal Thing</b><br />
+Anything with temporal extent, i.e. duration. e.g. the taking of a photograph, a scheduled meeting, a GPS time-stamped track-point. (<a href="#W3C-BASIC-GEO">W3C Basic Geo</a>)</p>
+</li>
+</ul>
+</div>
+      </div>
+      <div id="oas30-usage-section">
+        <h1 id="toc22">9.&#xA0; Using OpenAPI (Informative)</h1>
+        <p id="_ba50dcf8-5766-298c-4f74-9d8d2cd965ce">The following section describes the main components of an OpenAPI document and how they should be used to construct API requests. The authoritative source is the OpenAPI 3.0 standard available <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#oasObject">here</a>.</p>
+        <div id="_openapi_document_root"><h2 id="toc23">9.1.&#xA0; OpenAPI Document (root)</h2>
+
+<p id="_4ace6c98-7257-a765-ab7e-2fb7d41c9a95">The OpenAPI document (Root) contains descriptive information about the API and serves as the root for the other parts of the document.</p>
+</div>
+        <div id="_paths"><h2 id="toc24">9.2.&#xA0; Paths</h2>
+
+<p id="_637c263d-39bd-6ed1-6df3-c4ef8df7f03d">All API resources are accessed through a path. The Paths field of the OpenAPI document defines all of the paths available through this API. The Paths field is a collection of Paths Objects. Each Paths Object includes the URL or URL template for this path, any Server Objects specific to this Path, Parameters which are applicable to this Path, and an Operation Object for each of the HTTP Verbs applicable to this Path.</p>
+</div>
+        <div id="_operations"><h2 id="toc25">9.3.&#xA0; Operations</h2>
+
+<p id="_17221736-59fe-d2dc-e179-d0b1521e4c41">Operation Objects provide the details needed to create an HTTP request and response. Specifically, they provide definitions of the request message (including parameters) and all possible responses. In addition, they define any operation specific Server Objects or Security Requirements.</p>
+</div>
+        <div id="_parameters"><h2 id="toc26">9.4.&#xA0; Parameters</h2>
+
+<p id="_d4a79916-3d4a-0e31-8077-6cf74d5b24cb">Parameter Objects describe parameters which can be used in an API. These objects provide the parameter name, where it is passed (query, header, path, or cookie), and a detailed description of its structure (if needed).</p>
+
+<p id="_7b441a32-4097-8bf1-806f-f599a76ed770">Parameter Objects can be defined at the following levels:</p>
+
+<ul id="_ebbb91f2-1392-3669-ad89-2c352b9c85b7"><li><p id="_ed52245d-decc-734f-35e1-76f116b444b8">Path&#x2009;&#x2014;&#x2009;applicable to all operations on this path.</p>
+</li>
+<li><p id="_15aae747-76ef-4473-b063-f14beb4e10fc">Operation&#x2009;&#x2014;&#x2009;only applicable to this operation. Overrides any parameters defined at the Path level which have the same name.</p>
+</li>
+</ul>
+</div>
+        <div id="_servers"><h2 id="toc27">9.5.&#xA0; Servers</h2>
+
+<p id="_d2450451-4905-2cbe-c9fa-385626f139f0">An API is not restricted to a single server. Furthermore, the set of valid servers may be different for different sections of the API. An OpenAPI Server Object describes a single server. Most importantly, it provides the URL to that server. Server Objects are grouped into arrays. These arrays provide a list of the servers which can be used to access a section of the API.</p>
+
+<pre id="_d8b94af0-68dc-853b-7087-33b64be3db0b" class="prettyprint "><br /><br />servers:<br />&#xA0; - url: https://dev.example.org/<br />&#xA0;&#xA0;&#xA0; description: Development server<br />&#xA0; - url: https://data.example.org/<br />&#xA0;&#xA0;&#xA0; description: Production server</pre><p class="SourceTitle" style="text-align:center;">Figure 4&#xA0;&#x2014; Example Array of Server Objects</p>
+
+
+<p id="_3ca70475-85e2-edd5-3ac7-294b0cc3ab74">Server Objects can be defined at the following levels:</p>
+
+<ul id="_95b4206f-9a09-f2e7-5aae-5a340ceeb921"><li><p id="_bb6b3801-0755-4a07-f882-1f05c5c19d40">Root&#x2009;&#x2014;&#x2009;applicable to the whole API unless overridden</p>
+</li>
+<li><p id="_37a320e1-39de-7e1c-9587-a6a68dcb4328">Path&#x2009;&#x2014;&#x2009;applicable to all operations on this path. Servers defined at the Root level are still valid.</p>
+</li>
+<li><p id="_7d848e17-53b5-fc92-50ec-26450db13ffa">Operation&#x2009;&#x2014;&#x2009;only applicable to this operation. Overrides any servers defined at the Path or Root level.</p>
+</li>
+</ul>
+
+<div id="_building_urls"><h3>9.5.1.&#xA0; Building URLs</h3>
+
+<p id="_fcd2365b-34ad-a170-868d-5d39e2727a77">An OpenAPI document can describe a large number of URLs. Extracting all of the URLs is a non-trivial task. The OpenAPI objects used to construct URLs are:</p>
+
+<ul id="_fb7f09cf-9946-4fb6-413c-bc41757f9aaa"><li><p id="_ef46fe5b-aaaf-0e82-1134-0cdb01754201">Server Objects (URL template for the root and variables to populate it)</p>
+</li>
+<li><p id="_10949edf-5173-b59a-4922-c959380ad2c4">Paths Objects (URL template for the path and parameters)</p>
+</li>
+<li><p id="_fb050f6a-498e-9578-8487-ad3273748359">Operation Objects (including parameters)</p>
+</li>
+</ul>
+
+<p id="_7caacd44-d9ce-befb-d6ad-61f3fa9511c3">They are organized as follows:</p>
+
+<p id="_a6026fd7-8421-e74e-8727-5cd168c2e8b4"><tt>{Server Object}/{Path Object}/?{Query Parameters}</tt></p>
+
+<p id="_fea61b68-bc51-2f56-d01b-9c5e958b5391">Server Objects may be found at the OpenAPI document, Path Object, and Operation Object level. Given this potentially large number of servers, how do you create the valid paths?</p>
+
+<p id="_842226f9-d4f4-ec28-28ca-ee88ae3f18ab">We can assume that if a Server Object is included, there must be a reason for its presence. So, the Server Objects with the most restrictive scope are the ones we should use.  Clients should look for Server Objects in the following order:</p>
+
+<ol type="1" id="_d5b276ce-650f-5102-5c4a-fef650f30d73"><li><p id="_8d1623ff-e99c-7bce-f576-6775d94f54d7">The Operation Object,</p>
+</li>
+<li><p id="_5b747024-67a9-9767-737e-073fe7780e3c">Then Path Item,</p>
+</li>
+<li><p id="_e82cd768-587b-2934-5020-07876550b62a">The root.</p>
+</li>
+</ol>
+
+<p id="_d18b21d6-5a6e-2ba2-9135-df56684dfea2">The first scope where a Server Object is found dictates the behavior completely.</p>
+
+<pre id="_badcae90-4a24-cccb-bb8a-0d219a75da4b" class="prettyprint lang-bsh"><br /><br />&#xA0;IF Server Objects are supplied<br />&#xA0;&#xA0;&#xA0;&#xA0; THEN save them for latter<br />&#xA0;&#xA0;&#xA0;&#xA0; ELSE create a Server Object for the host of the OpenAPI document<br />&#xA0;DO FOR each Path<br />&#xA0;&#xA0;&#xA0;&#xA0; IF Server Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Use them instead of those previously identified<br />&#xA0;&#xA0;&#xA0;&#xA0; IF Parameter Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; save them for latter<br />&#xA0;&#xA0;&#xA0;&#xA0; DO FOR Each Operation<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF Server Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Use them instead of those previously identified<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF Parameter Objects are included THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF this parameter was previously defined<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; THEN replace the previous definition<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ELSE add this parameter to the set.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DO FOR Each Server Object<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Extract all URL roots<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DO FOR each URL root<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Concatenate the URL root and Path to create a working URL<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Concatenate the working URL with the Parameters<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Save the completed URL for future use<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; CONTINUE<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DONE<br />&#xA0;&#xA0;&#xA0;&#xA0; DONE<br />&#xA0;DONE</pre><p class="SourceTitle" style="text-align:center;">Figure 5&#xA0;&#x2014; Algorithm for building a URL</p>
+
+</div>
+</div>
+      </div>
+      <br />
+      <div id="_revision_history" class="Section3">
+        <h1 class="Annex" id="toc28"><b>Annex A</b><br />(informative)<br /><b>Revision History</b></h1>
+        <p class="TableTitle" style="text-align:center;">Table A.1</p>
+        <table id="_d81806eb-9efc-9427-ef88-aa873d93a8ab" class="MsoISOTable" style="border-width:1px;border-spacing:0;width:90%;">
+          <thead>
+            <tr>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Date</th>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Release</th>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Editor</th>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Primary clauses modified</th>
+              <th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2021-06-01</td>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">0.1</td>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">C. Heazel</td>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">all</td>
+              <td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">initial version</td>
+            </tr>
+            <tr>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">2022-11-08</td>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">0.2</td>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">G. Hobona</td>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">all</td>
+              <td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">revision</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <div><h1 class="Section3" id="toc29">Bibliography</h1>
+<p id="rfc8288" class="Biblio">[1]&#xA0; IETF RFC 8288: Web Linking, <a href="https://tools.ietf.org/html/rfc8288">https://tools.ietf.org/html/rfc8288</a></p><p id="rfc3987" class="Biblio">[2]&#xA0; IETF RFC 3987: Internationalized Resource Identifiers (IRIs), <a href="https://tools.ietf.org/html/rfc3987">https://tools.ietf.org/html/rfc3987</a></p><p id="rfc2046" class="Biblio">[3]&#xA0; IETF RFC 2046: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types, <a href="https://tools.ietf.org/html/rfc2046">https://tools.ietf.org/html/rfc2046</a></p><p id="fielding2000" class="Biblio">[4]&#xA0; Fielding, Roy Thomas: <b>Architectural Styles and the Design of Network-based Software Architectures</b>. Doctoral dissertation, University of California, Irvine, 2000, <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf">https://www.ics.uci.edu/fielding/pubs/dissertation/fielding_dissertation.pdf</a></p><p id="link-relations" class="Biblio">[5]&#xA0; IANA: <b>Link Relation Types</b>, <a href="https://www.iana.org/assignments/link-relations/link-relations.xml">https://www.iana.org/assignments/link-relations/link-relations.xml</a></p><p id="bnf-citation" class="Biblio">[6]&#xA0; ISO/IEC 14977:1996(E): <b>Information technology &#x2013; Syntactic metalanguage &#x2013; Extended BNF</b>, available from <a href="https://standards.iso.org/ittf/PubliclyAvailableStandards/s026153_ISO_IEC_14977_1996(E).zip">ISO</a>.</p><p id="ogc-06-121" class="Biblio">[7]&#xA0; Whiteside, A., Greenwood, J.: <b>OGC Web Services Common Standard</b>, version 2.0, <a href="http://portal.opengeospatial.org/files/?artifact_id=38867">OGC 06-121r9</a></p><p id="WEBARCH" class="Biblio">[8]&#xA0; W3C: <b>Architecture of the World Wide Web, Volume One</b>, W3C Recommendation, 15 December 2004, <a href="https://www.w3.org/TR/webarch/">https://www.w3.org/TR/webarch/</a></p><p id="DCAT" class="Biblio">[9]&#xA0; W3C: <b>Data Catalog Vocabulary (DCAT)&#x2009;&#x2014;&#x2009;Version 2</b>, W3C Recommendation, 04 February 2020, <a href="https://www.w3.org/TR/vocab-dcat-2/">https://www.w3.org/TR/vocab-dcat-2/</a></p><p id="DWBP" class="Biblio">[10]&#xA0; W3C: <b>Data on the Web Best Practices</b>, W3C Recommendation, 31 January 2017, <a href="https://www.w3.org/TR/dwbp/">https://www.w3.org/TR/dwbp/</a></p><p id="SDWBP" class="Biblio">[11]&#xA0; W3C/OGC: <b>Spatial Data on the Web Best Practices</b>, W3C Working Group Note, 28 September 2017, <a href="https://www.w3.org/TR/sdw-bp/">https://www.w3.org/TR/sdw-bp/</a></p><p id="rfc3986" class="Biblio">[12]&#xA0; IETF RFC 3986: Uniform Resource Identifier (URI): Generic Syntax. <a href="https://tools.ietf.org/html/rfc3986">https://tools.ietf.org/html/rfc3986</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </main>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { preferredFont: "STIX" },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+ });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
+  </script>
+
+  <script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('body').animate({ 'margin-left': '0' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+        $('body').animate({ 'margin-left': '298px' }, 'slow');
+    }
+});
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+    <script>
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script>
+
+</body>
+</html>

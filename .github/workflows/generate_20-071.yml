@@ -1,0 +1,31 @@
+name: generate_20-071
+on:
+  schedule:
+    - cron:  '1 21 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/ogcapi-common
+          path: 20-071
+      - name: Generate document
+        run: |
+          cd 20-071
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf users_guide/document.adoc
+          cp ./users_guide/document.html ../main/20-071.html
+          cp ./users_guide/document.pdf ../main/20-071.pdf
+          cd ../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 20-071.html 20-071.pdf
+          git commit -am "Automated generation of HTML and PDF documents"
+          git push
