@@ -20,9 +20,9 @@ jobs:
       - name: Generate document
         run: |
           cd 19-072
-          metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf core/document.adoc
-          cp ./core/document.html ../main/19-072.html
-          cp ./core/document.pdf ../main/19-072.pdf
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf 19-072/document.adoc
+          cp ./19-072/document.html ../main/19-072.html
+          cp ./19-072/document.pdf ../main/19-072.pdf
           cd ../main
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
