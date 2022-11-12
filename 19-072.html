@@ -135,6 +135,12 @@ a.FootnoteRef + a.FootnoteRef:before {
 #standard {
   border-bottom: solid 3px #3D9970; }
 
+#draft-standard-band {
+  background-color: #3D9970; }
+
+#draft-standard {
+  border-bottom: solid 3px #3D9970; }
+
 #abstract-specification-topic-band {
   background-color: #3D9970; }
 
@@ -1174,8 +1180,8 @@ span.hi {
 <style class="anchorjs"></style>
 </link></link></link></link></link></head>
   <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="draft-band">
-    <p class="document-stage">Draft</p>
+    <div class="title-section"><div class="document-stage-band" id="approved-band">
+    <p class="document-stage">Approved</p>
 </div>
 
 <div class="document-type-band" id="standard-band">
@@ -1223,9 +1229,9 @@ span.hi {
   </div>
 
     <div class="coverpage-metadata">
-      <span class="label">Submission Date: </span> <span class="value">2022-08-08</span>
-      <span class="label">Approval Date: </span> <span class="value">2029-03-30</span>
-      <span class="label">Publication Date: </span> <span class="value">2029-03-30</span>
+      <span class="label">Submission Date: </span> <span class="value">2021-08-23</span>
+      <span class="label">Approval Date: </span> <span class="value">2022-02-02</span>
+      <span class="label">Publication Date: </span> <span class="value">2022-11-09</span>
       <span class="label">External identifier of this OGC&#xAE; document: <span class="docnumber value">http://www.opengis.net/doc/is/ogcapi-common-1/1.0</span></span>
       <span class="label">Internal identifier of this OGC&#xAE; document: <span class="docnumber value">19-072</span></span>
       
@@ -1261,7 +1267,7 @@ span.hi {
   </div>
 
   <div class="coverpage-stage-block">
-    <p><span class="coverpage-maturity" id="draft">Draft</span></p>
+    <p><span class="coverpage-maturity" id="approved">Approved</span></p>
   </div>
 </div>
 
@@ -1269,11 +1275,10 @@ span.hi {
     <div class="boilerplate-legal">
 
 
-    <div><h1 class="IntroTitle">Notice for Drafts</h1>
+    <div><h1 class="IntroTitle">Notice</h1>
 
-      <p id="_09caafd2-d047-3050-9095-b3f182faf86f">This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.</p>
-
-      <p id="_d80fd0eb-fbfd-dec3-0ddb-92472f4d5fcf">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+      <p id="_a156d1c4-313c-340a-8480-366345e3e0d2">This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+      </p>
     </div>
 
 
@@ -1290,7 +1295,7 @@ span.hi {
     <tr><td>Document number:</td><td>19-072</td></tr>
     <tr><td>Document type:</td><td>OGC Standard</td></tr>
     <tr><td align="right">Document subtype:</td><td align="right">Implementation</td></tr>
-    <tr><td align="right">Document stage:</td><td align="right">Draft</td></tr>
+    <tr><td align="right">Document stage:</td><td align="right">Approved</td></tr>
     <tr><td align="right">Document language:</td><td align="right">English</td></tr>
   </table>
 </div>
@@ -1441,7 +1446,7 @@ span.hi {
         <p id="_3a3f234f-59b5-88af-be7d-c12ca0c499a9">The OGC has extended their suite of standards to include <a href="https://en.wikipedia.org/wiki/Resource-oriented_architecture">Resource Oriented Architectures</a> and <a href="https://portal.ogc.org/files/?artifact_id=71776&#x26;version=1">Web APIs</a>. In the course of developing these standards, some practices proved to be common across multiple OGC Web API standards. These common practices are documented in the OGC API&#x2009;&#x2014;&#x2009;Common standard. The OGC API&#x2009;-&#x2009;Common standard is a multi-part standard that specifies reusable building-blocks that can be used in the construction of OGC API Standards. This document presents Part 1, the Core, of the OGC API &#x2013; Common standard. Standards developers will use these building-blocks in the construction of other OGC Standards that relate to Web APIs. The result is a modular suite of coherent API standards which can be adapted by a system designer for the unique requirements of their system.</p>
         <p id="_1d584693-c450-070d-64a5-859dbeb670ed">The purpose of the OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Part 1: Core Standard (API-Core) is to define those fundamental building blocks and requirements which are applicable to all OGC Web API Standards.</p>
       </div>
-      <div class="Section3" id="_512ea49c-bc25-462e-9d29-0c5a974faccd">
+      <div class="Section3" id="_9aa27941-4d48-4e1b-bbca-4429bb7856ee">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1458,7 +1463,7 @@ span.hi {
         <p id="_6fceaf1b-ef82-3d7c-b807-68f8aab9fe76">The OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Part 1: Core Standard does not specify any specific security controls. However, it was constructed so that security controls can be added without impacting conformance.</p>
         <p id="_1725807d-e926-205c-cdf0-07b671017d8f">See <a href="#rc_oas30-security">Clause 11.4</a> for a discussion of OpenAPI support for security controls.</p>
       </div>
-      <div class="Section3" id="_4b0d9371-e4fb-45d2-b9ad-5e296280094e">
+      <div class="Section3" id="_d5d2aaf8-46e8-4d44-b218-9ed926a8bf1d">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1599,7 +1604,7 @@ span.hi {
  <p id="rfc7807" class="NormRef">M. Nottingham, E. Wilde: IETF RFC 7807, <i>Problem Details for HTTP APIs</i>. (2016). <a href="https://www.rfc-editor.org/info/rfc7807">https://www.rfc-editor.org/info/rfc7807</a>.</p>
  <p id="rfc8288" class="NormRef">M. Nottingham: IETF RFC 8288, <i>Web Linking</i>. (2017). <a href="https://www.rfc-editor.org/info/rfc8288">https://www.rfc-editor.org/info/rfc8288</a>.</p>
  <p id="rfc8259" class="NormRef">T. Bray (ed.): IETF RFC 8259, <i>The JavaScript Object Notation (JSON) Data Interchange Format</i>. (2017). <a href="https://www.rfc-editor.org/info/rfc8259">https://www.rfc-editor.org/info/rfc8259</a>.</p>
-<p id="openapi" class="NormRef">Open API Initiative: <b>OpenAPI Specification</b>, Version 3.0. The latest patch version at the time of publication of this standard was 3.0.3, available from <a href="http://spec.openapis.org/oas/v3.0.3">http://spec.openapis.org/oas/v3.0.3</a>.</p>
+<p id="openapi" class="NormRef">Open API Initiative: OpenAPI Specification, Version 3.0. The latest patch version at the time of publication of this standard was 3.0.3, available from <a href="http://spec.openapis.org/oas/v3.0.3">http://spec.openapis.org/oas/v3.0.3</a>.</p>
 </div>
       <div id="_terms_and_definitions"><h1 id="toc14">4.&#xA0; Terms and definitions</h1><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word &#x201C;shall&#x201D; (not &#x201C;must&#x201D;) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p><p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the &#x2018;ModSpec&#x2019;. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p><p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p><h2 class="TermNum" style="text-align:left;" id="kebab-case-definition">4.1.&#xA0;<b>Kebab case</b></h2>
 <p id="_872c8d34-a84b-2134-f1a5-3f0cd4c841bd">A case style where punctuation is removed and spaces are replaced by single hyphens. All letters are in lower case when used in OGC documentation. (<a href="https://en.wikipedia.org/wiki/Letter_case">Wikipedia</a>) Example: <tt>kebab-case-style</tt></p>
@@ -1765,7 +1770,7 @@ span.hi {
 </td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_9ce25fd5-cf24-a4eb-9d99-5bbe61646c2b">This recommendation does not apply when there are a large number of links included in a response or a link is not known when the HTTP headers of the response are created.</p>
 </td></tr></tbody></table>
 
-<p id="_007a5798-625d-f351-8931-7c3455bef9c7">Additional information on this topic is provided in the <a href="http://www.opengis.net/doc/UG/ogcapi-common/1.0#links-section">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide</a>.</p>
+<p id="_007a5798-625d-f351-8931-7c3455bef9c7">Additional information on this topic is provided in the <a href="http://www.opengis.net/doc/UG/ogcapi-common/1.0#link-relations-section">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide</a>.</p>
 </div>
         <div id="link-relation-conventions"><h2 id="toc20">6.4.&#xA0; Link relations</h2>
 
@@ -1790,8 +1795,6 @@ API definitions are considered service descriptions.</td></tr><tr><td style="tex
 <p id="_f9b4f5c4-a3f0-7c94-2d6b-1299412d7c08">For simplicity, this OGC Standard only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS. This is simply a shorthand notation for &#x201C;HTTP or HTTPS&#x201D;. In fact, most servers are expected to use <a href="#rfc2818">HTTPS</a> and not <a href="#rfc7231">HTTP</a>.</p>
 
 <p id="_e1b7e95d-5569-090d-87f9-ad627136c97f">OGC Web API standards do not prohibit the use of any valid HTTP option. However, implementers should be aware that optional capabilities that are not in common use could be an impediment to interoperability.</p>
-
-<p id="_da11e238-2365-5f7e-f9f9-95612ab14f4f">Additional information on the use of HTTPS to secure API transactions is provided in the <a href="http://www.opengis.net/doc/UG/ogcapi-common/1.0#https-section">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide</a>.</p>
 </div>
         <div id="api-definition-conventions"><h2 id="toc22">6.6.&#xA0; API definition</h2>
 
@@ -1832,7 +1835,7 @@ API definitions are considered service descriptions.</td></tr><tr><td style="tex
 
 <p id="_cc05f04e-f2a3-4d60-3a18-16cb5b37db73">Reusable components for OpenAPI definitions for an OGC API are referenced from this document. They are available from the OGC Schemas Registry at <a href="http://schemas.opengis.net/ogcapi/common/part1/1.0">http://schemas.opengis.net/ogcapi/common/part1/1.0</a>.</p>
 
-<p id="_8a181089-7f57-2ac3-ba06-c5ba6dc137b9">Additional information on the use of OpenAPI as an API definition is provided in the <a href="http://www.opengis.net/doc/UG/ogcapi-common/1.0#openapi-section">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide</a>.</p>
+<p id="_8a181089-7f57-2ac3-ba06-c5ba6dc137b9">Additional information on the use of OpenAPI as an API definition is provided in the <a href="http://www.opengis.net/doc/UG/ogcapi-common/1.0#oas30-usage-section">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide</a>.</p>
 </div>
 </div>
       </div>
@@ -1864,8 +1867,6 @@ API definitions are considered service descriptions.</td></tr><tr><td style="tex
 <li><p id="_841b8788-a67a-f230-15c5-1b60ad8c4c9a">Modularization is not just about a single &#x201C;service&#x201D;. OGC APIs provide building blocks that can be reused in APIs in general. In other words, a server that implements the OGC API &#x2013; Features Standard should not be seen as a standalone service. Rather, this server should be viewed as a collection of API building blocks that together implement the capabilities that are specified in OGC API&#x2009;&#x2014;&#x2009;Features. A corollary of this is that it should be possible to implement an API that simultaneously conforms to conformance classes from multiple current or future OGC API Standards.</p>
 </li>
 </ul>
-
-<p id="_2f1fdfd9-1f4e-e3a7-5946-c643770463d1">A more detailed discussion of modular APIs can be found in the <a href="http://www.opengis.net/doc/UG/ogcapi-common/1.0#modular-api">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide</a>.</p>
 </div>
         <div id="using-api-introduction"><h2 id="toc26">7.3.&#xA0; Using APIs</h2>
 
@@ -1874,8 +1875,6 @@ API definitions are considered service descriptions.</td></tr><tr><td style="tex
 <p id="_b621b63d-e058-893d-f557-d67ff1c7e085">In the first approach, clients are implemented with knowledge about the standard used to build the API and the associated resource types. The clients navigate the resources based on this knowledge and based on the responses provided by the API. The API definition may be used to determine details, e.g., on filter parameters, but this may not be necessary depending on the needs of the client. These are clients that are in general able to use multiple APIs as long as they implement OGC API Standards.</p>
 
 <p id="_76c2c872-9ee7-a2fa-cf91-f61b8a5383ea">The other approach targets developers that are not familiar with OGC API Standards but want to interact with spatial data provided by an API that happens to implement OGC API Standards. In this case the developer will study and use the API definition&#x2009;&#x2014;&#x2009;typically an OpenAPI document&#x2009;&#x2014;&#x2009;to understand the API and implement the code to interact with that API. This assumes familiarity with the API definition language and the related tooling, but it should not be necessary to study the OGC API standards.</p>
-
-<p id="_3f066e38-ec57-6e13-579e-474d63c29516">A more detailed discussion of navigating Web APIs can be found in the <a href="http://www.opengis.net/doc/UG/ogcapi-common/1.0#api-navigation">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide</a>.</p>
 </div>
       </div>
       <div id="rc_core-section">
@@ -2272,8 +2271,6 @@ the upper case hexadecimal digits (&#x201C;A&#x201D; through &#x201C;F&#x201D;) 
 <p id="_2e20e9f6-38c5-08a7-d2df-754289822a01">Examples of OGC API landing pages are provided in <a href="#landing-page-examples">Annex B.1</a>.</p>
 
 <p id="_a6869c4a-0113-9259-220f-1d28b5bc6538">A JSON schema for the Landing Page resource can be found on the <a href="http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml">OGC Schema Repository</a>.</p>
-
-<p id="_5ebf7e66-cf05-628f-a379-4c3cda804b46">Additional information about the Landing Page can be found in the <a href="http://www.opengis.net/doc/UG/ogcapi-common/1.0#landing-page-section">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide</a>.</p>
 </div>
 
 <div id="_error_situations"><h3>9.1.3.&#xA0; Error Situations</h3>
