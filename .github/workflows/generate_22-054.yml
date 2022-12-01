@@ -1,0 +1,31 @@
+name: generate_22-054
+on:
+  schedule:
+    - cron:  '1 3 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/developer-events
+          path: 22-054
+      - name: Generate document
+        run: |
+          cd 22-054/2022/Web-Mapping-Code-Sprint/engineering-report
+          metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf document.adoc
+          cp document.html ../../../../main/22-054.html
+          cp document.pdf ../../../../main/22-054.pdf
+          cd ../../../../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 22-054.html 22-054.pdf
+          git commit -am "Automated generation of HTML and PDF documents"
+          git push
