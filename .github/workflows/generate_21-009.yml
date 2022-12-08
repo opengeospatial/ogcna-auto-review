@@ -1,4 +1,7 @@
 name: generate_21-009
+on:
+  schedule:
+    - cron:  '30 * * * *'
 
 jobs:
   build:
