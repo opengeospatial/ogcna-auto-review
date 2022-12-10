@@ -10,11 +10,8 @@ The following draft specifications are automatically compiled from asciidoc to H
 
 * [OGC API - 3D GeoVolumes, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/22-029.html)
 * [OGC API - Environmental Data Retrieval, version 1.1.0 draft](https://opengeospatial.github.io/ogcna-auto-review/19-086r6.html)
-* [OGC API - Environmental Data Retrieval, version 1.0.1 draft](https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html)
 * [OGC API - Discrete Global Grid Systems - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-038.html)
 * [OGC CoverageJSON, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-069.html)
-* [OGC Two Dimensional Tile Matrix Set and Tile Set Metadata, version 2.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/17-083r4.html)
-* [OGC API - Tiles - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/20-057.html)
 * [2022 Joint OGC and ISO Code Sprint Summary Engineering Report draft](https://opengeospatial.github.io/ogcna-auto-review/22-043r1.html)
 * [OGC GeoPose, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-056r10.html)
 * [OGC API - Common - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/19-072.html)
