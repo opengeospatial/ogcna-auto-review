@@ -931,12 +931,15 @@ a, a:visited {
 
 a:hover {
   color: #00335b;
-  background: white;
-  box-shadow: 3px 0 0 white, -3px 0 0 white; }
+  background: #39CCCC;
+  box-shadow: 3px 0 0 #39CCCC, -3px 0 0 #39CCCC; }
 
-::selection,
-::-moz-selection {
-  background: white;
+*::selection {
+  background: #39CCCC;
+  color: #00335b; }
+
+*::-moz-selection {
+  background: #39CCCC;
   color: #00335b; }
 
 /* Bibliograhy */
@@ -1169,7 +1172,41 @@ span.hi {
   background-color: yellow; }
 
 -->
-</style><title>OGC API - Common - Users Guide</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .dl, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}--></style><title>OGC API - Common - Users Guide</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1271,14 +1308,14 @@ span.hi {
   <div class="coverpage-warning">
     <div class="boilerplate-legal">
 
-    <div><h1 class="IntroTitle">Notice</h1>
+  <div><h1 class="IntroTitle">Notice</h1>
 
-      <p id="_64cd6a1e-b42a-1d67-a46a-682ea4ad73ae">This document is not an OGC Standard. This document is an OGC User Guide and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
-      <p id="_4372936d-b228-917f-b16d-56d993e5f2dc">Further, an OGC User Guide should not be referenced as required or mandatory technology in procurements.</p>
-    </div>
-
-
+    <p id="_64cd6a1e-b42a-1d67-a46a-682ea4ad73ae">This document is not an OGC Standard. This document is an OGC User Guide and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+    <p id="_4372936d-b228-917f-b16d-56d993e5f2dc">Further, an OGC User Guide should not be referenced as required or mandatory technology in procurements.</p>
   </div>
+
+
+</div>
  </div>
          
 
@@ -1299,18 +1336,19 @@ span.hi {
     <div><h1 class="IntroTitle">Copyright notice</h1>
 
 
-      <p id="_609a02a1-fa53-7a69-1cb9-ff2ed59292e2" style="text-align:center;">Copyright
-        &#xA9; 2022 Open Geospatial Consortium<br />
-        To obtain additional rights of use, visit
-        <a href="http://www.ogc.org/legal/">http://www.ogc.org/legal/</a></p>
-    </div>
-    <div><h1 class="IntroTitle">Note</h1>
-
-      <p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
-
-      <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
-    </div>
+      <p id="_1fccc2ba-15c8-d148-cb34-a5178bd1e5f8" style="text-align:center;">Copyright
+      &#xA9; 2022 Open Geospatial Consortium<br />
+      To obtain additional rights of use, visit
+      <a href="https://www.ogc.org/legal">https://www.ogc.org/legal</a>
+    </p>
   </div>
+  <div><h1 class="IntroTitle">Note</h1>
+
+    <p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+    <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+  </div>
+</div>
 </div>
 
 <div class="rule"></div>
@@ -1322,78 +1360,11 @@ span.hi {
     <br />
     <div class="prefatory-section"><div class="license">
   <div class="boilerplate-license">
-    <div><h1 class="IntroTitle">License Agreement</h1>
+  <div><h1 class="IntroTitle">License Agreement</h1>
 
 
-      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
-        Consortium, (&#x201C;Licensor&#x201D;), free of charge and subject to the terms set
-        forth below, to any person obtaining a copy of this Intellectual Property and
-        any associated documentation, to deal in the Intellectual Property without
-        restriction (except as set forth below), including without limitation the
-        rights to implement, use, copy, modify, merge, publish, distribute, and/or
-        sublicense copies of the Intellectual Property, and to permit persons to whom
-        the Intellectual Property is furnished to do so, provided that all copyright notices
-        on the intellectual property are retained intact and that each person to whom
-        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
-
-      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
-        the modified Intellectual Property must include, in addition to the above
-        copyright notice, a notice that the Intellectual Property includes
-        modifications that have not been approved or adopted by LICENSOR.</p>
-
-      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
-        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
-        THE INTELLECTUAL PROPERTY IS PROVIDED &#x201C;AS
-        IS&#x201D;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
-        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
-        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
-        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
-        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER&#x2019;S OWN RISK. IN NO
-        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
-        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
-        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
-        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
-        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
-        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
-        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
-
-      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
-        terminate it at any time by destroying the Intellectual Property together with
-        all copies in any form. The license will also terminate if you fail to comply
-        with any term or condition of this Agreement. Except as provided in the
-        following sentence, no such termination of this license shall require the
-        termination of any third party end-user sublicense to the Intellectual Property
-        which is in force as of the date of notice of such termination. In addition,
-        should the Intellectual Property, or the operation of the Intellectual
-        Property, infringe, or in LICENSOR&#x2019;s sole opinion be
-        likely to infringe, any patent, copyright, trademark or other right of a third
-        party, you agree that LICENSOR, in its sole discretion, may terminate this
-        license without any compensation or liability to you, your licensees or any
-        other party. You agree upon termination of any kind to destroy or cause to be
-        destroyed the Intellectual Property together with all copies in any form,
-        whether held by you or by any third party.</p>
-
-      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
-        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
-        Property shall not be used in advertising or otherwise to promote the sale, use
-        or other dealings in this Intellectual Property without prior written
-        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
-        all times be the sole entity that may authorize you or any third party to use
-        certification marks, trademarks or other special designations to indicate
-        compliance with any LICENSOR standards or specifications.
-        This Agreement is
-        governed by the laws of the Commonwealth of Massachusetts. The application to
-        this Agreement of the United Nations Convention on Contracts for the
-        International Sale of Goods is hereby expressly excluded. In the event any
-        provision of this Agreement shall be deemed unenforceable, void or invalid, such
-        provision shall be modified so as to make it valid and enforceable, and as so
-        modified the entire Agreement shall remain in full force and effect. No
-        decision, action or inaction by LICENSOR shall be construed to be a waiver of
-        any rights or remedies available to it.</p>
-
-      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    <p id="_319164f2-21a2-0783-9988-1636951e3d55">Use of this document is subject to the license agreement at
+    <a href="https://www.ogc.org/license">https://www.ogc.org/license</a></p>
     </div>
   </div>
 
@@ -1416,23 +1387,23 @@ span.hi {
     <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
       <div class="authority">
   
+
+
   
 
-  
 
 
 
+<div class="boilerplate-feedback">
 
-  <div class="boilerplate-feedback">
-
-  </div>
+</div>
 </div>
       <br />
       <div id="_abstract">
         <h1 class="AbstractTitle" id="toc0">I.&#xA0; Abstract</h1>
         <p id="_0b9fb3f6-5e0f-4ef1-47f4-c4f66af502c2">The OGC API&#x2009;&#x2014;&#x2009;Common standard is a multi-part standard that specifies reusable building-blocks that can be used in the construction of OGC API Standards. The OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Users Guide presents information useful to developers or users of implementations of the OGC API&#x2009;&#x2014;&#x2009;Common standard. The information in the Users Guide is not normative. That is, it is not mandatory. However, it may prove essential to fully understand the normative text in the OGC API&#x2009;&#x2014;&#x2009;Common standard. The Users Guide is therefore intended to serve as an aid to developers and users.</p>
       </div>
-      <div class="Section3" id="_977a01bd-917c-4f11-aef8-a3d5ceeeac02">
+      <div class="Section3" id="_9e46dbe6-c8f7-4d61-815f-fa220def6027">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1448,7 +1419,7 @@ span.hi {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_1b937dd3-7809-4b11-a225-144918bee9e0">
+      <div class="Section3" id="_c5366e86-afd6-41fc-bb2a-0a0ed05aeb9b">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1631,7 +1602,7 @@ implementations, thereby providing a common look and feel to implementations of 
           <b>Summary for Developers:</b>
         </p>
         <p id="_e1833c86-abc2-fbd6-f41a-aec1b2e5db08"><a href="https://docs.ogc.org/is/19-072/19-072.html#rfc3986">RFC 3986</a> defines a URI in Backus-Naur Form <a href="https://docs.ogc.org/is/19-072/19-072.html#bnf-citation">(BNF)</a> as follows:</p>
-        <pre id="_54d2df96-629d-77cd-65b0-b2e67aa920b2" class="prettyprint lang-java"><br /><br />&#xA0;&#xA0;&#xA0; URI = scheme &#x201D;:&#x201D; hier-part [ &#x201C;?&#x201D; query ] [ &#x201C;#&#x201D; fragment ]<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; hier-part&#xA0;&#xA0;&#xA0;&#xA0; = &#x201C;//&#x201D; authority path-abempty<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / path-absolute<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / path-rootless<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / path-empty<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; authority&#xA0;&#xA0;&#xA0;&#xA0; = [ userinfo &#x201C;@&#x201D; ] host [ &#x201D;:&#x201D; port ]<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path-abempty&#xA0; = *( &#x201C;/&#x201D; segment )<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path-absolute = &#x201C;/&#x201D; [ segment-nz *( &#x201C;/&#x201D; segment ) ]<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path-rootless = segment-nz *( &#x201C;/&#x201D; segment )<br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path-empty&#xA0;&#xA0;&#xA0; = 0&#x3c;pchar&#x3e;</pre>
+        <pre id="_e1ee8e76-0484-564a-a964-3e0422c1c5c2" class="sourcecode"><br /><br />&#xA0;&#xA0;&#xA0; <span class="no">URI</span> <span class="o">=</span> <span class="n">scheme</span> <span class="s">":"</span> <span class="n">hier</span><span class="o">-</span><span class="n">part</span> <span class="o">[</span> <span class="s">"?"</span> <span class="n">query</span> <span class="o">]</span> <span class="o">[</span> <span class="s">"#"</span> <span class="n">fragment</span> <span class="o">]</span><br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">hier</span><span class="o">-</span><span class="n">part</span>&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="s">"//"</span> <span class="n">authority</span> <span class="n">path</span><span class="o">-</span><span class="n">abempty</span><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">/</span> <span class="n">path</span><span class="o">-</span><span class="n">absolute</span><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">/</span> <span class="n">path</span><span class="o">-</span><span class="n">rootless</span><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">/</span> <span class="n">path</span><span class="o">-</span><span class="n">empty</span><br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">authority</span>&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="o">[</span> <span class="n">userinfo</span> <span class="s">"@"</span> <span class="o">]</span> <span class="n">host</span> <span class="o">[</span> <span class="s">":"</span> <span class="n">port</span> <span class="o">]</span><br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">path</span><span class="o">-</span><span class="n">abempty</span>&#xA0; <span class="o">=</span> <span class="o">*(</span> <span class="s">"/"</span> <span class="n">segment</span> <span class="o">)</span><br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">path</span><span class="o">-</span><span class="n">absolute</span> <span class="o">=</span> <span class="s">"/"</span> <span class="o">[</span> <span class="n">segment</span><span class="o">-</span><span class="n">nz</span> <span class="o">*(</span> <span class="s">"/"</span> <span class="n">segment</span> <span class="o">)</span> <span class="o">]</span><br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">path</span><span class="o">-</span><span class="n">rootless</span> <span class="o">=</span> <span class="n">segment</span><span class="o">-</span><span class="n">nz</span> <span class="o">*(</span> <span class="s">"/"</span> <span class="n">segment</span> <span class="o">)</span><br /><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">path</span><span class="o">-</span><span class="n">empty</span>&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="mi">0</span><span class="o">&#x3c;</span><span class="n">pchar</span><span class="o">&#x3e;</span></pre>
         <p class="SourceTitle" style="text-align:center;">Figure 1&#xA0;&#x2014; Backus-Naur Definition of URI</p>
         <p id="_3a06cfc3-11a2-85b6-3b2f-26f83c04f057">The following rules should be used when interpreting the BNF <a href="#bnf-citation">[6]</a> for use with this standard:</p>
         <ul id="_94195ff3-d5aa-169e-6779-c18e77bb5ad5"><li><p id="_351145da-18eb-fa21-62b0-e553a92dc3bd"><tt>scheme</tt> is assumed to be <tt>HTTP</tt> or <tt>HTTPS</tt></p>
@@ -1648,7 +1619,7 @@ implementations, thereby providing a common look and feel to implementations of 
 </li>
 </ul>
         <p id="_b2b243e6-59ee-d0e6-c0e5-b357ca63f758">The following example shows a URI categorized according to <a href="#rfc3986">RFC 3986</a> and OGC Web API standards.</p>
-        <pre id="_db235a15-908d-6647-e0d6-a6e4eb112149" class="prettyprint lang-java"><br /><br />URI&#xA0;&#xA0;&#xA0;&#xA0; foo://example.com:8042/myapi/mydata/?name=roads#centerline<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; \__/ \______________/\____________/ \_________/ \________/<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |<br />3986&#xA0;&#xA0;&#xA0; scheme&#xA0;&#xA0;&#xA0;&#xA0; authority&#xA0;&#xA0;&#xA0;&#xA0; path&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; query&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; fragment<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; \__________________________/\_____/\__________/<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; |<br />OGC&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; {root}&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; path&#xA0;&#xA0; parameters</pre>
+        <pre id="_db235a15-908d-6647-e0d6-a6e4eb112149" class="sourcecode"><br /><br /><span class="no">URI</span>&#xA0;&#xA0;&#xA0;&#xA0; <span class="nl">foo:</span><span class="c1">//example.com:8042/myapi/mydata/?name=roads#centerline</span><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="err">\</span><span class="n">__</span><span class="o">/</span> <span class="err">\</span><span class="n">______________</span><span class="o">/</span><span class="err">\</span><span class="n">____________</span><span class="o">/</span> <span class="err">\</span><span class="n">_________</span><span class="o">/</span> <span class="err">\</span><span class="n">________</span><span class="o">/</span><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">|</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">|</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">|</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">|</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">|</span><br /><span class="mi">3986</span>&#xA0;&#xA0;&#xA0; <span class="n">scheme</span>&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">authority</span>&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">path</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">query</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">fragment</span><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="err">\</span><span class="n">__________________________</span><span class="o">/</span><span class="err">\</span><span class="n">_____</span><span class="o">/</span><span class="err">\</span><span class="n">__________</span><span class="o">/</span><br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">|</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">|</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">|</span><br /><span class="no">OGC</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">{</span><span class="n">root</span><span class="o">}</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="n">path</span>&#xA0;&#xA0; <span class="n">parameters</span></pre>
         <p class="SourceTitle" style="text-align:center;">Figure 2&#xA0;&#x2014; Example URI and Components</p>
         <p id="_7cd157aa-004a-d202-056d-3d83e40eb45a">The OGC API &#x2013; Common &#x2013; Part 1: Core standard does not restrict the lexical space of URIs used in the API beyond the requirements of the <a href="https://docs.ogc.org/is/19-072/19-072.html#rc2616">HTTP</a> and <a href="https://docs.ogc.org/is/19-072/19-072.html#rc3986">URI Syntax</a>
  IETF RFCs. If URIs include reserved characters that are delimiters in
@@ -1661,7 +1632,7 @@ the URI subcomponent, these have to be percent-encoded. See Clause 2 of <a href=
         <h1 id="toc15">7.&#xA0; Link Relations</h1>
         <p id="_9a567b09-7d0f-68ca-35a0-11ffbab5c369">This section provides a discussion of link relations, the governing policies and standards, as well as how they should be used.</p>
         <p id="_a9d2a788-06a5-63b6-f66f-07c03b022668">Links between elements of an OGC API are encoded using the link relation schema provided in <a href="#link-schema">Figure 3</a>.</p>
-        <pre id="link-schema" class="prettyprint "><br /><br />type: object<br />required:<br />&#xA0; - href<br />&#xA0; - rel<br />properties:<br />&#xA0; href:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: Supplies the URI to a remote resource (or resource fragment).<br />&#xA0;&#xA0;&#xA0; example: http://data.example.com/buildings/123<br />&#xA0; rel:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: The type or semantics of the relation.<br />&#xA0;&#xA0;&#xA0; example: alternate<br />&#xA0; type:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: A hint indicating what the media type of the result of dereferencing the link should be.<br />&#xA0;&#xA0;&#xA0; example: application/geo+json<br />&#xA0; hreflang:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: A hint indicating what the language of the result of dereferencing the link should be.<br />&#xA0;&#xA0;&#xA0; example: en<br />&#xA0; title:<br />&#xA0;&#xA0;&#xA0; type: string<br />&#xA0;&#xA0;&#xA0; description: Used to label the destination of a link such that it can be used as a human-readable identifier.<br />&#xA0;&#xA0;&#xA0; example: Trierer Strasse 70, 53115 Bonn<br />&#xA0; length:<br />&#xA0;&#xA0;&#xA0; type: integer</pre>
+        <pre id="link-schema" class="sourcecode"><br /><br /><span class="na">type</span><span class="pi">:</span> <span class="s">object</span><br /><span class="na">required</span><span class="pi">:</span><br />&#xA0; <span class="pi">-</span> <span class="s">href</span><br />&#xA0; <span class="pi">-</span> <span class="s">rel</span><br /><span class="na">properties</span><span class="pi">:</span><br />&#xA0; <span class="na">href</span><span class="pi">:</span><br />&#xA0;&#xA0;&#xA0; <span class="na">type</span><span class="pi">:</span> <span class="s">string</span><br />&#xA0;&#xA0;&#xA0; <span class="na">description</span><span class="pi">:</span> <span class="s">Supplies the URI to a remote resource (or resource fragment).</span><br />&#xA0;&#xA0;&#xA0; <span class="na">example</span><span class="pi">:</span> <span class="s">http://data.example.com/buildings/123</span><br />&#xA0; <span class="na">rel</span><span class="pi">:</span><br />&#xA0;&#xA0;&#xA0; <span class="na">type</span><span class="pi">:</span> <span class="s">string</span><br />&#xA0;&#xA0;&#xA0; <span class="na">description</span><span class="pi">:</span> <span class="s">The type or semantics of the relation.</span><br />&#xA0;&#xA0;&#xA0; <span class="na">example</span><span class="pi">:</span> <span class="s">alternate</span><br />&#xA0; <span class="na">type</span><span class="pi">:</span><br />&#xA0;&#xA0;&#xA0; <span class="na">type</span><span class="pi">:</span> <span class="s">string</span><br />&#xA0;&#xA0;&#xA0; <span class="na">description</span><span class="pi">:</span> <span class="s">A hint indicating what the media type of the result of dereferencing the link should be.</span><br />&#xA0;&#xA0;&#xA0; <span class="na">example</span><span class="pi">:</span> <span class="s">application/geo+json</span><br />&#xA0; <span class="na">hreflang</span><span class="pi">:</span><br />&#xA0;&#xA0;&#xA0; <span class="na">type</span><span class="pi">:</span> <span class="s">string</span><br />&#xA0;&#xA0;&#xA0; <span class="na">description</span><span class="pi">:</span> <span class="s">A hint indicating what the language of the result of dereferencing the link should be.</span><br />&#xA0;&#xA0;&#xA0; <span class="na">example</span><span class="pi">:</span> <span class="s">en</span><br />&#xA0; <span class="na">title</span><span class="pi">:</span><br />&#xA0;&#xA0;&#xA0; <span class="na">type</span><span class="pi">:</span> <span class="s">string</span><br />&#xA0;&#xA0;&#xA0; <span class="na">description</span><span class="pi">:</span> <span class="s">Used to label the destination of a link such that it can be used as a human-readable identifier.</span><br />&#xA0;&#xA0;&#xA0; <span class="na">example</span><span class="pi">:</span> <span class="s">Trierer Strasse 70, 53115 Bonn</span><br />&#xA0; <span class="na">length</span><span class="pi">:</span><br />&#xA0;&#xA0;&#xA0; <span class="na">type</span><span class="pi">:</span> <span class="s">integer</span></pre>
         <p class="SourceTitle" style="text-align:center;">Figure 3&#xA0;&#x2014; Link Schema</p>
         <div id="relation-attributes-section"><h2 id="toc16">7.1.&#xA0; Attributes of Link Relations</h2>
 
@@ -1867,7 +1838,7 @@ Anything with temporal extent, i.e. duration. e.g. the taking of a photograph, a
 
 <p id="_d2450451-4905-2cbe-c9fa-385626f139f0">An API is not restricted to a single server. Furthermore, the set of valid servers may be different for different sections of the API. An OpenAPI Server Object describes a single server. Most importantly, it provides the URL to that server. Server Objects are grouped into arrays. These arrays provide a list of the servers which can be used to access a section of the API.</p>
 
-<pre id="_d8b94af0-68dc-853b-7087-33b64be3db0b" class="prettyprint "><br /><br />servers:<br />&#xA0; - url: https://dev.example.org/<br />&#xA0;&#xA0;&#xA0; description: Development server<br />&#xA0; - url: https://data.example.org/<br />&#xA0;&#xA0;&#xA0; description: Production server</pre><p class="SourceTitle" style="text-align:center;">Figure 4&#xA0;&#x2014; Example Array of Server Objects</p>
+<pre id="_d8b94af0-68dc-853b-7087-33b64be3db0b" class="sourcecode"><br /><br />servers:<br />&#xA0; - url: https://dev.example.org/<br />&#xA0;&#xA0;&#xA0; description: Development server<br />&#xA0; - url: https://data.example.org/<br />&#xA0;&#xA0;&#xA0; description: Production server</pre><p class="SourceTitle" style="text-align:center;">Figure 4&#xA0;&#x2014; Example Array of Server Objects</p>
 
 
 <p id="_3ca70475-85e2-edd5-3ac7-294b0cc3ab74">Server Objects can be defined at the following levels:</p>
@@ -1910,7 +1881,7 @@ Anything with temporal extent, i.e. duration. e.g. the taking of a photograph, a
 
 <p id="_d18b21d6-5a6e-2ba2-9135-df56684dfea2">The first scope where a Server Object is found dictates the behavior completely.</p>
 
-<pre id="_badcae90-4a24-cccb-bb8a-0d219a75da4b" class="prettyprint lang-bsh"><br /><br />&#xA0;IF Server Objects are supplied<br />&#xA0;&#xA0;&#xA0;&#xA0; THEN save them for latter<br />&#xA0;&#xA0;&#xA0;&#xA0; ELSE create a Server Object for the host of the OpenAPI document<br />&#xA0;DO FOR each Path<br />&#xA0;&#xA0;&#xA0;&#xA0; IF Server Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Use them instead of those previously identified<br />&#xA0;&#xA0;&#xA0;&#xA0; IF Parameter Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; save them for latter<br />&#xA0;&#xA0;&#xA0;&#xA0; DO FOR Each Operation<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF Server Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Use them instead of those previously identified<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF Parameter Objects are included THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF this parameter was previously defined<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; THEN replace the previous definition<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ELSE add this parameter to the set.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DO FOR Each Server Object<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Extract all URL roots<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DO FOR each URL root<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Concatenate the URL root and Path to create a working URL<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Concatenate the working URL with the Parameters<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Save the completed URL for future use<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; CONTINUE<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DONE<br />&#xA0;&#xA0;&#xA0;&#xA0; DONE<br />&#xA0;DONE</pre><p class="SourceTitle" style="text-align:center;">Figure 5&#xA0;&#x2014; Algorithm for building a URL</p>
+<pre id="_badcae90-4a24-cccb-bb8a-0d219a75da4b" class="sourcecode"><span class="go"><br /><br />&#xA0;IF Server Objects are supplied<br />&#xA0;&#xA0;&#xA0;&#xA0; THEN save them for latter<br />&#xA0;&#xA0;&#xA0;&#xA0; ELSE create a Server Object for the host of the OpenAPI document<br />&#xA0;DO FOR each Path<br />&#xA0;&#xA0;&#xA0;&#xA0; IF Server Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Use them instead of those previously identified<br />&#xA0;&#xA0;&#xA0;&#xA0; IF Parameter Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; save them for latter<br />&#xA0;&#xA0;&#xA0;&#xA0; DO FOR Each Operation<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF Server Objects are included, THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Use them instead of those previously identified<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF Parameter Objects are included THEN<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IF this parameter was previously defined<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; THEN replace the previous definition<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ELSE add this parameter to the set.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DO FOR Each Server Object<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Extract all URL roots<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DO FOR each URL root<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Concatenate the URL root and Path to create a working URL<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Concatenate the working URL with the Parameters<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Save the completed URL for future use<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; CONTINUE<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DONE<br />&#xA0;&#xA0;&#xA0;&#xA0; DONE<br />&#xA0;DONE</span></pre><p class="SourceTitle" style="text-align:center;">Figure 5&#xA0;&#x2014; Algorithm for building a URL</p>
 
 </div>
 </div>
@@ -1971,7 +1942,7 @@ Anything with temporal extent, i.e. duration. e.g. the taking of a photograph, a
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
