@@ -931,12 +931,15 @@ a, a:visited {
 
 a:hover {
   color: #00335b;
-  background: white;
-  box-shadow: 3px 0 0 white, -3px 0 0 white; }
+  background: #39CCCC;
+  box-shadow: 3px 0 0 #39CCCC, -3px 0 0 #39CCCC; }
 
-::selection,
-::-moz-selection {
-  background: white;
+*::selection {
+  background: #39CCCC;
+  color: #00335b; }
+
+*::-moz-selection {
+  background: #39CCCC;
   color: #00335b; }
 
 /* Bibliograhy */
@@ -1169,7 +1172,41 @@ span.hi {
   background-color: yellow; }
 
 -->
-</style><title>OGC API - Discrete Global Grid Systems - Part 1: Core</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .dl, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}--></style><title>OGC API - Discrete Global Grid Systems - Part 1: Core</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1286,18 +1323,18 @@ span.hi {
     <div class="boilerplate-legal">
 
 
-    <div><h1 class="IntroTitle">Notice for Drafts</h1>
+  <div><h1 class="IntroTitle">Notice for Drafts</h1>
 
-      <p id="_09caafd2-d047-3050-9095-b3f182faf86f">This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.</p>
+    <p id="_09caafd2-d047-3050-9095-b3f182faf86f">This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.</p>
 
-      <p id="_d80fd0eb-fbfd-dec3-0ddb-92472f4d5fcf">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
-    </div>
-
-
-
-
-
+    <p id="_d80fd0eb-fbfd-dec3-0ddb-92472f4d5fcf">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
   </div>
+
+
+
+
+
+</div>
  </div>
          
 
@@ -1318,18 +1355,19 @@ span.hi {
     <div><h1 class="IntroTitle">Copyright notice</h1>
 
 
-      <p id="_609a02a1-fa53-7a69-1cb9-ff2ed59292e2" style="text-align:center;">Copyright
-        &#xA9; 2022 Open Geospatial Consortium<br />
-        To obtain additional rights of use, visit
-        <a href="http://www.ogc.org/legal/">http://www.ogc.org/legal/</a></p>
-    </div>
-    <div><h1 class="IntroTitle">Note</h1>
-
-      <p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
-
-      <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
-    </div>
+      <p id="_1fccc2ba-15c8-d148-cb34-a5178bd1e5f8" style="text-align:center;">Copyright
+      &#xA9; 2022 Open Geospatial Consortium<br />
+      To obtain additional rights of use, visit
+      <a href="https://www.ogc.org/legal">https://www.ogc.org/legal</a>
+    </p>
   </div>
+  <div><h1 class="IntroTitle">Note</h1>
+
+    <p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+    <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+  </div>
+</div>
 </div>
 
 <div class="rule"></div>
@@ -1341,89 +1379,22 @@ span.hi {
     <br />
     <div class="prefatory-section"><div class="license">
   <div class="boilerplate-license">
-    <div><h1 class="IntroTitle">License Agreement</h1>
+  <div><h1 class="IntroTitle">License Agreement</h1>
 
 
-      <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial
-        Consortium, (&#x201C;Licensor&#x201D;), free of charge and subject to the terms set
-        forth below, to any person obtaining a copy of this Intellectual Property and
-        any associated documentation, to deal in the Intellectual Property without
-        restriction (except as set forth below), including without limitation the
-        rights to implement, use, copy, modify, merge, publish, distribute, and/or
-        sublicense copies of the Intellectual Property, and to permit persons to whom
-        the Intellectual Property is furnished to do so, provided that all copyright notices
-        on the intellectual property are retained intact and that each person to whom
-        the Intellectual Property is furnished agrees to the terms of this Agreement.</p>
-
-      <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of
-        the modified Intellectual Property must include, in addition to the above
-        copyright notice, a notice that the Intellectual Property includes
-        modifications that have not been approved or adopted by LICENSOR.</p>
-
-      <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT
-        CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD.
-        THE INTELLECTUAL PROPERTY IS PROVIDED &#x201C;AS
-        IS&#x201D;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-        LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-        AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS
-        INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
-        INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE
-        INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE
-        INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER&#x2019;S OWN RISK. IN NO
-        EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY
-        RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT,
-        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
-        FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN
-        AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT
-        OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR
-        PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p>
-
-      <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may
-        terminate it at any time by destroying the Intellectual Property together with
-        all copies in any form. The license will also terminate if you fail to comply
-        with any term or condition of this Agreement. Except as provided in the
-        following sentence, no such termination of this license shall require the
-        termination of any third party end-user sublicense to the Intellectual Property
-        which is in force as of the date of notice of such termination. In addition,
-        should the Intellectual Property, or the operation of the Intellectual
-        Property, infringe, or in LICENSOR&#x2019;s sole opinion be
-        likely to infringe, any patent, copyright, trademark or other right of a third
-        party, you agree that LICENSOR, in its sole discretion, may terminate this
-        license without any compensation or liability to you, your licensees or any
-        other party. You agree upon termination of any kind to destroy or cause to be
-        destroyed the Intellectual Property together with all copies in any form,
-        whether held by you or by any third party.</p>
-
-      <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of
-        LICENSOR or of any other holder of a copyright in all or part of the Intellectual
-        Property shall not be used in advertising or otherwise to promote the sale, use
-        or other dealings in this Intellectual Property without prior written
-        authorization of LICENSOR or such copyright holder. LICENSOR is and shall at
-        all times be the sole entity that may authorize you or any third party to use
-        certification marks, trademarks or other special designations to indicate
-        compliance with any LICENSOR standards or specifications.
-        This Agreement is
-        governed by the laws of the Commonwealth of Massachusetts. The application to
-        this Agreement of the United Nations Convention on Contracts for the
-        International Sale of Goods is hereby expressly excluded. In the event any
-        provision of this Agreement shall be deemed unenforceable, void or invalid, such
-        provision shall be modified so as to make it valid and enforceable, and as so
-        modified the entire Agreement shall remain in full force and effect. No
-        decision, action or inaction by LICENSOR shall be construed to be a waiver of
-        any rights or remedies available to it.</p>
-
-      <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p>
+    <p id="_319164f2-21a2-0783-9988-1636951e3d55">Use of this document is subject to the license agreement at
+    <a href="https://www.ogc.org/license">https://www.ogc.org/license</a></p>
     </div>
   </div>
 
 
 <div class="boilerplate-feedback">
 
-    <div id="boilerplate-standard-feedback">
-      <p id="_bbc1a653-f270-135d-9455-af930feb3587">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <a href="http://portal.opengeospatial.org/public_ogc/change_request.php">http://portal.opengeospatial.org/public_ogc/change_request.php</a></p>
-    </div>
-
+  <div id="boilerplate-standard-feedback">
+    <p id="_7a013165-92ad-d101-65c5-6d742aecd60a">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <a href="http://ogc.standardstracker.org/">http://ogc.standardstracker.org/</a></p>
   </div>
+
+</div>
 
 
 </div>
@@ -1443,14 +1414,14 @@ span.hi {
     <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
       <div class="authority">
   
-  
-
-  
-
-
 
 
   
+
+
+
+
+
 </div>
       <br />
       <div id="_abstract">
@@ -1461,7 +1432,7 @@ as defined in <a href="https://docs.ogc.org/as/20-040r3/20-040r3.html">OGC Abstr
 matching a specify query (in combination with other building blocks defining queries, such as a filter defined using
 the <a href="https://docs.ogc.org/DRAFTS/21-065.html">OGC Common Query Language (CQL2)</a>.</p>
       </div>
-      <div class="Section3" id="_bbfdc0fc-5453-49af-9955-96c41ed58fe8">
+      <div class="Section3" id="_d40856bc-b156-4e17-8c43-b80e90da5ae8">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1483,7 +1454,7 @@ Additional parts for <i>OGC API&#x2009;&#x2014;&#x2009;Discrete Global Grid Syst
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_88f92572-6187-4a1a-b4ae-03833bb6b451">
+      <div class="Section3" id="_755b2b83-3411-4d62-a7e3-718b649e8357">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1728,7 +1699,7 @@ the link relation type <a href="http://www.opengis.net/def/rel/ogc/1.0/dggs-zone
 
 <div id="_response_3"><h4>8.1.1.2.&#xA0; Response</h4>
 
-<table id="_40e47c8d-5c84-334a-6a83-97682d1c2311" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 6</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Label</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/zone-query/zones-list-response</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_b5e335e7-cc7e-6945-7892-210cded1089f">For the response to a query requesting a list of DGGS zones:</p>
+<table id="_3ca31bb2-5ab4-1361-9cc2-ecb1e89a21e1" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 6</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Label</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">/req/zone-query/zones-list-response</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_b5e335e7-cc7e-6945-7892-210cded1089f">For the response to a query requesting a list of DGGS zones:</p>
 </td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_4677edec-e165-ecc4-7aa0-b2ae9fac794c">The response of the HTTP GET operation SHALL have a status code of 200.</p>
 </td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_ff99fde6-6182-0d47-eae6-fae3c2ed723c">The content of the response SHALL be a list of zones fully covering where data is available
 (in the case where the resource is associated with a particular dataset), and
@@ -1738,9 +1709,9 @@ without any redundancy.</p>
 SHALL all be of the same DGGS hierarchy level.</p>
 </td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">D</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_8b1edb5b-a6c4-df4d-cb17-8d80cb5a9e9c">The selection of an encoding for the returned list of zones SHALL be consistent with
 HTTP content negotiation.</p>
-</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">E</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_aa6148b2-6f5b-4a99-ed3e-90b692b08b5b">The implementation SHALL support at minimum a JSON encoding (media type <tt>application/json</tt>)
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">E</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_af72a9ec-86f4-e99d-aac8-0ec7e5ce3687">The implementation SHALL support at minimum a JSON encoding (media type <tt>application/json</tt>)
 where each zone ID is specified as a string within an array of zones assigned to a <tt>zones</tt> property
-within a JSON object (e..g, <tt>{ &#x201C;zones&#x201D;: [ &#x201C;1-E-14&#x201D;, &#x201C;1-E-15&#x201D;, &#x201C;1-F-14&#x201D;, &#x201C;1-F-15&#x201D;, &#x201C;1-F-16&#x201D; ] }</tt>.</p>
+within a JSON object (e..g, <tt>{ "zones": [ "1-E-14", "1-E-15", "1-F-14", "1-F-15", "1-F-16" ] }</tt>.</p>
 </td></tr></tbody></table>
 </div>
 </div>
@@ -1891,7 +1862,7 @@ which a client can request to resume listing the zones.</p>
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
