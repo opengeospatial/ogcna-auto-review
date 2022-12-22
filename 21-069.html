@@ -1430,7 +1430,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <p id="_4ee78aba-5027-2e97-f61d-4ccfe1d0d06b">The next simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents which are linked from the Coverage object. This is useful for a multi-variable dataset, such as one with temperature, humidity, wind speed, etc., to be recorded in separate files. This allows the client to load only the variables of interest.</p>
         <p id="_94fe8e33-9e6b-b7f0-50cd-1c14c357d4ba">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable&#x2019;s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially in a manner similar to a tiled map server.</p>
       </div>
-      <div class="Section3" id="_a2bd9cc8-f333-439f-a336-27539d385c9b">
+      <div class="Section3" id="_70d6e16a-4f93-4ee4-9329-69402732e653">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1447,7 +1447,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security Considerations</h1>
         <p id="_db8924f5-10fa-6bb2-b350-b73de75e1ce1">Given the intended use case of downloading data to a browser, there is no functionality within this specification to facilitate authenticity, integrity and confidentiality (e.g. signatures or encryption). This can be applied at the transport level using standards that apply there. Use cases involving authenticity, integrity and confidentiality outside of the transport context (e.g. offline devices) are not intended or supported.</p>
       </div>
-      <div class="Section3" id="_1d198df0-b421-4126-9711-65fae5eb8911">
+      <div class="Section3" id="_324a8350-2ffa-448c-8c9d-8aa7209d882e">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1589,10 +1589,24 @@ The special language tag <tt>"und"</tt> can be used to identify a value whose la
 
 <div id="_uml_diagram"><h3 id="toc19">9.1.2.&#xA0; UML Diagram</h3>
 
-<p id="_595e725d-f57a-5cda-caf8-6b1b0787ddd5">The following is a high-level UML class diagram of the main CoverageJSON objects and the relationships between them.</p>
+<p id="_9114d9cb-4dd7-877f-626a-20b46f85de07">The following is a high-level UML class diagram of the main CoverageJSON objects and the relationships between them.</p>
 
-<pre id="_da3ec545-f848-03ac-5aa5-8f070c86b9b8" class="sourcecode">classDiagram<br />&#xA0;&#xA0;&#xA0; CoverageCollection "0..1" o-- "1..*" Coverage<br /><br />&#xA0;&#xA0;&#xA0; Coverage "1" *-- "1" Domain<br />&#xA0;&#xA0;&#xA0; Coverage "1" *-- "1..*" Parameter<br />&#xA0;&#xA0;&#xA0; Coverage "1" *-- "*" ParameterGroup<br />&#xA0;&#xA0;&#xA0; Coverage "1" *-- "1..*" Range<br /><br />&#xA0;&#xA0;&#xA0; Domain "1" *-- "1..*" Axis<br />&#xA0;&#xA0;&#xA0; Domain "1" *-- "*" ReferenceSystem<br /><br />&#xA0;&#xA0;&#xA0; Range &#x3c;|-- NdArray<br />&#xA0;&#xA0;&#xA0; Range &#x3c;|-- TiledNdArray<br />&#xA0;&#xA0;&#xA0; TiledNdArray "0..1" *-- "1..*" NdArray<br /><br />&#xA0;&#xA0;&#xA0; ParameterGroup "0..1" *-- "1..*" Parameter</pre><p class="SourceTitle" style="text-align:center;">Figure 1</p>
+<p id="_07b6daeb-e359-ed11-89dd-386472872ccf">@startuml
+CoverageCollection &#x201C;0..1&#x201D; o&#x2014; &#x201C;1..*&#x201D; Coverage</p>
 
+<p id="_df2ceb20-6ef1-6d11-bbfb-844121f50dd9">Coverage &#x201C;1&#x201D; <b>&#x2014; &#x201C;1&#x201D; Domain Coverage &#x201C;1&#x201D; *&#x2014; &#x201C;1..</b>&#x201D; Parameter
+Coverage &#x201C;1&#x201D; <b>&#x2014; &#x201C;</b>&#x201D; ParameterGroup
+Coverage &#x201C;1&#x201D; <b>&#x2014; &#x201C;1..</b>&#x201D; Range</p>
+
+<p id="_98d549c5-0433-37ac-3a57-9051d65e29e4">Domain &#x201C;1&#x201D; <b>&#x2014; &#x201C;1..</b>&#x201D; Axis
+Domain &#x201C;1&#x201D; <b>&#x2014; &#x201C;</b>&#x201D; ReferenceSystem</p>
+
+<p id="_e443e1d1-549e-933c-ed84-488ea47f1a3b">Range &#x3c;|&#x2014; NdArray
+Range &#x3c;|&#x2014; TiledNdArray
+TiledNdArray &#x201C;0..1&#x201D; <b>&#x2014; &#x201C;1..</b>&#x201D; NdArray</p>
+
+<p id="_79e829d9-a5c1-b3b6-a129-70b5bf4ce3ff">ParameterGroup &#x201C;0..1&#x201D; <b>&#x2014; &#x201C;1..</b>&#x201D; Parameter
+@enduml</p>
 </div>
 </div>
         <div id="_i18n_objects"><h2 id="toc20">9.2.&#xA0; i18n Objects</h2>
@@ -1965,7 +1979,7 @@ Its general structure is:</p>
 
 <p id="_cd137676-9487-e6ff-700f-4501c5819594">The ordering of the data values with respect to their dimensions is equivalent to:</p>
 
-<pre id="_da9d580a-634e-0d4b-4f61-606c918ef99d" class="sourcecode"><span class="p">[</span><span class="err">(y</span><span class="mi">0</span><span class="p">,</span><span class="err">x</span><span class="mi">0</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">0</span><span class="p">,</span><span class="err">x</span><span class="mi">1</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">0</span><span class="p">,</span><span class="err">x</span><span class="mi">2</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">0</span><span class="p">,</span><span class="err">x</span><span class="mi">3</span><span class="err">)</span><span class="p">,</span><span class="w"><br /></span><span class="err">(y</span><span class="mi">1</span><span class="p">,</span><span class="err">x</span><span class="mi">0</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">1</span><span class="p">,</span><span class="err">x</span><span class="mi">1</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">1</span><span class="p">,</span><span class="err">x</span><span class="mi">2</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">1</span><span class="p">,</span><span class="err">x</span><span class="mi">3</span><span class="err">)</span><span class="p">]</span></pre><p class="SourceTitle" style="text-align:center;">Figure 2</p>
+<pre id="_da9d580a-634e-0d4b-4f61-606c918ef99d" class="sourcecode"><span class="p">[</span><span class="err">(y</span><span class="mi">0</span><span class="p">,</span><span class="err">x</span><span class="mi">0</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">0</span><span class="p">,</span><span class="err">x</span><span class="mi">1</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">0</span><span class="p">,</span><span class="err">x</span><span class="mi">2</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">0</span><span class="p">,</span><span class="err">x</span><span class="mi">3</span><span class="err">)</span><span class="p">,</span><span class="w"><br /></span><span class="err">(y</span><span class="mi">1</span><span class="p">,</span><span class="err">x</span><span class="mi">0</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">1</span><span class="p">,</span><span class="err">x</span><span class="mi">1</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">1</span><span class="p">,</span><span class="err">x</span><span class="mi">2</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="err">(y</span><span class="mi">1</span><span class="p">,</span><span class="err">x</span><span class="mi">3</span><span class="err">)</span><span class="p">]</span></pre><p class="SourceTitle" style="text-align:center;">Figure 1</p>
 
 </div>
 
