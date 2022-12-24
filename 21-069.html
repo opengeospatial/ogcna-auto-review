@@ -1430,7 +1430,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <p id="_4ee78aba-5027-2e97-f61d-4ccfe1d0d06b">The next simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents which are linked from the Coverage object. This is useful for a multi-variable dataset, such as one with temperature, humidity, wind speed, etc., to be recorded in separate files. This allows the client to load only the variables of interest.</p>
         <p id="_94fe8e33-9e6b-b7f0-50cd-1c14c357d4ba">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable&#x2019;s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially in a manner similar to a tiled map server.</p>
       </div>
-      <div class="Section3" id="_044123cc-1b91-4ea6-81ac-5a73c9ca1e9d">
+      <div class="Section3" id="_b34be876-e6e1-4839-88e1-d59f033a9563">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1447,7 +1447,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security Considerations</h1>
         <p id="_db8924f5-10fa-6bb2-b350-b73de75e1ce1">Given the intended use case of downloading data to a browser, there is no functionality within this specification to facilitate authenticity, integrity and confidentiality (e.g. signatures or encryption). This can be applied at the transport level using standards that apply there. Use cases involving authenticity, integrity and confidentiality outside of the transport context (e.g. offline devices) are not intended or supported.</p>
       </div>
-      <div class="Section3" id="_9350853d-beac-4aa4-bad5-6f14a573fb9a">
+      <div class="Section3" id="_3805e207-63b7-47ff-988d-9c31ccc880fb">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1506,16 +1506,16 @@ pre.sourcecode .nb, pre.sourcecode .bp {
 <p id="OGC07-011" class="NormRef">OGC: OGC 07-011, <i>Topic 6&#x2009;&#x2014;&#x2009;Schema for coverage geometry and functions</i>. Open Geospatial Consortium (2007). <a href="https://portal.ogc.org/files/?artifact id=19820">https://portal.ogc.org/files/?artifact id=19820</a>.</p>
  <p id="OGC18-010r7" class="NormRef">Roger Lott: OGC 18-010r7, <i>Geographic information &#x2014; Well-known text representation of coordinate reference systems</i>. Open Geospatial Consortium (2019). <a href="https://docs.ogc.org/is/18-010r7/18-010r7.html">https://docs.ogc.org/is/18-010r7/18-010r7.html</a>.</p>
 <p id="ogcutc" class="NormRef"><i>OGC definition of the UTC Temporal Reference System</i>, <a href="http://www.opengis.net/def/trs/BIPM/0/UTC">http://www.opengis.net/def/trs/BIPM/0/UTC</a></p>
-<p id="rfc2413" class="NormRef">S. Weibel, J. Kunze, C. Lagoze, M. Wolf: IETF RFC 2413, <i>Dublin Core Metadata for Resource Discovery</i>. (1998). <a href="https://www.rfc-editor.org/info/rfc2413">https://www.rfc-editor.org/info/rfc2413</a>.</p>
- <p id="rfc3339" class="NormRef">G. Klyne, C. Newman: IETF RFC 3339, <i>Date and Time on the Internet: Timestamps</i>. (2002). <a href="https://www.rfc-editor.org/info/rfc3339">https://www.rfc-editor.org/info/rfc3339</a>.</p>
- <p id="rfc3896" class="NormRef">O. Nicklass (ed.): IETF RFC 3896, <i>Definitions of Managed Objects for the DS3/E3 Interface Type</i>. (2004). <a href="https://www.rfc-editor.org/info/rfc3896">https://www.rfc-editor.org/info/rfc3896</a>.</p>
- <p id="rfc4627" class="NormRef">D. Crockford: IETF RFC 4627, <i>The application/json Media Type for JavaScript Object Notation (JSON)</i>. (2006). <a href="https://www.rfc-editor.org/info/rfc4627">https://www.rfc-editor.org/info/rfc4627</a>.</p>
- <p id="rfc4647" class="NormRef">A. Phillips, M. Davis (eds.): IETF RFC 4647, <i>Matching of Language Tags</i>. (2006). <a href="https://www.rfc-editor.org/info/rfc4647">https://www.rfc-editor.org/info/rfc4647</a>.</p>
- <p id="rfc5646" class="NormRef">A. Phillips, M. Davis (eds.): IETF RFC 5646, <i>Tags for Identifying Languages</i>. (2009). <a href="https://www.rfc-editor.org/info/rfc5646">https://www.rfc-editor.org/info/rfc5646</a>.</p>
- <p id="rfc6570" class="NormRef">J. Gregorio, R. Fielding, M. Hadley, M. Nottingham, D. Orchard: IETF RFC 6570, <i>URI Template</i>. (2012). <a href="https://www.rfc-editor.org/info/rfc6570">https://www.rfc-editor.org/info/rfc6570</a>.</p>
- <p id="rfc6906" class="NormRef">E. Wilde: IETF RFC 6906, <i>The &#x2018;profile&#x2019; Link Relation Type</i>. (2013). <a href="https://www.rfc-editor.org/info/rfc6906">https://www.rfc-editor.org/info/rfc6906</a>.</p>
- <p id="rfc7159" class="NormRef">T. Bray (ed.): IETF RFC 7159, <i>The JavaScript Object Notation (JSON) Data Interchange Format</i>. (2014). <a href="https://www.rfc-editor.org/info/rfc7159">https://www.rfc-editor.org/info/rfc7159</a>.</p>
- <p id="rfc7946" class="NormRef">H. Butler, M. Daly, A. Doyle, S. Gillies, S. Hagen, T. Schaub: IETF RFC 7946, <i>The GeoJSON Format</i>. (2016). <a href="https://www.rfc-editor.org/info/rfc7946">https://www.rfc-editor.org/info/rfc7946</a>.</p>
+<p id="rfc2413" class="NormRef">S. Weibel, J. Kunze, C. Lagoze, M. Wolf: IETF RFC 2413, <i>Dublin Core Metadata for Resource Discovery</i>. RFC Publisher (1998). <a href="https://www.rfc-editor.org/info/rfc2413">https://www.rfc-editor.org/info/rfc2413</a>.</p>
+ <p id="rfc3339" class="NormRef">G. Klyne, C. Newman: IETF RFC 3339, <i>Date and Time on the Internet: Timestamps</i>. RFC Publisher (2002). <a href="https://www.rfc-editor.org/info/rfc3339">https://www.rfc-editor.org/info/rfc3339</a>.</p>
+ <p id="rfc3896" class="NormRef">O. Nicklass (ed.): IETF RFC 3896, <i>Definitions of Managed Objects for the DS3/E3 Interface Type</i>. RFC Publisher (2004). <a href="https://www.rfc-editor.org/info/rfc3896">https://www.rfc-editor.org/info/rfc3896</a>.</p>
+ <p id="rfc4627" class="NormRef">D. Crockford: IETF RFC 4627, <i>The application/json Media Type for JavaScript Object Notation (JSON)</i>. RFC Publisher (2006). <a href="https://www.rfc-editor.org/info/rfc4627">https://www.rfc-editor.org/info/rfc4627</a>.</p>
+ <p id="rfc4647" class="NormRef">A. Phillips, M. Davis (eds.): IETF RFC 4647, <i>Matching of Language Tags</i>. RFC Publisher (2006). <a href="https://www.rfc-editor.org/info/rfc4647">https://www.rfc-editor.org/info/rfc4647</a>.</p>
+ <p id="rfc5646" class="NormRef">A. Phillips, M. Davis (eds.): IETF RFC 5646, <i>Tags for Identifying Languages</i>. RFC Publisher (2009). <a href="https://www.rfc-editor.org/info/rfc5646">https://www.rfc-editor.org/info/rfc5646</a>.</p>
+ <p id="rfc6570" class="NormRef">J. Gregorio, R. Fielding, M. Hadley, M. Nottingham, D. Orchard: IETF RFC 6570, <i>URI Template</i>. RFC Publisher (2012). <a href="https://www.rfc-editor.org/info/rfc6570">https://www.rfc-editor.org/info/rfc6570</a>.</p>
+ <p id="rfc6906" class="NormRef">E. Wilde: IETF RFC 6906, <i>The &#x2018;profile&#x2019; Link Relation Type</i>. RFC Publisher (2013). <a href="https://www.rfc-editor.org/info/rfc6906">https://www.rfc-editor.org/info/rfc6906</a>.</p>
+ <p id="rfc7159" class="NormRef">T. Bray (ed.): IETF RFC 7159, <i>The JavaScript Object Notation (JSON) Data Interchange Format</i>. RFC Publisher (2014). <a href="https://www.rfc-editor.org/info/rfc7159">https://www.rfc-editor.org/info/rfc7159</a>.</p>
+ <p id="rfc7946" class="NormRef">H. Butler, M. Daly, A. Doyle, S. Gillies, S. Hagen, T. Schaub: IETF RFC 7946, <i>The GeoJSON Format</i>. RFC Publisher (2016). <a href="https://www.rfc-editor.org/info/rfc7946">https://www.rfc-editor.org/info/rfc7946</a>.</p>
 <p id="w3ccurie" class="NormRef">W3C CURIE Syntax 1.0, Syntax for expressing Compact URIs, Working Group Note, 2010-12-16, <a href="http://www.w3.org/TR/curie/">http://www.w3.org/TR/curie/</a></p>
 <p id="w3cjsonld10" class="NormRef">W3C json-ld, <i>JSON-LD 1.0</i>. <a href="https://www.w3.org/TR/json-ld/">https://www.w3.org/TR/json-ld/</a>.</p>
 <p id="UCUM" class="NormRef">Schadow, G., McDonald, C. J.: Unified Code for Units of Measure, <a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a></p>
