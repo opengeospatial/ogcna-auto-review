@@ -129,6 +129,35 @@ a.FootnoteRef + a.FootnoteRef:before {
   color: red;
   text-decoration: line-through; }
 
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
+
 #standard-band {
   background-color: #3D9970; }
 
@@ -612,7 +641,7 @@ dl {
 
 @media screen and (min-width: 768px) {
   nav {
-    marign-right: 30px; } }
+    margin-right: 30px; } }
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -853,7 +882,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table thead tr th {
     background-color: #5d99d6; }
   table td, table th {
@@ -880,7 +909,7 @@ table.modspec {
   table.modspec th, table.modspec td {
     padding: 1em; }
   table.modspec td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table.modspec tr:nth-child(even) {
     background: #ffffff; }
   table.modspec tr:nth-child(odd) {
@@ -959,7 +988,7 @@ p.Biblio, p.NormRef {
   text-align: center;
   text-align: left; }
 
-pre {
+pre, .sourcecode {
   font-family: "Space Mono",monospace;
   font-variant-ligatures: none;
   background-color: #f7f7f7;
@@ -993,7 +1022,7 @@ pre {
   .Admonition p, .Admonition.Important p, .Admonition.Warning p {
     margin: 0; }
 
-.figure, pre, .pseudocode {
+.figure, pre, .pseudocode, .sourcecode {
   background-color: #e1eef1;
   color: #424242;
   font-size: 0.8em; }
@@ -1198,7 +1227,7 @@ pre.sourcecode .kr {
 pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
   color: #0000FF;
 }
-pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .dl, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
   color: #009C00;
 }
 pre.sourcecode .sa {
@@ -1206,7 +1235,12 @@ pre.sourcecode .sa {
 }
 pre.sourcecode .nb, pre.sourcecode .bp {
   color: #C34E00;
-}--></style><title>OGC CoverageJSON Community Standard</title>
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>OGC CoverageJSON Community Standard</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1215,16 +1249,16 @@ pre.sourcecode .nb, pre.sourcecode .bp {
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></link></link></head>
+<meta name="keywords" content="ogcdoc, OGC document, JSON, JSON-LD, CoverageJSON, CovJSON, Coverage, spatiotemporal, linked-data" /><meta name="description" content="Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser. Implementation experience has shown that CoverageJSON is an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. CoverageJSON supports the efficient transfer from big data stores of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables straightfoward local manipulation of the data, for example, by science researchers. Web developers often use and are familiar with JSON formats. CoverageJSON can be used to encode coverages and collections of coverages. Coverage data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications and to reduce the potential size of the payload. Relatively large datasets can be handled efficiently in a &#x201C;web-friendly&#x201D; way by partitioning information among several CoverageJSON documents, including a tiling mechanism. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended primarily to store or transfer very large datasets in bulk. The simplest and most common use case is to embed all the data values of all variables in a Coverage object within the CoverageJSON document, so that it is &#x22;self-contained&#x22;. Such a standalone document supports the use of very simple clients. The next simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents which are linked from the Coverage object. This is useful for a multi-variable dataset, such as one with temperature, humidity, wind speed, etc., to be recorded in separate files. This allows the client to load only the variables of interest. A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable&#x2019;s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially in a manner similar to a tiled map server." /></head>
   <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
     <div class="title-section"><div class="document-stage-band" id="draft-band">
     <p class="document-stage">Draft</p>
@@ -1430,7 +1464,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <p id="_4ee78aba-5027-2e97-f61d-4ccfe1d0d06b">The next simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents which are linked from the Coverage object. This is useful for a multi-variable dataset, such as one with temperature, humidity, wind speed, etc., to be recorded in separate files. This allows the client to load only the variables of interest.</p>
         <p id="_94fe8e33-9e6b-b7f0-50cd-1c14c357d4ba">A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable&#x2019;s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially in a manner similar to a tiled map server.</p>
       </div>
-      <div class="Section3" id="_37acf8c8-22c6-4c5d-9ca1-a1b3d544f286">
+      <div class="Section3" id="_0b7bdea3-5a8a-447d-a161-fecffe56e08f">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1447,7 +1481,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security Considerations</h1>
         <p id="_db8924f5-10fa-6bb2-b350-b73de75e1ce1">Given the intended use case of downloading data to a browser, there is no functionality within this specification to facilitate authenticity, integrity and confidentiality (e.g. signatures or encryption). This can be applied at the transport level using standards that apply there. Use cases involving authenticity, integrity and confidentiality outside of the transport context (e.g. offline devices) are not intended or supported.</p>
       </div>
-      <div class="Section3" id="_dd572bd7-742b-40fe-8440-868c0ae16f04">
+      <div class="Section3" id="_54ecffc8-7ecc-4a35-a40b-f7eebcea14a7">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
