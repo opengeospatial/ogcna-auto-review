@@ -129,6 +129,35 @@ a.FootnoteRef + a.FootnoteRef:before {
   color: red;
   text-decoration: line-through; }
 
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
+
 #standard-band {
   background-color: #3D9970; }
 
@@ -612,7 +641,7 @@ dl {
 
 @media screen and (min-width: 768px) {
   nav {
-    marign-right: 30px; } }
+    margin-right: 30px; } }
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -853,7 +882,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table thead tr th {
     background-color: #5d99d6; }
   table td, table th {
@@ -880,7 +909,7 @@ table.modspec {
   table.modspec th, table.modspec td {
     padding: 1em; }
   table.modspec td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table.modspec tr:nth-child(even) {
     background: #ffffff; }
   table.modspec tr:nth-child(odd) {
@@ -959,7 +988,7 @@ p.Biblio, p.NormRef {
   text-align: center;
   text-align: left; }
 
-pre {
+pre, .sourcecode {
   font-family: "Space Mono",monospace;
   font-variant-ligatures: none;
   background-color: #f7f7f7;
@@ -993,7 +1022,7 @@ pre {
   .Admonition p, .Admonition.Important p, .Admonition.Warning p {
     margin: 0; }
 
-.figure, pre, .pseudocode {
+.figure, pre, .pseudocode, .sourcecode {
   background-color: #e1eef1;
   color: #424242;
   font-size: 0.8em; }
@@ -1198,7 +1227,7 @@ pre.sourcecode .kr {
 pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
   color: #0000FF;
 }
-pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .dl, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
   color: #009C00;
 }
 pre.sourcecode .sa {
@@ -1206,7 +1235,12 @@ pre.sourcecode .sa {
 }
 pre.sourcecode .nb, pre.sourcecode .bp {
   color: #C34E00;
-}--></style><title>OGC API - Discrete Global Grid Systems - Part 1: Core</title>
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>OGC API - Discrete Global Grid Systems - Part 1: Core</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1215,16 +1249,16 @@ pre.sourcecode .nb, pre.sourcecode .bp {
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></link></link></head>
+<meta name="keywords" content="ogcdoc, OGC document, API, openapi, html, ogcapi" /><meta name="description" content="This specification defines building blocks which can be used as part of a Web API to retrieve geospatial data for a specific area, time and resolution of interest, based on a specific Discrete Global Grid System (DGGS) and indexing scheme, as defined in OGC Abstract Topic 21, as well to query the list of DGGS zones from which data is available and/or matching a specify query (in combination with other building blocks defining queries, such as a filter defined using the OGC Common Query Language (CQL2)." /></head>
   <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
     <div class="title-section"><div class="document-stage-band" id="swg-draft-band">
     <p class="document-stage">Candidate SWG Draft</p>
@@ -1432,7 +1466,7 @@ as defined in <a href="https://docs.ogc.org/as/20-040r3/20-040r3.html">OGC Abstr
 matching a specify query (in combination with other building blocks defining queries, such as a filter defined using
 the <a href="https://docs.ogc.org/DRAFTS/21-065.html">OGC Common Query Language (CQL2)</a>.</p>
       </div>
-      <div class="Section3" id="_84b4df24-6ea5-4935-b1bd-528c2bd0187c">
+      <div class="Section3" id="_4633c4f1-799e-43ce-98fd-1d3a89a975e9">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1454,7 +1488,7 @@ Additional parts for <i>OGC API&#x2009;&#x2014;&#x2009;Discrete Global Grid Syst
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_80a0d565-7b4a-4d1e-825f-e1f3f0381e17">
+      <div class="Section3" id="_3a27ff40-e576-4ca6-9528-bb32f937b8f1">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
