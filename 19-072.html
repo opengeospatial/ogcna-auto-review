@@ -129,6 +129,35 @@ a.FootnoteRef + a.FootnoteRef:before {
   color: red;
   text-decoration: line-through; }
 
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
+
 #standard-band {
   background-color: #3D9970; }
 
@@ -612,7 +641,7 @@ dl {
 
 @media screen and (min-width: 768px) {
   nav {
-    marign-right: 30px; } }
+    margin-right: 30px; } }
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -853,7 +882,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table thead tr th {
     background-color: #5d99d6; }
   table td, table th {
@@ -880,7 +909,7 @@ table.modspec {
   table.modspec th, table.modspec td {
     padding: 1em; }
   table.modspec td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table.modspec tr:nth-child(even) {
     background: #ffffff; }
   table.modspec tr:nth-child(odd) {
@@ -959,7 +988,7 @@ p.Biblio, p.NormRef {
   text-align: center;
   text-align: left; }
 
-pre {
+pre, .sourcecode {
   font-family: "Space Mono",monospace;
   font-variant-ligatures: none;
   background-color: #f7f7f7;
@@ -993,7 +1022,7 @@ pre {
   .Admonition p, .Admonition.Important p, .Admonition.Warning p {
     margin: 0; }
 
-.figure, pre, .pseudocode {
+.figure, pre, .pseudocode, .sourcecode {
   background-color: #e1eef1;
   color: #424242;
   font-size: 0.8em; }
@@ -1198,7 +1227,7 @@ pre.sourcecode .kr {
 pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
   color: #0000FF;
 }
-pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .dl, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
   color: #009C00;
 }
 pre.sourcecode .sa {
@@ -1206,7 +1235,12 @@ pre.sourcecode .sa {
 }
 pre.sourcecode .nb, pre.sourcecode .bp {
   color: #C34E00;
-}--></style><title>OGC API - Common - Part 1: Core</title>
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>OGC API - Common - Part 1: Core</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1215,16 +1249,16 @@ pre.sourcecode .nb, pre.sourcecode .bp {
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></link></link></head>
+<meta name="keywords" content="ogcdoc, OGC document, geographic information, spatial data, API, json, html, OpenAPI, REST, Common" /><meta name="description" content="The OGC has extended their suite of standards to include Resource Oriented Architectures and Web APIs. In the course of developing these standards, some practices proved to be common across multiple OGC Web API standards. These common practices are documented in the OGC API - Common standard. The OGC API&#x2009;-&#x2009;Common standard is a multi-part standard that specifies reusable building-blocks that can be used in the construction of OGC API Standards. This document presents Part 1, the Core, of the OGC API &#x2013; Common standard. Standards developers will use these building-blocks in the construction of other OGC Standards that relate to Web APIs. The result is a modular suite of coherent API standards which can be adapted by a system designer for the unique requirements of their system. The purpose of the OGC API - Common - Part 1: Core Standard (API-Core) is to define those fundamental building blocks and requirements which are applicable to all OGC Web API Standards." /></head>
   <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
     <div class="title-section"><div class="document-stage-band" id="draft-band">
     <p class="document-stage">Draft</p>
@@ -1427,7 +1461,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <p id="_3a3f234f-59b5-88af-be7d-c12ca0c499a9">The OGC has extended their suite of standards to include <a href="https://en.wikipedia.org/wiki/Resource-oriented_architecture">Resource Oriented Architectures</a> and <a href="https://portal.ogc.org/files/?artifact_id=71776&#x26;version=1">Web APIs</a>. In the course of developing these standards, some practices proved to be common across multiple OGC Web API standards. These common practices are documented in the OGC API&#x2009;&#x2014;&#x2009;Common standard. The OGC API&#x2009;-&#x2009;Common standard is a multi-part standard that specifies reusable building-blocks that can be used in the construction of OGC API Standards. This document presents Part 1, the Core, of the OGC API &#x2013; Common standard. Standards developers will use these building-blocks in the construction of other OGC Standards that relate to Web APIs. The result is a modular suite of coherent API standards which can be adapted by a system designer for the unique requirements of their system.</p>
         <p id="_1d584693-c450-070d-64a5-859dbeb670ed">The purpose of the OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Part 1: Core Standard (API-Core) is to define those fundamental building blocks and requirements which are applicable to all OGC Web API Standards.</p>
       </div>
-      <div class="Section3" id="_f09745fd-3f4e-4504-99f0-297c509447aa">
+      <div class="Section3" id="_02af3247-5ae7-448f-b4e2-56865ce3f6d3">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1444,7 +1478,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <p id="_6fceaf1b-ef82-3d7c-b807-68f8aab9fe76">The OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Part 1: Core Standard does not specify any specific security controls. However, it was constructed so that security controls can be added without impacting conformance.</p>
         <p id="_1725807d-e926-205c-cdf0-07b671017d8f">See <a href="#rc_oas30-security">Clause 11.4</a> for a discussion of OpenAPI support for security controls.</p>
       </div>
-      <div class="Section3" id="_a87c300f-ac33-4963-ad15-da5ddfc82965">
+      <div class="Section3" id="_74112ef6-f9f7-487c-ad45-bc326a39953c">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
