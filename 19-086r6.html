@@ -129,6 +129,35 @@ a.FootnoteRef + a.FootnoteRef:before {
   color: red;
   text-decoration: line-through; }
 
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
+
 #standard-band {
   background-color: #3D9970; }
 
@@ -612,7 +641,7 @@ dl {
 
 @media screen and (min-width: 768px) {
   nav {
-    marign-right: 30px; } }
+    margin-right: 30px; } }
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -853,7 +882,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table thead tr th {
     background-color: #5d99d6; }
   table td, table th {
@@ -880,7 +909,7 @@ table.modspec {
   table.modspec th, table.modspec td {
     padding: 1em; }
   table.modspec td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
   table.modspec tr:nth-child(even) {
     background: #ffffff; }
   table.modspec tr:nth-child(odd) {
@@ -959,7 +988,7 @@ p.Biblio, p.NormRef {
   text-align: center;
   text-align: left; }
 
-pre {
+pre, .sourcecode {
   font-family: "Space Mono",monospace;
   font-variant-ligatures: none;
   background-color: #f7f7f7;
@@ -993,7 +1022,7 @@ pre {
   .Admonition p, .Admonition.Important p, .Admonition.Warning p {
     margin: 0; }
 
-.figure, pre, .pseudocode {
+.figure, pre, .pseudocode, .sourcecode {
   background-color: #e1eef1;
   color: #424242;
   font-size: 0.8em; }
@@ -1198,7 +1227,7 @@ pre.sourcecode .kr {
 pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
   color: #0000FF;
 }
-pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .dl, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
   color: #009C00;
 }
 pre.sourcecode .sa {
@@ -1206,7 +1235,12 @@ pre.sourcecode .sa {
 }
 pre.sourcecode .nb, pre.sourcecode .bp {
   color: #C34E00;
-}--></style><title>OGC API - Environmental Data Retrieval Standard</title>
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>OGC API - Environmental Data Retrieval Standard</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1215,16 +1249,16 @@ pre.sourcecode .nb, pre.sourcecode .bp {
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></link></link></head>
+<meta name="keywords" content="ogcdoc, OGC document, property, geographic information, spatial data, spatial thing, spatio-temporal, dataset, distribution, API, JSON, geoJSON, coverageJSON, HTML, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, cube, time-series, radius, polygon, WKT" /><meta name="description" content="The OGC Environmental Data Retrieval (EDR) Application Programming Interface (API) provides a family of lightweight query interfaces to access spatiotemporal data resources by requesting data at a Position, within an Area, along a Trajectory or through a Corridor. A spatio-temporal data resource is a collection of spatio-temporal data that can be sampled using the EDR query pattern geometries. These patterns are described in the section describing the Core Requirements Class. The goals of the EDR API are to: 1. Make it easier to access a wide range of data through a uniform, well-defined simple Web interface; 2. To achieve data reduction to just the data needed by the user or client while hiding much of the data storage complexity. A major use case for the EDR API is to retrieve small subsets from large collections of environmental data, such as weather forecasts, though many other types of data can be accessed. The important aspect is that the requested data can be unambiguously specified by spatio-temporal coordinates. The EDR API query patterns - Position, Area, Cube, Trajectory or Corridor - can be thought of as discrete sampling geometries, conceptually consistent with the feature of interest in the Sensor Observation Service (SOS) standard. A typical data resource accessed by an EDR API instance is a multidimensional dataset that could be accessed via an implementation of the Web Coverage Service (WCS) standard. In contrast to SOS and WCS, the EDR API is fully consistent with the patterns of the OGC API family of standards and aims to provide a single set of simple-to-use query patterns. Use cases for EDR range from real or virtual time-series observation retrievals, to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query patterns do not attempt to satisfy the full scope of either SOS or WCS, but instead provide useful building blocks to enable the composition of APIs that satisfy a wide range of geospatial data use cases. By defining a small set of query patterns (and no requirement to implement all of them), the EDR API should help to simplify the design of systems (as they can be performance tuned for the supported queries) making it easier to build robust and scalable infrastructures. With the OGC API family of standards, the OGC community has extended its suite of standards to include Resource Oriented Architectures and Web Application Programming Interfaces (APIs). These standards are based on a shared foundation, specified in OGC API-Common, which defines the resources and access paths that are supported by all OGC APIs. The resources are listed in Table 1. This document extends that foundation to define the Environmental Data Retrieval API. Table&#xA0;&#x2014; Overview of Resources Resource Path HTTP Method Document Reference Landing page / GET API Landing Page API definition /api GET API Definition Conformance classes /conformance GET Declaration of Conformance Classes Collections metadata /collections GET Collections Metadata Collection instance metadata /collections/{collection_id} GET Collection Metadata The resources identified in Table 1 primarily support Discovery operations. Discovery operations allow clients to query via the API to determine supported capabilities and obtain information (metadata) about a distribution of a resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers. The OGC API-EDR standard extends the common query operations listed in Table 1 by defining simple, coordinate-based, queries which are applicable to many spatio-temporal, including geospatial, resource types. Other OGC API standards may define additional query capabilities specific to their resource type. EDR Query operations allow resources or values to be retrieved from the underlying spatio-temporal resource data store. The information returned is based upon the selection criteria (query string) provided by the client." /></head>
   <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
     <div class="title-section"><div class="document-stage-band" id="draft-band">
     <p class="document-stage">Draft</p>
@@ -1509,7 +1543,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <p id="_b5d01afb-a32b-6eb0-5f53-3911b8cbef5b">The resources identified in  <a href="#common-paths">Table 1</a> primarily support Discovery operations. Discovery operations allow clients to query via the API to determine supported capabilities and obtain information (metadata) about a distribution of a resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers.</p>
         <p id="_aeca3e66-79f1-74e4-1429-532c409c584c">The OGC API-EDR standard extends the common query operations listed in <a href="#common-paths">Table 1</a> by defining simple, coordinate-based, queries which are applicable to many spatio-temporal, including geospatial, resource types. Other OGC API standards may define additional query capabilities specific to their resource type. EDR Query operations allow resources or values to be retrieved from the underlying spatio-temporal resource data store. The information returned is based upon the selection criteria (query string) provided by the client.</p>
       </div>
-      <div class="Section3" id="_7bd66f28-9534-419f-a868-d16ff8bc1329">
+      <div class="Section3" id="_246c1a2c-f951-4be7-af14-70256ca518be">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1525,7 +1559,7 @@ pre.sourcecode .nb, pre.sourcecode .bp {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_d45575df-7073-4a53-917f-e16797781835">
+      <div class="Section3" id="_7997fd18-eda9-4fc1-b2dc-ac5357ff2e25">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -3709,7 +3743,23 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_core_rc-bbox-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.30</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_c8760534-f3b6-ae5e-3bda-8dd14496e6a1">
   <b>A:</b>
-</p><p id="_537d3567-af46-ecd1-c98b-d45bfffe4bc9">The operation SHALL support a parameter <tt>bbox</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_3370858b-2d22-426d-8fec-b27b548654a9" class="sourcecode">name: bbox<br />in: query<br />required: false<br />schema:<br />&#xA0; oneOf:<br />&#xA0;&#xA0;&#xA0; - items:<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; minItems: 4<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; maxItems: 4<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: number<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: array<br />&#xA0;&#xA0;&#xA0; - items:<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; minItems: 6<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; maxItems: 6<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: number<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: array<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_537d3567-af46-ecd1-c98b-d45bfffe4bc9">The operation SHALL support a parameter <tt>bbox</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_3370858b-2d22-426d-8fec-b27b548654a9" class="sourcecode">name: bbox
+in: query
+required: false
+schema:
+&#xA0; oneOf:
+&#xA0;&#xA0;&#xA0; - items:
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; minItems: 4
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; maxItems: 4
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: number
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: array
+&#xA0;&#xA0;&#xA0; - items:
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; minItems: 6
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; maxItems: 6
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: number
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: array
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_core_rc-bbox-response"><h3>A.5.3.&#xA0; <b>Requirement /req/core/rc-bbox-response</b> Parameter bbox response</h3>
@@ -3749,7 +3799,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_coords-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.32</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_c4328185-46d5-bb68-d2b3-f92aca2133de">
   <b>A:</b>
-</p><p id="_522825b8-e587-5cb1-3983-c6a05f1c156e">Each geometry based resource (Position, Radius, Area, Cube , Trajectory, Corridor) collection operation SHALL support a parameter <tt>coords</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_9525a351-e191-c173-5583-7dd8a8dae255" class="sourcecode">name: coords<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_ab0cfdc0-0f3c-6172-1e9c-bdc2efcda88a">
+</p><p id="_522825b8-e587-5cb1-3983-c6a05f1c156e">Each geometry based resource (Position, Radius, Area, Cube , Trajectory, Corridor) collection operation SHALL support a parameter <tt>coords</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_9525a351-e191-c173-5583-7dd8a8dae255" class="sourcecode">name: coords
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_ab0cfdc0-0f3c-6172-1e9c-bdc2efcda88a">
   <b>B:</b>
 </p><p id="_4f64a459-80d2-12e9-87d0-04ee71039086">The <tt>coords</tt> string value will be a Well Known Text of representation geometry as defined in <a href="http://www.opengeospatial.org/standards/sfa">Simple Feature Access&#x2009;&#x2014;&#x2009;Part 1: Common Architecture</a>.  The representation type will depend on the queryType of the API</p></td></tr></tbody></table>
 </div>
@@ -3806,7 +3862,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_core_datetime-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.36</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_4d3035f0-2a31-026b-2801-e28c4347a14e">
   <b>A:</b>
-</p><p id="_b17c9143-e120-bb1f-e14a-23cd46b5c139">The <tt>datetime</tt> parameter SHALL have the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_bbf8db00-01dd-9196-652b-62f30566982a" class="sourcecode">name: datetime<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_b17c9143-e120-bb1f-e14a-23cd46b5c139">The <tt>datetime</tt> parameter SHALL have the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_bbf8db00-01dd-9196-652b-62f30566982a" class="sourcecode">name: datetime
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_core_rc-time-response"><h3>A.5.9.&#xA0; <b>Requirement /req/core/datetime-response</b> datetime response</h3>
@@ -3819,7 +3881,11 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
   <b>C:</b>
 </p><p id="_13ad539e-b5f4-3fc4-cc64-aaaaa3021fc9">The <tt>datetime</tt> parameter SHALL match all resources in the collection that are not associated with a temporal geometry.</p></td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_310a2d8b-4d8f-4c61-ec2e-52240094ceb1">
   <b>D:</b>
-</p><p id="_68e9ebb5-7396-47ba-56ef-9e997bb18b2b">The temporal information is either a date-time or a time interval. The parameter value SHALL conform to the following syntax (using <a href="https://tools.ietf.org/html/rfc2234">ABNF</a>):</p><pre id="_5ddfce20-cd7d-b667-39fe-6b5a90bb8c75" class="sourcecode"><span class="n">interval</span><span class="o">-</span><span class="n">closed</span>&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span> <span class="s">"/"</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span><br /><span class="n">interval</span><span class="o">-</span><span class="n">open</span><span class="o">-</span><span class="n">start</span> <span class="o">=</span> <span class="s">"../"</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span><br /><span class="n">interval</span><span class="o">-</span><span class="n">open</span><span class="o">-</span><span class="n">end</span>&#xA0;&#xA0; <span class="o">=</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span> <span class="s">"/.."</span><br /><span class="n">interval</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="n">interval</span><span class="o">-</span><span class="n">closed</span> <span class="o">/</span> <span class="n">interval</span><span class="o">-</span><span class="n">open</span><span class="o">-</span><span class="n">start</span> <span class="o">/</span> <span class="n">interval</span><span class="o">-</span><span class="n">open</span><span class="o">-</span><span class="n">end</span><br /><span class="n">datetime</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span> <span class="o">/</span> <span class="n">interval</span></pre></td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_fa1da5a8-7aaf-96a4-0b22-7946f36e5578">
+</p><p id="_68e9ebb5-7396-47ba-56ef-9e997bb18b2b">The temporal information is either a date-time or a time interval. The parameter value SHALL conform to the following syntax (using <a href="https://tools.ietf.org/html/rfc2234">ABNF</a>):</p><pre id="_5ddfce20-cd7d-b667-39fe-6b5a90bb8c75" class="sourcecode"><span class="n">interval</span><span class="o">-</span><span class="n">closed</span>&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span> <span class="s">"/"</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span>
+<span class="n">interval</span><span class="o">-</span><span class="n">open</span><span class="o">-</span><span class="n">start</span> <span class="o">=</span> <span class="s">"../"</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span>
+<span class="n">interval</span><span class="o">-</span><span class="n">open</span><span class="o">-</span><span class="n">end</span>&#xA0;&#xA0; <span class="o">=</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span> <span class="s">"/.."</span>
+<span class="n">interval</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="n">interval</span><span class="o">-</span><span class="n">closed</span> <span class="o">/</span> <span class="n">interval</span><span class="o">-</span><span class="n">open</span><span class="o">-</span><span class="n">start</span> <span class="o">/</span> <span class="n">interval</span><span class="o">-</span><span class="n">open</span><span class="o">-</span><span class="n">end</span>
+<span class="n">datetime</span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="o">=</span> <span class="n">date</span><span class="o">-</span><span class="n">time</span> <span class="o">/</span> <span class="n">interval</span></pre></td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_fa1da5a8-7aaf-96a4-0b22-7946f36e5578">
   <b>E:</b>
 </p><p id="_160e82cf-e82b-7144-0ab2-845cf6bf460d">The syntax of <tt>date-time</tt> is specified by <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339, 5.6</a>.</p></td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_afa07f31-d641-eacb-dbd5-1328cd3d26a1">
   <b>F:</b>
@@ -3830,7 +3896,15 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_REQ_rc-parameter-name-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.38</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_45c20347-0c1a-d09c-8163-e245ae2abe41">
   <b>A:</b>
-</p><p id="_434a3511-9c5c-11d3-502a-a160d9f11900">Each resource collection operation SHALL support a parameter <tt>parameter-name</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_a02526d1-b0ae-ad42-a219-91be6253082a" class="sourcecode">name: parameter-name<br />in: query<br />required: false<br />explode: false<br />schema:<br />&#xA0;&#xA0;&#xA0; minItems: 1<br />&#xA0;&#xA0;&#xA0; type: array<br />&#xA0;&#xA0;&#xA0; items:<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: string</pre></td></tr></tbody></table>
+</p><p id="_434a3511-9c5c-11d3-502a-a160d9f11900">Each resource collection operation SHALL support a parameter <tt>parameter-name</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_a02526d1-b0ae-ad42-a219-91be6253082a" class="sourcecode">name: parameter-name
+in: query
+required: false
+explode: false
+schema:
+&#xA0;&#xA0;&#xA0; minItems: 1
+&#xA0;&#xA0;&#xA0; type: array
+&#xA0;&#xA0;&#xA0; items:
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: string</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_parameters-response"><h3>A.5.11.&#xA0; <b>Requirement /req/edr/parameter-name-response</b> Parameter parameter-name response</h3>
@@ -3846,7 +3920,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_REQ_rc-crs-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.40</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_05ebdfe7-558b-65cc-0f23-1f58b8d8d374">
   <b>A:</b>
-</p><p id="_5f4cb8b1-f4ab-21a8-e55b-65a1c6635021">Each resource collection operation SHALL support a parameter <tt>crs</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_7193e792-46a0-b5c6-f6b9-f2fefc8c6f04" class="sourcecode">name: crs<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_5f4cb8b1-f4ab-21a8-e55b-65a1c6635021">Each resource collection operation SHALL support a parameter <tt>crs</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_7193e792-46a0-b5c6-f6b9-f2fefc8c6f04" class="sourcecode">name: crs
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_crs-response"><h3>A.5.13.&#xA0; <b>Requirement /req/edr/REQ_rc-crs-response</b> Parameter crs response</h3>
@@ -3864,7 +3944,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_rc-f-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.42</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_59ef5c47-6bc8-4465-3c09-94330aa18615">
   <b>A:</b>
-</p><p id="_b14d18f2-6d04-8462-5364-5ae77c801b49">Each resource collection operation SHALL support a parameter <tt>f</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_3d6c0a8e-9867-9e74-7789-0a2b82cca5b7" class="sourcecode">name: f<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_b14d18f2-6d04-8462-5364-5ae77c801b49">Each resource collection operation SHALL support a parameter <tt>f</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_3d6c0a8e-9867-9e74-7789-0a2b82cca5b7" class="sourcecode">name: f
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_f-response"><h3>A.5.15.&#xA0; <b>Requirement /req/edr/REQ_rc-f-response</b> Parameter <tt>f</tt> response</h3>
@@ -3884,7 +3970,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_z-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.44</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_882a34b6-9cc8-131e-7e4d-b6ceef793ae3">
   <b>A:</b>
-</p><p id="_cbf80d4b-7298-c093-82a9-1128833237fb">Each resource collection operation MAY support a parameter <tt>z</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_33ef195f-1dc3-17b3-42b7-2610a4bf433e" class="sourcecode">name: z<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_cbf80d4b-7298-c093-82a9-1128833237fb">Each resource collection operation MAY support a parameter <tt>z</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_33ef195f-1dc3-17b3-42b7-2610a4bf433e" class="sourcecode">name: z
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_z-response"><h3>A.5.17.&#xA0; <b>Requirement /req/edr/z-response</b> Parameter z response</h3>
@@ -3914,7 +4006,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
   <b>A:</b>
 </p><p id="_bd18009a-1310-2e29-6b4c-bf664f46e160">Each resource collection operation MAY support a parameter <tt>within</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p></td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_c98d5ba6-cae2-7e99-e808-f0ab0735beb1">
   <b>B:</b>
-</p><p id="_4a44fd73-6ac8-87d3-6770-977e3f016d37">If the instance metadata does not provide <tt>within-units</tt> values the API SHALL NOT support <tt>within</tt> queries:</p><pre id="_11075759-1eb3-5a1e-8e8a-ad58186e7f40" class="sourcecode">name: within<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_4a44fd73-6ac8-87d3-6770-977e3f016d37">If the instance metadata does not provide <tt>within-units</tt> values the API SHALL NOT support <tt>within</tt> queries:</p><pre id="_11075759-1eb3-5a1e-8e8a-ad58186e7f40" class="sourcecode">name: within
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_within-response"><h3>A.5.19.&#xA0; <b>Requirement /req/edr/REQ_rc-within-response</b> Parameter within response</h3>
@@ -3932,7 +4030,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
   <b>A:</b>
 </p><p id="_2465c9eb-a37f-24b3-0ded-d578df086327">Each resource collection operation MAY support a parameter <tt>within-units</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p></td></tr><tr><td colspan="2" style="border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_cb8ece8c-b5c4-d977-c94d-4e2518acc089">
   <b>B:</b>
-</p><p id="_ac51eed1-f8eb-78c4-1e3b-e732186408f4">A within-units value MUST be one of the values defined in the instance metadata:</p><pre id="_9e781b6e-c247-5505-5836-724b4e67c932" class="sourcecode">name: within-units<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_ac51eed1-f8eb-78c4-1e3b-e732186408f4">A within-units value MUST be one of the values defined in the instance metadata:</p><pre id="_9e781b6e-c247-5505-5836-724b4e67c932" class="sourcecode">name: within-units
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_within-units-response"><h3>A.5.21.&#xA0; <b>Requirement /req/edr/REQ_rc-within-units-response</b> Parameter within-units response</h3>
@@ -3946,7 +4050,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_resolution-x-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.50</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_38d1ef71-35f0-7160-c138-1973810dff74">
   <b>A:</b>
-</p><p id="_0b9022f9-ed41-2987-a256-a398c6fd9255">Each resource collection operation MAY support a parameter <tt>resolution-x</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_a5442732-1d1c-6a6c-d839-dc569c7e2e55" class="sourcecode">name: resolution-x<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_0b9022f9-ed41-2987-a256-a398c6fd9255">Each resource collection operation MAY support a parameter <tt>resolution-x</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_a5442732-1d1c-6a6c-d839-dc569c7e2e55" class="sourcecode">name: resolution-x
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_resolution-x-response"><h3>A.5.23.&#xA0; <b>Requirement /req/edr/resolution-x-response</b> Parameter resolution-x response</h3>
@@ -3979,7 +4089,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_resolution-y-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.53</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_270912be-1f7f-335c-7169-ea83fd9353a1">
   <b>A:</b>
-</p><p id="_140c5540-b58a-58bc-494a-48535c55f38d">Each resource collection operation MAY support a parameter <tt>resolution-y</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_aacbc5d1-a650-a737-34ee-280cf20c0f03" class="sourcecode">name: resolution-y<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_140c5540-b58a-58bc-494a-48535c55f38d">Each resource collection operation MAY support a parameter <tt>resolution-y</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_aacbc5d1-a650-a737-34ee-280cf20c0f03" class="sourcecode">name: resolution-y
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_resolution-y-response"><h3>A.5.26.&#xA0; <b>Requirement /req/edr/resolution-y-response</b> Parameter resolution-y response</h3>
@@ -3999,7 +4115,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_resolution-z-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.55</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_db3136b9-6c1e-fb7a-a5af-8fffb786fdde">
   <b>A:</b>
-</p><p id="_42d4c4a6-7135-95fc-0ed3-eb0641941e89">Each resource collection operation MAY support a parameter <tt>resolution-z</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_97d82fcc-9a6d-5e2f-1d73-834f12addbd7" class="sourcecode">name: resolution-z<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_42d4c4a6-7135-95fc-0ed3-eb0641941e89">Each resource collection operation MAY support a parameter <tt>resolution-z</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_97d82fcc-9a6d-5e2f-1d73-834f12addbd7" class="sourcecode">name: resolution-z
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_resolution-z-response"><h3>A.5.28.&#xA0; <b>Requirement /req/edr/resolution-z-response</b> Parameter resolution-z response</h3>
@@ -4017,7 +4139,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_REQ_rc-corridor-height-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.57</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_c6d94d7d-8ea0-daef-50a4-50c4166c390c">
   <b>A:</b>
-</p><p id="_0a449cb8-b36c-3cc9-101f-c8d651d2a5d7">Each resource collection operation SHALL support a parameter <tt>corridor-height</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_28275f86-146a-9ad2-b0f2-1739fb13e28c" class="sourcecode">name: corridor-height<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_0a449cb8-b36c-3cc9-101f-c8d651d2a5d7">Each resource collection operation SHALL support a parameter <tt>corridor-height</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_28275f86-146a-9ad2-b0f2-1739fb13e28c" class="sourcecode">name: corridor-height
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_corridor-height-response"><h3>A.5.30.&#xA0; <b>Requirement /req/edr/REQ_rc-corridor-height-response</b> Parameter corridor-height response</h3>
@@ -4037,7 +4165,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_REQ_rc-height-units-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.59</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_8a5f6805-0453-0624-9829-2db63af9b26a">
   <b>A:</b>
-</p><p id="_a08ab6fc-33da-a026-b0ab-fc057ec197a6">Each corridor resource collection operation SHALL support a parameter <tt>height-units</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_1903e42f-d039-68bd-15e5-25a849e9a496" class="sourcecode">name: height-units<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_a08ab6fc-33da-a026-b0ab-fc057ec197a6">Each corridor resource collection operation SHALL support a parameter <tt>height-units</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_1903e42f-d039-68bd-15e5-25a849e9a496" class="sourcecode">name: height-units
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_height_units-response"><h3>A.5.32.&#xA0; <b>Requirement /req/edr/height-units-response</b> Parameter height-units response</h3>
@@ -4053,7 +4187,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_corridor-width-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.61</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_dc6a15a7-e724-2382-f409-f9a787cb15b7">
   <b>A:</b>
-</p><p id="_f9597ccb-cc3d-c938-c7dc-13fa82229350">Each resource collection operation SHALL support a parameter `corridor-width`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_8c800503-fb55-165f-ab60-b511fc157b8c" class="sourcecode">name: corridor-width<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_f9597ccb-cc3d-c938-c7dc-13fa82229350">Each resource collection operation SHALL support a parameter `corridor-width`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_8c800503-fb55-165f-ab60-b511fc157b8c" class="sourcecode">name: corridor-width
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_corridor-width-response"><h3>A.5.34.&#xA0; <b>Requirement /req/edr/REQ_rc-corridor-width-response</b> Parameter corridor-width response</h3>
@@ -4075,7 +4215,13 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_REQ_rc-width-units-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.63</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_db98c6a3-1bb0-0789-e177-395ee6bd675b">
   <b>A:</b>
-</p><p id="_00c6d33e-6242-24b8-5822-76f29fde1897">Each corridor resource collection operation SHALL support a parameter <tt>width-units</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_2a44929e-640a-4ea3-1bd2-4c581e6c2672" class="sourcecode">name: width-units<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_00c6d33e-6242-24b8-5822-76f29fde1897">Each corridor resource collection operation SHALL support a parameter <tt>width-units</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_2a44929e-640a-4ea3-1bd2-4c581e6c2672" class="sourcecode">name: width-units
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_width_units-response"><h3>A.5.36.&#xA0; <b>Requirement /req/edr/width-units-response</b> Parameter width-units response</h3>
@@ -4091,7 +4237,12 @@ If <tt>crs</tt> is not defined, the values will be assumed to be WGS84 longitude
 
 <table id="_req_edr_custom-dimension-definition" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement A.65</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_1739cef2-edfb-f23d-5627-4f41c490f103">
   <b>A:</b>
-</p><p id="_6f7dbaab-47e2-21b5-d082-8076e156a213">Each resource collection operation MAY support custom parameters with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_d5176e48-cf13-605d-5fe5-55b0c683f4cf" class="sourcecode">in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre></td></tr></tbody></table>
+</p><p id="_6f7dbaab-47e2-21b5-d082-8076e156a213">Each resource collection operation MAY support custom parameters with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><pre id="_d5176e48-cf13-605d-5fe5-55b0c683f4cf" class="sourcecode">in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre></td></tr></tbody></table>
 </div>
 
 <div id="req_edr_custom-dimension-response"><h3>A.5.38.&#xA0; <b>Requirement /req/edr/custom-dimension-response</b> Custom Parameter response</h3>
@@ -5055,7 +5206,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f10b9682-80ba-d019-a0af-ca2ccc64f471"><a href="#req_edr_coords-definition">/req/edr/coords-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_a9483d28-44c6-c353-402e-2b2c8f3dbd90">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_cb071d9a-01a2-556a-b63d-ce740c91ec9d" class="sourcecode">name: coords<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_cb071d9a-01a2-556a-b63d-ce740c91ec9d" class="sourcecode">name: coords
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 
 <p id="_c4c960b7-0103-a5b1-9899-90312de0eb95">Use a coords value in all requests:</p>
@@ -5085,7 +5242,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f4116dc9-9013-2d92-bcd1-f03de6dec6cd"><a href="#req_edr_z-definition">/req/edr/rc-z-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_300c8a3b-a9c6-ee3b-6e9c-1cadcc807a4d">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_1908f1d8-bbaa-a5fa-83ac-7d47ae297e3d" class="sourcecode">name: z<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_1908f1d8-bbaa-a5fa-83ac-7d47ae297e3d" class="sourcecode">name: z
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5106,7 +5269,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_63ee5015-f3e2-5059-0b66-801433cb1952"><a href="#req_collections_rc-time-definition">/req/core/datetime-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_b4ee20c5-3a0f-1412-e62c-85305096c37d">Verify that the <tt>datetime</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_a409bdd9-8faa-09da-e082-0c4d3e242ef5" class="sourcecode">name: datetime<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_a409bdd9-8faa-09da-e082-0c4d3e242ef5" class="sourcecode">name: datetime
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5129,7 +5298,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f32eff16-06d7-e131-d2b9-f856e4c2adca"><a href="#req_edr_parameters-definition">/req/edr/REQ_rc-parameter-name-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_189e4ce4-2752-6104-fc01-6a42f66dcbdd">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_12883b79-cd1b-0bb7-8843-92426795cd09" class="sourcecode">name: parameter-name<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_12883b79-cd1b-0bb7-8843-92426795cd09" class="sourcecode">name: parameter-name
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5150,7 +5325,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_78874528-e6ed-6770-32c3-229339e8f840"><a href="#req_edr_crs-definition">/req/edr/REQ_rc-crs-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_b8c848ae-d757-b550-7785-15445d6e4dfd">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_22c49ad8-e2f0-9d43-61dc-e17052aa8ec1" class="sourcecode">name: crs<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_22c49ad8-e2f0-9d43-61dc-e17052aa8ec1" class="sourcecode">name: crs
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5177,7 +5358,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f6fff384-e9b7-5702-4a4b-89f212832ae4"><a href="#req_edr_f-definition">/req/edr/rc-f-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_c38771dc-ac59-fe88-41ae-a86a1e6dc71e">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_0ce7c2f4-c84b-3af6-5de3-d7d698cf7e07" class="sourcecode">name: f<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_0ce7c2f4-c84b-3af6-5de3-d7d698cf7e07" class="sourcecode">name: f
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5285,7 +5472,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_45b5c669-732e-63dc-bc06-1f0d1c8c0863"><a href="#req_edr_coords-definition">/req/edr/coords-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_fb4db52e-fdbe-b00a-fecc-730036584a32">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_a9c37f07-be34-834c-4a96-ce708e71aab5" class="sourcecode">name: coords<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_a9c37f07-be34-834c-4a96-ce708e71aab5" class="sourcecode">name: coords
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 
 <p id="_527a12b0-c62e-9b06-9c80-d1ef4e4a1690">Use a coords value in all requests:</p>
@@ -5315,7 +5508,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_dc69d1a0-4487-3c5c-f621-83319e023238"><a href="#req_edr_z-definition">/req/edr/rc-z-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_9041b2d1-464d-0d87-0e0b-3a93b9b1d418">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_605d763f-a0b3-a102-0c73-afd65e85aac8" class="sourcecode">name: z<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_605d763f-a0b3-a102-0c73-afd65e85aac8" class="sourcecode">name: z
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5336,7 +5535,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_9273b829-856b-63a1-2489-0f749de7d74c"><a href="#req_collections_rc-time-definition">/req/core/datetime-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_33fbe836-c011-e0ce-17f7-0663a33b2af2">Verify that the <tt>datetime</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_df04c648-aa11-8f2f-7c04-20ef8a2f0723" class="sourcecode">name: datetime<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_df04c648-aa11-8f2f-7c04-20ef8a2f0723" class="sourcecode">name: datetime
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5359,7 +5564,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_84b9cd59-8f82-2975-2f2b-10e28c515263"><a href="#req_edr_parameters-definition">/req/edr/REQ_rc-parameter-name-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_060862b6-2dd3-b09a-c61f-a7f7b29193e8">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_b2bc099b-2e70-d57a-259f-4d0e943eb143" class="sourcecode">name: parameter-name<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_b2bc099b-2e70-d57a-259f-4d0e943eb143" class="sourcecode">name: parameter-name
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5380,7 +5591,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_1e8355d3-bc32-e8da-e374-0a39a11fae1e"><a href="#req_edr_crs-definition">/req/edr/REQ_rc-crs-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_5a40f8bc-7e44-ebfc-f9b6-d57b849ffba2">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_c1c35e16-5d18-ac93-b0ac-000090d083b1" class="sourcecode">name: crs<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_c1c35e16-5d18-ac93-b0ac-000090d083b1" class="sourcecode">name: crs
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5407,7 +5624,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_cf7e92ab-3c92-a23f-779c-cae907fb43aa"><a href="#req_edr_f-definition">/req/edr/rc-f-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_8a652787-69fa-f16d-6fc5-4ad6ae363f60">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_853e261c-9f96-5d25-dde3-a33c67569939" class="sourcecode">name: f<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_853e261c-9f96-5d25-dde3-a33c67569939" class="sourcecode">name: f
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5515,7 +5738,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_726139eb-5d34-2b80-55d9-d7d03097160a"><a href="#req_edr_coords-definition">/req/edr/coords-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_14517845-0f27-c5da-46ad-739d1c95d8c2">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_6138a36a-669d-2847-8abf-cd45985610fb" class="sourcecode">name: coords<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_6138a36a-669d-2847-8abf-cd45985610fb" class="sourcecode">name: coords
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 
 <p id="_b0c5f3e3-330a-a604-da97-852179064693">Use a coords value in all requests:</p>
@@ -5545,7 +5774,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_dbc230c4-3926-6b79-a7c7-e12ad907a499"><a href="#req_edr_z-definition">/req/edr/rc-z-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_4e006658-55d7-332a-d7f5-7fa3dde09ad9">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_83fe1eac-5ef6-56d3-de65-b1fef1516116" class="sourcecode">name: z<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_83fe1eac-5ef6-56d3-de65-b1fef1516116" class="sourcecode">name: z
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5566,7 +5801,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_ec233cc6-dad0-4f39-9202-9e6e2a86d150"><a href="#req_collections_rc-time-definition">/req/core/datetime-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_bd3200d8-c265-1846-aaba-882f791512ed">Verify that the <tt>datetime</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_647968f7-6d35-6185-72c2-bf04dfd54ba3" class="sourcecode">name: datetime<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_647968f7-6d35-6185-72c2-bf04dfd54ba3" class="sourcecode">name: datetime
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5589,7 +5830,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_965f9e5c-6ed8-f5d6-62d3-80cd1421e84f"><a href="#req_edr_parameters-definition">/req/edr/REQ_rc-parameter-name-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_3bef2eef-3470-45a9-aedb-6d1b9d0ddb21">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_4d5a5fed-863d-5eca-8dcb-cf3360193050" class="sourcecode">name: parameter-name<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_4d5a5fed-863d-5eca-8dcb-cf3360193050" class="sourcecode">name: parameter-name
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5610,7 +5857,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_bfc5d43f-db8c-f5d8-a645-f32ffb9cbbb2"><a href="#req_edr_crs-definition">/req/edr/REQ_rc-crs-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_62f23145-95e3-4dd0-71f0-654da140e5ee">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_55bc9364-a37d-11fc-85f9-72ef147a30e9" class="sourcecode">name: crs<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_55bc9364-a37d-11fc-85f9-72ef147a30e9" class="sourcecode">name: crs
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5637,7 +5890,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_a497d9f1-3e57-2ace-add4-547f4dc0acc1"><a href="#req_edr_f-definition">/req/edr/rc-f-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_dfa8c164-30e7-95b8-99d5-a592be43313e">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_8eda1e0e-b920-dc9d-7c9d-58b52e4fcc62" class="sourcecode">name: f<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_8eda1e0e-b920-dc9d-7c9d-58b52e4fcc62" class="sourcecode">name: f
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5811,7 +6070,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f6f604dd-c0b0-645d-fac0-12f3f0c1792a"><a href="#req_edr_coords-definition">/req/edr/coords-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_d673cf26-e850-c5a7-ba3e-8dc8087685bf">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_cf5fdbda-52c4-b2db-4041-c6622c615663" class="sourcecode">name: coords<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_cf5fdbda-52c4-b2db-4041-c6622c615663" class="sourcecode">name: coords
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 
 <p id="_ea3c51cc-a8a4-1ab9-5624-90f789962dfa">Use a coords value in all requests:</p>
@@ -5841,7 +6106,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_d32215bf-5857-ad0e-ac2c-0159cf08759f"><a href="#req_edr_parameters-definition">/req/edr/REQ_rc-parameter-name-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_d80669ba-709a-cb4d-37ca-26fe3fda6929">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_5e40abd6-45d0-1224-714f-d1b623988aac" class="sourcecode">name: parameter-name<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_5e40abd6-45d0-1224-714f-d1b623988aac" class="sourcecode">name: parameter-name
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5862,7 +6133,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_c9e442d5-5d43-2c26-55bc-666074ca95d7"><a href="#req_edr_crs-definition">/req/edr/REQ_rc-crs-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_95f9c07b-b84f-ed96-2b52-4d56c6700305">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_dbbd3115-5a6c-97ae-8b09-59734ecfb29a" class="sourcecode">name: crs<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_dbbd3115-5a6c-97ae-8b09-59734ecfb29a" class="sourcecode">name: crs
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -5889,7 +6166,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_1359b33e-6a6a-408b-0917-fc22e3401359"><a href="#req_edr_f-definition">/req/edr/rc-f-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_11671822-a2a1-dc43-9b7d-00af713150b0">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_28b3e854-931e-d878-f2dd-5978c6bc45a1" class="sourcecode">name: f<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_28b3e854-931e-d878-f2dd-5978c6bc45a1" class="sourcecode">name: f
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6129,7 +6412,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_10e08ee9-b924-e72f-b5f0-fadb77b5d944"><a href="#req_edr_coords-definition">/req/edr/coords-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_fd44ff79-6542-d870-68a5-93c0ec1c3cbb">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_b551eba5-a02d-deda-e1c2-072b63ec8fa8" class="sourcecode">name: coords<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_b551eba5-a02d-deda-e1c2-072b63ec8fa8" class="sourcecode">name: coords
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 
 <p id="_7aae8670-227e-ad3a-3498-7984944374a4">Use a coords value in all requests:</p>
@@ -6159,7 +6448,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_af45214d-2675-4f9b-509b-da8427a9062f"><a href="#req_collections_rc-corridor-width-definition">/req/edr/corridor-width-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_fbaf8a21-b630-d489-089e-4360d09bd96f">Verify that the <tt>corridor-width</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_a52b633b-34a2-ded6-05a6-49cd55fb9f17" class="sourcecode">name: corridor-width<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_a52b633b-34a2-ded6-05a6-49cd55fb9f17" class="sourcecode">name: corridor-width
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6180,7 +6475,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_0d14ff1b-fbaa-cb48-905b-a9e2f1b4ff57"><a href="#req_collections_rc-corridor-height-definition">/req/edr/REQ_rc-corridor-height-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_4e876ca1-eba7-8c8c-3a81-2cea0b72dcd3">Verify that the <tt>corridor-height</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_8d498851-8692-4e71-3f3a-78393eb737bb" class="sourcecode">name: corridor-height<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_8d498851-8692-4e71-3f3a-78393eb737bb" class="sourcecode">name: corridor-height
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6201,7 +6502,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_aabaedaa-31dc-c107-ae05-ee5834492cce"><a href="#req_collections_rc-with-units-definition">/req/edr/REQ_rc-width-units-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_df0cd8bb-2a65-645a-7a30-5f312013593c">Verify that the <tt>width-units</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_e8b94c41-139a-fcd5-0d2c-120350ae4e18" class="sourcecode">name: width-units<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_e8b94c41-139a-fcd5-0d2c-120350ae4e18" class="sourcecode">name: width-units
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6222,7 +6529,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_5340efcc-1899-3069-0499-9a6e27aaa9ce"><a href="#req_collections_rc-height-units-definition">/req/edr/REQ_rc-height-units-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_2db7800b-ad63-7c39-dddf-27d67419b110">Verify that the <tt>within-units</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_1a45a750-9f7a-8056-320e-2e9d82b85c64" class="sourcecode">name: height-units<br />in: query<br />required: true<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_1a45a750-9f7a-8056-320e-2e9d82b85c64" class="sourcecode">name: height-units
+in: query
+required: true
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6243,7 +6556,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_60dc84f8-3917-d202-8d27-51b50730de96"><a href="#req_edr_parameters-definition">/req/edr/REQ_rc-parameter-name-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_c3c8cab4-9b8e-164f-c028-6d46647d020b">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_8b2434e5-0559-a838-a20b-3bfa68b9df35" class="sourcecode">name: parameter-name<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_8b2434e5-0559-a838-a20b-3bfa68b9df35" class="sourcecode">name: parameter-name
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6264,7 +6583,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f6cba5a2-e217-9001-331a-39ea6b05952a"><a href="#req_edr_crs-definition">/req/edr/REQ_rc-crs-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_25d58981-ca89-a839-1fe1-e89418cf9fb4">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_2ce6832d-09be-3218-b868-be43b8c49dc2" class="sourcecode">name: crs<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_2ce6832d-09be-3218-b868-be43b8c49dc2" class="sourcecode">name: crs
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6291,7 +6616,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_8f673fa1-6367-7da9-05a1-f5f6d3df7334"><a href="#req_edr_f-definition">/req/edr/rc-f-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_77dd7a37-38dd-7ba0-cec8-cb8a84ecf2d2">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_ba55945c-0f78-0968-10b9-8c270be58dcc" class="sourcecode">name: f<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_ba55945c-0f78-0968-10b9-8c270be58dcc" class="sourcecode">name: f
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6428,7 +6759,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_9bf219d2-3897-b1fd-242f-3ef305a363ab"><a href="#req_collections_rc-time-definition">/req/core/datetime-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_0e7951e3-aa9e-39a3-a6b8-7d03496f77ab">Verify that the <tt>datetime</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_46460163-4a23-f4da-7e71-29524cb30cd5" class="sourcecode">name: datetime<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_46460163-4a23-f4da-7e71-29524cb30cd5" class="sourcecode">name: datetime
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6451,7 +6788,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_dbc0e4b8-ba19-76a4-6bb7-665de584cff0"><a href="#req_edr_parameters-definition">/req/edr/REQ_rc-parameter-name-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_399887a2-f5a8-6518-5584-cb63444bdcac">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_97fdea2b-5684-102f-9159-a6c802a8ef2f" class="sourcecode">name: parameter-name<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_97fdea2b-5684-102f-9159-a6c802a8ef2f" class="sourcecode">name: parameter-name
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6472,7 +6815,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_18fd98bf-28c0-e629-7f92-96b4336b8323"><a href="#req_edr_crs-definition">/req/edr/REQ_rc-crs-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_8053da48-88a8-405c-4a9d-44f470e37d43">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_2c8d823a-833b-00d6-fca8-df55766a6628" class="sourcecode">name: crs<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_2c8d823a-833b-00d6-fca8-df55766a6628" class="sourcecode">name: crs
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
@@ -6499,7 +6848,13 @@ and verify that only information that matches the selection criteria is returned
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Requirement</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_c4f22af4-4a18-d486-6c7b-729d7f03ed44"><a href="#req_edr_f-definition">/req/edr/rc-f-definition</a></p>
 </td></tr><tr><td style="text-align:center;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Test Method</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_e742fc7b-7b3e-adf0-9d8d-d0bdb558ba05">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 
-<pre id="_5efc2603-26cd-0f55-db46-da165bf9d855" class="sourcecode">name: f<br />in: query<br />required: false<br />schema:<br />&#xA0; type: string<br />style: form<br />explode: false</pre>
+<pre id="_5efc2603-26cd-0f55-db46-da165bf9d855" class="sourcecode">name: f
+in: query
+required: false
+schema:
+&#xA0; type: string
+style: form
+explode: false</pre>
 
 </td></tr></tbody></table>
 
