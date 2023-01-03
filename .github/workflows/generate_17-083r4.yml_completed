@@ -20,7 +20,7 @@ jobs:
       - name: Generate document
         run: |
           cd 17-083r4
-          metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf ./standard/17-083r4.adoc
+          metanorma compile --agree-to-terms -t ogc -x xml,html,pdf ./standard/17-083r4.adoc
           cp ./standard/17-083r4.html ../main/17-083r4.html
           cp ./standard/17-083r4.pdf ../main/17-083r4.pdf
           cd ../main
