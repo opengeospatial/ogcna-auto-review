@@ -20,11 +20,12 @@ jobs:
       - name: Generate document
         run: |
           cd 18-067/core
-          metanorma compile --agree-to-terms -t ogc -x xml,html 18-067r4.adoc
+          metanorma compile --agree-to-terms -t ogc -x xml,html,pdf 18-067r4.adoc
           cp 18-067r4.html ../../main/18-067r4.html
+          cp 18-067r4.pdf ../../main/18-067r4.pdf
           cd ../../main
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
-          git add 18-067r4.html
+          git add 18-067r4.html 18-067r4.pdf
           git commit -am "Automated generation of documents"
           git push
