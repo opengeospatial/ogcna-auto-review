@@ -1,0 +1,34 @@
+name: generate_23-016
+on:
+  schedule:
+    - cron:  '1 22 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: Checkout other repo
+        uses: actions/checkout@v3       # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/geoapi
+          path: 23-016
+      - name: Generate document
+        run: |
+          cd 23-016
+          mkdir target                  # Metanorma output will be there.
+
+          # Generate HTML only because the deltas are efficiently handled by versionning systems, contrarily to PDF binary.
+          metanorma compile --output-dir target --agree-to-terms --type ogc --extensions html src/main/metanorma/standard.adoc
+
+          mv ./23-016/target/standard.html ../main/23-016.html
+          cd ../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 23-016.html
+          git commit --message "Automated generation of HTML document"
+          git push
