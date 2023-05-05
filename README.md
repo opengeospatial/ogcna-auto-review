@@ -17,6 +17,7 @@ The following draft specifications are automatically compiled from asciidoc to H
 * [OGC API - Common - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/19-072.html)
 * [OGC API - Common - Users Guide, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/20-071.html)
 * [2022 Web Mapping Code Sprint Summary Engineering Report draft](https://opengeospatial.github.io/ogcna-auto-review/22-054.html)
+* [2023 Open Standards and Open Source Software Code Sprint Summary Engineering Report draft](https://opengeospatial.github.io/ogcna-auto-review/23-025.html)
 * More to follow
 
 
