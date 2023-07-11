@@ -21,6 +21,7 @@ jobs:
         run: |
           cd 17-014r11
           metanorma compile --agree-to-terms -t ogc -x xml,html format/17-014r11.adoc
+          python3 format/add_license.py
           cp format/17-014r11.html ../main/17-014r11.html
           cd ../main
           git config --global user.name 'opengeospatial'
