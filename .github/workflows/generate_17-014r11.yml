@@ -1,0 +1,30 @@
+name: generate_17-014r11
+on:
+  schedule:
+    - cron:  '1 18 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/ogc-i3s-community-standard
+          path: 17-014r11
+      - name: Generate document
+        run: |
+          cd 17-014r11
+          metanorma compile --agree-to-terms -t ogc -x xml,html format/17-014r11r4.adoc
+          cp 17-014r11r4.html ../main/17-014r11r4.html
+          cd ../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 17-014r11r4.html
+          git commit -am "Automated generation of documents"
+          git push
