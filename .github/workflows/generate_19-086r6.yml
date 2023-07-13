@@ -17,6 +17,7 @@ jobs:
         with:
           repository: opengeospatial/ogcapi-environmental-data-retrieval
           path: 19-086r6
+          ref: 1.1.0
       - name: Generate document
         run: |
           cd 19-086r6/standard
