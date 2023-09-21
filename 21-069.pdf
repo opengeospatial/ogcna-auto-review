@@ -8,7 +8,7 @@
 /Keywords (Coverage, CoverageJSON, CovJSON, JSON, JSON-LD, linked-data, ogcdoc, OGC document, spatiotemporal.)
 /Creator ()
 /Producer (Ribose Metanorma mn2pdf version 1.79)
-/CreationDate (D:20230920160524Z)
+/CreationDate (D:20230921160618Z)
 >>
 endobj
 2 0 obj
@@ -53,15 +53,15 @@ stream
 <dc:language>en</dc:language>
 <dc:description>Based on JavaScript Object Notation (JSON), CoverageJSON is a format for publishing spatiotemporal data to the Web. The primary design goals are simplicity, machine and human readability and efficiency. While other use cases are possible, the primary CoverageJSON use case is enabling the development of interactive visual websites that display and manipulate environmental data within a web browser. Implementation experience has shown that CoverageJSON is an effective, efficient format, friendly to web and application developers, and therefore consistent with the current OGC API developments. CoverageJSON supports the efficient transfer from big data stores of useful quantities of data to lightweight clients, such as browsers and mobile applications. This enables straightfoward local manipulation of the data, for example, by science researchers. Web developers often use and are familiar with JSON formats. CoverageJSON can be used to encode coverages and collections of coverages. Coverage data may be gridded or non-gridded, and data values may represent continuous values (such as temperature) or discrete categories (such as land cover classes). CoverageJSON uses JSON-LD to provide interoperability with RDF and Semantic Web applications and to reduce the potential size of the payload. Relatively large datasets can be handled efficiently in a “web-friendly” way by partitioning information among several CoverageJSON documents, including a tiling mechanism. Nevertheless, CoverageJSON is not intended to be a replacement for efficient binary formats such as NetCDF, HDF or GRIB, and is not intended primarily to store or transfer very large datasets in bulk. The simplest and most common use case is to embed all the data values of all variables in a Coverage object within the CoverageJSON document, so that it is “self-contained”. Such a standalone document supports the use of very simple clients. The next simplest use case is to put data values for each variable (parameter) in separate array objects in separate CoverageJSON documents which are linked from the Coverage object. This is useful for a multi-variable dataset, such as one with temperature, humidity, wind speed, etc., to be recorded in separate files. This allows the client to load only the variables of interest. A sophisticated use case is to use tiling objects, where the data values are partitioned spatially and temporally, so that a single variable’s data values would be split among several documents. A simple example of this use case is encoding each time step of a dataset into a separate file, but the tiles could also be divided spatially in a manner similar to a tiled map server.</dc:description>
 <dc:creator>UK Met Office; University of Reading; Meteorological Service of Canada; Unidata UCAR; US NOAA / National Weather Service; ESIP/JPL/NASA</dc:creator>
-<dc:date>2023-09-20T16:05:24Z</dc:date>
+<dc:date>2023-09-21T16:06:18Z</dc:date>
 </rdf:Description>
 <rdf:Description xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" rdf:about="">
 <pdfuaid:part>1</pdfuaid:part>
 </rdf:Description>
 <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
 <xmp:CreatorTool/>
-<xmp:MetadataDate>2023-09-20T16:05:24Z</xmp:MetadataDate>
-<xmp:CreateDate>2023-09-20T16:05:24Z</xmp:CreateDate>
+<xmp:MetadataDate>2023-09-21T16:06:18Z</xmp:MetadataDate>
+<xmp:CreateDate>2023-09-21T16:06:18Z</xmp:CreateDate>
 </rdf:Description>
 </rdf:RDF>
 </x:xmpmeta><?xpacket end="r"?>
@@ -15725,7 +15725,7 @@ endobj
 <<
   /Root 6366 0 R
   /Info 1 0 R
-  /ID [<A4F21310EABAD8A490DC6D4117953ED9> <A4F21310EABAD8A490DC6D4117953ED9>]
+  /ID [<F734B566944BC384885ED79ABD326A9D> <F734B566944BC384885ED79ABD326A9D>]
   /Type /XRef
   /Size 7876
   /W [1 8 2]
