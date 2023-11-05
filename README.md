@@ -12,8 +12,6 @@ The following draft specifications are automatically compiled from asciidoc to H
 * [OGC Styles and Symbology Model and Encodings - Part 1: Core, version 2.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/18-067r4.html)
 * [OGC API - 3D GeoVolumes, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/22-029.html)
 * [OGC API - Discrete Global Grid Systems - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-038.html)
-* [2022 Web Mapping Code Sprint Summary Engineering Report draft](https://opengeospatial.github.io/ogcna-auto-review/22-054.html)
-* [2023 Open Standards and Open Source Software Code Sprint Summary Engineering Report draft](https://opengeospatial.github.io/ogcna-auto-review/23-025.html)
 * [OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard v1.4 draft](https://opengeospatial.github.io/ogcna-auto-review/17-014r11.html)
 * [OGC API - Processes, version 2.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html)
 * [2023 Open Standards Code Sprint Summary Engineering Report draft](https://opengeospatial.github.io/ogcna-auto-review/23-059.html)
