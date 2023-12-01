@@ -1,0 +1,31 @@
+name: generate_22-003
+on:
+  schedule:
+    - cron:  '1 23 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/ogcapi-movingfeatures
+          ref: metanorma
+          path: 22-003
+      - name: Generate document
+        run: |
+          cd 22-003
+          metanorma compile --agree-to-terms -t ogc -x xml,html standard/document.adoc
+          cp standard/document.html ../main/22-003.html
+          cd ../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 22-003.html
+          git commit -am "Automated generation of documents"
+          git push
