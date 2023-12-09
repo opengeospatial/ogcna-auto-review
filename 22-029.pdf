@@ -8,7 +8,7 @@
 /Keywords (3D, 3D Tiles , API, bounding volume hierarchy, dataset, distribution, feature, geographic information, geographic information, Geospatial API, GeoVolume, GeoVolumes, glTF, HTML, I3S, OGC API, ogcdoc, OGC document, OpenAPI.)
 /Creator ()
 /Producer (Ribose Metanorma mn2pdf version 1.79)
-/CreationDate (D:20231208170717Z)
+/CreationDate (D:20231209170658Z)
 >>
 endobj
 2 0 obj
@@ -53,15 +53,15 @@ stream
 <dc:language>en</dc:language>
 <dc:description>This document provides an Application Programming Interface (API) and encoding that organizes access to a variety of 2D / 3D content according to a hierarchy of 3D geospatial volumes (GeoVolumes). The goal of this specification is to establish an API and encoding that allows applications to request a variety of 3D content from different providers in an interoperable and standardized way. The API described in this document is based on Open Geospatial Consortium (OGC) and OpenAPI principles. The API is consistent with OGC API — Common core building blocks and supports link-follow, bounding box and tile coordinate query methods of access to resources of interest. An OGC API — 3D GeoVolumes specification is needed because a variety of solutions and standards exist to access and transfer 3D geospatial content (e.g. 3D Tiles, I3S, glTF and others). The OGC API — 3D GeoVolumes specification addresses this challenge by providing a resource model and corresponding API to integrate various approaches to accessing and transferring 2D / 3D geospatial content into a single, open standards-based solution. By outlining an implementation approach for the parameters of the API, the 3D GeoVolumes specification simplifies application development across geospatial enterprises by providing a single interface for requesting and receiving a variety of 2D / 3D datasets and their distribution. As such, the goal of this OGC API specification is not to replace existing distribution methods and models for 3D content, but to enable interoperability between them. The content provided within this document is derived largely from work done during collaborative, hands-on engineering conducted by members of the OGC during late 2019 and early 2020. As additional methodologies mature, this OGC API will be updated to include those approaches. Table 1 — Overview of Resources Resource Path HTTP Method Document Reference Landing page / GET API Landing Page API definition /api GET API Definition Conformance classes /conformance GET Declaration of Conformance Classes Collections metadata /collections GET Collections Metadata Collection instance metadata /collections/{collection_id} GET Collection Metadata NOTE: In the context of this candidate Standard, {collection_id} is the {3DContainerId} identifier of the 3D Container. The resources identified in Table 1 primarily support Discovery operations. Discovery operations allow clients to interrogate the API to determine its capabilities and obtain information (metadata) about a distribution of a resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers. This standard extends the common query operations listed in Table 1 by defining simple, coordinate-based, queries which are applicable to many spatio-temporal, including geospatial, resource types. Other OGC API standards may define additional query capabilities specific to their resource type. EDR Query operations allow resources or values to be retrieved from the underlying spatio-temporal resource data store. The information returned is based upon the selection criteria (query string) provided by the client.</dc:description>
 <dc:creator>US Army Geospatial Center (AGC); Skymantics, LLC; Ecere Corporation; Cesium; Cognitics; Helyx SIS; Strategic Alliance Consulting Inc.; Steinbeis</dc:creator>
-<dc:date>2023-12-08T17:07:17Z</dc:date>
+<dc:date>2023-12-09T17:06:58Z</dc:date>
 </rdf:Description>
 <rdf:Description xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" rdf:about="">
 <pdfuaid:part>1</pdfuaid:part>
 </rdf:Description>
 <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
 <xmp:CreatorTool/>
-<xmp:MetadataDate>2023-12-08T17:07:17Z</xmp:MetadataDate>
-<xmp:CreateDate>2023-12-08T17:07:17Z</xmp:CreateDate>
+<xmp:MetadataDate>2023-12-09T17:06:58Z</xmp:MetadataDate>
+<xmp:CreateDate>2023-12-09T17:06:58Z</xmp:CreateDate>
 </rdf:Description>
 </rdf:RDF>
 </x:xmpmeta><?xpacket end="r"?>
@@ -23982,7 +23982,7 @@ endobj
 <<
   /Root 3861 0 R
   /Info 1 0 R
-  /ID [<C55013C2839363EE331C74CA0E2074B0> <C55013C2839363EE331C74CA0E2074B0>]
+  /ID [<02E365DD9EA008E310256615FD95BB7E> <02E365DD9EA008E310256615FD95BB7E>]
   /Type /XRef
   /Size 5923
   /W [1 8 2]
