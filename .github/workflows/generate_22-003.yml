@@ -15,8 +15,7 @@ jobs:
       - name: checkout other repo
         uses: actions/checkout@v3 # checkout the repository content to github runner
         with:
-          repository: opengeospatial/ogcapi-movingfeatures
-          ref: metanorma
+          repository: opengeospatial/ogcapi-movingfeatures          
           path: 22-003
       - name: Generate document
         run: |
