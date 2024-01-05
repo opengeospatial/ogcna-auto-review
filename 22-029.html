@@ -1445,7 +1445,7 @@ span.hi {
         <p id="_1c855990-83bb-49de-976d-874de1fa7fee">This document provides an Application Programming Interface (API) and encoding that organizes access to a variety of 2D / 3D content according to a hierarchy of 3D geospatial volumes (GeoVolumes). The goal of this specification is to establish an API and encoding that allows applications to request a variety of 3D content from different providers in an interoperable and standardized way.</p>
         <p id="_1ddfea0f-082a-737e-a2d8-8f358956628d">The API described in this document is based on Open Geospatial Consortium (OGC) and OpenAPI principles. The API is consistent with OGC API&#x2009;&#x2014;&#x2009;Common core building blocks and supports link-follow, bounding box and tile coordinate query methods of access to resources of interest.</p>
         <p id="_ef4c5f91-5eab-f1aa-b0e1-ef2b4a4ca55a">An OGC API&#x2009;&#x2014;&#x2009;3D GeoVolumes specification is needed because a variety of solutions and standards exist to access and transfer 3D geospatial content (e.g. 3D Tiles, I3S, glTF and others). The OGC API&#x2009;&#x2014;&#x2009;3D GeoVolumes specification addresses this challenge by providing a resource model and corresponding API to integrate various approaches to accessing and transferring 2D / 3D geospatial content into a single, open standards-based solution. By outlining an implementation approach for the parameters of the API, the 3D GeoVolumes specification simplifies application development across geospatial enterprises by providing a single interface for requesting and receiving a variety of 2D / 3D datasets and their distribution. As such, the goal of this OGC API specification is not to replace existing distribution methods and models for 3D content, but to enable interoperability between them.</p>
-        <p id="_4b5833c4-7e55-4abb-6cba-261dfdb26903">The content provided within this document is derived largely from work done during collaborative, hands-on engineering conducted by members of the OGC during late 2019 and early 2020. As additional methodologies mature, this OGC API will be updated to include those approaches.</p>
+        <p id="_ddf72802-69e5-d775-0bfc-d304f7009caf">The content provided within this document is derived largely from work done during collaborative, hands-on engineering conducted by members of the OGC during late 2019 and early 2020. As additional methodologies mature, OGC API&#x2009;&#x2014;&#x2009;3D GeoVolumes will be updated to include those approaches.</p>
         <p class="TableTitle" style="text-align:center;">Table 1&#xA0;&#x2014; Overview of Resources</p>
         <table id="common-paths" class="MsoISOTable" style="border-width:1px;border-spacing:0;width:90%;table-layout:fixed;">
           <colgroup>
@@ -1521,7 +1521,7 @@ span.hi {
         <p id="_292cd024-64cc-9385-5409-5a5bc337b1b6">The resources identified in  <a href="#common-paths">Table 1</a> primarily support Discovery operations. Discovery operations allow clients to interrogate the API to determine its capabilities and obtain information (metadata) about a distribution of a resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers.</p>
         <p id="_6d04ed18-6b33-359d-0b21-31c5f2f8147c">This standard extends the common query operations listed in <a href="#common-paths">Table 1</a> by defining simple, coordinate-based, queries which are applicable to many spatio-temporal, including geospatial, resource types. Other OGC API standards may define additional query capabilities specific to their resource type. EDR Query operations allow resources or values to be retrieved from the underlying spatio-temporal resource data store. The information returned is based upon the selection criteria (query string) provided by the client.</p>
       </div>
-      <div class="Section3" id="_62d0eab4-d2bc-4a64-8944-44ed8ef6f378">
+      <div class="Section3" id="_40554cdd-44d7-4899-b6e8-63289751c129">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1537,7 +1537,7 @@ span.hi {
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_40823f68-2eaf-4577-b1e1-c41bf486727e">
+      <div class="Section3" id="_d9a159ae-112a-4432-815e-05f19e385516">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1613,11 +1613,10 @@ span.hi {
       <p class="zzSTDTitle1">OGC API - 3D GeoVolumes</p>
       <div id="_scope">
         <h1 id="toc6">1.&#xA0; Scope</h1>
-        <p id="_0aaa24ed-6834-d0b9-743a-32437212b8d1">The OGC 3D GeoVolumes specification provides an Application Programming Interface (API) and encoding that organizes access to a variety of 3D content according to a hierarchy of 3D geospatial volumes (GeoVolumes).</p>
-        <p id="_83736118-ee30-41c3-8f90-749ff77276ab">The goal of this OGC API is to allow applications to request a variety of 3D content from different providers in an interoperable and standardized way.</p>
-        <p id="_68d892c1-7900-183a-084e-e3f33fd26c10">OGC API&#x2009;&#x2014;&#x2009;3D GeoVolumes specification is based on Open Geospatial Consortium (OGC) and OpenAPI principles. The API is consistent with OGC API &#x2013; Common &#x2013; Part 1: Core building blocks and supports link-follow, bounding box query, and tile coordinate methods of access to resources of interest.</p>
-        <p id="_0b2ae32a-5a61-3096-952e-9208369e9b07">The objective of the 3D GeoVolumes API and resource model is not to replace existing distribution methods and models for 3D content such as OGC 3D Tiles and I3S, but to enable interoperability between them.</p>
-        <p id="_2e36f424-d951-964c-2d3a-09b709a3229c">The content provided within this document is derived largely from work done during collaborative, hands-on engineering conducted by members of the OGC during late 2019 and early 2020.</p>
+        <p id="_efeb0163-0b1b-660e-6a75-a76967a392ec">The OGC API&#x2009;&#x2014;&#x2009;3D GeoVolumes candidate Standard specifies an Application Programming Interface (API) and encoding that organizes access to a variety of 3D content according to a hierarchy of 3D geospatial volumes (GeoVolumes). The goal of the candidate Standard is to allow applications to request a variety of 3D content from different providers in an interoperable and standardized way.</p>
+        <p id="_e96642c7-5764-795e-241f-3c18693853d6">OGC API&#x2009;&#x2014;&#x2009;3D GeoVolumes is based on Open Geospatial Consortium (OGC) and OpenAPI principles. The API is consistent with OGC API &#x2013; Common &#x2013; Part 1: Core building blocks and supports link-follow, bounding box query, and tile coordinate methods of access to resources of interest.</p>
+        <p id="_4f63e984-7cfa-ae18-510b-3ad5b9386543">The objective of the 3D GeoVolumes API and resource model is not to replace existing distribution methods and models for 3D content such as OGC 3D Tiles and I3S, but to enable interoperability between them.</p>
+        <p id="_398bd208-852d-d7b1-55dc-2e5c19c12cfd">The content provided within this document is derived largely from work done during collaborative, hands-on engineering conducted by members of the OGC during late 2019 and early 2020.</p>
         <div id="_why_3d_geovolumes"><h2 id="toc7">1.1.&#xA0; Why 3D GeoVolumes</h2>
 
 <p id="_362cb779-7884-e9df-2892-b4e2cb640700">OGC API&#x2009;&#x2014;&#x2009;3D GeoVolumes is needed because a variety of solutions and standards exist to access and transfer 3D geospatial content (e.g. 3D Tiles, I3S, glTF and others). OGC API&#x2009;&#x2014;&#x2009;3D GeoVolumes addresses the challenge of accessing and transferring 3D geospatial content in a variety of standards by providing a resource model and single API for requesting, receiving, and distributing this content, thus simplifying application development across geospatial enterprises. The 3D GeoVolumes API and resource model use a space-centric perspective to allow efficient access to 3D content.</p>
@@ -1632,7 +1631,7 @@ span.hi {
 
 <p id="_35d02b18-e5e0-c9e7-b7f1-a369c91f39bd">The three systems differ in the 3D content standards implemented, volume of data that can be stored and processed, supported analytics and available bandwidth for data transport between entities, with &#x2018;A&#x2019; having the highest bandwidth and &#x2018;C&#x2019; having the lowest bandwidth.</p>
 
-<p id="_c61e039c-71c2-4783-fc51-468abd3c9027">Despite these differences, 3D GeoVolumes provides a model that allows offering, discovering, requesting and accessing data at each entity using a common API on top of a single organizational model of 3D geospatial resources. This common API leverages available 3D geospatial data formats and distribution standards such as 3D Tiles [<a href="https://www.ogc.org/standards/3DTiles">https://www.ogc.org/standards/3DTiles</a>], I3S [<a href="https://www.ogc.org/standards/i3s">https://www.ogc.org/standards/i3s</a>], CityGML [<a href="https://www.ogc.org/standards/citygml">https://www.ogc.org/standards/citygml</a>], and CDB [<a href="https://www.ogc.org/standards/cdb">https://www.ogc.org/standards/cdb</a>] to ensure users can work with 3D geospatial content in the optimal distribution format and interaction method for their application task. High bandwidth capacity data centers (&#x2018;A&#x2019;) have 3D content available for broad regions or on a global scale. Content can be made available in multiple datasets and distributions based on conversion and transcoding workflows. Access to the data can be offered to other entities in the enterprise by means of the 3D GeoVolumes API. Depending on users&#x2019; needs, data can be made available through alternative API methods in 2D or in raw format, such as the draft OGC API&#x2009;&#x2014;&#x2009;Tiles specification or the OGC API&#x2009;&#x2014;&#x2009;Features Standard.</p>
+<p id="_a4aad485-bb6b-f198-a060-df913cc15f5f">Despite these differences, 3D GeoVolumes provides a model that allows offering, discovering, requesting and accessing data at each entity using a common API on top of a single organizational model of 3D geospatial resources. This common API leverages available 3D geospatial data formats and distribution standards such as 3D Tiles [<a href="https://www.ogc.org/standards/3DTiles">https://www.ogc.org/standards/3DTiles</a>], I3S [<a href="https://www.ogc.org/standards/i3s">https://www.ogc.org/standards/i3s</a>], CityGML [<a href="https://www.ogc.org/standards/citygml">https://www.ogc.org/standards/citygml</a>], and CDB [<a href="https://www.ogc.org/standards/cdb">https://www.ogc.org/standards/cdb</a>] to ensure users can work with 3D geospatial content in the optimal distribution format and interaction method for their application task. High bandwidth capacity data centers (&#x2018;A&#x2019;) have 3D content available for broad regions or on a global scale. Content can be made available in multiple datasets and distributions based on conversion and transcoding workflows. Access to the data can be offered to other entities in the enterprise by means of the 3D GeoVolumes API. Depending on users&#x2019; needs, data can be made available through alternative API methods in 2D or in raw format, such as the <a href="https://ogcapi.ogc.org/tiles">OGC API&#x2009;&#x2014;&#x2009;Tiles</a> Standard or the <a href="https://ogcapi.ogc.org/features">OGC API&#x2009;&#x2014;&#x2009;Features</a> Standard.</p>
 
 <p id="_6b7a92e3-d79f-29d8-041f-bd2adfd1d0b8">Medium bandwidth capacity data centers (&#x2018;B&#x2019;) do not require all data that is available at the data center (&#x2018;A&#x2019;) but are more selective according to their role. The amount of data transferred to (&#x2018;B&#x2019;) depends on the available bandwidth and specific needs for data analysis and re-distribution. To obtain required data in the best suited format and minimum size, medium bandwidth capacity data centers make use of the specific space-centric indexing scheme that is the fundamental idea of a GeoVolume resource and the corresponding 3D GeoVolumes API offered by (&#x2018;A&#x2019;).</p>
 
@@ -1681,26 +1680,26 @@ span.hi {
         <h1 id="toc9">2.&#xA0; Conformance</h1>
         <p id="_9a8689cf-da69-851d-fbd8-56a567334f29">Conformance with this API shall be checked using the tests specified in Annex A of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the  <a href="https://portal.ogc.org/files/?artifact_id=55234">OGC Compliance Testing Policies and Procedures</a> and the  <a href="https://www.ogc.org/compliance">OGC Compliance Testing</a> web site.</p>
         <p id="_c41add8e-7894-8776-a5e1-f1e84bdc1719">The one Standardization Target for this standard is  <a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#webapi-definition">Web APIs</a>.</p>
-        <p id="_69fc5b94-e269-84e4-e44d-ec670d572329"><a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#OGC19-072">OGC API&#x2009;- Common&#x2009;- Part 1: Core</a> defines an API module intended for re-use by other OGC Web API standards. The OGC API&#x2009;- 3D GeoVolumes is an extension of  <a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#OGC19-072">OGC API&#x2009;-&#x2009;Common&#x2009;-&#x2009;Part 1: Core</a>. Conformance to the OGC API&#x2009;- 3D GeoVolumes requires demonstrated conformance to the applicable Conformance Classes of OGC API&#x2009;- Common.</p>
-        <p id="_454c0350-8610-5f72-0908-6885808f8bc9">OGC API&#x2009;- 3D GeoVolumes identifies a set of Conformance Classes. The  <a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#ctc-definition">Conformance Classes</a> implemented by an API are advertised through the /conformance path on the landing page.</p>
+        <p id="_09480013-6713-e32a-ee44-075c1a15e0f7"><a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#OGC19-072">OGC API&#x2009;- Common&#x2009;- Part 1: Core</a> defines an API module intended for re-use by other OGC Web API standards. The OGC API&#x2009;- 3D GeoVolumes is an extension of  <a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#OGC19-072">OGC API&#x2009;-&#x2009;Common&#x2009;-&#x2009;Part 1: Core</a>. Conformance to the OGC API&#x2009;- 3D GeoVolumes candidate Standard requires demonstrated conformance to the applicable Conformance Classes of OGC API&#x2009;- Common.</p>
+        <p id="_454c0350-8610-5f72-0908-6885808f8bc9">OGC API&#x2009;- 3D GeoVolumes identifies a set of Conformance Classes. The  <a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#ctc-definition">Conformance Classes</a> implemented by an API are advertised through the <tt>/conformance</tt> path on the landing page.</p>
         <p id="_22499e5b-c80e-572a-751e-ab188332544a">Each Conformance Class is defined by one or more  <a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#requirements-class-definition">Requirements Classes</a> defined in Section 6. The requirements in Section 6 are organized by Requirements Class.</p>
         <div id="_mandatory_requirements_classes"><h2 id="toc10">2.1.&#xA0; Mandatory Requirements Classes</h2>
 
-<p id="_9fa42f81-d9f0-c4f7-5c7c-66a8285b6730">The mandatory requirements class of OGC API&#x2009;- 3D GeoVolumes is the Requirements Class &#x201C;OGC API &#x2013; 3D GeoVolumes &#x2013; Core&#x201D; specified in Section 6.</p>
+<p id="_eb5a0c5f-a495-6832-816d-dbbdad0f8b54">The mandatory requirements class of OGC API&#x2009;- 3D GeoVolumes is the Requirements Class &#x201C;Core&#x201D; specified in <a href="#clause_requirements_class_core">Clause 7.1</a>.</p>
 
 <p id="_dc0838b2-59c9-98ee-4ec7-7e483093b0eb">This requirements class inherits from the <i>Core Requirements Class</i> of  <a href="https://docs.ogc.org/is/19-086r4/19-086r4.html#OGC19-072">OGC API&#x2009;&#x2014;&#x2009;Common&#x2009;&#x2014;&#x2009;Part 1: Core</a> which specifies the minimal useful service interface for an OGC API.</p>
 
-<p id="_2ac8ed84-da73-f798-72d1-bcd2c68e7052">The requirements specified in the Requirements Class &#x201C;OGC API &#x2013; 3D GeoVolumes &#x2013; Core&#x201D; focus on minimal capabilities for a static web server.</p>
+<p id="_d486f4ea-ab68-5b5f-054b-2e8cdf4e50f8">The requirements specified in the Requirements Class &#x201C;Core&#x201D; of OGC API &#x2013; 3D GeoVolumes focus on minimal capabilities for a static web server.</p>
 
-<p id="_29517d1e-e7b2-4367-e53c-964976954ea0">The requirements specified in the Requirements Class &#x201C;OGC API &#x2013; 3D GeoVolumes &#x2013; Core&#x201D; are mandatory for all implementations of the 3D GeoVolumes API.</p>
+<p id="_85f53d53-fa7e-1933-6c1f-99e15bd9367f">The requirements specified in the Requirements Class &#x201C;Core&#x201D; of OGC API &#x2013; 3D GeoVolumes are mandatory for all implementations of the 3D GeoVolumes API.</p>
 </div>
         <div id="_optional_requirements_classes"><h2 id="toc11">2.2.&#xA0; Optional Requirements Classes</h2>
 
-<p id="_3569da2c-81de-123e-cc1e-1dd3d7e7f5f7">The optional requirements classes of OGC API&#x2009;- 3D GeoVolumes include Requirements Class &#x201C;OGC API &#x2013; 3D GeoVolumes &#x2013; Extension&#x201D; specified in Section 6.</p>
+<p id="_ce41a59e-3646-ab63-e10f-cfcce7d18924">The optional requirements classes of OGC API&#x2009;- 3D GeoVolumes include Requirements Class &#x201C;Extension&#x201D; specified in <a href="#clause_requirements_class_extension">Clause 7.2</a>.</p>
 
-<p id="_10fe0d5d-ec6b-8a4f-e0a9-820350e89d11">The requirements specified in the Requirements Class &#x201C;OGC API &#x2013; 3D GeoVolumes &#x2013; Extension&#x201D; adds the option for a spatial query parameter or tile coordinates to limit the result.</p>
+<p id="_ba616aef-46c1-9c57-fb98-7627ad40092b">The requirements specified in the Requirements Class &#x201C;Extension&#x201D; adds the option for a spatial query parameter or tile coordinates to limit the result.</p>
 
-<p id="_81fa55a6-52f8-da3b-301c-e3c1621dfa08">The requirements specified in the Requirements Class &#x201C;OGC API &#x2013; 3D GeoVolumes &#x2013; Extension&#x201D; are optional for implementations of the 3D GeoVolumes API.</p>
+<p id="_8f78924f-22d5-1066-f5d9-e735231f58e6">The requirements specified in the Requirements Class &#x201C;Extension&#x201D; are optional for implementations of the 3D GeoVolumes API.</p>
 </div>
       </div>
       <div><h1 id="toc12">3.&#xA0; Normative references</h1>
@@ -1870,7 +1869,7 @@ span.hi {
             </tr>
           </tbody>
         </table>
-        <div id="_requirements_class_core"><h2 id="toc18">7.1.&#xA0; Requirements Class &#x201C;Core&#x201D;</h2>
+        <div id="clause_requirements_class_core"><h2 id="toc18">7.1.&#xA0; Requirements Class &#x201C;Core&#x201D;</h2>
 
 <p id="_079f0131-0bbe-bc86-70f4-5fd2231c5a1c">All resources are available in a &#x2018;Core&#x2019; requirements class, i.e. all GeoVolumes APIs will support them.</p>
 
@@ -1939,7 +1938,7 @@ span.hi {
 <pre id="_66a382e2-87ee-cf0f-4e44-a0018f0304a5" class="prettyprint ">type: object<br />required:<br />&#xA0;&#x2009;&#x2014;&#x2009;conformsTo<br />properties:<br />&#xA0; conformsTo:<br />&#xA0;&#xA0;&#xA0; type: array<br />&#xA0;&#xA0;&#xA0; items:<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; type: string</pre>
 
 
-<p id="_0d79eaf3-2f38-82e0-e276-2acb1f35bbac">The following example of the conformance declaration of a 3D GeoVolumes API was taken from the &#x201C;OGC API &#x2013; Tiles&#x2009;&#x2014;&#x2009;3D (GeoVolumes) Engineering Report&#x201D;:</p>
+<p id="_ed63291c-aa6b-b0b7-559e-21f83e99e90b">The following example of the conformance declaration of a 3D GeoVolumes API was taken from the &#x201C;OGC API &#x2013; Tiles&#x2009;&#x2014;&#x2009;3D (GeoVolumes) Engineering Report&#x201D; (<a href="https://docs.ogc.org/per/20-030.html">OGC 20-030</a>):</p>
 
 <pre id="_af5714c2-99be-4c32-2412-e118225dd49d" class="prettyprint ">{<br />&#xA0; &#x201C;conformsTo&#x201D;: [<br />&#xA0;&#xA0;&#xA0; &#x201D; http://www.opengis.net/spec/ogcapi-geovolumes-1/1.0/conf/core[http://www.opengis.net/spec/ogcapi-geovolumes-1/1.0/conf/core]&#x201D;,<br />&#xA0;&#xA0;&#xA0; &#x201D; http://www.opengis.net/spec/ogcapi-geovolumes-1/1.0/conf/oas30[http://www.opengis.net/spec/ogcapi-geovolumes-1/1.0/conf/oas30]&#x201D;,<br />&#xA0;&#xA0;&#xA0; &#x201D; http://www.opengis.net/spec/ogcapi-geovolumes-1/1.0/conf/json[http://www.opengis.net/spec/ogcapi-geovolumes-1/1.0/conf/json]&#x201D;<br />&#xA0;&#xA0;&#xA0; ]<br />}</pre>
 
@@ -2030,7 +2029,7 @@ span.hi {
 <p id="_bf4128da-be72-4745-ea72-690a4c0c272e">See Table B.4 in <a href="#appendix_b">Annex B</a> for additional guidance.</p>
 </div>
 </div>
-        <div id="_requirements_class_extension"><h2 id="toc19">7.2.&#xA0; Requirements Class &#x201C;Extension&#x201D;</h2>
+        <div id="clause_requirements_class_extension"><h2 id="toc19">7.2.&#xA0; Requirements Class &#x201C;Extension&#x201D;</h2>
 
 <p id="_e640dc4a-01ca-1a59-fc00-19bf1edb18f3">This class provides specifics on the extensions to the Collections requirement class. The extensions to the Collections requirement class are as follows:</p>
 
