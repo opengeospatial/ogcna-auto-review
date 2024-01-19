@@ -1446,7 +1446,7 @@ as defined in <a href="https://docs.ogc.org/as/20-040r3/20-040r3.html">OGC Abstr
 matching a specify query (in combination with other building blocks defining queries, such as a filter defined using
 the <a href="https://docs.ogc.org/DRAFTS/21-065.html">OGC Common Query Language (CQL2)</a>.</p>
       </div>
-      <div class="Section3" id="_ff4bc564-4219-4292-8acc-2f41a4c6050f">
+      <div class="Section3" id="_c69d1404-1592-41d3-ac0a-fd0fd03916b2">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1468,7 +1468,7 @@ Additional parts for <i>OGC API&#x2009;&#x2014;&#x2009;Discrete Global Grid Syst
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_6bffb48c-5a4a-c73f-8352-74e8ed0d680a">No security considerations have been made for this document.</p>
       </div>
-      <div class="Section3" id="_289e2712-32a8-4576-85ed-6e59d44046e7">
+      <div class="Section3" id="_b79a2fdf-4b7d-469f-b129-d0c9decc7fa4">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1502,9 +1502,8 @@ Additional parts for <i>OGC API&#x2009;&#x2014;&#x2009;Discrete Global Grid Syst
       <p class="zzSTDTitle1">OGC API - Discrete Global Grid Systems - Part 1: Core</p>
       <div id="_scope">
         <h1 id="toc6">1.&#xA0; Scope</h1>
-        <div id="_19759895-aabd-4232-a497-4ca4b6a23eb3" class="Note">
-          <p><span class="note_label">NOTE</span>&#xA0; Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.</p>
-        </div>
+        <p id="_e971712b-cbda-2b49-297d-f8d3171982cf">This OGC Standard specifies a Web API that enables the direct retrieval of geospatial data for a specified area, time and resolution of interest, based on a specific DGGS and indexing scheme and/or the query of DGGS resources to return a list of DGGS Zones from which data is available. Queries can be specified in combination with other building blocks defining queries, such as a filter defined using
+the <a href="https://docs.ogc.org/DRAFTS/21-065.html">OGC Common Query Language (CQL2)</a>.</p>
       </div>
       <div id="_conformance">
         <h1 id="toc7">2.&#xA0; Conformance</h1>
@@ -2133,7 +2132,7 @@ These requirements classes include:</p>
         <p id="_eedfd432-903a-f855-54df-37142aeffb39">
           <b>For zone list:</b>
         </p>
-        <ul id="_64fcdb37-c3cd-b0e8-09d2-03d291c6a44c"><li><p id="_faacd7fb-7fbb-f26a-206c-af61372d09bc"><a href="#rc_zone-html">HTML Zone List</a></p>
+        <ul id="_46a22544-1cca-5a17-d539-6bd390c9c2fd"><li><p id="_faacd7fb-7fbb-f26a-206c-af61372d09bc"><a href="#rc_zone-html">HTML Zone List</a></p>
 </li>
 <li><p id="_8783cb81-17ef-26a6-b702-d2826dcdb89c"><a href="#rc_zone-json">JSON Zone List</a></p>
 </li>
@@ -2141,7 +2140,7 @@ These requirements classes include:</p>
 </li>
 <li><p id="_2eabd532-3819-92f4-6d8e-540e54ed084f"><a href="#rc_zone-geojson">GeoJSON Zone List</a></p>
 </li>
-<li><p id="_4b8d5b9d-fa1f-a4ea-8ef5-3ad34319698e"><a href="#rc_zone-fgjson">FG-SON Zone List</a></p>
+<li><p id="_a56fd2ca-9410-46f6-42d7-f29f2164f8b9"><a href="#rc_zone-fgjson">FG-JSON Zone List</a></p>
 </li>
 <li><p id="_5e71f6d9-bd5f-ec7e-bc38-5c0ce2ef7392"><a href="#rc_zone-geotiff">GeoTIFF Zone List</a></p>
 </li>
@@ -2165,6 +2164,13 @@ These requirements classes include:</p>
 <p id="_41521572-2a5a-69b8-b498-e3fa05c542b1">For a DGGS with non-rectangular zones (e.g., hexagonal zones), a GeoTIFF representation can be the minimal bounding rectangle of the zone shape, with NODATA values used outside the bounds of the zone.</p>
 
 <table id="rc_table-data_geotiff" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 8: Requirements Class GeoTIFF Data</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>https://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/data-geotiff</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#TIFF_V6">[TIFF_V6]</a><br />https://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/data-retrieval</td></tr></tbody></table>
+
+<table id="_f2a919c8-ff54-8e36-17c6-b05ca28e5303" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 19</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/data-geotiff/content</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f83f24f5-1ed7-39e1-c385-27713c27fa43">Every 200 response of the server for zone data with the media type image/tiff SHALL be a TIFF document representing the data values for all selected fields for a single zone.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_62b1b870-6d82-b1d9-2a8e-4695a9192f34">If the TIFF encoding incorporates a GeoTIFF georeference, this information SHALL be consistent with the DGGRS Zone ID and the CRS implied by the DGGRS.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">C</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_6b9fead2-ace0-e7c7-d8d7-613d33bdb009">If the zone geometry is not rectangular, the closest bounding rectangle SHALL be used for referencing the image, and null values SHALL be used for cells lying outside the zone geometry.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">D</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_c4fa44a8-c739-e972-00a6-76fbb3b8c332">A distinct value for each sub-zone implied from the requested <tt>zone-depth</tt> SHALL correspond to at least one distinct cell value in the response.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">E</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_36a36a8d-3235-a08f-3e3a-1b1247ce42ee">For implementations supporting Data Custom Depths, each depth of the requested zone depth pyramid SHALL be a separate image (overview) in the response.</p>
+</td></tr></tbody></table>
 </div>
 </div>
 
@@ -2269,14 +2275,7 @@ The object can also include a <tt>&#x201C;links&#x201D;</tt> objects linking bac
 
 <p id="_03298e38-bd73-66b0-eadb-50df09c71d0e">HTML is the core language of the World Wide Web. An API that supports HTML will support browsing the spatial resources with a web browser and will also enable search engines to crawl and index those resources.</p>
 
-<p class="SourceTitle" style="text-align:center;">Example&#xA0;&#x2014; Requirements Class HTML Zone List</p><div id="rc_table-zone_html" class="example">
-
-<dl id="_1e3de159-e1dd-a666-6e0c-b3eccdce89ec"><dt><p>identifier</p></dt><dd><p id="_be3942d3-d19f-9450-634c-66c69426bc2c"><a href="https://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-html">https://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-html</a></p>
-</dd><dt><p>subject</p></dt><dd><p id="_3d9ab945-4a83-ef43-c5a7-0d36ce16d060">Web API</p>
-</dd><dt><p>inherit</p></dt><dd><p id="_1958380c-a6fa-fd86-9a6c-d845dce39197"><a href="https://html.spec.whatwg.org/">https://html.spec.whatwg.org/</a>: HTML Living Standard</p>
-</dd><dt><p>inherit</p></dt><dd><p id="_8a1562f1-d13a-335f-22ba-607fc86afce0"><a href="https://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query">https://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</a></p>
-</dd></dl>
-</div>
+<table id="rc_table-zone_html" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 16: Requirements Class HTML Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>https://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-html</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">https://html.spec.whatwg.org/<br />https://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
 </div>
 </div>
 
@@ -2290,7 +2289,7 @@ DGGRS whose zone identifiers can be expressed as a single 64-bit integer.</p>
 <p id="_b6b320c0-03ca-8866-2ffb-654b513e284b">The response consists of a 64-bit integer count of zones, followed by that count of zones, also 64-bit integers.
 With compact zones and additional HTTP content encoding compression, this provides an optimal way to exchange DGGS zone lists.</p>
 
-<table id="rc_table-zone_binary64bit" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 16: Requirements Class 64-bit Binary Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-uint64</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisite</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
+<table id="rc_table-zone_binary64bit" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 17: Requirements Class 64-bit Binary Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-uint64</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisite</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
 </div>
 </div>
 
@@ -2308,7 +2307,7 @@ The zone identifier is represented in the <tt>id</tt> field of each feature.</p>
 not necessary for a DGGS client working natively with the same DGGRS, this requirement class provides an easy way to readily visualize the response in a variety of tools.
 This requirements class is therefore intended for convenience, demonstration and educational purposes.</p>
 
-<table id="rc_table-zone_geojson" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 17: Requirements Class GeoJSON Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-geojson</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#rfc7946">GeoJSON</a><br />http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
+<table id="rc_table-zone_geojson" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 18: Requirements Class GeoJSON Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-geojson</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#rfc7946">GeoJSON</a><br />http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
 </div>
 </div>
 
@@ -2326,7 +2325,7 @@ The zone identifier is represented in the <tt>id</tt> field of each feature.</p>
 not necessary for a DGGS client working natively with the same DGGRS, this requirement class provides an easy way to readily visualize the response in a variety of tools.
 This requirements class is therefore intended for convenience, demonstration and educational purposes.</p>
 
-<table id="rc_table-zone_fgjson" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 18: Requirements Class FG-JSON Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-geojson</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#rfc7946">GeoJSON</a><br />http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
+<table id="rc_table-zone_fgjson" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 19: Requirements Class FG-JSON Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-geojson</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#rfc7946">GeoJSON</a><br />http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
 </div>
 </div>
 
@@ -2345,7 +2344,7 @@ and would therefore be very sub-optimal. While for rectangular zones it would be
 <p id="_41cc4bb3-c34f-998a-c6c9-895bf9ef0877">While not intended to efficiently exchange zone list, this requirement class provides an easy way to readily visualize the response in a variety of tools.
 This requirements class is therefore intended for convenience, demonstration and educational purposes.</p>
 
-<table id="rc_table-zone_geotiff" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 19: Requirements Class GeoTIFF Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-geotiff</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#TIFF_V6">[TIFF_V6]</a><br />http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
+<table id="rc_table-zone_geotiff" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 20: Requirements Class GeoTIFF Zone List</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-geotiff</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#TIFF_V6">[TIFF_V6]</a><br />http://www.opengis.net/spec/ogcapi-dggs-1/1.0/req/zone-query</td></tr></tbody></table>
 </div>
 </div>
 </div>
