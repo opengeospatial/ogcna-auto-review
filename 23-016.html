@@ -1475,7 +1475,7 @@ GeoAPI documents the mapping of types and methods from the abstract model into J
 providing standard interfaces in the <tt>&#x201C;org.opengis&#x201D;</tt> (Java) or <tt>&#x201C;opengis&#x201D;</tt> (Python) namespaces
 and explaining the use of GeoAPI interfaces.</p>
       </div>
-      <div class="Section3" id="_100d996f-bc9d-47d5-90c5-9f718a247915">
+      <div class="Section3" id="_2e011aa3-6b21-4ca7-a209-d09ab79d6ae4">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1515,7 +1515,7 @@ standard set forth in this document, and to provide supporting documentation.</p
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_4bfc9ff4-0427-16f3-2dce-96ac965b7eae">No security considerations have been made for this Standard.</p>
       </div>
-      <div class="Section3" id="_4746734f-1089-4d99-aea6-da9f41023aa2">
+      <div class="Section3" id="_0059a70a-14f6-4d97-abd3-522e7fcfa5f5">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -2152,7 +2152,7 @@ by grouping different types and functionality in separated Java and Python langu
   </g>
  </g>
 </svg><p class="FigureTitle" style="text-align:center;">Figure 1&#xA0;&#x2014; OGC/ISO specifications and GeoAPI packages mapping</p></div>
-        <p id="_817ed6f1-4bfb-a575-2604-4da7bc64412f">The <tt>opengis&#x200B;.annotation</tt> package provides the annotation system
+        <p id="_95ac235b-13d0-2838-211f-69e46ed1d308">The <tt>opengis&#x200B;.annotation</tt> package provides the annotation system
 used to document the origin and obligation level of all methods and types in GeoAPI.
 These annotations are available through introspection at runtime for any code which wishes to exploit this information.
 The <tt>opengis&#x200B;.util</tt> package provides some basic types shared by two or more standards.
@@ -2162,7 +2162,7 @@ The packages in the <tt>opengis&#x200B;.metadata</tt> namespace cover the types 
 They are completed by <a href="#ISO19157">ISO 19157:2013</a> <i>Data quality</i> for the <tt>quality</tt> sub-package.
 The packages in the <tt>opengis&#x200B;.parameter</tt> and <tt>opengis&#x200B;.referencing</tt> namespaces
 implement the types from the <a href="#ISO19111">ISO 19111:2019</a> <i>Referencing by Coordinates</i> specification
-complemented by the mathematical operator types from the <a href="#OGC01-009">OGC 01-009</a> <i>Coordinate Transformation Services</i> implementation specification.
+complemented by the mathematical operator types from the <a href="#OGC01-009">OGC 01-009</a> <i>Coordinate Transformation Services</i>.
 The packages in the <tt>opengis&#x200B;.geometry</tt> namespace cover the types defined in the <a href="#ISO19107">ISO 19107:2003</a> <i>Spatial Schema</i> specification,
 although version 4.0 of the library only defines the elements from that specification needed by the geo-referencing types.
 The <tt>opengis&#x200B;.feature</tt> package covers the meta-classes defined in the <a href="#ISO19109">ISO 19109:2015</a> <i>Rules for application schema</i> specification,
@@ -6341,8 +6341,8 @@ In particular the following method call:</p>
 
 <p id="_18844192-cee6-f3c5-d3f7-1680837eb528"><i>From <a href="#ISO19111">ISO 19111:2019</a> &#xA7;12 and &#xA7;C.5</i></p>
 
-<p id="_bb1aadf5-0afc-9233-ef82-20cbff4e9c66">A Coordinate Operation can <i>transform</i> or <i>convert</i> coordinate tuples from one Coordinate Reference System (CRS) to another CRS.
-There is four kinds of coordinate operations in GeoAPI:</p>
+<p id="_6e217574-cf79-e8a5-61d3-2642b03f6b38">A Coordinate Operation can <i>transform</i> or <i>convert</i> coordinate tuples from one Coordinate Reference System (CRS) to another CRS.
+There are four kinds of coordinate operations in GeoAPI:</p>
 
 <ul id="_4182f66b-a3cf-f663-26e0-3312ebd7d284"><li><p id="_b63191db-298d-537f-e94c-d5d436e268d0">A <i>coordinate conversion</i> is the implementation of some mathematical formulas without empirically derived parameters.
 Conversions can be as accurate as floating point computations allow.
@@ -8811,10 +8811,10 @@ But GeoAPI is not restricted to these assumptions.</p>
       <br />
       <div id="history" class="Section3">
         <h1 class="Annex" id="toc37"><b>Annex E</b><br />(informative)<br /><b>Revision History</b></h1>
-        <p id="_740bb188-e693-bab3-2d43-11c5a5948ef4">This GeoAPI standard evolved from an effort at the Open Geospatial Consortium&#xA0;(OGC) and in the free software community
+        <p id="_703992de-2d7a-456e-f1ee-4a915fe535df">This GeoAPI standard evolved from an effort at the Open Geospatial Consortium&#xA0;(OGC) and in the free software community
 focused on developing a library of interfaces defining a coherent data model for the manipulation of geospatial data
 based on the data model defined in the OGC Abstract Specifications.
-GeoAPI interfaces originates with the publication in January 2001 of the implementation specification
+GeoAPI interfaces originates with the publication in January 2001 of the implementation standard
 <a href="#OGC01-009">OGC 01-009</a> <i>Coordinate Transformation Services</i> Revision&#xA0;1.00 (Martin Daly,&#xA0;ed.)
 which included a set of interfaces written in different programming languages and in the <tt>org&#x200B;.opengis</tt> namespace.
 The GeoAPI project started in 2003 as an effort from several contributors to develop a set of Java language interfaces
@@ -8826,7 +8826,7 @@ as the basis for further work, the standards developed by the Technical Committe
 International Organization for Standardization (ISO) in its ISO&#xA0;19100 series.
 The GeoAPI project therefore realigned its interfaces with those standards.
 In 2003, version&#xA0;1.0 of GeoAPI interfaces was released to match the release of the first public draft
-of the implementation specification <a href="#OGC03-064">OGC 03-064r10</a> <i>GO-1 Application Objects</i> Version&#xA0;1.0 (Greg Reynolds,&#xA0;ed.).
+of the implementation standard <a href="#OGC03-064">OGC 03-064r10</a> <i>GO-1 Application Objects</i> Version&#xA0;1.0 (Greg Reynolds,&#xA0;ed.).
 The standardization effort of GO-1 took a couple of years during which extensive work was made on GeoAPI interfaces.
 Release 2.0 of GeoAPI was made at the time of the final publication of the GO-1 specification in 2005.
 GO-1 has been retired later, but a new working group has been formed in 2009 for continuing GeoAPI development
