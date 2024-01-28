@@ -1475,7 +1475,7 @@ GeoAPI documents the mapping of types and methods from the abstract model into J
 providing standard interfaces in the <tt>&#x201C;org.opengis&#x201D;</tt> (Java) or <tt>&#x201C;opengis&#x201D;</tt> (Python) namespaces
 and explaining the use of GeoAPI interfaces.</p>
       </div>
-      <div class="Section3" id="_cf7c911f-2487-4440-a735-7cab76924a1b">
+      <div class="Section3" id="_0356eff7-d57d-41a5-a573-0dd3afd9c9bc">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1515,7 +1515,7 @@ standard set forth in this document, and to provide supporting documentation.</p
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_4bfc9ff4-0427-16f3-2dce-96ac965b7eae">No security considerations have been made for this Standard.</p>
       </div>
-      <div class="Section3" id="_7e83665c-3180-4710-9e92-eb0ffe7243d6">
+      <div class="Section3" id="_2fc8643a-6c21-466e-975f-30894b65c824">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -1856,10 +1856,10 @@ Note that code lists, enumerations and feature types are not interfaces.</p>
 <p id="_58870029-d4be-78b1-bd1d-70498bd6b789">The word <i>property</i> (not attribute) is used for values or associations defined by an interface.
 This document reserves the word <i>attribute</i> for <a href="#term_feature_attribute">feature attributes</a> or XML attributes.</p>
 
-<p id="_af0d22b5-5acf-9790-da87-6afc91839ac6">The meaning of <i>implementation</i> depends on the context.
+<p id="_dd12c094-1343-6832-9bb4-439c58d38ed6">The meaning of <i>implementation</i> depends on the context.
 From the perspective of OGC/ISO abstract specifications,
 Java interfaces or Python abstract classes are implementations of the abstract models,
-in the same way than XML Schema Definitions (XSD) are other implementations of the same abstract models.
+in the same way as XML Schema Definitions (XSD) are other implementations of the same abstract models.
 But from the perspective of programming languages, interfaces are not implementations;
 instead the word &#x201C;implementation&#x201D; is used for concrete classes.
 In this document, the types provided by GeoAPI are said to be an implementation of abstract models,
@@ -2190,7 +2190,7 @@ The camel cases convention (for example <tt>&#x201C;Coordinate&#xAD;System&#xAD;
 
 <div id="naming_enumerations"><h4>6.1.1.2.&#xA0; Code lists and enumerations</h4>
 
-<p id="_0d7f0a7d-0abb-1858-f05f-d707f1efc702">The two-letter prefixes are dropped in the same way than for interfaces.
+<p id="_c142d4e2-0299-239c-e522-c0ac789bb68d">The two-letter prefixes are dropped in the same way as for interfaces.
 Then if the type name ends with the <tt>&#x201C;Code&#x201D;</tt> suffix, that suffix is dropped too in strongly-typed languages like Java.
 For example, the ISO 19115 <tt>&#x201C;MD_Topic&#xAD;Category&#xAD;Code&#x201D;</tt> code list is named <tt>&#x201C;Topic&#xAD;Category&#x201D;</tt> in Java classes.
 But the <tt>&#x201C;Code&#x201D;</tt> suffix drop is not applied to more dynamic languages like Python,
@@ -4044,7 +4044,7 @@ or because the GeoAPI type is inspired by a similar effort in the target languag
 
 <div id="internationalization_departures_for_harmonization"><h5>6.2.8.1.2.&#xA0; Harmonization</h5>
 
-<p id="_167ca6e1-3b60-9379-523f-5d288d9ef722"><tt>InternationalString</tt> as defined by GeoAPI provides the same functionality than ISO 19115 <tt>PT_FreeText</tt>.
+<p id="_6038a5b1-31eb-bfc7-690a-78a2474bdb0e"><tt>InternationalString</tt> as defined by GeoAPI provides the same functionality as ISO 19115 <tt>PT_FreeText</tt>.
 It can be applied to all ISO 19115 elements who&#x2019;s data type is <tt>Character&#xAD;String</tt> and domain is &#x201C;free text&#x201D;.
 Consequently, GeoAPI uses the single <tt>International&#xAD;String</tt> interface for the two ISO types
 <tt>LanguageCode</tt> (from ISO 19103) and <tt>PT_FreeText</tt> (from ISO 19115).</p>
@@ -5113,7 +5113,7 @@ The <tt>reference&#xAD;System&#xAD;Identifier</tt> property defined by ISO 19115
 The <tt>reference&#xAD;System&#xAD;Type</tt> property value (geographic, projected, compound, geographic identifier, <i>etc.</i>)
 can be determined using language-specific instructions such as <tt>instanceof</tt> in Java.</p>
 
-<p id="_572588a7-013e-192e-036d-9ddef43eee20">In the same spirit than above replacement, <tt>verticalCRSId</tt> is omitted because redundant with <tt>verticalCRS</tt>.</p>
+<p id="_e7d92cc3-118c-cc5c-8b51-2f9f9292e813">In the same spirit as above replacement, <tt>verticalCRSId</tt> is omitted because redundant with <tt>verticalCRS</tt>.</p>
 </div>
 </div>
 </div>
@@ -8555,10 +8555,10 @@ It is not required to implement all interfaces.
 The contract for each interface and each method is specified in the javadoc.</p>
         <div id="uom_jsr"><h2 id="toc31">B.1.&#xA0; Units of measurement</h2>
 
-<p id="_8e4131fe-a3f6-c9a7-5faa-682eef964cec">The Java profile of GeoAPI does not materialize any of the units of measurement types (<a href="#units">Clause 6.2.9</a>) defined by ISO 19103.
+<p id="_209a0f87-4d35-3b9e-4a65-ebc23292d0d4">The Java profile of GeoAPI does not materialize any of the units of measurement types (<a href="#units">Clause 6.2.9</a>) defined by ISO 19103.
 Instead, unit modeling is entirely delegated to the Java Specification Request <a href="#JSR385">JSR 385</a>.
 The ISO&#xA0;19103 <tt>Measure</tt> type is represented by the JSR&#xA0;385 <tt>Quantity</tt> interface.
-The Java standard defines various quantity subtypes in the same way than ISO&#xA0;19103 does,
+The Java standard defines various quantity subtypes in the same way as ISO&#xA0;19103 does,
 often with the same names (<tt>Angle</tt>, <tt>Length</tt>, <tt>Area</tt>, <tt>Volume</tt>, <i>etc</i>).
 But contrarily to ISO&#xA0;19103, JSR&#xA0;385 does not define a parallel set of subtypes for units of measurement.
 Instead, it defines only one unit type, <tt>javax&#x200B;.measure&#x200B;.Unit&#x3c;Q extends Quantity&#x3c;Q&#x3e;&#x3e;</tt>,
@@ -8775,11 +8775,11 @@ it with above-cited predefined components for creating the projected CRS.</p>
 <pre id="_c2c686dd-f21f-4844-ea29-41bb13421f09" class="prettyprint lang-java">/*<br />&#xA0;* Factories for obtaining predefined components from a geodetic registry<br />&#xA0;* (in this example, from EPSG geodetic dataset).<br />&#xA0;*/<br />CSAuthorityFactory csRegistry = &#x2026;;<br />CRSAuthorityFactory crsRegistry = &#x2026;;<br />CoordinateOperationAuthorityFactory opRegistry = &#x2026;;<br />/*<br />&#xA0;* Factories for creating objects from programmatic parameters.<br />&#xA0;*/<br />CRSFactory crsFactory = &#x2026;;<br />CoordinateOperationFactory opFactory = &#x2026;;<br />/*<br />&#xA0;* Predefined components used in this example:<br />&#xA0;*<br />&#xA0;*&#xA0; &#x2009;&#x2014;&#x2009;EPSG::4326&#xA0;&#xA0; &#x2014;&#xA0;&#xA0; WGS 84<br />&#xA0;*&#xA0; &#x2009;&#x2014;&#x2009;EPSG::4440&#xA0;&#xA0; &#x2014;&#xA0;&#xA0; Cartesian 2D. Orientations: east, north. UoM: m<br />&#xA0;*&#xA0; &#x2009;&#x2014;&#x2009;EPSG::9804&#xA0;&#xA0; &#x2014;&#xA0;&#xA0; Mercator (variant A)<br />&#xA0;*/<br />GeographicCRS&#xA0;&#xA0; baseCRS = crsRegistry.createGeographicCRS&#xA0; (&#x201C;EPSG::4326&#x201D;);<br />CartesianCS&#xA0;&#xA0;&#xA0;&#xA0; projCS&#xA0; =&#xA0; csRegistry.createCartesianCS&#xA0;&#xA0;&#xA0; (&#x201C;EPSG::4400&#x201D;);<br />OperationMethod method&#xA0; =&#xA0; opRegistry.createOperationMethod(&#x201C;EPSG::9804&#x201D;);<br />/*<br />&#xA0;* Get the parameters initialized to their default values,<br />&#xA0;* then set parameter values.<br />&#xA0;*/<br />ParameterValueGroup pg = method.getParameters().createValue();<br />pg.parameter(&#x201C;Latitude of natural origin&#x201D;).setValue(0.0);<br />pg.parameter(&#x201C;Longitude of natural origin&#x201D;).setValue(110.0);<br />pg.parameter(&#x201C;Scale factor at natural origin&#x201D;).setValue(0.997);<br />pg.parameter(&#x201C;False easting&#x201D;).setValue(3900000.0);<br />pg.parameter(&#x201C;False northing&#x201D;).setValue(900000.0);<br />/*<br />&#xA0;* Create the defining conversion from above parameters.<br />&#xA0;*/<br />Conversion definition = opFactory.createDefiningConversion(<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Map.of(Conversion.NAME_KEY, &#x201C;Makassar / NEIEZ&#x201D;), method, pg);<br />/*<br />&#xA0;* Create the projected CRS using conversion defined by parameters<br />&#xA0;* and predefined components fetched from EPSG geodetic dataset.<br />&#xA0;*/<br />ProjectedCRS makassar = crsFactory.createProjectedCRS(<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Map.of(Conversion.NAME_KEY, &#x201C;Makassar / NEIEZ&#x201D;),<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; baseCRS, definition, projCS);</pre><p class="SourceTitle" style="text-align:center;">Figure D.10</p>
 
 
-<p id="_e03677bb-eaf1-e654-b3c1-365e891cbaa6">Above example created the &#x201C;Makassar / NEIEZ&#x201D; coordinate reference system in a hard way for showing the use of factories.
+<p id="_a4d3d44f-1633-e667-1352-8ca4e02ec0fa">Above example created the &#x201C;Makassar / NEIEZ&#x201D; coordinate reference system in a hard way for showing the use of factories.
 But when an authority code is available (which is the case of above example),
 the use of an authority factory is recommended not only because it is easier,
 but also because it generally provides more metadata information such as scope and domain of validity.
-The following example creates the same CRS than above example:</p>
+The following example creates the same CRS as above example:</p>
 
 <pre id="_9a44007a-23a9-a638-64b8-18e9715d5eeb" class="prettyprint lang-java">CRSAuthorityFactory crsRegistry = &#x2026;;<br />ProjectedCRS makassar = crsRegistry.createProjectedCRS(&#x201C;EPSG::3002&#x201D;);</pre><p class="SourceTitle" style="text-align:center;">Figure D.11</p>
 
