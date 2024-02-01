@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  version: 1.0.0
+  version: 1.0.0-draft01
   title: 'OGC API - Tiles - Part 1: Core (Implementer Guide)'
   description: |-
       Joan Masó Editor
@@ -9,9 +9,9 @@ info:
 
       Submission Date:  2022-06-15
 
-      Approval Date:  2022-08-26
+      Approval Date:  0000-00-00
 
-      Publication Date:  2022-11-10
+      Publication Date:  0000-00-00
 
       External identifier of this OGC® document: http://www.opengis.net/doc/IS/ogcapi-tiles-1/1.0
       
@@ -24,7 +24,7 @@ info:
 
       OGC Standard
 
-      Approved
+      Draft
 
       #### Notice
      
@@ -44,7 +44,7 @@ info:
       | Document number: | 20-057 |
       | Document type: | OGC Standard |
       | Document subtype: | Implementation |
-      | Document stage: | Approved |
+      | Document stage: | Draft |
       | Document language: | English |
 
 
