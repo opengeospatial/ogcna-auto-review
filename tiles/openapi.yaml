@@ -2810,9 +2810,7 @@ info:
       | Identifier | /conf/core/conformance-success |
       | Requirement | [Requirement 7: /req/core/conformance-success](#req_core_conformance-success) |
       | Test purpose | Validate that the Conformance Declaration response complies with the required structure and contents. |
-      | Test method | 1. If there is a Conformance Class declaration document, validate the response document against OpenAPI 3.0 schema confClasses.yaml
-      2. Validate that the document includes the conformance class “http://www.opengis.net/spec/ogcapi-tiles-1/1.0/conf/core”
-      |
+      | Test method | 1. If there is a Conformance Class declaration document, validate the response document against OpenAPI 3.0 schema confClasses.yaml<br>2. Validate that the document includes the conformance class “http://www.opengis.net/spec/ogcapi-tiles-1/1.0/conf/core”|
 
 
 
@@ -2830,13 +2828,7 @@ info:
       | Identifier | /conf/core/tc-op |
       | Requirement | [Requirement 1: /req/core/tc-op](#req_core_tc-op) |
       | Test purpose | With a provided template, validate that tiles are available for the right GET request. |
-      | Test method | 1. Validate that tiles making up a tileset containing available data are available as an HTTP GET request to a URI that is built from a template
-      containing three variables (such as {tileMatrix}, {tileRow} and {tileCol} as defined by the tileset conformance class, or {z}, {y} and {x}).
-      The URI is obtained by substituting the variables by their respective valid values.
-      2. Validate that the variables in the URL correspond to the tile matrix, tile row and tile column of a particular tile matrix set as defined by the 2D Tile Matrix Set standard.
-      3. Validate that the API provides a mechanism for obtaining the template and associating the variables to their respective meaning, for example by implementing the tileset
-      conformance class, or through an API definition.
-      |
+      | Test method | 1. Validate that tiles making up a tileset containing available data are available as an HTTP GET request to a URI that is built from a template containing three variables (such as {tileMatrix}, {tileRow} and {tileCol} as defined by the tileset conformance class, or {z}, {y} and {x}). The URI is obtained by substituting the variables by their respective valid values.<br>2. Validate that the variables in the URL correspond to the tile matrix, tile row and tile column of a particular tile matrix set as defined by the 2D Tile Matrix Set standard.<br>3. Validate that the API provides a mechanism for obtaining the template and associating the variables to their respective meaning, for example by implementing the tileset conformance class, or through an API definition. |
 
 
       NOTE  In practice, to test for conformance to the Core conformance class, the user of the test should provide a TileMatrixSet definition, a URL template (that contains the endpoint for tiles) with specific variable names, and a range of valid values for those variables and building the URLs. Once the information has been provided, the user can then execute the test.
@@ -2853,8 +2845,7 @@ info:
       | Identifier | /conf/core/tc-tilematrix-definition |
       | Requirement | [Requirement 2: /req/core/tc-tilematrix-definition](#req_core_tc-tilematrix-definition) |
       | Test purpose | Validate that there is a tileMatrix definition. |
-      | Test method | 1. If the API implements *OGC API — Common — Part 1: Core*, validate that the definition of a tile operation contains a mandatory string parameter tileMatrix.
-      |
+      | Test method | 1. If the API implements *OGC API — Common — Part 1: Core*, validate that the definition of a tile operation contains a mandatory string parameter tileMatrix.   |
 
 
 
@@ -2868,8 +2859,7 @@ info:
       | Identifier | /conf/core/tc-tilerow-definition |
       | Requirement | [Requirement 3: /req/core/tc-tilerow-definition](#req_core_tc-tilerow-definition) |
       | Test purpose | Validate that there is a tileRow definition. |
-      | Test method | 1. If the API implements *OGC API — Common — Part 1: Core*, validate that the definition of a tile operation contains a mandatory integer parameter tileCol.
-      |
+      | Test method | 1. If the API implements *OGC API — Common — Part 1: Core*, validate that the definition of a tile operation contains a mandatory integer parameter tileCol.   |
 
 
 
@@ -2883,8 +2873,7 @@ info:
       | Identifier | /conf/core/tc-tilecol-definition |
       | Requirement | [Requirement 4: /req/core/tc-tilecol-definition](#req_core_tc-tilecol-definition) |
       | Test purpose | Validate that there is a tileCol definition. |
-      | Test method | 1. If the API implements *OGC API — Common — Part 1: Core*, validate that the definition of a tile operation contains a mandatory integer parameter tileCol.
-      |
+      | Test method | 1. If the API implements *OGC API — Common — Part 1: Core*, validate that the definition of a tile operation contains a mandatory integer parameter tileCol.    |
 
 
 
@@ -2898,13 +2887,11 @@ info:
       | Identifier | /conf/core/tc-success |
       | Requirement | [Requirement 5: /req/core/tc-success](#req_core_core_tc-success) |
       | Test purpose | Validate that a successful execution with data responds with an HTTP status code 200, the format is consistent with the requested and the elements represented in the tile are the ones present in the geographical area. |
-      | Test method | 1. Validate that a successful execution of the operation with content responds with a HTTP status code 200.
-      2. Validate that the content of that response is consistent with the format requested via HTTP content negotiation and represents elements inside or intersecting with the spatial extent of the geographical area of the tile identified by the tile matrix, tile row and tile column of the tileset’s tile matrix set.
-      |
+      | Test method | 1. Validate that a successful execution of the operation with content responds with a HTTP status code 200.<br>2. Validate that the content of that response is consistent with the format requested via HTTP content negotiation and represents elements inside or intersecting with the spatial extent of the geographical area of the tile identified by the tile matrix, tile row and tile column of the tileset’s tile matrix set.   |
 
 
 
-      ###--- |# A.1.2.6.  Error conditions
+      ##### A.1.2.6.  Error conditions
 
 
 
@@ -2914,9 +2901,7 @@ info:
       | Identifier | /conf/core/tc-error |
       | Requirement | [Requirement 6: /req/core/tc-error](#req_core_core_tc-error) |
       | Test purpose | Validate that the request for a tile that is out-of-range or empty, responds with the right content |
-      | Test method | 1. If the path parameter values tileMatrix, tileRow, tileCol for a tile request are out-of-range (outside the tile matrix set or tile matrix set limits of the resource), validate that the HTTP response is a status code 404 or a 400.
-      2. If the tile has no content due to lack of data in the area, but is within the data resource’s tile matrix sets and tile matrix sets limits, validate that the HTTP response is a status code either 204 (indicating an empty tile with no content) or a 200 with the content of a blank response compatible with the requested media type (which may or may not be zero bytes long, depending on the output format; e.g., a 0 byte file if valid for the requested format, or a PNG with internal headers and no “pixels”).
-      |
+      | Test method | 1. If the path parameter values tileMatrix, tileRow, tileCol for a tile request are out-of-range (outside the tile matrix set or tile matrix set limits of the resource), validate that the HTTP response is a status code 404 or a 400.<br>  2. If the tile has no content due to lack of data in the area, but is within the data resource’s tile matrix sets and tile matrix sets limits, validate that the HTTP response is a status code either 204 (indicating an empty tile with no content) or a 200 with the content of a blank response compatible with the requested media type (which may or may not be zero bytes long, depending on the output format; e.g., a 0 byte file if valid for the requested format, or a PNG with internal headers and no “pixels”).    |
 
 
 
@@ -2927,8 +2912,8 @@ info:
 
 
 
-      | Conformance class A.2 |
-      | --- |
+      | Conformance class A.2 ||
+      | --- |--- |
       | Identifier | http://www.opengis.net/spec/ogcapi-tiles-1/1.0/conf/tileset |
       | Subject | [Requirements Class “Tileset”](#rc_tileSet) |
       | Target Type | Web API |
@@ -2947,16 +2932,7 @@ info:
       | Identifier | /conf/tileset/description |
       | Requirement | [Requirement 8: /req/tileset/description](#req_tileset-description.adoc) |
       | Test purpose | Validate the content of a tileset description |
-      | Test method | 1. Validate that the tileset endpoint SHALL support negotiation for an application/json response. In this case, a successful response of a HTTP GET for a specific tileset is encoded following the data model and JSON schema for tileset metadata, as defined by the 2D Tile Matrix Set and Tileset Metadata standard 2.0.
-      2. If the tileset endpoint also supports negotiation for an application/xml response, validate that a successful response of a HTTP GET for a specific tileset is encoded following the data model and XML schema for tileset metadata, as defined by the 2D Tile Matrix Set and Tileset Metadata standard 2.0.
-      3. If the tileset uses a TileMatrixSet registered in a TileMatrixSet register that is published through an accessible registry (e.g. the OGC TileMatrixSet register), validate that the tileMatrixSetURI property links to the registered TileMatrixSet (e.g. <http://www.opengis.net/def/tilematrixset/{tileMatrixSet}>).
-      4. Validate that the links property includes a link to the TileMatrixSet definition with relation type <http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme> following the
-      [tile matrix set schema](https://schemas.opengis.net/tms/2.0/json/tileMatrixSet.json), as defined by the 2D Tile Matrix Set and Tile Set Metadata standard 2.0.
-      5. Validate that the tileset metadata includes at least one templated link to individual tiles using the relation type item, and the template parameters
-      {tileMatrix}, and {tileRow} and {tileCol}. Those variables are to be substituted by their respective valid values to obtain the URL to a tile.
-      6. If a tiles link template is specific to a particular format, validate that contains the media type for that format in the “type” property. Otherwise, normal HTTP content type negotiation rules apply (Accept: header).
-      7. Validate that a property templated with a boolean true value is part of the link properties to indicate that the link needs to be processed to substitute the templated variables with valid values before being used as a URL to a tile.
-      |
+      | Test method | 1. Validate that the tileset endpoint SHALL support negotiation for an application/json response. In this case, a successful response of a HTTP GET for a specific tileset is encoded following the data model and JSON schema for tileset metadata, as defined by the 2D Tile Matrix Set and Tileset Metadata standard 2.0.<br>2. If the tileset endpoint also supports negotiation for an application/xml response, validate that a successful response of a HTTP GET for a specific tileset is encoded following the data model and XML schema for tileset metadata, as defined by the 2D Tile Matrix Set and Tileset Metadata standard 2.0.<br>3. If the tileset uses a TileMatrixSet registered in a TileMatrixSet register that is published through an accessible registry (e.g. the OGC TileMatrixSet register), validate that the tileMatrixSetURI property links to the registered TileMatrixSet (e.g. <http://www.opengis.net/def/tilematrixset/{tileMatrixSet}>).<br>4. Validate that the links property includes a link to the TileMatrixSet definition with relation type <http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme> following the [tile matrix set schema](https://schemas.opengis.net/tms/2.0/json/tileMatrixSet.json), as defined by the 2D Tile Matrix Set and Tile Set Metadata standard 2.0.<br>5. Validate that the tileset metadata includes at least one templated link to individual tiles using the relation type item, and the template parameters {tileMatrix}, and {tileRow} and {tileCol}. Those variables are to be substituted by their respective valid values to obtain the URL to a tile.<br>6. If a tiles link template is specific to a particular format, validate that contains the media type for that format in the “type” property. Otherwise, normal HTTP content type negotiation rules apply (Accept: header).<br>7. Validate that a property templated with a boolean true value is part of the link properties to indicate that the link needs to be processed to substitute the templated variables with valid values before being used as a URL to a tile.<br>|
 
 
 
@@ -2987,13 +2963,7 @@ info:
       | Identifier | /conf/tilesets-list/tileset-links |
       | Requirement | [Requirement 10: /req/tilesets-list/tileset-links](#req_tilesets-list_tileset-links) |
       | Test purpose | Validate that the content of a tileset list |
-      | Test method | 1. Validate that the API supports a GET operation on a …​/tiles path returning a list of available tilesets
-      2. Validate that a successful response of a HTTP GET consists of a list of available tilesets each element containing a subset of the tileset metadata (as defined by the 2D Tile Matrix Set and Metadata standard), consisting of: dataType, `crs, a link to the tileset (with rel: self), a link to the TileMatrixSet defintion (with rel: <http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme>) and tileMatrixSetURI (if the TMS is available in a registry).
-      3. Validate that each element of that list includes a link to a resource providing the full version of the tileset metadata, using link relation self.
-      4. Validate that the tileset-list endpoint supports negotiating an application/json response. In this case, validate that each tileset in the successful response of a HTTP GET is encoded following the data model and JSON schema for tileset metadata, as defined by the 2D Tile Matrix Set and Tileset Metadata standard 2.0.
-      5. If the tileset-list endpoint also supports negotiating an application/xml response, validate that each tileset in the successful response of a HTTP GET is encoded following the data model and XML schema for tileset metadata, as defined by the 2D Tile Matrix Set and Tileset Metadata standard 2.0.
-      6. Validate that the tileset is available as a URI that is composed by three parts: The first part is the URL of the geospatial resource (e.g., ‘…​/map’) followed by the word ‘/tiles’, and finally followed by the id of the tile matrix set supported.
-      |
+      | Test method | 1. Validate that the API supports a GET operation on a …​/tiles path returning a list of available tilesets<br>2. Validate that a successful response of a HTTP GET consists of a list of available tilesets each element containing a subset of the tileset metadata (as defined by the 2D Tile Matrix Set and Metadata standard), consisting of: dataType, `crs, a link to the tileset (with rel: self), a link to the TileMatrixSet defintion (with rel: <http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme>) and tileMatrixSetURI (if the TMS is available in a registry).<br>3. Validate that each element of that list includes a link to a resource providing the full version of the tileset metadata, using link relation self.<br>4. Validate that the tileset-list endpoint supports negotiating an application/json response. In this case, validate that each tileset in the successful response of a HTTP GET is encoded following the data model and JSON schema for tileset metadata, as defined by the 2D Tile Matrix Set and Tileset Metadata standard 2.0.<br>5. If the tileset-list endpoint also supports negotiating an application/xml response, validate that each tileset in the successful response of a HTTP GET is encoded following the data model and XML schema for tileset metadata, as defined by the 2D Tile Matrix Set and Tileset Metadata standard 2.0.<br> 6. Validate that the tileset is available as a URI that is composed by three parts: The first part is the URL of the geospatial resource (e.g., ‘…​/map’) followed by the word ‘/tiles’, and finally followed by the id of the tile matrix set supported.|
 
 
 
@@ -3024,8 +2994,7 @@ info:
       | Identifier | /conf/dataset-tilesets/landingpage |
       | Requirement | [Requirement 11: /req/dataset-tilesets/landingpage](#req_dataset-tilesets-landingpage) |
       | Test purpose | Validate that it is possible to retrieve the tilesets list for the dataset |
-      | Test method | 1. If the API has a mechanism to expose root resources (e.g., a landing page), validate that the API advertises at least one URI for retrieving a tilesets list that is provided by this service with a link having a rel value: <http://www.opengis.net/def/rel/ogc/1.0/tilesets-vector>, <http://www.opengis.net/def/rel/ogc/1.0/tilesets-map> or <http://www.opengis.net/def/rel/ogc/1.0/tilesets-coverage>.
-      |
+      | Test method | 1. If the API has a mechanism to expose root resources (e.g., a landing page), validate that the API advertises at least one URI for retrieving a tilesets list that is provided by this service with a link having a rel value: <http://www.opengis.net/def/rel/ogc/1.0/tilesets-vector>, <http://www.opengis.net/def/rel/ogc/1.0/tilesets-map> or <http://www.opengis.net/def/rel/ogc/1.0/tilesets-coverage>.      |
 
 
 
@@ -3043,9 +3012,7 @@ info:
       | Identifier | /conf/dataset-tilesets/operation |
       | Requirement | [Requirement 12: /req/dataset-tilesets/operation](#req_dataset-tilesets-operation) |
       | Test purpose | Validate that there is an operation to get the tilesets list. |
-      | Test method | 1. Validate that the dataset resource (the root resource) has at least one tileset accessible at …​/tiles supporting an HTTP GET operation
-      2. Validate that the URI is composed of two parts: the initial part is the URI of the dataset resource (the root resource) that can be represented as tiles and the final part follows the pattern /tiles
-      |
+      | Test method | 1. Validate that the dataset resource (the root resource) has at least one tileset accessible at …​/tiles supporting an HTTP GET operation<br>2. Validate that the URI is composed of two parts: the initial part is the URI of the dataset resource (the root resource) that can be represented as tiles and the final part follows the pattern /tiles      |
 
 
 
@@ -3073,8 +3040,7 @@ info:
       | Identifier | /conf/geodata-tilesets/desc-links |
       | Requirement | [Requirement 13: /req/geodata-tilesets/desc-links](#req_geodata-tilesets_desc-links) |
       | Test purpose | Validate that it is possible to retrieve the tilesets list for the geospatial resource |
-      | Test method | 1. If the API has a mechanism for their geospatial data resources to expose links to geospatial aspects (e.g., feature items, metadata…​), validate that the API includes at least one of three link with the href pointing to tilesets list for geospatial data resources and with rel: <http://www.opengis.net/def/rel/ogc/1.0/tilesets-vector>, <http://www.opengis.net/def/rel/ogc/1.0/tilesets-map> and <http://www.opengis.net/def/rel/ogc/1.0/tilesets-coverage>.
-      |
+      | Test method | 1. If the API has a mechanism for their geospatial data resources to expose links to geospatial aspects (e.g., feature items, metadata…​), validate that the API includes at least one of three link with the href pointing to tilesets list for geospatial data resources and with rel: <http://www.opengis.net/def/rel/ogc/1.0/tilesets-vector>, <http://www.opengis.net/def/rel/ogc/1.0/tilesets-map> and <http://www.opengis.net/def/rel/ogc/1.0/tilesets-coverage>.      |
 
 
 
@@ -3091,9 +3057,7 @@ info:
       | Identifier | /conf/geodata-tilesets/operation |
       | Requirement | [Requirement 14: /req/geodata-tilesets/operation](#req_geodata-tilesets_operation) |
       | Test purpose | Validate that there is an operation to get the tilesets list. |
-      | Test method | 1. Validate that the geospatial data resource has an associated list of at least one tileset accessible at …​/tiles supporting an HTTP GET operation
-      2. Validate that the URI is composed of two parts: the initial part is the URI of the geospatial data resource that can be represented as tiles and the final part follows the pattern /tiles
-      |
+      | Test method | 1. Validate that the geospatial data resource has an associated list of at least one tileset accessible at …​/tiles supporting an HTTP GET operation<br>2. Validate that the URI is composed of two parts: the initial part is the URI of the geospatial data resource that can be represented as tiles and the final part follows the pattern /tiles      |
 
 
 
@@ -3124,17 +3088,7 @@ info:
       | Identifier | /conf/collections-selection/query-collections |
       | Requirement | [Requirement 15: /req/collections-selection/query-collections](#req_collections-selection_query-collections) |
       | Test purpose | Validate support of the optional parameter collections. |
-      | Test method | Given:
-      A tileset for an origin consisting of multiple geospatial data sub-resources (e.g., described in the tileset metadata as being comprised of multiple layers).
-      When:
-      Requesting resources either for the tileset or for individual tiles (e.g., a dataset tileset at {datasetAPI}/tiles/WebMercatorQuad and dataset tiles at
-      {datasetAPI}/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}), with a collections query parameter consisting of a comma-separated list of collectionIDs
-      (consistent with the collection identifiers making up that tileset, as described for example, in the tileset metadata layers).
-      Then:
-      Assert that the parameter is accepted for valid lists of collectionIDs.
-      Note that servers are free to restrict valid combinations of collectionIDs (permission /per/collections-selection/valid-collections). Tests should be
-      restricted to few collections e.g., between one and five. If the sub-collections are also available individually, only collections advertising support for the same TileMatrixSet,
-      CRS and encodings as used for the request should be selected. |
+      | Test method | Given:<br>A tileset for an origin consisting of multiple geospatial data sub-resources (e.g., described in the tileset metadata as being comprised of multiple layers).<br>When:<br>Requesting resources either for the tileset or for individual tiles (e.g., a dataset tileset at {datasetAPI}/tiles/WebMercatorQuad and dataset tiles at<br>{datasetAPI}/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}), with a collections query parameter consisting of a comma-separated list of collectionIDs<br>(consistent with the collection identifiers making up that tileset, as described for example, in the tileset metadata layers).<br>Then:<br>Assert that the parameter is accepted for valid lists of collectionIDs.<br>Note that servers are free to restrict valid combinations of collectionIDs (permission /per/collections-selection/valid-collections). Tests should be<br>restricted to few collections e.g., between one and five. If the sub-collections are also available individually, only collections advertising support for the same TileMatrixSet,<br>CRS and encodings as used for the request should be selected. |
 
 
 
@@ -3148,18 +3102,7 @@ info:
       | Identifier | /conf/collections-selection/collections-response |
       | Requirement | [Requirement 16: /req/collections-selection/collections-response](#req_core_collections-selection-response) |
       | Test purpose | Validate response when using collections parameter. |
-      | Test method | Given:
-      Requests described in the previous abstract test (query-collections)
-      When:
-      The request is successful
-      Then:
-      Assert that the response to tilesets and tiles requests only include the selected collections.
-      For tilesets, verify that only the selected collections are included in the layers.
-      For tiles, verify that the content is limited to the data pertaining to the selected collections.
-      If more than one collection is selected and no style applied specifies otherwise,
-      validate that the selected collections are included in the response starting by the first (leftmost in the comma-separated list) and ending by the last (rightmost).
-      In map tiles, this will result in the first collection being portrayed at the bottom and the others are rendered on top of the previous ones, one by one
-      (the rightmost collection will become topmost in the portrayal). |
+      | Test method | Given:<br>Requests described in the previous abstract test (query-collections)<br>When:<br>The request is successful<br>Then:<br>Assert that the response to tilesets and tiles requests only include the selected collections.<br>For tilesets, verify that only the selected collections are included in the layers.<br>For tiles, verify that the content is limited to the data pertaining to the selected collections.<br>If more than one collection is selected and no style applied specifies otherwise,<br>validate that the selected collections are included in the response starting by the first (leftmost in the comma-separated list) and ending by the last (rightmost).<br>In map tiles, this will result in the first collection being portrayed at the bottom and the others are rendered on top of the previous ones, one by one<br>(the rightmost collection will become topmost in the portrayal). |
 
 
 
@@ -3187,16 +3130,7 @@ info:
       | Identifier | /conf/collections/rc-op-datetime |
       | Requirements | [Requirement 17: /req/collections/rc-datetime-definition](#req_collections_rc-datetime-definition)[Requirement 18: /req/collections/rc-datetime-response](#req_collections_rc-datetime-response) |
       | Test purpose | Validate that resources can be identified and extracted from an API server using the datetime query parameter. |
-      | Test method | 1. Select a valid datetime value which intersects a subset of the resource collections available through the API implementation.
-      2. Construct a datetime query parameter using the selected value.
-      3. Validate the datetime query parameter using [/conf/collections/rc-datetime-definition](#ats_collections_rc-datetime-definition)
-      4. Issue an HTTP GET request to the URL {root}/collections. Include the validated datetime query parameter.
-      5. Validate that a document was returned with a status code 200
-      6. Validate the contents of the returned document using:
-        1. <http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections/rc-md-success> and
-        2. [/conf/collections/rc-datetime-response](#ats_collections_rc-datetime-response) and
-        3. <http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections/rc-paged-response>.
-      |
+      | Test method | 1. Select a valid datetime value which intersects a subset of the resource collections available through the API implementation.<br>2. Construct a datetime query parameter using the selected value.<br>3. Validate the datetime query parameter using [/conf/collections/rc-datetime-definition](#ats_collections_rc-datetime-definition)<br>4. Issue an HTTP GET request to the URL {root}/collections. Include the validated datetime query parameter.<br>5. Validate that a document was returned with a status code 200<br>6. Validate the contents of the returned document using:<br>&ensp;&ensp;a. <http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections/rc-md-success> and<br>&ensp;&ensp;b. [/conf/collections/rc-datetime-response](#ats_collections_rc-datetime-response) and<br>&ensp;&ensp;c. <http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections/rc-paged-response>.<br>|
 
 
 
@@ -3206,12 +3140,7 @@ info:
       | Identifier | /conf/collections/rc-datetime-definition |
       | Requirement | [Requirement 17: /req/collections/rc-datetime-definition](#req_collections_rc-datetime-definition) |
       | Test purpose | Validate that the dateTime query parameter is constructed correctly. |
-      | Test method | Verify that the datetime query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
-
-      ```
-      name: datetimein: queryrequired: falseschema:  type: stringstyle: formexplode: false
-      ```
-      |
+      | Test method | Verify that the datetime query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):<br><pre><br>name: datetime<br>in: query<br>required: false<br>schema:<br>  type: string<br>style: form<br>explode: false</pre>|
 
 
 
@@ -3221,10 +3150,7 @@ info:
       | Identifier | /conf/collections/rc-datetime-response |
       | Requirements | [Requirement 17: /req/collections/rc-datetime-definition](#req_collections_rc-datetime-definition)[Requirement 18: /req/collections/rc-datetime-response](#req_collections_rc-datetime-response) |
       | Test purpose | Validate that the datetime query parameter is processed correctly. |
-      | Test method | DO FOR each Collection in the collections element of the response:1. Extract the temporal geometry from the interval element of the extent property of the Collection resource.
-      2. IF there is a temporal geometry, verify that the temporal geometry intersects the temporal period defined by the datetime parameter.
-      3. IF there is a temporal geometry, validate that the processing of the datetime parameter complies with the syntax described in /req/collections/rc-datetime-definition (B, C, and D).
-      |
+      | Test method | DO FOR each Collection in the collections element of the response:<br>1. Extract the temporal geometry from the interval element of the extent property of the Collection resource.<br>2. IF there is a temporal geometry, verify that the temporal geometry intersects the temporal period defined by the datetime parameter.<br>3. IF there is a temporal geometry, validate that the processing of the datetime parameter complies with the syntax described in /req/collections/rc-datetime-definition (B, C, and D).|
 
 
 
@@ -3238,16 +3164,7 @@ info:
       | Identifier | /conf/collections/rc-op-subset |
       | Requirements | [Requirement 19: /req/collections/rc-subset-definition](#req_collections_rc-subset-definition)[Requirement 20: /req/collections/rc-subset-response](#req_collection_rc-subset-response) |
       | Test purpose | Validate that resources can be identified and extracted from an API server using the subset query parameter. |
-      | Test method | 1. Select a valid subset value which intersects a subset of the resource collections available through the API implementation.
-      2. Construct a subset query parameter using the selected dimension name and value.
-      3. Validate the subset query parameter using [/conf/collections/rc-subset-definition](#ats_collections_rc-subset-definition)
-      4. Issue an HTTP GET request to the URL {root}/collections. Include the validated subset query parameter.
-      5. Validate that a document was returned with a status code 200
-      6. Validate the contents of the returned document using:
-        1. <http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections/rc-md-success> and
-        2. [/conf/collections/rc-subset-response](#ats_collections_rc-datetime-response) and
-        3. <http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections/rc-paged-response>.
-      |
+      | Test method | 1. Select a valid subset value which intersects a subset of the resource collections available through the API implementation.<br>2. Construct a subset query parameter using the selected dimension name and value.<br>3. Validate the subset query parameter using [/conf/collections/rc-subset-definition](#ats_collections_rc-subset-definition)<br>4. Issue an HTTP GET request to the URL {root}/collections. Include the validated subset query parameter.<br>5. Validate that a document was returned with a status code 200<br>6. Validate the contents of the returned document using:<br>&ensp;&ensp;a. <http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections/rc-md-success> and<br>&ensp;&ensp;b. [/conf/collections/rc-subset-response](#ats_collections_rc-datetime-response) and<br>&ensp;&ensp;c. <http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections/rc-paged-response>.<br>|
 
 
 
@@ -3257,12 +3174,7 @@ info:
       | Identifier | /conf/collections/rc-subset-definition |
       | Requirement | [Requirement 19: /req/collections/rc-subset-definition](#req_collections_rc-subset-definition) |
       | Test purpose | Validate that the subset query parameter is constructed correctly. |
-      | Test method | Verify that the subset query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
-
-      ```
-        SubsetSpec:       "subset"=axisName(intervalOrPoint)  axisName:         {text}  intervalOrPoint:  interval \| point  interval:         low : high  low:              point \| *  high:             point \| *  point:            {number} \| "{text}"  Where:     \" = double quote = ASCII code 0x42,     {number} is an integer or floating-point number, and     {text} is some general ASCII text (such as a time and date notation in ISO 8601).
-      ```
-      |
+      | Test method | Verify that the subset query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):<br><pre>SubsetSpec:       "subset"=axisName(intervalOrPoint)<br>axisName:         {text}<br>intervalOrPoint:  interval \| point<br>interval:         low : high<br>low:              point \| *<br>high:             point \| *<br>point:            {number} \| "{text}"<br><br>Where:<br>  \" = double quote = ASCII code 0x42,<br>{number} is an integer or floating-point number, and<br>{text} is some general ASCII text (such as a time and date notation in ISO 8601).<br> </pre>|
 
 
 
@@ -3272,10 +3184,7 @@ info:
       | Identifier | /conf/collections/rc-subset-response |
       | Requirements | [Requirement 19: /req/collections/rc-subset-definition](#req_collections_rc-subset-definition)[Requirement 20: /req/collections/rc-subset-response](#req_collection_rc-subset-response)/req/collections/rc-subset-collection-response |
       | Test purpose | Validate that the subset query parameter is processed correctly. |
-      | Test method | DO FOR each Collection in the collections element of the response:1. Extract the dimension values from the interval element of the extent property of the Collection resource.
-      2. If the dimension is there, verify that the dimension interval intersects the dimension period defined by the subset parameter.
-      3. If the dimension is there, validate that the processing of the subset parameter complies with the syntax described in /req/collections/rc-subset-definition.
-      |
+      | Test method | DO FOR each Collection in the collections element of the response:<br>1. Extract the dimension values from the interval element of the extent property of the Collection resource.<br>2. If the dimension is there, verify that the dimension interval intersects the dimension period defined by the subset parameter.<br>3. If the dimension is there, validate that the processing of the subset parameter complies with the syntax described in /req/collections/rc-subset-definition.<br>|
 
 
 
@@ -3285,8 +3194,7 @@ info:
       | Identifier | /conf/datetime/axis |
       | Requirement | [Requirement 21: /req/datetime/axis](#req_tiles-datetime-axis.adoc) |
       | Test purpose | Validate that a request of a subset of a datetime dimension is supported by the server |
-      | Test method | 1. Validate the server support “datetime” as axisname in the subset parameter to subset the generic datetime dimension.
-      |
+      | Test method | 1. Validate the server support “datetime” as axisname in the subset parameter to subset the generic datetime dimension.|
 
 
 
@@ -3313,10 +3221,7 @@ info:
       | Identifier | /conf/oas30/completeness |
       | Requirement | [Requirement 22: /req/oas30/completeness](#req_oas30_completeness) |
       | Test purpose | Validate OpenAPI completeness and consistency |
-      | Test method | 1. Validate that OpenAPI definition describes all tileset, tilesets list and tile resources provided by the API instance.
-      2. Validate that the OpenAPI paths are consistent with the links provided by the landing page, tileset and tilesets list resources.
-      3. Validate that the OpenAPI paths provide the description of the parameters that the tileset and tile resources need to operate as specified in the corresponding conformance classes.
-      |
+      | Test method | 1. Validate that OpenAPI definition describes all tileset, tilesets list and tile resources provided by the API instance.<br>2. Validate that the OpenAPI paths are consistent with the links provided by the landing page, tileset and tilesets list resources.<br>3. Validate that the OpenAPI paths provide the description of the parameters that the tileset and tile resources need to operate as specified in the corresponding conformance classes.|
 
 
 
@@ -3326,8 +3231,7 @@ info:
       | Identifier | /conf/oas30/operation-id |
       | Requirement | [Requirement 23: /req/oas30/operation-id](#req_oas30_operation_id) |
       | Test purpose | Validate use of operationID suffixes in OpenAPI definition |
-      | Test method | 1. Validate that at least one instance of all path operations defined in the supported conformance classes can be discovered in the API definition by identifying them based on the operationIDs suffixes specified in [Table 11](#openapi-operation-id-suffixes).
-      |
+      | Test method | 1. Validate that at least one instance of all path operations defined in the supported conformance classes can be discovered in the API definition by identifying them based on the operationIDs suffixes specified in [Table 11](#openapi-operation-id-suffixes). |
 
 
 
@@ -3354,8 +3258,7 @@ info:
       | Identifier | /conf/xml/definition |
       | Requirement | [Requirement 24: /req/xml/definition](#req_xml_definition) |
       | Test purpose | Validate the support of the required media type |
-      | Test method | 1. Validate that 200-responses of the server support the application/xml media type for the Tilesets list and TileSet resources.
-      |
+      | Test method | 1. Validate that 200-responses of the server support the application/xml media type for the Tilesets list and TileSet resources.      |
 
 
 
@@ -3365,8 +3268,7 @@ info:
       | Identifier | /conf/xml/content |
       | Requirement | [Requirement 25: /req/xml/content](#req_xml_content) |
       | Test purpose | Validate the particularities of an XML response |
-      | Test method | 1. Validate that every request to a TileSets list or TileSet resource which: Receives a 200-response and with the Content-Type header set to application/xml includes, or links to, a payload encoded according to the [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml/)
-      2. Validate that the payload for these responses conforms with the XML Schema specified for the resource in the OGC 17-083r4: OGC Two Dimensional Tile Matrix Set and Tile Set Metadata
+      | Test method | 1. Validate that every request to a TileSets list or TileSet resource which: Receives a 200-response and with the Content-Type header set to application/xml includes, or links to, a payload encoded according to the [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml/)<br>2. Validate that the payload for these responses conforms with the XML Schema specified for the resource in the OGC 17-083r4: OGC Two Dimensional Tile Matrix Set and Tile Set Metadata
       |
 
 
@@ -3397,11 +3299,7 @@ info:
       | Identifier | /conf/png/content |
       | Requirement | [Requirement 26: /req/png/content](#req_png_content) |
       | Test purpose | Validate the particularities of a PNG response |
-      | Test method | 1. Validate that every 200-response of the server with the media type image/png contains a PNG document representing only one tile.
-      2. Validate that the colors of the PNG represent the geospatial features or coverage values in the tile.
-      3. Validate that the alpha channel of the PNG is used when partial transparency is required.
-      4. Validate that all tiles representing parts of the same resource or resources, and using the same style, are following the same portrayal rules.
-      |
+      | Test method | 1. Validate that every 200-response of the server with the media type image/png contains a PNG document representing only one tile.<br>2. Validate that the colors of the PNG represent the geospatial features or coverage values in the tile.<br>3. Validate that the alpha channel of the PNG is used when partial transparency is required.<br>4. Validate that all tiles representing parts of the same resource or resources, and using the same style, are following the same portrayal rules.|
 
 
 
@@ -3428,10 +3326,7 @@ info:
       | Identifier | /conf/jpeg/content |
       | Requirement | [Requirement 27: /req/jpeg/content](#req_jpeg_content) |
       | Test purpose | Validate the particularities of a JPEG response |
-      | Test method | 1. Validate that every 200-response of the server with the media type image/jpeg contains a JPEG document representing only one tile.
-      2. Validate that the colors of the JPEG represent coverage values or geospatial features in the tile.
-      3. Validate that all tiles representing parts of the same resource or resources using the same style are following the same portrayal rules.
-      |
+      | Test method | 1. Validate that every 200-response of the server with the media type image/jpeg contains a JPEG document representing only one tile.<br>2. Validate that the colors of the JPEG represent coverage values or geospatial features in the tile.<br>3. Validate that all tiles representing parts of the same resource or resources using the same style are following the same portrayal rules.|
 
 
 
@@ -3458,10 +3353,7 @@ info:
       | Identifier | /conf/tiff/content |
       | Requirement | [Requirement 28: /req/tiff/content](#req_tiff_content) |
       | Test purpose | Validate the particularities of a TIFF response |
-      | Test method | 1. Validate that every 200-response of the server with the media type image/tiff contains a TIFF document representing only one tile
-      2. Validate that the TIFF file is organized in strips (avoiding organization in internal tiles).
-      3. Validate that all tiles representing parts of the same resource or resources and using the same style follows the same portrayal rules or represent data with the same reference and units of measure.
-      |
+      | Test method | 1. Validate that every 200-response of the server with the media type image/tiff contains a TIFF document representing only one tile<br>2. Validate that the TIFF file is organized in strips (avoiding organization in internal tiles).<br>3. Validate that all tiles representing parts of the same resource or resources and using the same style follows the same portrayal rules or represent data with the same reference and units of measure.|
 
 
 
@@ -3471,8 +3363,7 @@ info:
       | Identifier | /conf/tiff/geotiff |
       | Requirement | [Requirement 29: /req/tiff/geotiff](#req_tiff_geotiff) |
       | Test purpose | Validate GeoTIFF consistency of the georeference |
-      | Test method | 1. If the TIFF encoding incorporates a GeoTIFF georeference, validate that this information is consistent with the TileMatrixSet, TileMatrix, TileRow and TileCol
-      |
+      | Test method | 1. If the TIFF encoding incorporates a GeoTIFF georeference, validate that this information is consistent with the TileMatrixSet, TileMatrix, TileRow and TileCol      |
 
 
 
@@ -3499,9 +3390,7 @@ info:
       | Identifier | /conf/netcdf/content |
       | Requirement | [Requirement 30: /req/netcdf/content](#req_netcdf_content) |
       | Test purpose | Validate the particularities of a NetCDF response |
-      | Test method | 1. Validate that every 200-response of the server with the media type application/netcdf or application/x-netcdf contains a NetCDF document representing only one tile
-      2. Validate that the NetCDF file contains only data in two or more dimensions
-      |
+      | Test method | 1. Validate that every 200-response of the server with the media type application/netcdf or application/x-netcdf contains a NetCDF document representing only one tile<br>2. Validate that the NetCDF file contains only data in two or more dimensions|
 
 
 
@@ -3511,8 +3400,7 @@ info:
       | Identifier | /conf/netcdf/geo |
       | Requirement | [Requirement 31: /req/netcdf/geo](#req_netcdf_geo) |
       | Test purpose | Validate NetCDF consistency of the georeference |
-      | Test method | 1. Validate that the NetCDF encoding incorporates a georeference, this information is consistent with the TileMatrixSet, TileMatrix, TileRow and TileCol
-      |
+      | Test method | 1. Validate that the NetCDF encoding incorporates a georeference, this information is consistent with the TileMatrixSet, TileMatrix, TileRow and TileCol|
 
 
 
@@ -3539,10 +3427,7 @@ info:
       | Identifier | /conf/geojson/content |
       | Requirement | [Requirement 32: /req/geojson/content](#req_geojson_content) |
       | Test purpose | Validate the particularities of a GeoJSON response |
-      | Test method | 1. Validate that every 200-response of the server with the media type application/geo+json contains a GeoJSON document representing only one tile.
-      2. Validate that root of the GeoJSON document is a GeoJSON FeatureCollection Object for features, or a GeoJSON Feature Object for a single feature.
-      3. Validate that regardless of the TileMatrixSet CRS, the geometry coordinates are in CRS84 as stated in the GeoJSON standard unless a *prior arrangement* applies to use an alternative coordinate reference system. The fact that a TileMatrixSet is used does not constitute a *prior arrangement*. For example, an extension could negotiate another CRS for coordinates with a query parameter.
-      |
+      | Test method | 1. Validate that every 200-response of the server with the media type application/geo+json contains a GeoJSON document representing only one tile.<br>2. Validate that root of the GeoJSON document is a GeoJSON FeatureCollection Object for features, or a GeoJSON Feature Object for a single feature.<br>3. Validate that regardless of the TileMatrixSet CRS, the geometry coordinates are in CRS84 as stated in the GeoJSON standard unless a *prior arrangement* applies to use an alternative coordinate reference system. The fact that a TileMatrixSet is used does not constitute a *prior arrangement*. For example, an extension could negotiate another CRS for coordinates with a query parameter. |
 
 
 
@@ -3569,10 +3454,7 @@ info:
       | Identifier | /conf/mvt/content |
       | Requirement | [Requirement 33: /req/mvt/content](#req_mvt_content) |
       | Test purpose | Validate the particularities of a Mapbox Vector Tiles response |
-      | Test method | 1. Validate that every 200-response of the server with the media type application/vnd.mapbox-vector-tile contains a Mapbox Vector Tile document representing only one tile.
-      2. Validate that a feature contains a geometry field. Validate that a feature contains a type field as described in the Geometry Types section.
-      3. Validate that the grid space for the MVT coordinates maps linearly to the coordinates in the tile extent expressed in the Tileset CRS unless a *prior arrangement* applies to use an alternative CRS; and in this case the linear mapping is done to the alternative CRS and not with the Tileset CRS. For example, an extension could negotiate another CRS for coordinates with a query parameter. In particular the 0,0 coordinate in the MVT maps to the top-left corner of the tile. The bottom-right corner of the tile corresponds the bottom-right corner of the MVT grid.
-      |
+      | Test method | 1. Validate that every 200-response of the server with the media type application/vnd.mapbox-vector-tile contains a Mapbox Vector Tile document representing only one tile.<br>2. Validate that a feature contains a geometry field. Validate that a feature contains a type field as described in the Geometry Types section.<br>3. Validate that the grid space for the MVT coordinates maps linearly to the coordinates in the tile extent expressed in the Tileset CRS unless a *prior arrangement* applies to use an alternative CRS; and in this case the linear mapping is done to the alternative CRS and not with the Tileset CRS. For example, an extension could negotiate another CRS for coordinates with a query parameter. In particular the 0,0 coordinate in the MVT maps to the top-left corner of the tile. The bottom-right corner of the tile corresponds the bottom-right corner of the MVT grid.<br>|
 
 
 
@@ -3611,7 +3493,7 @@ info:
 
         
 
-      ### Bibliography
+      ## Bibliography
 
 
       This standard is deeply inspired by concepts defined in the following documents that preceded it. This standard offers an alternative interface to fulfill similar tasks described in these references:
