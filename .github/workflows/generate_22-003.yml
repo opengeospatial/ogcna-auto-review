@@ -1,7 +1,7 @@
 name: generate_22-003
 on:
   schedule:
-    - cron:  '26 18 * * *'
+    - cron:  '59 18 * * *'
 
 jobs:
   build:
@@ -23,7 +23,6 @@ jobs:
           metanorma compile --agree-to-terms -t ogc -x xml,html standard/document.adoc
           cp standard/document.html ../main/22-003.html
           cd ../main
-          rm -rf 22-003.csv || true
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
           git pull
