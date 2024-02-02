@@ -32,10 +32,10 @@ def main(argv):
 
 
     fout = open(wd+document_number+'.csv','w')
-
     now = datetime.now()
-    current_time = now.strftime("%H:%M:%S")
-    fout.write("Created,"+str(current_time)+"\n")
+
+    current_time = now.strftime("%Y-%m-%dT%H:%M:%S")
+    fout.write("Created,"+str(current_time)+",\n")
 
     bb_list = []
 
@@ -48,7 +48,9 @@ def main(argv):
             outputstring = ''
             date_time = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
             bb = BuildingBlock('identifier','name', 'abstract', 'under-development', str(date_time), 'api', 'ogc-building-block-register', '1.0.0','development')
+            readingModSpecElement = False
             modSpecElementType = None
+
             if 'class' in row.attrib:
                 if row.attrib['class'] == 'modspec':
                     paragraphs = row.findall(".//p")
@@ -58,9 +60,15 @@ def main(argv):
                                 if 'id' in row.attrib:
                                     outputstring = outputstring +""+ source_webpage+"#"+str(row.attrib['id'])
                                 bb.name = str(paragraph.text)
-                                modSpecElementType = 'modSpecElement'
-                                #print(paragraph.text)
-            if str(modSpecElementType) == 'modSpecElement':
+                                readingModSpecElement = True
+                                if "Requirements class " in str(paragraph.text):
+                                    modSpecElementType = "requirements_class"
+                                elif "Conformance class " in str(paragraph.text):
+                                    modSpecElementType = "conformance_class"                                   
+                                elif "Requirement " in str(paragraph.text):
+                                    modSpecElementType = "requirement"                                   
+                                print(paragraph.text)
+            if readingModSpecElement == True:
                 trElements = row.findall(".//tr")
                 for trElement in trElements:
                     thElements = trElement.findall(".//th")
@@ -76,7 +84,7 @@ def main(argv):
                                         outputstring = outputstring +","+baseURI+ str(ttElement.text)+""
                                     bb.identifier = str(ttElement.text)
             if(len(outputstring)>0):
-                fout.write(outputstring+"\n")
+                fout.write(outputstring+","+modSpecElementType+"\n")
                 print(outputstring+"\n")
                 bb_list.append(bb)
 
