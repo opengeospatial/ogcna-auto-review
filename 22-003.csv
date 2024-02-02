@@ -1,3 +1,4 @@
+Created,19:02:20
 https://docs.ogc.org/is/22-003/22-003.html#rc_movingfeature_collection,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/req/mf-collection
 https://docs.ogc.org/is/22-003/22-003.html#req_mfc-collections-op-get,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/req/mf-collection/collections-get
 https://docs.ogc.org/is/22-003/22-003.html#req_mfc-collections-op-post,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/req/mf-collection/collections-post
@@ -50,6 +51,6 @@ https://docs.ogc.org/is/22-003/22-003.html#rc_mf_common,http://www.opengis.net/s
 https://docs.ogc.org/is/22-003/22-003.html#req_core_param-limit,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/req/common/param-limit
 https://docs.ogc.org/is/22-003/22-003.html#req_core_param-bbox,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/req/common/param-bbox
 https://docs.ogc.org/is/22-003/22-003.html#req_core_param-datetime,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/req/common/param-datetime
-https://docs.ogc.org/is/22-003/22-003.html#req_general_http-responsse,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/req/common/http-response
+https://docs.ogc.org/is/22-003/22-003.html#req_general_http-response,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/req/common/http-response
 https://docs.ogc.org/is/22-003/22-003.html#conf_movingfeature_collection,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/conf/mf-collection
 https://docs.ogc.org/is/22-003/22-003.html#conf_movingfeature,http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0/conf/movingfeatures
