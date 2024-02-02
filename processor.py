@@ -64,7 +64,7 @@ def main(argv):
     now = datetime.now()
 
     current_time = now.strftime("%Y-%m-%dT%H:%M:%S")
-    fout.write("timestamp,target,source,num_segments,segment_result\n")
+    fout.write("timestamp,target,source,type,num_segments,segment_result\n")
 
     bb_list = []
 
