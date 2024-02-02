@@ -6,26 +6,49 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: metanorma/metanorma:1.6.4
-    steps:
+    container: metanorma/metanorma:latest
+    steps:       
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: main
       - name: checkout other repo
         uses: actions/checkout@v3 # checkout the repository content to github runner
         with:
-          repository: opengeospatial/ogcapi-movingfeatures          
+          repository: opengeospatial/ogcapi-movingfeatures
           path: 22-003
       - name: Generate document
-        run: |
+        run: |                    
           cd 22-003
-          metanorma compile --agree-to-terms -t ogc -x xml,html,pdf standard/document.adoc
+          metanorma compile --agree-to-terms -t ogc -x xml,html standard/document.adoc
           cp standard/document.html ../main/22-003.html
-          cp standard/document.pdf ../main/22-003.pdf
           cd ../main
+          rm -rf 22-003.csv || true
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
-          git add 22-003.html 22-003.pdf
+          git pull
+          git add --all
           git commit -am "Automated generation of documents"
-          git push
+          git push          
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |   
+        git pull       
+        python -m pip install --upgrade pip
+        pip install lxml
+        python processor.py 22-003.html https://docs.ogc.org/is/22-003/22-003.html http://www.opengis.net/spec/ogcapi-movingfeatures-1/1.0                   
+        git config --global user.name 'opengeospatial'
+        git config --global user.email 'opengeospatial@users.noreply.github.com'
+        git add 22-003.csv
+        git commit -am "Automated generation of CSV"
+        git push          
+      
