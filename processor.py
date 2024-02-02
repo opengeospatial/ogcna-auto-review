@@ -23,9 +23,11 @@ def check_num_segments(inputstring):
     if "/req/" in inputstring:
         token = inputstring[1+inputstring.index("/req/"):]
         return str(len(token.split("/")))
-    if "/conf/" in inputstring:
+    elif "/conf/" in inputstring:
         token = inputstring[1+inputstring.index("/conf/"):]   
         return str(len(token.split("/"))) 
+    else:
+        return str(0)
 
 def check_segments(elem_type,inputstring):
     #inputstring = "https://docs.ogc.org/is/22-047r1/22-047r1.html#conf_mf_tproperty_delete_success,http://www.opengis.net/spec/geosparql/1.1/conf/movingfeatures/tproperty-delete-success"
@@ -38,7 +40,7 @@ def check_segments(elem_type,inputstring):
         else:
             return "FAIL"      
             
-    if "/conf/" in inputstring:
+    elif "/conf/" in inputstring:
         token = inputstring[1+inputstring.index("/conf/"):]   
         if len(token.split("/")) == 2 and elem_type == "conformance_class":
             return "PASS"
@@ -46,6 +48,9 @@ def check_segments(elem_type,inputstring):
             return "PASS"
         else:
             return "FAIL"          
+    else:
+        return "FAIL"
+
 
 def main(argv):
 
@@ -97,7 +102,9 @@ def main(argv):
                                 elif "Requirement " in str(paragraph.text):
                                     modSpecElementType = "requirement"  
                                 elif "Abstract test " in str(paragraph.text):
-                                    modSpecElementType = "abstract_test"                                                                      
+                                    modSpecElementType = "abstract_test"
+                                else:
+                                    modSpecElementType = str(paragraph.text)                                                                    
                                 print(paragraph.text)
             if readingModSpecElement == True:
                 trElements = row.findall(".//tr")
