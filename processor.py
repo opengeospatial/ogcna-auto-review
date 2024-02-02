@@ -18,6 +18,35 @@ class BuildingBlock:
         self.maturity = maturity
 
 
+def check_num_segments(inputstring):
+    #inputstring = "https://docs.ogc.org/is/22-047r1/22-047r1.html#conf_mf_tproperty_delete_success,http://www.opengis.net/spec/geosparql/1.1/conf/movingfeatures/tproperty-delete-success"
+    if "/req/" in inputstring:
+        token = inputstring[1+inputstring.index("/req/"):]
+        return str(len(token.split("/")))
+    if "/conf/" in inputstring:
+        token = inputstring[1+inputstring.index("/conf/"):]   
+        return str(len(token.split("/"))) 
+
+def check_segments(elem_type,inputstring):
+    #inputstring = "https://docs.ogc.org/is/22-047r1/22-047r1.html#conf_mf_tproperty_delete_success,http://www.opengis.net/spec/geosparql/1.1/conf/movingfeatures/tproperty-delete-success"
+    if "/req/" in inputstring:
+        token = inputstring[1+inputstring.index("/req/"):]
+        if len(token.split("/")) == 2 and elem_type == "requirements_class":
+            return "PASS"
+        elif len(token.split("/")) == 3 and elem_type == "requirement":
+            return "PASS"
+        else:
+            return "FAIL"      
+            
+    if "/conf/" in inputstring:
+        token = inputstring[1+inputstring.index("/conf/"):]   
+        if len(token.split("/")) == 2 and elem_type == "conformance_class":
+            return "PASS"
+        elif len(token.split("/")) == 3 and elem_type == "abstract_test":
+            return "PASS"
+        else:
+            return "FAIL"          
+
 def main(argv):
 
     # python3 processor.py 22-047r1.html https://docs.ogc.org/is/22-047r1/22-047r1.html http://www.opengis.net/spec/geosparql/1.1 
@@ -35,7 +64,7 @@ def main(argv):
     now = datetime.now()
 
     current_time = now.strftime("%Y-%m-%dT%H:%M:%S")
-    fout.write("Created,"+str(current_time)+",\n")
+    fout.write("Created,"+str(current_time)+",num_segments,segment_result\n")
 
     bb_list = []
 
@@ -86,7 +115,7 @@ def main(argv):
                                         outputstring = outputstring +","+baseURI+ str(ttElement.text)+""
                                     bb.identifier = str(ttElement.text)
             if(len(outputstring)>0):
-                fout.write(outputstring+","+str(modSpecElementType)+"\n")
+                fout.write(outputstring+","+str(modSpecElementType)+","+check_num_segments(outputstring)+","+check_segments(str(modSpecElementType),outputstring)+"\n")
                 print(outputstring+"\n")
                 bb_list.append(bb)
 
