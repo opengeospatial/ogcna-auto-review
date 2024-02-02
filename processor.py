@@ -56,7 +56,7 @@ def main(argv):
                     paragraphs = row.findall(".//p")
                     for paragraph in paragraphs:
                         if 'class' in paragraph.attrib:
-                            if paragraph.attrib['class'] == 'RecommendationTitle':
+                            if paragraph.attrib['class'] == 'RecommendationTitle' or paragraph.attrib['class'] == 'RecommendationTestTitle':
                                 if 'id' in row.attrib:
                                     outputstring = outputstring +""+ source_webpage+"#"+str(row.attrib['id'])
                                 bb.name = str(paragraph.text)
@@ -66,7 +66,9 @@ def main(argv):
                                 elif "Conformance class " in str(paragraph.text):
                                     modSpecElementType = "conformance_class"                                   
                                 elif "Requirement " in str(paragraph.text):
-                                    modSpecElementType = "requirement"                                   
+                                    modSpecElementType = "requirement"  
+                                elif "Abstract test " in str(paragraph.text):
+                                    modSpecElementType = "abstract_test"                                                                      
                                 print(paragraph.text)
             if readingModSpecElement == True:
                 trElements = row.findall(".//tr")
@@ -84,7 +86,7 @@ def main(argv):
                                         outputstring = outputstring +","+baseURI+ str(ttElement.text)+""
                                     bb.identifier = str(ttElement.text)
             if(len(outputstring)>0):
-                fout.write(outputstring+","+modSpecElementType+"\n")
+                fout.write(outputstring+","+str(modSpecElementType)+"\n")
                 print(outputstring+"\n")
                 bb_list.append(bb)
 
