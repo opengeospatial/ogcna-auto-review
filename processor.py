@@ -33,6 +33,10 @@ def main(argv):
 
     fout = open(wd+document_number+'.csv','w')
 
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    fout.write("Created,"+str(current_time)+"\n")
+
     bb_list = []
 
     with open(wd+document_number+".html",'r') as file:
