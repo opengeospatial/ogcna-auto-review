@@ -3,19 +3,6 @@ import json
 import sys
 from datetime import datetime
 
-class BuildingBlock:
-    def __init__(self):
-        pass
-    def __init__(self,identifier,name,abstract,status,dateTimeAddition,itemClass,register,version,maturity):
-        self.identifier = identifier
-        self.name = name
-        self.abstract = abstract
-        self.status = status
-        self.dateTimeAddition = dateTimeAddition
-        self.itemClass = itemClass
-        self.register = register
-        self.version = version
-        self.maturity = maturity
 
 
 def check_num_segments(inputstring):
@@ -71,7 +58,6 @@ def main(argv):
     current_time = now.strftime("%Y-%m-%dT%H:%M:%S")
     fout.write("timestamp,target,source,type,num_segments,segment_result\n")
 
-    bb_list = []
 
     with open(wd+document_number+".html",'r') as file:
         data = file.read()
@@ -81,7 +67,6 @@ def main(argv):
         for row in rows:
             outputstring = ''
             date_time = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-            bb = BuildingBlock('identifier','name', 'abstract', 'under-development', str(date_time), 'api', 'ogc-building-block-register', '1.0.0','development')
             readingModSpecElement = False
             modSpecElementType = None
 
@@ -93,7 +78,6 @@ def main(argv):
                             if paragraph.attrib['class'] == 'RecommendationTitle' or paragraph.attrib['class'] == 'RecommendationTestTitle':
                                 if 'id' in row.attrib:
                                     outputstring = outputstring +str(current_time)+","+ source_webpage+"#"+str(row.attrib['id'])
-                                bb.name = str(paragraph.text)
                                 readingModSpecElement = True
                                 if "Requirements class " in str(paragraph.text):
                                     modSpecElementType = "requirements_class"
@@ -120,11 +104,9 @@ def main(argv):
                                         outputstring = outputstring +","+str(ttElement.text)+""
                                     else:
                                         outputstring = outputstring +","+baseURI+ str(ttElement.text)+""
-                                    bb.identifier = str(ttElement.text)
             if(len(outputstring)>0):
                 fout.write(outputstring+","+str(modSpecElementType)+","+check_num_segments(outputstring)+","+check_segments(str(modSpecElementType),outputstring)+"\n")
                 print(outputstring+"\n")
-                bb_list.append(bb)
 
     fout.close()
 
