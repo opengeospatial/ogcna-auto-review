@@ -64,7 +64,7 @@ def main(argv):
     now = datetime.now()
 
     current_time = now.strftime("%Y-%m-%dT%H:%M:%S")
-    fout.write("Created,"+str(current_time)+",num_segments,segment_result\n")
+    fout.write("timestamp,target,source,num_segments,segment_result\n")
 
     bb_list = []
 
@@ -87,7 +87,7 @@ def main(argv):
                         if 'class' in paragraph.attrib:
                             if paragraph.attrib['class'] == 'RecommendationTitle' or paragraph.attrib['class'] == 'RecommendationTestTitle':
                                 if 'id' in row.attrib:
-                                    outputstring = outputstring +""+ source_webpage+"#"+str(row.attrib['id'])
+                                    outputstring = outputstring +str(current_time)+","+ source_webpage+"#"+str(row.attrib['id'])
                                 bb.name = str(paragraph.text)
                                 readingModSpecElement = True
                                 if "Requirements class " in str(paragraph.text):
