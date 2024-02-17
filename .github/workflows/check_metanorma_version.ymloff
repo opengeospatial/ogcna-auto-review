@@ -1,0 +1,23 @@
+name: check_metanorma_version
+on:
+  schedule:
+    - cron:  '35 19 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:       
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/ogcapi-movingfeatures
+          path: AB-CDE
+      - name: Check metanorma version
+        run: |                    
+          cd AB-CDE
+          metanorma --version
