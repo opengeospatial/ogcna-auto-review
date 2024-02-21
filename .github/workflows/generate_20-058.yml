@@ -1,7 +1,7 @@
 name: generate_20-058
 on:
-  issues:
-    types: opened
+  schedule:
+    - cron:  '35 17 * * *'
 
 jobs:
   build:
