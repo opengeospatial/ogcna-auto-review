@@ -16,6 +16,7 @@ The following draft specifications are automatically compiled from asciidoc to H
 * [OGC API - Processes, version 2.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/18-062r3.html)
 * [2023 Open Standards Code Sprint Summary Engineering Report draft](https://opengeospatial.github.io/ogcna-auto-review/23-059.html)
 * [OGC API - Moving Features - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/22-003.html)
+* [OGC API - Maps - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/20-058.html)
 * More to follow
 
 
