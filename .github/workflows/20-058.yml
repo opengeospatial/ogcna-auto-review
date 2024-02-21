@@ -1,0 +1,36 @@
+name: generate_20-058
+on:
+  issues:
+    types: opened
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/ogcapi-maps
+          ref: metanorma
+          path: 20-058
+      - name: Generate document
+        run: |          
+          pwd
+          cd 20-058/core/standard
+          ls 
+          metanorma compile --agree-to-terms -t ogc -x xml,html,pdf 20-058.adoc
+          cp ./20-058.html ../../../main/20-058.html
+          cp ./20-058.pdf ../../../main/20-058.pdf
+          cd ../../../main
+          pwd
+          ls
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 20-058.html 20-058.pdf
+          git commit -am "Automated generation of HTML and PDF documents"
+          git push
