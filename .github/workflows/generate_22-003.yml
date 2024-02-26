@@ -1,7 +1,7 @@
 name: generate_22-003
 on:
   schedule:
-    - cron:  '50 10 * * *'
+    - cron:  '50 10,13,16,20 * * *'
 
 jobs:
   build:
