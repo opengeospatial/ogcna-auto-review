@@ -1475,7 +1475,7 @@ GeoAPI documents the mapping of types and methods from the abstract model into J
 providing standard interfaces in the <tt>&#x201C;org.opengis&#x201D;</tt> (Java) or <tt>&#x201C;opengis&#x201D;</tt> (Python) namespaces
 and explaining the use of GeoAPI interfaces.</p>
       </div>
-      <div class="Section3" id="_d1c2865f-e82e-44d9-ad98-b70e001527c7">
+      <div class="Section3" id="_db52f42a-c91d-487f-9d3b-66cf4c06c23c">
         <h1 class="IntroTitle" id="toc1">II.&#xA0; Keywords</h1>
         <p>The following are keywords to be used by search engines and
     document catalogues.</p>
@@ -1515,7 +1515,7 @@ standard set forth in this document, and to provide supporting documentation.</p
         <h1 class="IntroTitle" id="toc3">IV.&#xA0; Security considerations</h1>
         <p id="_4bfc9ff4-0427-16f3-2dce-96ac965b7eae">No security considerations have been made for this Standard.</p>
       </div>
-      <div class="Section3" id="_745389da-040a-4ccd-80bc-9260756e63c8">
+      <div class="Section3" id="_9bf63328-d95f-421c-a1c3-b32b12b09d3b">
         <h1 class="IntroTitle" id="toc4">V.&#xA0; Submitting Organizations</h1>
         <p>The following organizations submitted this Document to the
    Open Geospatial Consortium (OGC):</p>
@@ -8655,7 +8655,7 @@ The enclosed annotation indicates that the <tt>getCoordinate&#xAD;System()</tt> 
 was derived from a property named <tt>coordinate&#xAD;System</tt> in the ISO 19111 standard,
 and that a non-null value must be provided by every <tt>ProjectedCRS</tt> instance:</p>
 
-<pre id="_aaf366a2-623a-3e9e-b8d0-064e552bc595" class="prettyprint lang-java">@Classifier(Stereotype.TYPE)<br />@UML(identifier = &#x201C;ProjectedCRS&#x201D;, specification = ISO_19111)<br />public interface ProjectedCRS extends GeneralDerivedCRS {<br />&#xA0;&#xA0;&#xA0; /**<br />&#xA0;&#xA0;&#xA0;&#xA0; * Returns the coordinate system.<br />&#xA0;&#xA0;&#xA0;&#xA0; */<br />&#xA0;&#xA0;&#xA0; @UML(identifier&#xA0;&#xA0;&#xA0; = &#x201C;coordinateSystem&#x201D;,<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; obligation&#xA0;&#xA0;&#xA0; = MANDATORY,<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; specification = ISO_19111)<br />&#xA0;&#xA0;&#xA0; CartesianCS getCoordinateSystem();<br />}</pre><p class="SourceTitle" style="text-align:center;">Figure D.1</p>
+<pre id="_d9e17a7d-5527-1c69-c4ae-56cbd26eda0e" class="prettyprint lang-java">@Classifier(Stereotype.TYPE)<br />@UML(identifier = &#x201C;ProjectedCRS&#x201D;, specification = ISO_19111)<br />public interface ProjectedCRS extends DerivedCRS {<br />&#xA0;&#xA0;&#xA0; /**<br />&#xA0;&#xA0;&#xA0;&#xA0; * Returns the coordinate system.<br />&#xA0;&#xA0;&#xA0;&#xA0; */<br />&#xA0;&#xA0;&#xA0; @UML(identifier&#xA0;&#xA0;&#xA0; = &#x201C;coordinateSystem&#x201D;,<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; obligation&#xA0;&#xA0;&#xA0; = MANDATORY,<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; specification = ISO_19111)<br />&#xA0;&#xA0;&#xA0; CartesianCS getCoordinateSystem();<br />}</pre><p class="SourceTitle" style="text-align:center;">Figure D.1</p>
 
 
 <p id="_93485401-48e6-443a-9477-fa4688d2e3e8">At runtime, the annotation of a reference to a GeoAPI interface can be obtained as follows,
