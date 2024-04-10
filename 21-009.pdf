@@ -26,7 +26,7 @@ endobj
 /Keywords (API, html, ogcapi, ogcdoc, OGC document, openapi.)
 /Creator ()
 /Producer (Ribose Metanorma mn2pdf version 1.85)
-/CreationDate (D:20240409121030Z)
+/CreationDate (D:20240410120956Z)
 >>
 endobj
 2 0 obj
@@ -72,15 +72,15 @@ stream
 <dc:language>en</dc:language>
 <dc:description>This specification extends the core capabilities specified in OGC API — Processes — Part 1: Core with the ability to chain nested processes, refer to both local and external processes and collections of data accessible via OGC API standards as inputs to a process, and trigger execution of processes through OGC API data delivery specifications such as OGC API — Tiles, DGGS, Coverages, Features, EDR and Maps. Conformance classes defined in this specification enable clients to integrate discovered data and processes as a workflow in an ad-hoc manner (without first requiring to deploy the workflow as a process), then drive the execution on-demand for a particular area, time and resolution of interest using a “pull” mechanism (pulling the final required output from the client, as opposed to a batch execution starting from source inputs of the first processing step). The workflows defined with this specification can also be deployed as processes using the OGC API — Processes — Part 2: Deploy, Replace, Undeploy extension.</dc:description>
 <dc:creator>Ecere Corporation; CubeWerx Inc.; GeoLabs; University of Calgary; Pangaea Innovations Pty. Ltd.; Natural Resources Canada; EOX IT Services GmbH; Universitat Autònoma de Barcelona (CREAF); Centre de Recherche en Informatique de Montréal (CRIM); 52°North Spatial Information Research GmbH; European Space Agency (ESA); US Army Geospatial Center (AGC); Hexagon; Haute École d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD); Laboratoire des Sciences et Techniques de l'information de la Communication et de la Connaissance / Centre national de la recherche scientifique (Lab-STICC CNRS)</dc:creator>
-<dc:date>2024-04-09T12:10:30Z</dc:date>
+<dc:date>2024-04-10T12:09:56Z</dc:date>
 </rdf:Description>
 <rdf:Description xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" rdf:about="">
 <pdfuaid:part>1</pdfuaid:part>
 </rdf:Description>
 <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
 <xmp:CreatorTool/>
-<xmp:MetadataDate>2024-04-09T12:10:30Z</xmp:MetadataDate>
-<xmp:CreateDate>2024-04-09T12:10:30Z</xmp:CreateDate>
+<xmp:MetadataDate>2024-04-10T12:09:56Z</xmp:MetadataDate>
+<xmp:CreateDate>2024-04-10T12:09:56Z</xmp:CreateDate>
 </rdf:Description>
 </rdf:RDF>
 </x:xmpmeta><?xpacket end="r"?>
@@ -4863,7 +4863,7 @@ endobj
 /Type /Annot
 /Page 37
 /C [1.0 0.7647059 0.2]
-/M (D:20240409000000)
+/M (D:20240410000000)
 /F 24
 /NM ()
 /Rect [99.212 295.127 119.212 320.127]
@@ -5432,7 +5432,7 @@ endobj
 /Type /Annot
 /Page 55
 /C [1.0 0.7647059 0.2]
-/M (D:20240409000000)
+/M (D:20240410000000)
 /F 24
 /NM ()
 /Rect [99.212 638.179 119.212 663.179]
@@ -5542,7 +5542,7 @@ endobj
 /Type /Annot
 /Page 58
 /C [1.0 0.7647059 0.2]
-/M (D:20240409000000)
+/M (D:20240410000000)
 /F 24
 /NM ()
 /Rect [99.212 668.03 119.212 693.03]
@@ -79701,7 +79701,7 @@ endobj
 /Length 24595
 /Root 1 0 R
 /Info 7 0 R
-/ID [<CFA377A93A99774D085A43CB92B03052> <CFA377A93A99774D085A43CB92B03052>]
+/ID [<C39F97DDA0BFD39A129F6FE80A8D3BCE> <C39F97DDA0BFD39A129F6FE80A8D3BCE>]
 /Type /XRef
 /Size 9570
 /Index [0 9569]
