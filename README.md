@@ -10,7 +10,6 @@ The following draft specifications are automatically compiled from asciidoc to H
 
 * [OGC API - 3D GeoVolumes, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/22-029.html)
 * [OGC API - Discrete Global Grid Systems - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-038.html)
-* [OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package (*.slpk) Format Community Standard v1.4 draft](https://opengeospatial.github.io/ogcna-auto-review/17-014r11.html)
 * [OGC API - Moving Features - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/22-003.html)
 * More to follow
 
