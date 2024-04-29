@@ -8,7 +8,6 @@ The prototype workflows are at the **alpha** stage of development.
 
 The following draft specifications are automatically compiled from asciidoc to HTML once a day. During the compilation a number of OGC-NA checks are made on the documents.
 
-* [OGC API - 3D GeoVolumes, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/22-029.html)
 * [OGC API - Discrete Global Grid Systems - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/21-038.html)
 * [OGC API - Moving Features - Part 1: Core, version 1.0.0 draft](https://opengeospatial.github.io/ogcna-auto-review/22-003.html)
 * More to follow
