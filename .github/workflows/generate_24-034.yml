@@ -19,7 +19,7 @@ jobs:
           path: 24-034
       - name: Generate document
         run: |
-          cd 24-034/2023/Open-Standards-Code-Sprint/engineering-report
+          cd 24-034/2024/Open-Standards-Code-Sprint/engineering-report
           metanorma compile --agree-to-terms -t ogc -x xml,html document.adoc
           cp document.html ../../../../main/24-034.html
           cd ../../../../main
