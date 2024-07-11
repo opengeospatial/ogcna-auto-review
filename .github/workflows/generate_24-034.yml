@@ -1,0 +1,30 @@
+name: generate_24-034
+on:
+  schedule:
+    - cron:  '41 9 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/developer-events
+          path: 24-034
+      - name: Generate document
+        run: |
+          cd 24-034/2023/Open-Standards-Code-Sprint/engineering-report
+          metanorma compile --agree-to-terms -t ogc -x xml,html document.adoc
+          cp document.html ../../../../main/24-034.html
+          cd ../../../../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 24-034.html
+          git commit -am "Automated generation of HTML documents"
+          git push
