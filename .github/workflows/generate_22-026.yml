@@ -1,0 +1,33 @@
+name: generate_22-026
+on:
+  schedule:
+    - cron:  '30 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:       
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          path: main
+      - name: checkout other repo
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/ogcapi-joins
+          path: 22-026
+      - name: Generate document
+        run: |                    
+          cd 22-026/sources/core
+          metanorma compile --agree-to-terms -t ogc -x xml,html,pdf standard/22-026.adoc
+          cp standard/22-026.html ../main/22-026.html
+          cp standard/22-026.pdf ../main/22-026.pdf
+          cd ../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git pull
+          git add 22-026.html 22-026.pdf
+          git commit -am "Automated generation of documents"
+          git push                   
+      
