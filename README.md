@@ -8,7 +8,6 @@ The prototype workflows are at the **alpha** stage of development.
 
 The following draft specifications are automatically compiled from asciidoc to HTML once a day. During the compilation a number of OGC-NA checks are made on the documents.
 
-* [July 2024 Open Standards Code Sprint Summary Engineering Report, version 1.0.0 draft](https://htmlpreview.github.io/?https://github.com/opengeospatial/ogcna-auto-review/blob/main/24-034.html)
 * More to follow
 
 
