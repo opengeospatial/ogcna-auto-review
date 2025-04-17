@@ -1,7 +1,7 @@
 name: generate_18-067r4
 on:
-  issues:
-    types: opened
+  schedule:
+    - cron:  '25 10 * * *'
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
           cd 18-067r4
           metanorma --version
           metanorma compile --agree-to-terms -t ogc -x xml,html 1-core/18-067r4.adoc
-          cp ./1-core/18-067r4.html ./1-core/18-067r4.html
+          cp ./1-core/18-067r4.html ../main/18-067r4.html
           cd ../main
           git config --global user.name 'opengeospatial'
           git config --global user.email 'opengeospatial@users.noreply.github.com'
