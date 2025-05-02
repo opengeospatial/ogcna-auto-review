@@ -21,7 +21,7 @@
             data.addColumn('date', 'Start Date');
             data.addColumn('date', 'End Date');
             data.addColumn('number', 'Duration');
-            data.addColumn('number', 'Percent Complete');
+            //data.addColumn('number', 'Percent Complete');
             data.addColumn('string', 'Dependencies');
             
             data.sort([{column: 2}]);
@@ -41,7 +41,7 @@
       
                   data.addRow(
                       [roadmap_json[i].sid, roadmap_json[i].name, 'spring',
-                      new Date(Date.parse(roadmap_json[i].start_date+ "T00:00:00Z")), new Date(Date.parse(roadmap_json[i].end_date+ "T00:00:00Z")), null, 100, null]);
+                      new Date(Date.parse(roadmap_json[i].start_date+ "T00:00:00Z")), new Date(Date.parse(roadmap_json[i].end_date+ "T00:00:00Z")), null, null]);
               }
           } catch (error) {
               console.error(error.message);
