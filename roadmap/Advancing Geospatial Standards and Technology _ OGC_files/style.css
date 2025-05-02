@@ -1,0 +1,129 @@
+/* visual styles */
+.searchwp-live-search-results {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background: #fff;
+	-webkit-box-shadow: 0 0 2px 0 rgba(30,30,30,0.4);
+	box-shadow: 0 0 2px 0 rgba(30,30,30,0.4);
+	border-radius: 3px;
+	width: 315px;
+	min-width: 315px;
+	min-height: 175px;
+	max-height: 300px;
+}
+
+.searchwp-live-search-result {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 10px;
+	border-bottom:1px solid rgba(30,30,30,0.1);
+}
+
+.searchwp-live-search-result:last-child {
+	border-bottom: none;
+}
+
+.searchwp-live-search-result--img {
+	flex-shrink: 0;
+	-ms-flex-preferred-size: 70px;
+	flex-basis: 70px;
+}
+
+.searchwp-live-search-results-container.swp-ls--img-sm .searchwp-live-search-result--img {
+	-ms-flex-preferred-size: 70px;
+	flex-basis: 70px;
+}
+
+.searchwp-live-search-results-container.swp-ls--img-m .searchwp-live-search-result--img {
+	-ms-flex-preferred-size: 110px;
+	flex-basis: 110px;
+}
+
+.searchwp-live-search-results-container.swp-ls--img-l .searchwp-live-search-result--img {
+	-ms-flex-preferred-size: 150px;
+	flex-basis: 150px;
+}
+
+.searchwp-live-search-result--img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: top;
+}
+
+.searchwp-live-search-result--info {
+	flex: 1 1 250px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.searchwp-live-search-result--title {
+	margin-top: 0;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.searchwp-live-search-result--desc {
+	font-size: 0.9em;
+}
+
+.searchwp-live-search-result--ecommerce {
+	margin-left: auto;
+	text-align: end;
+	flex-shrink: 0;
+}
+
+.searchwp-live-search-result--ecommerce *{
+	font-size: 1em;
+}
+
+.searchwp-live-search-no-min-chars .spinner {
+	opacity: 0.3;
+}
+
+.searchwp-live-search-result--focused {
+	background: #f7f7f7;
+}
+
+/* Bullet proof Screen Reader Only text */
+.searchwp-live-search-instructions {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+@keyframes searchwp-spinner-line-fade-more {
+  0%, 100% {
+    opacity: 0; /* minimum opacity */
+  }
+  1% {
+    opacity: 1;
+  }
+}
+
+@keyframes searchwp-spinner-line-fade-quick {
+  0%, 39%, 100% {
+    opacity: 0.25; /* minimum opacity */
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes searchwp-spinner-line-fade-default {
+  0%, 100% {
+    opacity: 0.22; /* minimum opacity */
+  }
+  1% {
+    opacity: 1;
+  }
+}
